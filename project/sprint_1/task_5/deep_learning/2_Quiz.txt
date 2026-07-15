@@ -1,0 +1,78 @@
+Quiz
+
+Instructions: Answer each question in 2-3 sentences.
+
+1. What command must be executed to generate the
+   build artifacts discussed in the source material?
+
+2. Where can you locate the compiled bytecode for
+   the main production classes of your application?
+
+3. Which folder within the build directory is responsible
+   for storing the assembled JAR file?
+
+4. If you want to review the overall outcome of your
+   application's tests, which folder should you check?
+
+5. In the Idea development environment, how is the build
+   folder visually distinguished?
+
+6. What type of files are stored in the resources folder
+   within the build directory?
+
+7. What is the purpose of the generated folder, even
+   if its full contents are not detailed in the current material?
+
+8. Besides the compiled bytecode, what other type of
+   artifact is located in the classes folder?
+
+9. Briefly explain the difference in content between
+   classes/java/main and classes/java/test.
+
+
+Quiz Answer Key
+
+1. The Gradle build command must be executed to generate
+   the discussed build artifacts. This command initiates
+   the compilation, assembly, and testing processes that
+   produce these files.
+
+2. The compiled bytecode for the main production classes
+   of your application can be located in the build/classes/java/main
+   folder. This specific path ensures separation of production
+   code from test code.
+
+3. The libs folder within the build directory is responsible
+   for storing the assembled JAR file. This JAR file is a packaging
+   of the compiled production code, ready for deployment or
+   distribution.
+
+4. If you want to review the overall outcome of your application's
+   tests, you should check the reports folder. This folder contains
+   human-readable summaries and reports of the test execution.
+
+5. In the Idea development environment, the build folder is visually
+   distinguished by being highlighted in orange. This color coding
+   serves as a quick visual cue to identify this important directory.
+
+6. The resources folder within the build directory contains
+   files that are utilized by the application but are not
+   compiled source code. These can include configuration
+   files, images, or other static assets.
+
+7. The generated folder's purpose is to store code that is
+   automatically created during the compilation process.
+   While its specific contents are not fully detailed yet,
+   it signifies that some code is machine-generated rather
+   than written manually.
+
+8. Besides the compiled bytecode, the classes folder is
+   structured to separate bytecode for production classes
+   and test classes. Therefore, it also contains bytecode
+   for test classes in the classes/java/test subdirectory.
+
+9. classes/java/main contains the compiled bytecode for the core,
+   production-ready classes of your application. In contrast,
+   classes/java/test contains the compiled bytecode for the
+   classes specifically written to test the functionality
+   of your application.

@@ -1,0 +1,84 @@
+Quiz (Short Answer)
+
+1. What is the central philosophical question posed
+   to the reader at the beginning of the text?
+
+2. According to the text, what distinguishes a "true master"
+   from others in the field of software development?
+
+3. How does the text suggest a developer's attitude towards
+   their work impacts the quality of their output?
+
+4. What negative consequence is implied for developers
+   who do not value the results of their labor?
+
+5. Beyond individual benefit, what broader impact can
+   quality work and results have, according to the text?
+
+6. The text mentions several challenges to producing
+   quality work. Name two of them.
+
+7. What opportunity does striving for quality, even
+   amidst challenges, present for an individual developer?
+
+8. What specific type of solution are developers encouraged
+   to create by valuing their work?
+
+9. What is the ultimate goal the authors have for the
+   readers of this text regarding their development skills?
+
+10. How does valuing the results of one's labor
+    open the "road to true mastery"?
+
+
+Quiz Answer Key
+
+1. The central philosophical question is about how
+   developers relate to the results of their labor.
+   It asks if they value their code and projects, or
+   if they are indifferent, simply working for money.
+
+2. According to the text, a "true master" is distinguished
+   from others by the quality of their work. This quality
+   reflects a deep personal investment and dedication to excellence.
+
+3. The text suggests that valuing one's work leads to
+   investing "soul" into it and making every effort for
+   the best possible outcome. Conversely, a lack of value
+   results in minimal effort and an "it's good enough" mentality.
+
+4. If a person does not value the result of their work,
+   it is implied they will not exert additional effort
+   to improve it. This can lead to creating code that
+   others would want to "run away from" rather than work with.
+
+5. Beyond individual benefit, quality work and results
+   are capable of elevating entire companies, with Apple
+   being cited as a prominent example. It suggests that a
+   commitment to quality can lead to significant organizational success.
+
+6. Two challenges to producing quality work mentioned
+   are tight deadlines ("горят сроки") and pressure
+   from management ("давит начальство"). Another is a
+   workplace culture that does not encourage quality.
+
+7. Even amidst challenges, striving for quality presents
+   a "very cool opportunity" for an individual developer
+   to stand out, grow, and move up to a higher level in
+   their career. It allows for personal and professional advancement.
+
+8. Developers are encouraged to create "truly quality
+   solutions" and write "good code with which one wants to work."
+   This implies building robust, maintainable, and effective
+   IT solutions.
+
+9. The ultimate goal the authors have for the readers
+   is for them to become "true masters in creating software."
+   They believe this is achieved by learning to value the
+   results of their labor.
+
+10. Valuing the results of one's labor opens the
+    "road to true mastery" because it compels a developer
+    to invest their whole self, striving for the highest
+    possible quality. This commitment to excellence is
+    what defines a master.

@@ -1,0 +1,27 @@
+Essay Format Questions
+
+Discuss the advantages of a standardized project structure
+(like Maven's) over a project with an ad-hoc or unorganized
+file layout, considering factors like collaboration, build
+automation, and project maintainability.
+
+Explain how the Maven project structure implicitly supports
+the "convention over configuration" principle in build tools
+like Gradle. Provide specific examples from the directory structure.
+
+Analyze the separation of "production code" and "test code"
+within the Maven project structure. Why is this distinction
+crucial for robust software development, and how does it benefit
+the build and deployment processes?
+
+Beyond the practical benefits mentioned in the source, explore
+the pedagogical reasons for introducing new developers to a
+standardized project structure early in their learning.
+How does it contribute to better coding practices and
+understanding of project lifecycles?
+
+Imagine a scenario where a project deviates significantly
+from the Maven project structure. Discuss the potential
+challenges and increased complexity this might introduce
+for build tools like Gradle, and what steps would be necessary
+to adapt the build process.

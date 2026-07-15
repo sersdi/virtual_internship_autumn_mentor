@@ -1,0 +1,35 @@
+Glossary of Key Terms
+
+Test Scenario:
+A high-level description of a specific functionality or
+business case that needs to be tested within an application.
+It defines what to test from a user's or business's perspective.
+
+Test Case:
+A specific set of conditions, inputs, and expected results
+designed to verify a particular path or aspect within a test
+scenario. (Implicitly related to scenarios, though not explicitly
+defined as distinct in the source).
+
+Test Coverage:
+A metric that measures the amount of application code exercised
+by the tests. The goal is to maximize this to ensure all
+functionalities are validated.
+
+Application Logic:
+The internal rules, processes, and computations that dictate
+how an application behaves and produces outputs based on inputs.
+
+Business Case:
+A specific user interaction or business process within the
+application that has a defined outcome and value, and thus
+needs to be validated through testing.
+
+Test Implementation:
+The process of writing the actual code for tests using
+specific programming languages, frameworks, and tools.
+
+TravelCalculatePremiumController:
+A specific, unnamed controller within the application that
+is used as an example target for comprehensive testing,
+likely responsible for calculating travel insurance premiums.

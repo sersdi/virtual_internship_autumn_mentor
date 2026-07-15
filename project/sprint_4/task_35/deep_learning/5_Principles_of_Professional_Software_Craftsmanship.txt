@@ -1,0 +1,77 @@
+Principles of Professional Software Craftsmanship
+
+What defines a good IT solution beyond just meeting requirements?
+
+A good IT solution is not merely one that fulfills all stated
+requirements. Crucially, it must also be easy to understand,
+easy to extend, and easy to modify. This emphasis on
+maintainability and comprehensibility is what distinguishes
+a professional-grade solution from a merely functional one.
+
+What is the "Boy Scout Rule" in the context of programming?
+
+The "Boy Scout Rule" in programming, as rephrased by Robert
+C. Martin, is: "Leave your code better than it was before you."
+This means that whenever you encounter a piece of code, even if
+you didn't write it, you should strive to improve it, even if just
+slightly. This could involve making difficult-to-read sections
+more understandable, even if it's outside your immediate task.
+Positive changes, no matter how small, accumulate over time.
+
+Why is it important to improve code you encounter,
+even if it's not yours or part of your current task?
+
+It's vital to improve code you encounter because someone
+else will eventually have to work with it, including code
+you've written. By making code even "a little bit better,"
+you simplify the lives of future developers (and your future self).
+Just as negative changes can lead to "code rot," positive changes,
+even minor ones, contribute to the gradual improvement of the
+application's codebase, preventing it from becoming a "cesspool."
+
+What is refactoring, and what is its primary goal?
+
+Refactoring is the process of altering the internal structure
+of a program without changing its external behavior. Its primary
+goal is to make the code easier to understand and, implicitly,
+easier to maintain and extend. It focuses on improving the code's
+design and readability, rather than adding new features.
+
+What are some classic resources for learning about
+refactoring and clean code?
+
+For refactoring, the classic resource is "Refactoring:
+Improving the Design of Existing Code" by Martin Fowler
+and Kent Beck, available in both first and second editions.
+For clean code principles, "The Clean Coder" by Robert C.
+Martin is considered a foundational text.
+
+What is the desired outcome of refactoring
+the TravelCalculatePremiumServiceImpl class?
+
+The specific task for refactoring the
+TravelCalculatePremiumServiceImpl class is to
+improve its readability and prepare it for future modifications.
+This aligns with the overall goals of refactoring, which aim
+to enhance code quality and maintainability.
+
+What programming style is suggested as a helpful
+approach for refactoring in this context?
+
+The suggestion for refactoring is to try utilizing a
+functional programming style. This indicates that adopting
+functional programming paradigms might lead to cleaner,
+more readable, and potentially more maintainable code within
+the TravelCalculatePremiumServiceImpl class.
+
+How do positive and negative changes in code accumulate over time?
+
+Both positive and negative changes in code accumulate over time,
+much like litter in a campsite. Consistent efforts to improve
+the code, even incrementally, lead to a gradual enhancement of
+the application's overall quality and maintainability.
+Conversely, neglecting code quality and allowing
+difficult-to-understand or poorly structured code to
+persist will lead to a deterioration of the codebase,
+eventually turning it into a "cesspool" that is difficult
+and costly to work with.

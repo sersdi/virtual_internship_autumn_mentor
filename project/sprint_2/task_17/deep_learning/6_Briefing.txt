@@ -1,0 +1,87 @@
+Briefing Document: Calculating Agreement Days
+
+This document summarizes key themes and requirements
+from the provided excerpts regarding the "Calculating
+Agreement Days" task.
+
+I. Core Task and Formula
+
+The primary objective is to calculate and populate
+the agreementPrice property. The formula for this
+is explicitly defined:
+
+agreementPrice = days between agreementDateFrom and agreementDateTo
+
+It is important to note that this initial implementation
+of agreementPrice is explicitly stated as a "fake value"
+("фейковое значение"). Real business requirements for this
+property will be introduced around "step 30" ("в районе 30 шага").
+
+II. Implementation Guidance and Best Practices
+
+The source provides crucial guidance on how to approach
+the implementation, emphasizing efficient and standard
+programming practices:
+
+Utilize Standard Solutions:
+Developers are strongly encouraged to "google how to
+calculate the number of days between two dates in Java"
+("загуглите как рассчитать количество дней между двумя датами
+в Java"). The text stresses that "there is a standard solution
+for this; find it and apply it in your project" ("Для этого
+есть стандартное решение, найдите его и примените в своём проекте").
+
+Discern When to Write New Code vs. Use Existing:
+A key takeaway for a "good programmer" ("Хороший программист")
+is to "learn to feel when to write new code yourself and when
+you can find a ready-made solution for a standard task online"
+("научиться чувствовать, когда надо самому писать новый код,
+а когда можно найти готовое решение стандартной задачи в интернете").
+This highlights a pragmatic approach to development.
+
+III. Project Progression and Developer Onboarding
+
+The current task is presented as an introductory step within a
+larger project, designed for gradual integration and team development:
+
+Gradual Difficulty Increase:
+The initial tasks, including this one, are intentionally
+simple ("не переживайте, если первые задания кажутся вам
+очень простыми"). The purpose is to allow developers to
+"gradually get into the project, get used to the development
+process, and establish communication with your mentor and
+colleagues" ("Мы хотим, чтобы вы постепенно вкатились в проект,
+привыкли к процессу разработки, наладили общение с ментором и
+коллегами"). Tasks will "gradually become more and more complex"
+("Задания постепенно будут становиться всё сложнее и сложнее").
+
+IV. Testing Requirements and Workflow
+
+Rigorous testing is a mandatory part of the development process,
+with clear instructions provided:
+
+Mandatory Testing:
+Developers "must not forget to test your changes"
+("не забудьте протестировать ваши изменения").
+
+Test Adaptation:
+If necessary, developers should "make changes to previously
+written tests so that they continue to work" ("Если это необходимо,
+внесите изменения в уже написанные ранее тесты для того, чтобы
+они по-прежнему работали"). This implies a focus on maintaining
+test integrity.
+
+Pre-Commit Test Execution:
+Critically, "before committing to the repository, be sure to
+run all your tests" ("перед комитом в репозиторий обязательно
+прогоняйте все ваши тесты").
+
+All Tests Must Pass:
+"All tests must pass without errors (be green)"
+("Все тесты должны проходить без ошибок (быть зелёными)").
+
+Fix Tests Before Commit:
+If tests fail, they "must be fixed before committing,
+not after" ("Если тесты поломались, их надо починить
+перед комитом, а не после него"). This emphasizes a
+"fail-fast" and pre-emptive approach to code quality.

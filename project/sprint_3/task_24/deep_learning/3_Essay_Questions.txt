@@ -1,0 +1,28 @@
+Essay Format Questions
+
+1. Compare and contrast Constructor Injection,
+   Setter (Method) Injection, and Field (Property) Injection.
+   Discuss the primary advantages and disadvantages of each,
+   and explain why Constructor Injection is often considered
+   the preferred method for mandatory dependencies.
+
+2. Elaborate on how Dependency Injection contributes to
+   writing more testable code. Provide specific examples
+   of how DI facilitates unit testing compared to a system without DI.
+
+3. Discuss the concept of "Inversion of Control" in detail.
+   Explain how Dependency Injection is a manifestation of
+   this principle and analyze the overall benefits IoC brings
+   to software design, beyond just dependency management.
+
+4. Imagine you are designing a new module for a complex
+   application. Describe a scenario where you would intentionally
+   choose Setter (Method) Injection over Constructor Injection,
+   justifying your decision with specific technical reasons.
+   What are the potential trade-offs in this scenario?
+
+5. The article mentions that Field Injection is often
+   considered "evil." Explain why this perception exists,
+   detailing the specific problems and design flaws that arise
+   from its use. Are there any niche scenarios where it might
+   be considered acceptable, and if so, under what strict conditions?

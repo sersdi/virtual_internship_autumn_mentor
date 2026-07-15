@@ -1,0 +1,126 @@
+Unifying Validation Logic: A Study Guide
+
+I. Core Concepts and Objectives
+
+This material describes a refactoring task aimed at
+unifying validation logic within an application,
+specifically focusing on classes responsible for validation.
+The primary goal is to standardize the public interface of
+validation classes, improve their encapsulation, and leverage
+Spring's Inversion of Control (IoC) container for dependency injection.
+
+Key Objectives of the Refactoring:
+
+Standardize Interface:
+Create a common public interface for all validation classes.
+
+Encapsulation:
+Restrict direct access to concrete validation class implementations.
+
+Modularity:
+Organize validation components into a dedicated package.
+
+Dependency Injection:
+Utilize Spring to automatically provide a list of all
+validation components to relevant classes.
+
+Flexible Validation Execution:
+Enable iterating through a list of validations without
+concern for specific order.
+
+II. Detailed Breakdown of Instructions
+
+Create a Common Interface:
+
+Action: Define a new interface.
+
+Method:
+This interface must declare a public method, execute(...),
+which takes a request as a parameter and returns an Optional.
+This method signature reflects the existing behavior of validation
+classes.
+
+Package Location:
+
+Action:
+Place the newly created interface into the core/validations package.
+This establishes a central, logical location for the common
+validation contract.
+
+Interface Visibility:
+
+Action:
+Make the new interface public. This ensures that other
+parts of the application can interact with the validation
+logic through this common contract, even if the concrete
+implementations are hidden.
+
+Package-Level Access for Concrete Classes:
+
+Action:
+Remove the public modifier from all existing concrete
+validation classes.
+
+Impact:
+This changes their access level to package-private.
+They will now only be accessible from within the same
+package where they are defined, effectively hiding their
+specific implementations from external modules.
+
+TravelCalculatePremiumRequestValidator Modification:
+
+Constructor Parameter:
+Add a List<TravelValidations> parameter to the constructor
+of TravelCalculatePremiumRequestValidator.
+
+Instance Variable:
+Save this list to a private instance variable: private
+List<TravelValidations> travelValidations;.
+
+Spring IoC Integration:
+Spring, recognizing that all validation classes implement
+the new interface and are @Components, will automatically
+inject a list containing all such components into this constructor.
+This is a core benefit of IoC.
+
+Validation Execution Logic:
+Implement the logic to iterate through the travelValidations
+list and apply each validation to the request. The order of
+application is not critical, as long as all validations are executed.
+
+Test Adaptation:
+
+Action:
+Modify existing tests to account for the changes, particularly
+in how TravelCalculatePremiumRequestValidator is instantiated
+and how validations are managed.
+
+III. Architectural Implications
+
+Design Pattern (IoC):
+The refactoring leverages the Inversion of Control (IoC)
+design pattern. Spring takes control of object creation
+and dependency management, providing
+TravelCalculatePremiumRequestValidator with its required
+list of validations rather than the validator having to
+create or find them.
+
+Encapsulation and Modularity:
+By introducing a public interface and making concrete
+implementations package-private, the system achieves
+better encapsulation. The internal workings of specific
+validations are hidden, and the core/validations package
+becomes a well-defined module for validation logic.
+
+Flexibility and Extensibility:
+New validation rules can be added by simply creating a
+new class that implements the common interface and is
+marked as a Spring component.
+The TravelCalculatePremiumRequestValidator does not
+need to be modified to incorporate new validations;
+Spring will automatically discover and inject them.
+
+Maintainability:
+Changes to individual validation implementations are
+less likely to impact other parts of the system, as
+long as they adhere to the common interface.

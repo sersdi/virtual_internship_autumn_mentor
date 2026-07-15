@@ -1,0 +1,73 @@
+Briefing Document:
+Spring Testing with Component & Autowired Annotation
+
+This briefing document summarizes the key themes and
+practical instructions from the provided source regarding
+Spring testing with @Component and @Autowired annotations.
+
+Main Theme:
+The core idea is to leverage Spring's Inversion
+of Control (IoC) container to manage dependencies even
+within the context of tests, thereby simplifying test
+setup and promoting reusability.
+
+Key Ideas/Facts:
+
+Spring IoC for Tests:
+The source explicitly states that "Да, Spring IoC работает
+так же и для тестов!" (Yes, Spring IoC works the same way for tests!).
+This highlights that the principles of dependency injection and bean
+management apply equally to production code and test environments.
+
+@Component Annotation Usage:
+
+Purpose:
+To designate a class as a Spring-managed component (a "bean").
+
+Instruction:
+The primary task is to "добавить аннотацию @Component
+на класс JsonFileReader" (add the @Component annotation
+to the JsonFileReader class). This makes JsonFileReader
+a candidate for Spring's component scanning and allows
+it to be injected into other Spring-managed components.
+
+@Autowired Annotation Usage:
+
+Purpose:
+To automatically inject a dependency into a Spring-managed component.
+
+Instruction:
+Developers are instructed to "Воспользуйтесь аннотацией
+@Autowired в классе TravelCalculatePremiumControllerTest
+для получения зависимости JsonFileReader" (Use the @Autowired
+annotation in the TravelCalculatePremiumControllerTest class
+to get the JsonFileReader dependency). This means that
+TravelCalculatePremiumControllerTest will no longer need
+to manually instantiate JsonFileReader; Spring will provide
+an instance.
+
+Test Data Management using JSON Files:
+
+Instruction:
+The final instruction is to "Замените запросы в тестах на запросы
+из JSON файлов находящихся в директории src/test/resources"
+(Replace requests in tests with requests from JSON files located
+in the src/test/resources directory).
+
+Implication:
+This suggests a best practice for managing test data:
+externalizing test inputs into well-structured JSON files.
+This approach makes tests more readable, maintainable, and
+allows for easier modification of test scenarios without
+altering test code. The JsonFileReader component would
+likely be responsible for parsing these JSON files.
+
+Summary of Actionable Items:
+
+Annotate JsonFileReader with @Component.
+
+Use @Autowired in TravelCalculatePremiumControllerTest to
+inject JsonFileReader.
+
+Migrate test request data into JSON files within
+src/test/resources and utilize JsonFileReader to access this data.

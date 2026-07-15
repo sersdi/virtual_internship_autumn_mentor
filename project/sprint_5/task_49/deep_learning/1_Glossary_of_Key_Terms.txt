@@ -1,0 +1,36 @@
+Glossary of Key Terms
+
+Duplicated Code:
+Sections of code that are identical or very similar and
+appear in multiple places within a codebase.
+
+Refactoring:
+The process of restructuring existing computer code—changing
+the factoring—without changing its external behavior. Its aim
+is to improve nonfunctional attributes of the software.
+
+Test Quality:
+A measure of how well tests perform their function,
+encompassing factors like readability, maintainability,
+effectiveness in catching bugs, and speed of execution.
+
+Maintainability:
+The ease with which a software system or component can be modified,
+understood, and repaired. High maintainability reduces the effort
+and cost of future changes.
+
+Test Data:
+The input values and expected output values used in tests
+to verify the correctness of a software component or system.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format that is easy for humans
+to read and write and easy for machines to parse and generate.
+It is commonly used for transmitting data between a server and
+web application, as an alternative to XML.
+
+Separation of Concerns:
+A design principle for separating a computer program into
+distinct sections, such that each section addresses a
+separate concern. In this context, it refers to separating
+test data from test logic.

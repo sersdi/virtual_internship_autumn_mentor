@@ -1,0 +1,30 @@
+Essay Questions
+
+1. Discuss the negative consequences of code duplication
+   in a test suite, specifically in the context of the
+   TravelCalculatePremiumControllerTest example. How does
+   refactoring address these issues, and what long-term benefits
+   can be expected?
+
+2. Explain the principle of "separation of test data from test
+   code." How does this principle directly contribute to eliminating
+   duplication in test methods, and what are its broader implications
+   for designing maintainable and extensible test suites?
+
+3. Imagine you are a developer tasked with refactoring the
+   TravelCalculatePremiumControllerTest class. Describe a
+   hypothetical approach you might take to separate test data
+   from test code. What specific refactoring patterns or
+   techniques could be applied?
+
+4. The source material states, "Теперь добавлять новые тесты
+   стало просто и это не требует дупликации кода." Analyze the
+   significance of this statement. How does the ease of adding
+   new tests reflect a successful refactoring effort, and why is
+   preventing duplication crucial for this ease?
+
+5. Beyond just eliminating duplication, what other aspects of test
+   suite quality (e.g., readability, maintainability, reliability)
+   might be positively impacted by the kind of refactoring described
+   in the source material? Provide specific examples of how these
+   improvements could manifest.

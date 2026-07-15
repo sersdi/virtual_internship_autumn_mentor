@@ -1,0 +1,85 @@
+Quiz
+
+1. What is the primary objective of the developer's current
+   task regarding the agreementPrice?
+
+2. What specific Java programming concept are developers
+   instructed to research and apply for this task?
+
+3. Why is the agreementPrice described as a "fake value"
+   at this stage of the project?
+
+4. What general programming principle does the guide
+   emphasize regarding finding solutions for standard tasks?
+
+5. At what point in the development process are developers
+   instructed to run all their tests?
+
+6. What should a developer do if their tests are "broken"
+   (not green) before committing changes?
+
+7. What is the purpose of starting with "very simple"
+   tasks for new developers in this project?
+
+8. Besides technical implementation, what other aspects
+   of the development process does this guide aim to help
+   developers get accustomed to?
+
+9. Is it acceptable to commit code to the repository if
+   some tests are failing? Explain your answer.
+
+10. When will the "real business requirements" for the
+    agreementPrice calculation begin to be implemented?
+
+
+Quiz Answer Key
+
+1. The primary objective is to calculate the agreementPrice
+   by determining the number of days between agreementDateFrom
+   and agreementDateTo. This calculation is a foundational step,
+   even though the current value is a placeholder.
+
+2. Developers are specifically instructed to research and apply
+   a standard Java solution for calculating the number of days
+   between two dates. This promotes the use of existing, proven
+   library functions.
+
+3. The agreementPrice is described as a "fake value" because
+   its current calculation is a placeholder, and the true,
+   complex business logic for it will be implemented later
+   in the project. This allows for incremental development.
+
+4. The guide emphasizes the principle that good programmers
+   should discern when to write new code and when to utilize
+   readily available, standard solutions found online.
+   This promotes efficiency and reliability.
+
+5. Developers are explicitly instructed to run all their
+   tests before committing any changes to the repository.
+   This ensures the stability and correctness of the codebase
+   before integration.
+
+6. If tests are broken or not passing (not "green") before
+   committing, the developer must fix them first. Committing
+   broken code is unacceptable, as it can introduce regressions
+   into the main repository.
+
+7. The purpose of starting with "very simple" tasks is to help
+   new developers gradually ease into the project, become
+   familiar with the development process, and build confidence.
+   It's a gentle onboarding strategy.
+
+8. Besides technical implementation, the guide aims to help
+   developers get accustomed to the overall development process,
+   establish communication with mentors, and collaborate
+   effectively with colleagues. It focuses on team integration.
+
+9. No, it is not acceptable to commit code if some tests
+   are failing. The guide explicitly states that all tests must
+   pass ("be green") before committing, and broken tests must
+   be fixed prior to submission.
+
+10. The implementation of the "real business requirements"
+    for the agreementPrice calculation is stated to begin
+    around "step 30" of the project. This indicates a phased
+    approach to feature development.

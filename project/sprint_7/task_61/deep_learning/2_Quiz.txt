@@ -1,0 +1,92 @@
+Quiz
+
+1. What is the primary purpose of Logback in an application?
+
+2. What does the term "appender" refer to within the context of Logback?
+
+3. Based on the provided excerpt, what specific type of
+   appender is explicitly mentioned as sufficient for this task?
+
+4. Why might an application developer choose to use a
+   logging system like Logback instead of simple
+   System.out.println() statements?
+
+5. What is "configuration" in the context of a logging
+   system like Logback?
+
+6. Where would a developer typically find the necessary
+   configuration information for Logback?
+
+7. What is the "console appender" designed to do with log messages?
+
+8. Is it necessary to specify multiple types of appenders
+   for this particular task, according to the excerpt?
+   Explain your answer.
+
+9. What is the overall goal of the task described in the
+   excerpt related to Logback?
+
+10. How does a logging system like Logback contribute
+    to application debugging and monitoring?
+
+
+Quiz Answer Key
+
+1. Logback's primary purpose is to provide a robust,
+   flexible, and fast logging framework for Java applications.
+   It allows developers to control where log messages are
+   outputted (e.g., console, file, database) and with what
+   level of detail.
+
+2. An "appender" in Logback is a component responsible for
+   delivering log events to their final destination. It acts
+   as the output mechanism for log messages, directing them
+   to a console, a file, a database, or other targets.
+
+3. Based on the provided excerpt, the "console appender"
+   is explicitly mentioned as sufficient for this task.
+   This means that for the given requirement, logging messages
+   only to the console is adequate.
+
+4. Developers choose a logging system like Logback over
+   System.out.println() for better control over log output,
+   performance benefits, and the ability to easily configure
+   logging levels (e.g., INFO, DEBUG, ERROR) without modifying
+   application code. It also allows for structured logging and
+   easier integration with monitoring tools.
+
+5. "Configuration" in the context of Logback refers to the
+   setup instructions that tell the logging system how to behave.
+   This includes defining appenders, setting logging levels for
+   different packages or classes, and specifying log message formats.
+
+6. A developer would typically find the necessary configuration
+   information for Logback in an XML file (e.g., logback.xml
+   or logback-test.xml) or a Groovy file located in the
+   application's classpath. This file is where the appenders
+   and loggers are defined.
+
+7. The "console appender" is designed to output log messages
+   directly to the console where the application is running.
+   This is useful for real-time debugging and monitoring
+   during development or in simple deployment scenarios.
+
+8. No, it is not necessary to specify multiple types of
+   appenders for this particular task. The excerpt explicitly
+   states, "В конфигурации системы логирования достаточно
+   указать консольный appender," which translates to "In the
+   logging system configuration, it is sufficient to specify
+   a console appender."
+
+9. The overall goal of the task described in the excerpt is
+   to find and add the necessary Logback configuration to an
+   application. Specifically, this configuration needs to enable
+   logging, with the console appender being the required output
+   destination.
+
+10. A logging system like Logback contributes significantly
+    to application debugging and monitoring by providing a
+    structured way to record events and errors. Developers
+    can analyze log files to identify issues, track application
+    flow, and monitor performance, making it easier to diagnose
+    and resolve problems.

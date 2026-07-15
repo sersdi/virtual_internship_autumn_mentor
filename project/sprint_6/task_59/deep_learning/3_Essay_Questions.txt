@@ -1,0 +1,19 @@
+Essay Questions
+
+1. Discuss the principle of information hiding as it applies
+   to the mentor's proposal for the
+   TravelCalculatePremiumRequestValidator and
+   TravelRequestValidation classes.
+
+2. Explain how the proposed refactoring contributes
+   to better code maintainability and extensibility.
+
+3. Analyze the role of interfaces in achieving modularity
+   and simplified interaction with complex code, using the
+   TravelCalculatePremiumRequestValidator example.
+
+4. Compare and contrast the state of validation
+   "not done to the end as a separate module" with
+   the proposed solution, elaborating on the benefits of the latter.
+
+5. Based on the provided text, describe what constitutes "the art of programming" and how the mentor's suggestion exemplifies this philosophy.

@@ -1,0 +1,82 @@
+Quiz: Short Answer Questions
+
+1. What is the primary benefit of moving an algorithm
+   into a separate class, as described in the text?
+
+2. The text uses an analogy of a "fortress" to
+   explain class design. What does the "fortress"
+   represent in this analogy?
+
+3. In the "fortress" analogy, what do the "gates" symbolize?
+
+4. What do "houses and streets inside" represent
+   within the "fortress" analogy?
+
+5. Why is it beneficial for the internal implementation
+   of a class to be modifiable without affecting other
+   parts of the application?
+
+6. According to the text, when would changes inside the
+   "fortress" (private parts of a class) impact the
+   "external world" (other classes)?
+
+7. What is the specific task assigned in this step
+   regarding the date calculation algorithm?
+
+8. Which new class is to be created to encapsulate
+   the date calculation algorithm?
+
+9. Is it necessary to modify the TravelCalculatePremiumServiceImpl
+   class in this particular step? Explain why or why not.
+
+10. Besides creating the new class and moving the algorithm,
+    what other crucial task is mentioned for this step?
+
+
+Quiz Answer Key
+
+1. The primary benefit is the ability to change the
+   internal implementation of the algorithm independently
+   from the rest of the application's code. This modularity
+   minimizes the impact of internal changes on external components.
+
+2. The "fortress" represents the class itself. It acts as
+   a protective boundary around the algorithm, controlling
+   access and isolating internal logic.
+
+3. The "gates" symbolize the public part of the class.
+   These are the interfaces or methods that are accessible
+   from outside the class, allowing external code to interact
+   with it.
+
+4. "Houses and streets inside" represent the private
+   part of the class, including private properties, methods,
+   and the internal implementation details of the algorithm.
+   These components are not directly visible or accessible
+   from outside the class.
+
+5. It is beneficial because it allows developers to make
+   changes and improvements to one part of the application
+   (the algorithm's implementation) without causing disruptions
+   or requiring modifications in other unrelated parts of the code.
+   This simplifies maintenance and evolution.
+
+6. Changes inside the "fortress" would only impact the
+   "external world" if the walls are broken or the gates
+   (public parts of the class) are changed. As long as the
+   public interface remains consistent, internal changes are isolated.
+
+7. The specific task is to create a new class, DateTimeService,
+   to encapsulate the date calculation algorithm and to write
+   tests for this new class.
+
+8. The new class to be created is DateTimeService.
+
+9. No, it is explicitly stated that TravelCalculatePremiumServiceImpl
+   should not be modified in this step. The focus of this step is
+   solely on creating the new class, moving the algorithm, and
+   writing its tests.
+
+10. Besides creating the new class and moving the algorithm,
+    the text emphasizes the crucial task of creating tests
+    for the new DateTimeService class.

@@ -1,0 +1,42 @@
+Ваша задача:
+
+Изучить зависимости между пакетами:
+/core/domain
+/core/repositories
+/core/util
+/core/validations
+/core/underwriting
+/core/services
+
+Правильная зависимость между пакетами должна быть следующей:
+
+/core/util - не зависит от других /core пакетов
+/core/domain - не зависит от других /core пакетов
+/core/repositories - зависит от /core/domain
+/core/validations - зависит от:
+        /core/util
+        /core/domain
+        /core/repositories
+/core/underwriting - зависит от:
+        /core/util
+        /core/domain
+        /core/repositories
+/core/services - зависит от:
+        /core/validations
+        /core/underwriting
+
+
+1. Скопировать в /version_2 пакет /core/domain.
+2. Скопировать в /version_2 пакет /core/repositories + тесты.
+3. Скопировать в /version_2 пакет /core/util + тесты.
+4. Скопировать в /version_2 папку resources как в /main так и в /test.
+5. Скопировать в /version_2 класс InsuranceApplication.
+
+PS: быстро найти все изменения сделанные в текущем задании
+можно в IDEA (закладка слева) выбрав папку текущего задания (например task_10)
+и папку предыдущего задания (например task_9) и в сплывающем меню выбрав пункт
+Compare Directories (Ctrl + D).
+
+PS: не забудьте по окончанию выполнения шага создать и заполнить
+файл /documentation/Task_x_description.txt. Формат заполнения этого
+файла описан в task_1 в файле Learning_reflection.txt.

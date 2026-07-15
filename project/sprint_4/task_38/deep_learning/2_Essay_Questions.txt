@@ -1,0 +1,25 @@
+Essay Format Questions
+
+1. Discuss the role of HTTP as an "application layer protocol"
+   and explain how this classification influences its function
+   in web communication.
+
+2. Compare and contrast the primary use cases for GET and
+   POST HTTP methods, specifically addressing how they
+   handle data transmission and their implications for
+   idempotency and side effects on the server.
+
+3. Explain the purpose and structure of URL parameters
+   and the request body, providing scenarios where each
+   would be the appropriate method for transmitting data
+   in an HTTP request.
+
+4. Describe the interconnectedness of HTTP request types,
+   URL structure, and parameters in forming a complete web
+   interaction. Provide a hypothetical example demonstrating
+   how these components work together.
+
+5. Based on the provided source material, articulate why a
+   "foundational understanding" of the HTTP protocol is
+   emphasized, and suggest additional steps one might take
+   to deepen this understanding beyond the initial learning phase.

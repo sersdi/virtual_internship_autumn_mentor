@@ -1,0 +1,85 @@
+Quiz
+
+1. What is the primary problem identified with directly
+   comparing JSON responses as strings?
+
+2. Where are the JSON answer files for comparison
+   expected to be located?
+
+3. What specific formatting issues can lead to incorrect
+   comparison results if JSON is treated as a plain string?
+
+4. What is the core objective of the task described
+   in the source material?
+
+5. Why is simply taking the response body as a string
+   and comparing it to a JSON answer file problematic?
+
+6. What characteristic of JSON comparison is the
+   desired outcome, rather than being dependent on formatting?
+
+7. If two JSON files have the same data but differ
+   in whitespace or line breaks, how should they be
+   treated according to the instructions?
+
+8. What is the implied consequence of an "incorrect result"
+   in the context of the test comparison?
+
+9. What type of files are the "answers" for the tests?
+
+10. What is the suggested approach to overcome the
+    formatting problem in JSON comparison?
+
+
+Answer Key
+
+1. The primary problem identified is that comparing JSON
+   responses as strings is highly sensitive to formatting
+   differences like extra spaces or line breaks, which
+   can lead to incorrect comparison results even if the
+   underlying data is the same.
+
+2. The JSON answer files for comparison are expected
+   to be located in the src/test/resources directory.
+
+3. Specific formatting issues that can lead to incorrect
+   comparison results include one extra space or a line break,
+   as these seemingly minor differences will cause string
+   comparisons to fail.
+
+4. The core objective of the task is to replace the current
+   method of comparing test answers with a method that compares
+   JSON responses from files in a way that is independent of
+   formatting but dependent on the data within.
+
+5. Simply taking the response body as a string and comparing
+   it to a JSON answer file is problematic because string
+   comparisons are literal and will fail if there are any
+   discrepancies in whitespace or line breaks, even if the
+   actual data content is identical.
+
+6. The desired outcome for JSON comparison is that it
+   should be independent of format (like spaces or line breaks)
+   and solely dependent on the data contained within the JSON
+   structure.
+
+7. If two JSON files have the same data but differ in whitespace
+   or line breaks, they should be considered identical according
+   to the instructions, as the comparison should prioritize data
+   content over formatting.
+
+8. The implied consequence of an "incorrect result" is that
+   the test will incorrectly report a failure or success,
+   meaning the test suite will not accurately reflect whether
+   the application's output is correct based on the expected
+   JSON data.
+
+9. The "answers" for the tests are JSON files, as indicated
+   by the instruction to compare "answers from JSON files."
+
+10. The suggested approach to overcome the formatting problem
+    in JSON comparison is to find a way to compare JSON that
+    is independent of format and only dependent on the data inside.
+    This implies using a JSON parsing library or method that
+    normalizes or understands the JSON structure rather than
+    treating it as a raw string.

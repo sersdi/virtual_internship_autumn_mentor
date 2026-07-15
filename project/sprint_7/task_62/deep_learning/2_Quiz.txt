@@ -1,0 +1,71 @@
+Quiz: Short Answer Questions
+
+1. What is the primary purpose of the logging system
+   as described in the source material?
+
+2. What specific type of information is the logging system
+   intended to preserve?
+
+3. What is the main task outlined for the user in this problem?
+
+4. What is the target format for the TravelCalculatePremiumRequest
+   object?
+
+5. What external resource is suggested for finding a solution
+   to the object-to-JSON conversion?
+
+6. How should the chosen solution for object-to-JSON
+   conversion be validated?
+
+7. What specific object name is given as an example for transformation?
+
+8. Describe the expected output format on the console,
+   particularly noting the prefix and the content.
+
+9. What is the significance of the timestamp and
+   thread information in the example console output?
+
+10. Based on the example output, what are some
+    of the key-value pairs expected within the JSON
+    string for TravelCalculatePremiumRequest?
+
+
+Answer Key
+
+1. The primary purpose of the logging system is to
+   save any information that could illuminate the
+   system's actions in the future.
+
+2. The logging system is intended to preserve
+   information that can help identify and eliminate
+   errors within the system.
+
+3. The main task outlined is to transform a
+   TravelCalculatePremiumRequest object into a JSON
+   string and then log it into the logging system.
+
+4. The target format for the TravelCalculatePremiumRequest
+   object is a JSON string.
+
+5. The internet is suggested as an external resource
+   for finding a solution for object-to-JSON conversion.
+
+6. The chosen solution for object-to-JSON conversion should
+   be validated using a test.
+
+7. The specific object name given as an example for
+   transformation is TravelCalculatePremiumRequest.
+
+8. The expected output format on the console begins
+   with a timestamp, followed by thread information,
+   an INFO level, the logger name, and then the
+   "REQUEST:" prefix, finally followed by the JSON string.
+
+9. The timestamp and thread information in the example
+   console output indicate when and by which thread the
+   log entry was made, which is crucial for debugging and
+   tracking system activity.
+
+10. Some key-value pairs expected within the JSON string
+    are personFirstName, personLastName, agreementDateFrom,
+    and agreementDateTo.

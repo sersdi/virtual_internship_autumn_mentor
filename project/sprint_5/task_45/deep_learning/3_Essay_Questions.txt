@@ -1,0 +1,25 @@
+Essay Format Questions
+
+1. Discuss the advantages of performing end-to-end controller
+   tests, such as those described for
+   TravelCalculatePremiumController, compared to unit
+   tests for individual components.
+
+2. Explain the significance of sending a JSON payload within
+   an HTTP POST request in the context of API testing. How
+   does this mimic real-world interactions with a web application?
+
+3. Imagine you are the "Ментор." Outline a step-by-step process
+   for a student to approach and understand the
+   TravelCalculatePremiumControllerTest for the first time,
+   assuming they have basic programming knowledge.
+
+4. Beyond simply verifying the "ответ," what other aspects
+   of the controller's behavior or the application's state
+   might be important to test for in a comprehensive controller
+   test suite?
+
+5. How does the ability to "поднимать приложение целиком"
+   (raise the entire application) contribute to the reliability
+   and robustness of the TravelCalculatePremiumController and
+   the application as a whole?

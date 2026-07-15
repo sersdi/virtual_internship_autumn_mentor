@@ -1,0 +1,27 @@
+Essay Format Questions
+
+1. Discuss the critical role of automated testing in
+   the context of "industrial software development"
+   as presented in the source material. How does
+   it contribute to the overall quality and
+   maintainability of a project?
+
+2. Explain the significance of the "GREEN" status for
+   tests. What does it communicate about the code, and
+   what are the potential consequences of ignoring
+   this status before a commit?
+
+3. Beyond simply proving code functionality, what
+   are the broader implications of consistently
+   writing and passing automated tests for a software
+   project's development lifecycle?
+
+4. The source advises comparing directories to find changes.
+   How does this feature complement the process of writing
+   and validating tests, especially when working on iterative tasks?
+
+5. Imagine a scenario where a developer commits code without
+   running all tests, leading to a broken build on GitHub.
+   Describe the potential negative impacts on the project team
+   and the development process, and how this scenario highlights
+   the importance of the outlined best practices.

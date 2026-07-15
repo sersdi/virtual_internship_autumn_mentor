@@ -1,0 +1,64 @@
+Glossary of Key Terms
+
+Lombok:
+A Java library that automatically plugs into your
+build process to 'delombok' your source code and
+produce byte code for you. It aims to reduce boilerplate code.
+
+Boilerplate Code:
+Sections of code that are repeated in multiple places
+with little to no variation, often for structural
+reasons rather than unique logic (e.g., getters, setters, constructors).
+
+Annotation:
+A form of metadata that can be added to Java source code.
+Annotations do not directly affect program execution but
+provide information for compilers, tools, and runtime libraries.
+
+@Getter:
+A Lombok annotation used at the class or field level to
+automatically generate a public getter method for the
+annotated field(s).
+
+@Setter:
+A Lombok annotation used at the class or field level
+to automatically generate a public setter method for
+the annotated field(s).
+
+@NoArgsConstructor:
+A Lombok annotation used at the class level to automatically
+generate a public constructor with no arguments.
+
+@AllArgsConstructor:
+A Lombok annotation used at the class level to automatically
+generate a public constructor with arguments for all fields
+in the class.
+
+compileOnly:
+A dependency configuration in build tools (like Gradle)
+that means the dependency is only available during compilation
+and is not included in the final runtime artifact.
+
+annotationProcessor:
+A dependency configuration that specifies a JAR containing
+an annotation processor, which runs during the compilation
+phase to process annotations in the source code.
+
+IntelliJ IDEA:
+A popular integrated development environment (IDE) for
+Java development.
+
+Annotation Processing:
+A feature in Java that allows tools to scan source code
+for annotations and perform actions based on them during
+compilation. This is how Lombok injects its generated code.
+
+Request Class:
+In web development contexts, a class designed to encapsulate
+data sent from a client to a server (e.g., in a JSON body of
+an HTTP POST request).
+
+Response Class:
+In web development contexts, a class designed to encapsulate
+data sent from a server back to a client (e.g., in a JSON body
+of an HTTP GET response).

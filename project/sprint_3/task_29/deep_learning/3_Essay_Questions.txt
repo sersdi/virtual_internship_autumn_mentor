@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the importance of unit testing in the context
+   of developing financial or insurance calculation software.
+   How do unit tests contribute to the reliability and
+   accuracy of such systems, especially concerning validation logic?
+
+2. Elaborate on common types of errors one might expect
+   to find in a request validator class like
+   TravelCalculatePremiumRequestValidator. Provide specific
+   examples of validation rules that could be incorrectly implemented.
+
+3. Describe a systematic approach to debugging a software
+   component when you suspect an error exists but are unsure
+   of its exact location. How would you use unit tests as part
+   of this debugging process?
+
+4. Beyond the explicit task, what broader benefits does the
+   practice of writing unit tests offer to a software
+   development team? Consider aspects such as code maintainability,
+   refactoring, and collaboration.
+
+5. Imagine you have successfully identified and fixed an
+   error in TravelCalculatePremiumRequestValidator.
+   What steps would you take next to ensure the fix is
+   robust and to prevent similar errors from reoccurring in the future?

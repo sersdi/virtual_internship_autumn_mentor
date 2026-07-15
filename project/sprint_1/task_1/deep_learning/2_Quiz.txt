@@ -1,0 +1,78 @@
+Gradle Project Setup and Management
+
+Quiz
+
+1. What is the primary purpose of a build
+   tool in Java application development?
+
+2. Name the specific build tool that will be used in this project.
+
+3. How does Gradle handle "dependencies" in a project?
+
+4. What is the Gradle wrapper, and why is it convenient to use?
+
+5. Where would you typically find the gradle-wrapper.jar
+   and gradle-wrapper.properties files?
+
+6. What is the function of the gradle-wrapper.properties file?
+
+7. What is the minimum requirement for the Gradle wrapper
+   to function in a project?
+
+8. Which specific JDK version is recommended for this project?
+
+9. Where in IntelliJ IDEA settings would you configure the Gradle JVM?
+
+10. What action should you take in IntelliJ IDEA after
+    configuring JDK and Gradle settings to ensure
+    dependencies are downloaded?
+
+Answer Key
+
+1. The primary purpose of a build tool in Java
+   application development is to provide convenient
+   commands for project assembly, manage dependencies,
+   and handle various other aspects of project construction.
+   They are essential for developing large Java applications.
+
+2. The specific build tool that will be used in this project
+   is Gradle. It is described as a modern and flexible tool
+   designed for building and managing projects of any complexity.
+
+3. Gradle handles dependencies by providing mechanisms to declare
+   and download them. When the Gradle wrapper runs, it will download
+   all specified dependencies and link them to the project, making
+   them available for compilation and execution.
+
+4. The Gradle wrapper is a Java library located in the project's
+   gradle folder. Its convenience lies in the fact that it does
+   not need to be downloaded separately; cloning the repository
+   provides the Gradle wrapper ready for use.
+
+5. You would typically find the gradle-wrapper.jar and
+   gradle-wrapper.properties files within the gradle folder
+   of your project. This folder contains the necessary components
+   for the Gradle wrapper.
+
+6. The gradle-wrapper.properties file contains the configuration
+   for the Gradle wrapper. This includes settings like the
+   distribution URL and version, which dictate how the wrapper operates.
+
+7. For the Gradle wrapper to function, all that is needed is to
+   specify a suitable JDK in the project. Since it is a Java library,
+   it relies on a Java Development Kit to run.
+
+8. JDK version 21 is recommended for this project, such as Amazon
+   Corretto version 21.0.3 or any other JDK of version 21. This
+   ensures compatibility and proper execution of the project.
+
+9. You would configure the Gradle JVM in IntelliJ IDEA settings
+   by navigating to File -> Settings, then searching for "Gradle"
+   under Build, Execution, Deployment -> Build Tools -> Gradle.
+   Here, you ensure "Gradle JVM" is set to "Project SDK".
+
+10. After configuring JDK and Gradle settings, you should open
+    the Gradle panel (elephant icon) on the right, and then
+    click the "Reload All Gradle Projects" icon (two arrows)
+    to initiate the Gradle wrapper, which will download all
+    project dependencies.

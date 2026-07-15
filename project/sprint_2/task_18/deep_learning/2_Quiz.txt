@@ -1,0 +1,95 @@
+Quiz
+
+1. What is the primary critique of the initial calculatePremium()
+   code snippet presented in the source material?
+
+2. The source mentions that the initial solution has
+   "little connection to business." What does this statement
+   imply about the code's design or readability?
+
+3. Why would finding the initial code snippet be difficult
+   in a large application with thousands of classes?
+
+4. The source lists Date.getTime() returning milliseconds
+   and TimeUnit.DAYS.convert as examples of "technical details."
+   Why is understanding these details problematic for code
+   comprehension?
+
+5. What is the recommended approach to improve the readability
+   and maintainability of the calculatePremium() method?
+
+6. What characteristic should the name of a newly extracted
+   method possess, according to the source?
+
+7. How does the suggested improvement (extracting code into
+   a separate method) address the issue of requiring
+   "additional effort and time" to understand the original code?
+
+8. The source advises breaking code into "small pieces."
+   What is the benefit of this approach?
+
+9. What is the main goal when identifying "pieces"
+   of code to be extracted into separate methods?
+
+10. Briefly explain the concept of "business language"
+    versus "technical language" as it relates to code
+    readability in the context of the provided text.
+
+
+Answer Key
+
+1. The primary critique is that the code is written in a
+   purely technical language, has little connection to
+   business logic, and requires understanding specific
+   technical details to comprehend, making it difficult
+   to maintain and understand.
+
+2. This statement implies that the code's implementation
+   focuses on technical mechanics rather than clearly
+   expressing the business intent or domain concept it represents,
+   making it less intuitive for non-technical stakeholders or
+   even other developers to grasp its purpose.
+
+3. Finding such code would be difficult because its technical
+   nature obscures its business purpose, meaning developers
+   would need to spend more time deciphering technical details
+   rather than quickly identifying its role within the larger
+   application.
+
+4. Understanding these technical details is problematic
+   because it adds an unnecessary cognitive load. Developers
+   should ideally be able to understand the code's purpose
+   from its structure and naming, without needing to recall
+   specific API behaviors for simple operations.
+
+5. The recommended approach is to extract the code responsible
+   for calculating the number of days between dates into a
+   separate method, giving that method a clear and descriptive
+   name that explains its function.
+
+6. The name of a newly extracted method should be so clear that,
+   upon reading it, it is immediately obvious what the method does,
+   without needing to inspect its internal implementation.
+
+7. By extracting the code into a separate, well-named method,
+   the original calculatePremium() method becomes more abstract
+   and business-focused. Developers no longer need to immediately
+   understand the technical intricacies of date conversion when
+   reading the higher-level method.
+
+8. The benefit of breaking code into small pieces is to create
+   methods that perform small, complete actions. This reduces
+   complexity, improves readability, and makes the code easier
+   to understand, test, and reuse.
+
+9. The main goal when identifying "pieces" of code to be
+   extracted is to find segments that perform a "small,
+   but complete action," allowing them to be encapsulated
+   within their own methods.
+
+10. "Business language" in code refers to using names and
+    structures that directly reflect the domain concepts
+    and operations, making the code's purpose clear from
+    a business perspective. "Technical language," conversely,
+    focuses on the specific implementation details and technical
+    mechanisms, often obscuring the underlying business logic.

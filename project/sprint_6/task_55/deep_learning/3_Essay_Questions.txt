@@ -1,0 +1,29 @@
+Essay Questions
+
+1. Discuss the "It'll Do!" approach in software development.
+   What are its common manifestations, its underlying cause
+   according to the mentor, and how do personal quality
+   standards serve as a countermeasure?
+
+2. Explain the concept of "personal quality standards"
+   as presented in the text. How do they differ from external
+   project requirements, and what is their significance for
+   individual developer growth and the overall quality of
+   software projects?
+
+3. Analyze the role of continuous improvement in the context
+   of personal quality standards. How does the mentor suggest
+   developers maintain and enhance their standards, and what
+   are the long-term benefits of this ongoing commitment?
+
+4. Beyond the examples provided ("writing unit tests" and
+   the "Boy Scout rule"), propose and elaborate on two
+   additional personal quality standards a developer might
+   adopt to improve their work. Justify why these standards
+   would be beneficial.
+
+5. Based on the text, argue why a consistent commitment to quality,
+   driven by personal standards, is more impactful for career
+   advancement to a "senior developer" level than simply
+   accumulating years of experience or a broad range of
+   technical skills.

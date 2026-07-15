@@ -1,0 +1,87 @@
+Lombok: Project Setup and Annotation Application - Study Guide
+
+This study guide is designed to help you review your
+understanding of the provided material on Lombok.
+It covers the core purpose of Lombok, its project setup,
+and key annotations.
+
+Quiz: Lombok Fundamentals
+
+1. What is the primary purpose of the Lombok library as
+   described in the source material?
+
+2. List the two main build tool dependencies that need
+   to be added to a project to include Lombok.
+
+3. Besides adding dependencies, what crucial setting needs
+   to be enabled in IntelliJ IDEA for Lombok to function correctly?
+
+4. Which Lombok annotation is used to automatically generate
+   getter methods for all fields in a class?
+
+5. Which Lombok annotation is used to automatically
+   generate setter methods for all fields in a class?
+
+6. Explain the purpose of the @NoArgsConstructor annotation.
+
+7. Explain the purpose of the @AllArgsConstructor annotation.
+
+8. Why is it beneficial to use Lombok for generating
+   boilerplate code like getters and setters?
+
+9. According to the provided instructions, for which
+   types of classes should Lombok be applied for
+   generating getters, setters, and constructors?
+
+10. What is the significance of the "annotationProcessor"
+    dependency type when adding Lombok to a project?
+
+
+Quiz Answer Key
+
+1. Lombok is used to reduce boilerplate code in Java projects,
+   primarily by automatically generating common methods like
+   getters, setters, and constructors during the compilation phase.
+   This helps to keep code cleaner and more concise.
+
+2. The two main build tool dependencies are
+    compileOnly('org.projectlombok:lombok:1.18.32')
+    and annotationProcessor('org.projectlombok:lombok:1.18.32').
+    There are also testCompileOnly and testAnnotationProcessor
+    for testing contexts.
+
+3. In IntelliJ IDEA, the "Enable annotation processing" setting,
+   found under File -> Settings, must be checked. This allows
+   the IDE to process Lombok annotations and generate the necessary
+   bytecode.
+
+4. The @Getter annotation is used to automatically generate getter
+   methods for all non-static fields within a class, eliminating
+   the need to write them manually.
+
+5. The @Setter annotation is used to automatically generate
+   setter methods for all non-static fields within a class,
+   thereby reducing the amount of repetitive code.
+
+6. The @NoArgsConstructor annotation automatically generates
+   a public constructor with no arguments for the class. This
+   is often required by frameworks for object instantiation.
+
+7. The @AllArgsConstructor annotation automatically generates
+   a public constructor with arguments for all fields in the class.
+   This constructor initializes all fields at once.
+
+8. Using Lombok for boilerplate code reduces verbosity, makes
+   the code easier to read and maintain, and minimizes the
+   risk of human error when writing repetitive methods. It allows
+   developers to focus on core business logic.
+
+9. According to the instructions, Lombok should be applied for
+   generating get/set methods and constructors specifically for
+   "classes of request and response." This implies DTOs or
+   similar data-carrying objects.
+
+10. The annotationProcessor dependency type is crucial because
+    Lombok operates as an annotation processor. It hooks into
+    the compilation process to generate bytecode based on the
+    annotations before the final .class files are produced.

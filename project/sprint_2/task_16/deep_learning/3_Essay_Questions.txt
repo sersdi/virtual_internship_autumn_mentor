@@ -1,0 +1,34 @@
+Essay Format Questions
+
+1. Discuss the limitations of IEEE 754 floating-point
+   representation (float and double in Java) when dealing
+   with decimal numbers, providing concrete examples of
+   how these limitations can manifest in financial applications.
+   Contrast this with how BigDecimal overcomes these issues and
+   why this difference is critical for monetary calculations.
+
+2. Imagine you are designing a new e-commerce platform.
+   Explain in detail why BigDecimal would be your data
+   type of choice for all price, tax, discount, and total
+   amount fields. What are the potential legal, financial,
+   and reputational risks of using double for these fields instead?
+
+3. Describe the internal representation of a BigDecimal object.
+   How does this representation enable precise decimal arithmetic,
+   and what are the key methods or operations you would use when
+   performing calculations (e.g., addition, subtraction,
+   multiplication, division, rounding) on BigDecimal values?
+
+4. The prompt implies that real-world Java development
+   involves significant self-study and problem-solving.
+   Elaborate on the importance of independent research
+   ("googling") and continuous learning for a Java developer,
+   using the BigDecimal example as a case study for when such
+   skills are crucial.
+
+5. Consider a scenario where monetary values need to be
+   stored in a database. How would the choice of BigDecimal
+   in Java influence the corresponding database column type
+   (e.g., DECIMAL, NUMERIC)? Discuss the importance of
+   maintaining precision across the entire application stack,
+   from front-end to back-end and database.

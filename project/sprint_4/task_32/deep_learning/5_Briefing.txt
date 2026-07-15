@@ -1,0 +1,65 @@
+Detailed Briefing Doc: Travel End Date Validation
+
+This document outlines a critical business requirement
+for travel requests, focusing on the necessity of a valid end date.
+
+Source: Excerpts from "Travel End Date Validation:
+A Business Requirement"
+
+Main Theme: The core theme is the mandatory inclusion
+and validation of an end date (agreementDateTo) for all
+travel requests.
+
+Most Important Ideas/Facts:
+
+Mandatory agreementDateTo:
+The most crucial point is that a travel request must
+contain an agreementDateTo. Any request lacking this
+date is considered invalid.
+
+Quote:
+"Бизнес требование гласит, запрос без даты окончания
+поездки (agreementDateTo) должен считаться не валидным."
+(The business requirement states that a request without a
+travel end date (agreementDateTo) should be considered invalid.)
+
+Implementation Task:
+The primary task for the development team is to implement
+this business rule by adding validation for the agreementDateTo
+field within the request.
+
+Quote:
+"Ваша задача: реализуйте это бизнес правило. Добавить
+валидацию на agreementDateTo из запроса." (Your task:
+implement this business rule. Add validation for agreementDateTo
+from the request.)
+
+Testing Requirement:
+A significant and explicitly stated requirement is the
+inclusion of tests for this validation. Solutions without
+accompanying tests will not be accepted. This emphasizes
+the importance of robust and verifiable implementation.
+
+Quote:
+"PS: Не забудьте про тесты! Решение без тестов не принимается!"
+(PS: Don't forget about tests! A solution without tests is not
+accepted!)
+
+Summary of Actionable Requirements:
+
+Develop:
+Implement a validation mechanism to check for the presence
+and validity of agreementDateTo in travel requests.
+
+Reject:
+Any request where agreementDateTo is missing should be
+rejected as invalid.
+
+Test:
+Comprehensive unit and/or integration tests must be
+written to cover this validation logic. The absence
+of these tests will result in the rejection of the solution.
+
+This business requirement aims to ensure data
+integrity and proper structuring of travel requests
+by enforcing the presence of a clearly defined travel end date.

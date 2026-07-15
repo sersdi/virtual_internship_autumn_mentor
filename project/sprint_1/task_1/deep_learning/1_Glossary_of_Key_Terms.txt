@@ -1,0 +1,66 @@
+Glossary of Key Terms
+
+JDK (Java Development Kit):
+A software development environment used for developing
+Java applications. It includes the Java Runtime Environment (JRE),
+an interpreter/loader (Java), a compiler (javac), an archiver (jar),
+and other tools.
+
+Project SDK (Software Development Kit):
+The specific JDK version configured and used for a particular
+project within an Integrated Development Environment (IDE)
+like IntelliJ IDEA.
+
+Build Tools:
+Software applications designed to automate the process
+of building computer programs. For Java projects, they
+manage compilation, dependency resolution, testing, and packaging.
+
+Maven Project Structure:
+A standardised project layout and build lifecycle used by Maven,
+another popular build automation tool, often contrasted with
+Gradle's more flexible structure.
+
+Gradle:
+A modern, flexible build automation tool used for building
+and managing software projects of any complexity, especially
+popular for Java development.
+
+Dependencies:
+External libraries or modules that a project relies on
+to function correctly. Gradle manages the downloading
+and linking of these dependencies to the project.
+
+Gradle Wrapper:
+A script and a small Java library (gradle-wrapper.jar)
+that allows a project to be built with a specific Gradle
+version without requiring Gradle to be installed globally
+on the system.
+
+gradle-wrapper.jar:
+The actual Java library component of the Gradle wrapper,
+located in the project's gradle folder.
+
+gradle-wrapper.properties:
+A configuration file for the Gradle wrapper, also located
+in the project's gradle folder, which specifies details
+like the Gradle distribution URL and version.
+
+Gradle JVM:
+The Java Virtual Machine (JVM) that Gradle itself uses
+to execute its tasks. This is typically configured to use
+the Project SDK.
+
+Reload All Gradle Projects:
+An action within IntelliJ IDEA that triggers Gradle to
+re-evaluate the project configuration, download dependencies,
+and sync the project structure.
+
+IntelliJ IDEA:
+A popular Integrated Development Environment (IDE) developed
+by JetBrains, widely used for Java development.
+
+Continuous Integration (CI):
+A development practice where developers frequently integrate
+their code into a shared repository, and automated builds
+and tests are run to detect integration errors early.

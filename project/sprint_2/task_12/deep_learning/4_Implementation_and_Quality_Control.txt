@@ -1,0 +1,55 @@
+How are the values for the response fields determined?
+
+The values for the response fields are to be taken directly
+from the incoming request. This indicates that the system
+primarily processes and reflects information provided by the
+user or client in their query.
+
+Where should changes be made to implement the response formation logic?
+
+The required changes for forming the response should be made
+within the TravelCalculatePremiumServiceImpl class. This suggests
+that this class is responsible for the business logic related to
+calculating and structuring the travel premium response.
+
+What is a crucial step to perform before committing
+changes to the local repository?
+
+Before committing any changes to the local repository,
+it is essential to always run a build of your module.
+
+Why is it important to run a module build before committing?
+
+Running a module build before committing allows developers
+to catch and fix errors during the development phase itself.
+This prevents errors from propagating to the global repository
+and causing a project build failure on GitHub.
+
+What are the consequences of failing a project build on GitHub?
+
+If a developer fails a project build on GitHub, there will
+be accountability for that failure ("за вами все равно придут!").
+This emphasizes the importance of preventing such incidents.
+
+How are commits in the global repository tracked?
+
+Any commits made to the global repository are added under
+the individual user's account, and the entire history of
+these commits is accessible on GitHub. This highlights the
+traceability and transparency of contributions.
+
+What is the overarching goal of these instructions?
+
+The overarching goal of these instructions is to guide developers
+in correctly implementing the business logic for calculating
+travel premiums, emphasizing quality control through pre-commit
+builds and individual accountability for code contributions.
+
+What is the primary focus of the "Developing Robust
+Travel Premium Calculations" document?
+
+The primary focus of the document is on the technical
+implementation of forming a response for travel premium
+calculations, specifically detailing where to implement
+business logic and stressing the importance of pre-commit
+testing and code quality.

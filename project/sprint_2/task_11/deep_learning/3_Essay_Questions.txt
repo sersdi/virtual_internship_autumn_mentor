@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the importance of constructors in
+   object-oriented programming, specifically
+   contrasting the use cases for a default constructor
+   versus a parameterized constructor.
+
+2. Explain the concept of encapsulation and
+   how get/set methods contribute to achieving
+   good encapsulation practices in a Java class.
+   Provide a hypothetical example related to the
+   TravelCalculatePremiumResponse class.
+
+3. Describe the benefits of regularly using Git
+   pull when working on a collaborative software
+   development project. What potential issues could
+   arise if this practice is neglected?
+
+4. Imagine you are reviewing a peer's code for the
+   TravelCalculatePremiumResponse class. What specific
+   elements would you look for to ensure they have correctly
+   implemented the requirements outlined in the source material?
+
+5. Beyond the explicit instructions, what unstated best practices
+   related to Java class design or version control might be
+   implicitly encouraged by the provided guidance?

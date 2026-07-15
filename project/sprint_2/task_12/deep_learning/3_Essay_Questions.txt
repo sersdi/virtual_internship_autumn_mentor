@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the importance of early error detection in
+   the software development lifecycle as emphasized
+   in the provided text. How does the recommended
+   practice contribute to a more robust development process?
+
+2. Analyze the relationship between "business logic"
+   and the TravelCalculatePremiumServiceImpl class as
+   described in the excerpt. Why is it significant that
+   changes are to be made within this specific class?
+
+3. The text strongly advises running a module build before
+   committing. Elaborate on the potential negative consequences
+   for a project if this advice is ignored, considering both
+   technical and collaborative aspects.
+
+4. Explain the concept of developer accountability as presented
+   in the document, particularly concerning commits to the global
+   repository and failed builds. How might this accountability
+   influence a developer's workflow?
+
+5. Beyond just calculating premiums, the text mentions
+   "forming the response" as part of the business logic.
+   Discuss why the structure and content of the response
+   are as crucial as the calculation itself in an application's design.

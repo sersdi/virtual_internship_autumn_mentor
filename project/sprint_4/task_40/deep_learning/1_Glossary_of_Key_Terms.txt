@@ -1,0 +1,51 @@
+Glossary of Key Terms
+
+API (Application Programming Interface):
+A set of rules and protocols for building and interacting
+with software applications. In this context, the insurance
+policy calculation service would expose an API.
+
+HTTP (Hypertext Transfer Protocol):
+The underlying protocol used by the World Wide Web, which
+defines how messages are formatted and transmitted, and what
+actions Web servers and browsers should take in response to
+various commands.
+
+HTTP POST Request:
+An HTTP method used to send data to a server to create or
+update a resource. In this exercise, it's used to send policy
+calculation parameters.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format. It is easy for humans
+to read and write and easy for machines to parse and generate.
+It's used here for the request body.
+
+Postman:
+A popular API client that enables users to create, test,
+and document APIs. It simplifies the process of sending HTTP
+requests and inspecting responses.
+
+Headers (HTTP):
+Components of an HTTP request or response that provide
+metadata about the message, such as content type, authorization,
+or caching instructions.
+
+Body (HTTP):
+The main content of an HTTP request or response, containing
+the actual data being sent or received. In this case, it holds
+the insurance policy calculation parameters in JSON format.
+
+Insurance Policy Calculation Service:
+The application or backend system designed to receive specific
+parameters (like person details and dates) and compute the cost
+of an insurance policy.
+
+AgreementDateFrom/To:
+Specific fields within the JSON request body that represent
+the start and end dates for which the insurance policy is
+being requested or calculated.
+
+Mentor:
+An experienced person who advises and guides a less
+experienced person, as suggested for assistance with questions.

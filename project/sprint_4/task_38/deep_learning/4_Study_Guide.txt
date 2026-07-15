@@ -1,0 +1,79 @@
+HTTP Protocol: Foundational Understanding Study Guide
+
+Detailed Study Guide
+
+This study guide is designed to help you review your
+understanding of the HTTP protocol based on the provided
+source material.
+
+I. Core Concepts of HTTP
+
+What is HTTP? Understand its fundamental role in
+daily internet usage (e.g., opening websites).
+
+Identify HTTP as an application layer protocol.
+
+Explain its function for server applications
+(receiving requests, forming responses).
+
+Why is it important to understand HTTP?
+Recognize its foundational nature for web communication.
+
+Appreciate its relevance for developers and anyone
+interacting with web services.
+
+
+II. Key Components and Mechanisms of HTTP
+
+Request Types (HTTP Methods):
+GET: When is it used? What is its purpose? (e.g., retrieving data)
+
+POST: When is it used? What is its purpose? (e.g., submitting data)
+
+PUT: When is it used? What is its purpose?
+(e.g., updating/replacing data)
+
+DELETE: When is it used? What is its purpose? (e.g., removing data)
+
+Self-reflection: Can you think of real-world examples for each?
+
+URL (Uniform Resource Locator) Structure:What is a URL?
+
+Identify the key components of a URL
+(e.g., scheme, hostname, path, query parameters).
+
+How does the URL specify the resource being requested?
+
+URL Parameters (Query Parameters): What are URL parameters?
+
+How are they included in the URL string? (e.g., ?, &)
+
+What kind of information can be passed via URL parameters?
+(e.g., search queries, filtering options)
+
+When are they typically used versus the request body?
+
+Request Body (Body of the Request):What is the request body?
+
+Which HTTP methods typically use a request body? (e.g., POST, PUT)
+
+What kind of information is transmitted in the request body?
+(e.g., form data, JSON, XML)
+
+Why would you use a request body instead of URL parameters
+for certain types of data?
+
+
+III. Learning Strategy and Resources
+
+Active Learning:
+The source emphasizes finding and utilizing additional
+resources. How would you go about this?
+
+The source encourages sharing useful resources.
+Why is this important for learning?
+
+Goal:
+Formulate an initial understanding of how HTTP is structured
+and operates. This implies not just memorization, but conceptual
+comprehension.

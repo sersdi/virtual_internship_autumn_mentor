@@ -1,0 +1,30 @@
+Ваша задача: добавить в запрос (TravelCalculatePremiumRequest)
+секцию selected_risks и внести соответствующие изменения в Java код,
+чтобы секция selected_risks парсилась в Java класс запроса:
+
+{
+  "personFirstName" : "Vasja",
+  "personLastName" : "Pupkin",
+  "agreementDateFrom" : "2040-05-25",
+  "agreementDateTo" : "2040-05-29",
+  "selected_risks":["TRAVEL_MEDICAL", "TRAVEL_CANCELLATION", "TRAVEL_LOSS_BAGGAGE"]
+}
+
+selected_risks - это массив строк, каждая строка содержит IC код
+из классификатора RISK_TYPE.
+
+PS: никаких валидаций и проверок на данном этапе делать не надо.
+После внесения изменений запустите приложение, через Postman
+отправьте запрос с секцией selected_risks и убедитесь в дебаге,
+что в Java коде данные будут доступны для дальнейшей обработки.
+Так же можете проверить залогируется секция selected_risks и ее
+значения в лог файл или нет.
+
+PS: быстро найти все изменения сделанные в текущем задании
+можно в IDEA (закладка слева) выбрав папку текущего задания (например task_10)
+и папку предыдущего задания (например task_9) и в сплывающем меню выбрав пункт
+Compare Directories (Ctrl + D).
+
+PS: не забудьте по окончанию выполнения шага создать и заполнить
+файл /documentation/Task_x_description.txt. Формат заполнения этого
+файла описан в task_1 в файле Learning_reflection.txt.

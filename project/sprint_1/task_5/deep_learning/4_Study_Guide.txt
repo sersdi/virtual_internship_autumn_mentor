@@ -1,0 +1,42 @@
+Gradle Build Artifacts: A Study Guide
+
+I. Overview of Gradle Build Process
+
+This study guide focuses on understanding the artifacts
+generated during the Gradle build process, specifically
+upon executing the Gradle build command. These artifacts
+are crucial for the deployment, testing, and debugging
+of an application. The primary location for these generated
+files is the build folder within your module.
+
+II. The build Folder and its Contents
+
+The build folder is automatically created upon a successful
+Gradle build. In the Idea development environment, this folder
+is often highlighted in orange, signifying its importance.
+Within this folder, various subfolders are organized, each
+containing specific types of build artifacts.
+
+Here's a breakdown of the key subfolders and their contents:
+
+classes: This folder houses the bytecode of compiled classes.
+
+classes/java/main: Contains the bytecode for production classes. These are the core classes of your application.
+
+classes/java/test: Contains the bytecode for test classes. These are classes used for testing your application's functionality.
+
+generated: This folder stores code that is generated during the compilation process. More details about its contents will be covered later in your learning journey.
+
+libs: This folder contains the compiled JAR (Java Archive) file, which is assembled from your production code. This JAR file is often the deployable unit of your application.
+
+reports: This folder holds generated test reports, providing an overview of your test execution results.
+
+resources: This folder contains resource files utilized by your application. The specific types of resource files will be explored in more detail later.
+
+test-results: This folder stores the raw results of test executions, often in a machine-readable format.
+
+III. Key Tasks and Best Practices
+
+The primary task related to this material is to explore
+the contents of the build folder to gain a practical understanding
+of the generated artifacts.

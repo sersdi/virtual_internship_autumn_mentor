@@ -1,0 +1,47 @@
+Understanding .gitignore in Java Projects
+
+Study Guide
+
+This guide will help you review your understanding
+of the .gitignore file, specifically within the context
+of Java projects.
+
+Key Concepts to Understand:
+
+Purpose of .gitignore:
+What is its primary function and why is it essential
+for version control?
+
+Location of .gitignore:
+Where should this file be placed within a project?
+
+Benefits of using .gitignore:
+How does it improve collaboration and repository management?
+
+Categories of files to ignore:
+What types of files and directories are commonly excluded
+from Git repositories in Java projects?
+
+Compiled files (Java bytecode)
+
+Package directories (Maven, Gradle, IDE-specific)
+
+IDE-specific configuration files
+Operating System metadata files
+Log and temporary files
+Local configuration and environment files
+Dependency directories
+Automatically generated archive files
+
+Self-Assessment Questions:
+Explain in your own words why *.class files should be ignored.
+
+What is the difference between target/, build/, and out/ in the context of .gitignore?
+
+Why is it important to ignore IDE-specific configuration files like .idea/ or .project?
+
+Provide examples of files that might contain sensitive data and why they should be ignored.
+
+How does ignoring node_modules/ or lib/ contribute to a cleaner repository?
+
+Describe the impact of not using a .gitignore file on a collaborative project.

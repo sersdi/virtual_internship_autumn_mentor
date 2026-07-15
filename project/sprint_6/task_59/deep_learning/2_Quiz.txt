@@ -1,0 +1,71 @@
+Quiz
+
+1. What is the main problem identified by the mentor
+   regarding validation?
+
+2. Which specific class is mentioned for relocation
+   in the mentor's proposal?
+
+3. Where is the TravelCalculatePremiumRequestValidator
+   class proposed to be moved?
+
+4. What kind of access modifier should be applied to
+   the TravelCalculatePremiumRequestValidator class
+   itself after relocation?
+
+5. What kind of access modifier should TravelRequestValidation have?
+
+6. What will be the only visible component from the
+   /core/validations package to external code?
+
+7. According to the text, what is a key aspect of the
+   art of programming concerning complex solutions?
+
+8. How does creating simple and clear interfaces for
+   complex modules benefit other parts of the code?
+
+9. What is the advantage of localizing a complex solution
+   within one package or module?
+
+10. What is the overall goal of the proposed refactoring?
+
+
+Quiz Answer Key
+
+1. The main problem identified by the mentor is that
+   validation has not been fully implemented as a separate module,
+   implying it's either incomplete or poorly organized.
+
+2. The specific class mentioned for relocation in the mentor's
+   proposal is TravelCalculatePremiumRequestValidator.
+
+3. The TravelCalculatePremiumRequestValidator class is proposed
+   to be moved to the /core/validations package.
+
+4. After relocation, the TravelCalculatePremiumRequestValidator
+   class itself should have package level access.
+
+5. TravelRequestValidation should also have package level access.
+
+6. The only visible component from the /core/validations package
+   to external code will be a public interface for
+   TravelCalculatePremiumRequestValidator.
+
+7. According to the text, a key aspect of the art of programming
+   is hiding complex, intricate solutions within packages
+   (modules) and creating simple, understandable interfaces for them.
+
+8. Creating simple and clear interfaces for complex modules
+   allows the rest of the code to utilize the complex module
+   easily, without needing to understand its intricate internal
+   workings.
+
+9. Localizing a complex solution within one package or module
+   allows all parts of the solution to be gathered in one place,
+   preventing them from spreading throughout the code where they
+   would be difficult to find.
+
+10. The overall goal of the proposed refactoring is to properly
+    modularize the validation logic, making it more organized,
+    maintainable, and providing a clean, single point of interaction
+    for external code.

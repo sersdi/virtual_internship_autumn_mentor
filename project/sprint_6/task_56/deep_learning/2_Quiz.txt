@@ -1,0 +1,83 @@
+Quiz: Refactoring Validation
+
+1. What is the primary class discussed in the
+   provided text that requires refactoring?
+
+2. What is the main structural issue identified
+   with the current implementation of validation
+   within the TravelCalculatePremiumRequestValidator class?
+
+3. Why does the text state that the current technical
+   solution for request validation is poorly adapted
+   for future business functionality expansion?
+
+4. Which software design principle is violated by
+   large classes with extensive functionality, as
+   described in the text?
+
+5. Besides violating a design principle, what other
+   significant problem is associated with large classes,
+   according to the text?
+
+6. What is the proposed solution to address the issues
+   identified with the TravelCalculatePremiumRequestValidator class?
+
+7. How should the functionality of the
+   TravelCalculatePremiumRequestValidator class be divided,
+   according to the suggested solution?
+
+8. After refactoring, what code should remain within the
+   TravelCalculatePremiumRequestValidator class?
+
+9. What is the specific task assigned to the reader
+   regarding the validation methods?
+
+10. What additional task is required for the newly
+    created validation classes?
+
+
+Quiz Answer Key
+
+1. The primary class discussed that requires refactoring
+   is TravelCalculatePremiumRequestValidator. This class
+   is responsible for validating requests, but its current
+   implementation has several issues.
+
+2. The main structural issue is that each field's validation
+   is implemented as a separate method within the
+   TravelCalculatePremiumRequestValidator class itself,
+   leading to a large and growing class.
+
+3. It is poorly adapted for future expansion because any
+   new validation logic would simply add another method
+   to the already large TravelCalculatePremiumRequestValidator
+   class, increasing its size indefinitely.
+
+4. The Single Responsibility Principle (SRP) is violated by
+   large classes with extensive functionality, as they take
+   on too many responsibilities instead of having one specific purpose.
+
+5. Besides violating SRP, another significant problem associated
+   with large classes is the increased difficulty in testing
+   them effectively due to their large and complex functionality.
+
+6. The proposed solution is to separate the functionality
+   of the TravelCalculatePremiumRequestValidator class,
+   specifically by extracting individual validations into
+   their own separate classes.
+
+7. The functionality of the class should be divided by
+   taking each individual validation logic and moving it
+   out into its own distinct class.
+
+8. After refactoring, the TravelCalculatePremiumRequestValidator
+   class should only contain the code responsible for invoking
+   or calling each of the new, separate validation classes.
+
+9. The specific task assigned is to extract all validation
+   logic from the TravelCalculatePremiumRequestValidator class
+   into separate, individual classes.
+
+10. For the newly created separate validation classes,
+    the additional task is to create individual test classes
+    for each of them.

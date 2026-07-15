@@ -1,0 +1,76 @@
+Quiz
+
+1. What specific fields in the insurance policy request
+   are identified as problematic by the tester?
+
+2. What is the core issue identified by the tester
+   regarding these date fields?
+
+3. Why does the tester consider allowing past
+   dates for insurance policy calculation to be incorrect?
+
+4. What humorous analogy does the tester use to
+   highlight the absurdity of the current system?
+
+5. Who did the tester consult to confirm the desired
+   date validation logic?
+
+6. What was the business's definitive stance regarding
+   the use of past dates for policy calculation?
+
+7. What type of dates are explicitly stated as the
+   only permissible dates for policy cost calculation?
+
+8. What is the primary task assigned to the developer
+   based on the tester's findings and business confirmation?
+
+9. Beyond implementing the validation, what additional
+   development task is mentioned in the "PS" note?
+
+10. In a general sense, why is "testing" considered
+    an important stage in software development,
+    according to the source?
+
+
+Quiz Answer Key
+
+1. The specific fields identified as problematic by
+   the tester are "agreementDateFrom" and "agreementDateTo"
+   within the request parameters.
+
+2. The core issue is that these date fields can currently
+   be set to dates in the past, implying that an insurance
+   policy could be acquired for past events.
+
+3. The tester believes it's incorrect because it makes no
+   logical sense to calculate the cost of an insurance
+   policy for a past trip or event. Insurance is typically
+   for future risks.
+
+4. The tester uses the humorous analogy of "acquiring
+   insurance for a trip to the past" to emphasize the illogical
+   nature of the current system.
+
+5. The tester consulted "the business" (бизнес) to clarify
+   and confirm the expected behavior and validation rules
+   for the dates.
+
+6. The business confirmed that the calculation of insurance
+   policy cost should not be based on past dates. Only future
+   dates are permissible.
+
+7. Only dates from the future (будущие даты) are explicitly
+   stated as the only permissible dates for policy cost calculation.
+
+8. The primary task assigned is to implement the corresponding
+   validation logic to prevent the use of past dates in the
+   specified fields.
+
+9. The "PS" note indicates that the developer must also
+   remember to correct all existing tests (исправить все тесты)
+   when implementing the new validation.
+
+10. Testing is considered an important stage because it
+    helps identify errors and inconsistencies in the software,
+    ensuring that the application functions as intended and
+    meets business requirements.

@@ -1,0 +1,27 @@
+Essay Format Questions
+
+1. Discuss the different levels of software testing
+   presented in the text, elaborating on their distinct
+   purposes, typical implementers, and the types of issues
+   they aim to uncover.
+
+2. Explain the concept of a "clean unit test" as described
+   in the source material. Why is it important to strive
+   for clean unit tests, and what are the drawbacks of
+   tests that deviate from this principle?
+
+3. Describe the role of mock objects in achieving clean
+   unit tests. How do libraries like Mockito facilitate
+   this, and what practical benefits do they offer to developers?
+
+4. The source material emphasizes the importance of
+   self-learning for software developers. Based on the text,
+   what tools and approaches are suggested for independent
+   study, and why is this skill considered an "integral part
+   of the job"?
+
+5. Analyze the provided TravelCalculatePremiumServiceImplTest
+   code snippet. Explain in detail why it is not a pure unit
+   test, how it demonstrates the need for mock objects, and
+   what modifications would be necessary to transform it into
+   a clean unit test using a mocking framework.

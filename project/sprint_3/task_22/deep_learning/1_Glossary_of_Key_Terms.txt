@@ -1,0 +1,46 @@
+Glossary of Key Terms
+
+ИТ решения (IT Solutions):
+Refers to the software, systems, and applications that
+developers create to address specific problems or needs.
+
+Код (Code):
+The set of instructions written in a programming language
+that forms a software program.
+
+Тестируете (Testing):
+The process of evaluating software to find and fix defects,
+ensuring it functions correctly and meets requirements.
+
+Качественные решения (Quality Solutions):
+Software or IT products that are well-designed, reliable,
+efficient, and meet high standards of performance and user experience.
+
+Хороший код (Good Code):
+Code that is clean, readable, maintainable, efficient,
+and performs its intended function effectively, making
+it pleasant to work with.
+
+Ценить результаты своего труда (Value the Results of Your Labor):
+To appreciate, respect, and feel a sense of ownership and pride
+in the outcomes of one's work.
+
+Вкладывать свою душу (Invest Your Soul):
+To put deep personal effort, passion, and dedication into one's
+work, going beyond mere obligation.
+
+Настоящий мастер (True Master):
+An individual who demonstrates exceptional skill, expertise,
+and a consistent commitment to excellence in their craft,
+distinguished by the high quality of their work.
+
+Культура, которая не поощряет качество
+(Culture That Does Not Encourage Quality):
+A workplace environment or organizational ethos where the
+pursuit of high-quality work is not valued, rewarded,
+or even actively discouraged, often in favor of speed or cost.
+
+Мастерство (Mastery):
+The comprehensive knowledge, skill, and expertise in a
+particular field, achieved through consistent practice,
+dedication, and a commitment to excellence.

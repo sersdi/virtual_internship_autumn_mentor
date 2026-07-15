@@ -1,0 +1,30 @@
+Essay Format Questions
+
+1. Discuss the importance of the specified Git commit message
+   formats (STEP XXX - DONE and STEP XXX - FIX) in a
+   collaborative development environment. How do these
+   conventions contribute to project management, code review,
+   and debugging efforts?
+
+2. Explain the concept of encapsulation as it relates to
+   the requirement for get/set methods in the
+   TravelCalculatePremiumRequest class. Why is encapsulation
+   considered a fundamental principle in object-oriented programming,
+   and what benefits does it provide?
+
+3. Compare and contrast the Git Rebase and Merge operations,
+   as instructed in the source material. Describe a scenario
+   where Rebase would be preferred over Merge for pushing changes
+   to a global repository, considering the context of the provided
+   guidelines.
+
+4. Analyze the significance of the instruction to only modify
+   files within one's own folder. What potential problems could
+   arise if this rule were not strictly followed in a project
+   with multiple participants, and how does this rule contribute
+   to efficient teamwork?
+
+5. Beyond the explicit instructions, what implicit best practices
+   for software development and version control can be inferred
+   from these guidelines? Provide examples from the text to support
+   your answer.

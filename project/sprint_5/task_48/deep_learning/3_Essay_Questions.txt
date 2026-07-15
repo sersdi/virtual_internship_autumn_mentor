@@ -1,0 +1,29 @@
+Essay Questions
+
+1. Discuss the importance of clear, JSON-formatted requests
+   and expected responses in the context of automated testing.
+   How do these elements contribute to the effectiveness and
+   reliability of the tests?
+
+2. Explain the workflow of transforming a conceptual test
+   scenario into a fully automated test within the
+   TravelCalculatePremiumControllerTest class. What steps
+   are involved, and what considerations should be made at each stage?
+
+3. Imagine you are onboarding a new team member to work on
+   this testing task. Describe how you would explain the
+   overall purpose and the specific instructions provided
+   in the source material to ensure they successfully
+   implement the automated tests.
+
+4. Beyond the scope of this specific document, what are
+   some general best practices for structuring and maintaining
+   a robust suite of automated tests, especially when dealing
+   with a growing number of scenarios and evolving application logic?
+
+5. Analyze the role of an "example" in software development,
+   specifically in the context of implementing new features
+   or tests. How does relying on an existing example (as
+   instructed for TravelCalculatePremiumControllerTest)
+   aid in the development process, and what potential
+   pitfalls might arise if the example is unclear or outdated?

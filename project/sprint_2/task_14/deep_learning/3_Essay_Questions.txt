@@ -1,0 +1,30 @@
+Essay Questions
+
+1. Discuss the rationale behind the "one assertion per test"
+   principle. What are the practical benefits and potential
+   drawbacks of strictly adhering to this guideline in different
+   project contexts (e.g., educational vs. commercial)?
+
+2. Analyze the tension presented in the text between "ideal"
+   coding practices (like high-quality tests) and the realities
+   of commercial software development (deadlines, stress, code
+   review requirements). How can developers strive for quality
+   while still meeting project demands?
+
+3. The source emphasizes the value of "uninterrupted blocks
+   of time" for deep work. Explain why this approach is
+   considered more effective than fragmented work sessions,
+   relating it to concepts like focus, immersion, and problem-solving.
+
+4. Describe the systematic approach recommended for dealing
+   with unknown technical details in programming. Illustrate
+   how this approach, specifically studying official documentation,
+   would be applied to resolve the "cunning question"
+   about java.util.Date.
+
+5. Explore the implications of a computer's ability to
+   execute commands "in milliseconds" on software development,
+   particularly concerning time-sensitive operations or concurrency.
+   How does this characteristic necessitate careful consideration
+   of data types and their precision, as exemplified by the
+   java.util.Date discussion?

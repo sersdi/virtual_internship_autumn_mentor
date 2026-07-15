@@ -1,0 +1,24 @@
+Essay Format Questions
+
+Discuss the critical role of the .gitignore file in
+maintaining a clean and efficient Git repository,
+particularly in the context of large-scale collaborative
+Java development.
+
+Categorize and explain the rationale behind ignoring at
+least five different types of files or directories commonly
+found in Java projects (e.g., compiled files, IDE settings,
+temporary files). Provide specific examples for each.
+
+Imagine a scenario where a .gitignore file was not used in
+a Java project. Describe the potential problems and challenges
+that would arise for individual developers and for a development team.
+
+Compare and contrast how different build tools and IDEs (e.g.,
+Maven, Gradle, IntelliJ IDEA, Eclipse) generate "unnecessary"
+files, and explain how a comprehensive .gitignore file addresses
+these variations.
+
+Explain how ignoring local configuration files (e.g., *.local, *.env)
+contributes to both security and ease of development in a shared
+Java project.

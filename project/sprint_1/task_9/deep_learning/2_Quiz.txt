@@ -1,0 +1,85 @@
+Quiz
+
+1. What are the two primary configuration files located at
+   the root of a Gradle project, and what is the general
+   purpose of each?
+
+2. Explain the concept of a multi-module Gradle project
+   based on the provided text. How are individual modules
+   handled during the build process?
+
+3. What is the significance of the buildscript
+   { repositories { mavenCentral() } } block in the build.gradle file?
+
+4. What is Maven Central, and what is its role in a Gradle
+   project as described in the text?
+
+5. What do apply plugin: 'java' and apply plugin: 'idea'
+   signify within the build.gradle file?
+
+6. What do the sourceCompatibility = '21' and
+   targetCompatibility = '21' lines indicate
+   about the project's development environment?
+
+7. Why is options.encoding = "UTF-8" specified for
+   compileJava and compileTestJava?
+
+8. What testing framework is utilized by the project,
+   as indicated by the test block?
+
+9. In what file would a new module be registered
+   or added within this multi-module Gradle project?
+
+10. If there are no dependencies between Gradle modules,
+    how are they built during a general build process?
+
+
+Quiz Answer Key
+
+1. The two primary configuration files are build.gradle
+   and settings.gradle. build.gradle contains general
+   configuration for all project modules, while settings.gradle
+   lists all individual modules within the multi-module project.
+
+2. A multi-module Gradle project consists of several separate
+   modules, all listed in settings.gradle. During the general
+   build process (the build command), these modules are built
+   independently unless dependencies exist between them.
+
+3. This block configures the project to fetch dependencies
+   from the Maven Central repository. It essentially tells
+   Gradle where to look for external libraries and tools
+   needed for the project.
+
+4. Maven Central is an open repository where Java libraries
+   are published. In the context of this project, it serves
+   as the source from which the project can connect and use
+   various Java libraries.
+
+5. These lines indicate that the project is using the Gradle
+   'java' plugin and the Gradle 'idea' plugin. The 'java'
+   plugin provides standard Java compilation and testing
+   capabilities, while 'idea' likely helps with integration
+   with IntelliJ IDEA.
+
+6. These lines indicate that the project is written and
+   compiled using Java Development Kit (JDK) version 21.
+   This specifies the compatible Java version for both
+   source code and compiled bytecode.
+
+7. options.encoding = "UTF-8" is specified to ensure
+   that the project's source code files (both main and test)
+   are compiled using the UTF-8 character encoding. This
+   helps prevent issues with special characters or internationalization.
+
+8. The project utilizes JUnit 5 as its testing platform,
+   as indicated by the useJUnitPlatform() configuration
+   within the test block.
+
+9. A new module would be registered or added in the
+   settings.gradle file, as this file is responsible
+   for listing all the separate modules in the repository.
+
+10. If there are no dependencies between them, Gradle modules
+   are built (compiled) separately from each other when the
+   general build process (the build command) is executed.

@@ -1,0 +1,109 @@
+Briefing: Class Design - Encapsulating Date Calculation
+
+This briefing summarizes the key themes and important
+ideas from the provided excerpt "Class Design:
+Encapsulating Date Calculation," focusing on the
+rationale and benefits of moving algorithms into
+separate classes, along with the immediate practical task.
+
+Main Themes and Most Important Ideas:
+
+The core idea presented is the encapsulation of
+algorithms within dedicated classes as a significant
+improvement to code design, particularly in the context
+of calculating the number of days between dates.
+This approach offers several crucial advantages, primarily
+centered around maintainability, modularity, and reduced dependencies.
+
+Algorithms as "Fortresses" (Класс как крепость для алгоритма):
+The most striking analogy used to explain the concept is that
+"a class is like a fortress for an algorithm." This analogy
+is elaborated to define the different parts of a class:
+
+Fortress (Крепость): The class itself.
+
+Gates (Ворота):
+The public part of the class, accessible from outside.
+These "do not change over time."
+
+Houses, Streets inside (Дома, улицы внутри):
+The private part of the class (private properties, methods),
+which is not visible from outside.
+
+Decoupling Internal Implementation from External Usage:
+The primary benefit of this "fortress" model is that
+"extracting the algorithm into a separate class makes
+it possible to change its internal implementation separately
+from the rest of the application code." This means that the
+"buildings and streets inside the fortress can be rebuilt
+as much and as often as desired." As long as the "walls
+are not broken" or the "fortress gates are not changed
+(public parts of the class)," these internal changes will
+"not affect the outside world (other classes)."
+
+Benefits in Complex Applications:
+The document emphasizes the value of this approach in
+"large complex applications." The ability to "change
+one part of the application without affecting something
+else" is highlighted as a "really cool" feature that
+extracting algorithms into separate classes enables.
+This directly contributes to improved modularity and
+reduced ripple effects from changes.
+
+Practical Application: DateTimeService:
+
+The theoretical concepts are immediately applied to a practical task.
+The goal is to:
+
+Create a new class called DateTimeService next to
+TravelCalculatePremiumServiceImpl.
+
+Move the algorithm for calculating the number of
+days between two dates into this new DateTimeService class.
+
+Create tests for the new DateTimeService class.
+
+Crucially, the current step explicitly states that
+the TravelCalculatePremiumServiceImpl should not be modified yet.
+The purpose is solely "to create a new class, copy the date
+calculation algorithm into it, and write tests for this
+algorithm (for this, a new test class needs to be created)."
+The integration of DateTimeService into
+TravelCalculatePremiumServiceImpl is reserved for "the next step."
+
+Quotes from the Original Source:
+
+"Класс это как крепость для алгоритма."
+(A class is like a fortress for an algorithm.)
+
+"Вынесение алгоритма в отдельный класс дает возможность
+изменять его внутреннюю реализацию отдельно от всего
+остального кода приложения." (Extracting the algorithm
+into a separate class makes it possible to change its
+internal implementation separately from the rest of the
+application code.)
+
+"До тех пор, пока вы не сломаете стены или не измените
+ворота крепости (публичные части класса), влияние на
+внешний мир (другие классы) перестройка внутри не окажет."
+(As long as you don't break the walls or change the fortress
+gates (public parts of the class), the internal restructuring
+will not affect the outside world (other classes).)
+
+"В больших сложных приложениях это действительно классно,
+когда вы можете менять одну часть приложения не затрагивая
+что-то другое." (In large complex applications, it's really
+cool when you can change one part of the application without
+affecting something else.)
+
+"Ваша задача: создайте новый класс (DateTimeService)
+рядом с TravelCalculatePremiumServiceImpl и поместите
+в него алгоритм расчёта числа дней между двумя датами."
+(Your task: create a new class (DateTimeService) next to
+TravelCalculatePremiumServiceImpl and place the algorithm
+for calculating the number of days between two dates into it.)
+
+"PS: в данном шаге не надо изменять код в
+TravelCalculatePremiumServiceImpl." (PS: in this step,
+there is no need to change the code in
+TravelCalculatePremiumServiceImpl.)

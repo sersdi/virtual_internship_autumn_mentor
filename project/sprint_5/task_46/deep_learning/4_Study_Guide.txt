@@ -1,0 +1,57 @@
+Mastering Test Scenario Crafting
+
+Study Guide
+
+This study guide is designed to help you review and solidify
+your understanding of best practices in crafting comprehensive
+test scenarios, based on the provided source material.
+
+I. Core Principles of Test Scenario Development:
+
+The Problem with Hasty Testing:What are the risks of
+immediately writing tests without prior planning?
+
+How can this lead to incomplete test coverage?
+
+Why might important scenarios be overlooked in this approach?
+
+The Importance of Test Scenario Lists:What is the primary
+purpose of creating a list of test scenarios before writing code?
+
+How does this approach help in focusing on what needs to be tested?
+
+How does it differ from focusing on how to write the test code?
+
+Achieving Comprehensive Coverage:What is the ultimate goal when
+creating a list of test scenarios?
+
+How does a well-crafted list ensure all application logic is covered?
+
+Given the simplicity of the current application logic, why is
+a full list still crucial?
+
+II. Practical Application of Test Scenario Crafting:
+
+The Mentor's Instruction:
+What specific application is mentioned as the target for testing?
+
+What is the desired outcome regarding test coverage
+for this application?
+
+Process for Creating Test Scenarios:
+What is the recommended first step to avoid incomplete testing?
+
+What should be the focus when developing the list of scenarios?
+
+Where should the completed list of scenarios be stored?
+What format is recommended?
+
+III. Differentiating Planning vs. Implementation:
+
+Focus During Scenario Creation:
+When creating test scenarios, what is the primary
+consideration? (Hint: Business vs. Technical)
+
+Focus During Test Implementation:
+When actually writing the test code, what becomes the
+primary consideration? (Hint: Business vs. Technical)

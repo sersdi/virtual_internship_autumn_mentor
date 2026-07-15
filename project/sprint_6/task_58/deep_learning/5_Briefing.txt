@@ -1,0 +1,97 @@
+Briefing Document: Unifying Validation Logic
+
+This document summarizes the key themes, ideas, and
+facts presented in the source "Unifying Validation
+Logic with a Common Interface." The source outlines a
+refactoring task aimed at improving the architecture
+of validation classes within an application, likely a
+Spring-based one, by introducing a common interface
+and leveraging dependency injection principles.
+
+Main Themes:
+
+Code Unification and Standardization:
+The primary goal is to standardize the public interface
+of disparate validation classes, which currently share
+a similar public method signature.
+
+Encapsulation and Modularity (Information Hiding):
+The refactoring emphasizes hiding concrete implementations
+of validation logic behind a public interface, promoting
+better module design and reducing coupling.
+
+Dependency Injection (IoC) for Collection of Implementations:
+Spring's IoC container is leveraged to automatically inject
+a collection of all validation classes that implement the
+new common interface, simplifying the process of applying
+multiple validations.
+
+Architectural Best Practices:
+The source highlights the introduced pattern as an excellent
+architectural approach for creating modules within an application.
+
+Most Important Ideas/Facts:
+
+Problem Statement:
+Identical Public Parts of Validation Classes: The mentor
+points out that "validation classes have almost identical
+public parts. They all have one public method that takes a
+request as a parameter and returns an Optional as a result."
+This redundancy and lack of a common contract is the driving
+force behind the proposed changes.
+
+Proposed Solution:
+Common Interface for Validation Classes: The core solution
+is to "create a common interface for all validation classes."
+
+Method Naming:
+The method within this interface can be named execute(...).
+
+Package Placement:
+The new interface should be placed in the core/validations package.
+
+Visibility: The new interface must be public.
+
+Encapsulation of Concrete Implementations:
+To enforce modularity and information hiding, "make all
+validation classes package level access (remove public
+from classes so they are only accessible within the package)."
+This means the concrete implementations become internal details
+of the core/validations package, exposed only through the public
+interface.
+
+Dependency Injection of Validation List:
+In the TravelCalculatePremiumRequestValidator class:
+
+A parameter List travelValidations should be added to the constructor.
+
+This list should be saved to a private field:
+private List travelValidations;.
+
+The source explicitly states:
+"Since all validation classes implement the new interface
+and are components in Spring (@Component), Spring allows you
+to get a list of all objects (classes) that implement the
+specified interface and are components in this way." This
+is a key advantage of using Spring's IoC container.
+
+Sequential Application of Validations:
+Since the order of applying validations is not critical
+("Since the order in which we apply validations is not critical,
+the main thing is just to apply them all"), the
+TravelCalculatePremiumRequestValidator should
+"simply iterate through the list of received validation
+classes and simply apply each one to validate the request."
+
+Impact on Tests:
+Developers are reminded to "Fix the tests if they stop working."
+
+Architectural Benefit:
+The source concludes by emphasizing the architectural advantage:
+"Thanks to the public interface and the IoC design pattern,
+we managed to hide (make package level access) concrete
+implementations of the interface and place them in a separate
+package. This is an excellent architectural technique for
+creating a module within an application. Remember it and use it."
+This reinforces the value of the refactoring in terms of
+maintainability, testability, and overall code organization.

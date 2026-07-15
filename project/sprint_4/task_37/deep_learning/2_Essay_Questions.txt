@@ -1,0 +1,25 @@
+Essay Format Questions
+
+1. Compare and contrast the OSI model and the TCP/IP
+   protocol stack. Discuss their similarities, differences,
+   and why both are still relevant in understanding modern networking.
+
+2. Choose one network layer (e.g., Transport, Network,
+   or Data Link) and describe its primary functions and
+   the importance of those functions for overall network
+   communication. Provide examples of protocols that operate
+   at this layer.
+
+3. Explain how the TCP and IP protocols work together to
+   enable reliable data transmission over the internet.
+   Discuss the specific roles each protocol plays in this process.
+
+4. Why is it crucial for applications developed by programmers
+   to communicate over networks? Discuss how network isolation
+   would limit the functionality and utility of modern software,
+   providing specific examples.
+
+5. Describe the concept of "layers" in network models.
+   Why is a layered approach beneficial for network design
+   and development, and what advantages does it offer over
+   a monolithic design?

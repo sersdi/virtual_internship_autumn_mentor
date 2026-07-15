@@ -1,0 +1,78 @@
+Quiz
+
+1. What was the purpose of the previous step
+   mentioned in the source material regarding test scenarios?
+
+2. What is the main deficiency identified in
+   the initial list of test scenarios?
+
+3. What specific information is needed to make
+   the test scenario list ready for implementation?
+
+4. How are the concrete requests and responses
+   expected to be formatted?
+
+5. Describe test scenario #1 and its expected outcome.
+
+6. Explain the expected response for test scenario
+   #5 ("allFields не указаны").
+
+7. What is the expected outcome when
+   "agreementDateTo < agreementDateFrom" (scenario #6)?
+
+8. What does test scenario #7, "указаны все поля,"
+   anticipate as a result?
+
+9. In the provided JSON example, what value is given
+   for "personFirstName" in the Request?
+
+10. Based on the example Response JSON, what message
+    is associated with the "personFirstName" error?
+
+
+Quiz Answer Key
+
+1. The previous step involved compiling a list of
+   test scenarios. This initial list served as a starting
+   point for defining different testing conditions.
+
+2. The main deficiency identified in the initial list
+   is a lack of concretization. The scenarios lack
+   specific data inputs and precise expected results
+   for each test case.
+
+3. To make the test scenario list ready for implementation,
+   it needs to be supplemented with concrete requests and
+   responses. These should be provided in JSON format.
+
+4. The concrete requests and responses are expected to be
+   formatted as JSON objects. This allows for a structured
+   and machine-readable representation of the data.
+
+5. Test scenario #1 is "firstName не указан" (firstName is
+   not specified). The expected outcome is an error in the
+   response indicating that "firstName is not specified."
+
+6. For test scenario #5, "allFields не указаны" (allFields
+   are not specified), the expected response is to receive
+   errors for each field. This indicates comprehensive validation
+   failure.
+
+7. When "agreementDateTo < agreementDateFrom" (scenario #6),
+   the expected outcome is an error in the response specifically
+   stating "agreementDateTo < agreementDateFrom." This highlights
+   a date range validation.
+
+8. Test scenario #7, "указаны все поля" (all fields are specified),
+   anticipates a response without errors. This serves as a
+   positive test case, verifying correct behavior when all
+   required inputs are provided.
+
+9. In the provided JSON example, the value given for
+   "personFirstName" in the Request is null. This represents
+   the condition where the field is not specified or is empty.
+
+10. Based on the example Response JSON, the message associated
+    with the "personFirstName" error is "Must not be empty!".
+    This provides specific feedback on why the input for that
+    field was considered invalid.

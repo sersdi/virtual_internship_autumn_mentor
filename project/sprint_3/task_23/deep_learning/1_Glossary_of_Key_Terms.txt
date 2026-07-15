@@ -1,0 +1,41 @@
+Glossary of Key Terms
+
+Acceptance Testing (Приемочное тестирование):
+A level of software testing conducted by the end-user or
+client to verify that the system meets their requirements
+and is ready for production use.
+
+Integration Testing (Интеграционное тестирование):
+A level of software testing that verifies the interaction
+and interfaces between different modules or components of
+a software system.
+
+Mock Object (Мок объект):
+A simulated object used in unit testing to substitute for
+a real dependency, allowing the developer to control its
+behavior and isolate the code being tested.
+
+Mockito:
+A popular open-source Java library used for creating and
+managing mock objects in unit tests.
+
+Module (Модуль):
+A self-contained, independent part of a software program,
+often referring to a class in object-oriented programming.
+
+Production Classes (Продакшн классы):
+Classes that contain the actual business logic and functionality
+of the software, as opposed to test-specific classes.
+
+Software Development (Разработка программного обеспечения):
+The process of creating and maintaining software applications.
+
+System Testing (Системное тестирование):
+A level of software testing that evaluates the complete,
+integrated software system against its specified requirements,
+covering both functional and non-functional aspects.
+
+Unit Testing (Модульное тестирование):
+The lowest level of software testing, focused on verifying
+individual modules or components of a software application
+in isolation.

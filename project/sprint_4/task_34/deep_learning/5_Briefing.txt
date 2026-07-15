@@ -1,0 +1,79 @@
+Briefing Document: Travel Date Validation Logic
+
+Document Title: Travel Date Validation Logic and Testing
+
+Purpose: This briefing document summarizes the
+         core requirements for implementing travel
+         date validation logic based on the provided source material.
+
+Main Themes and Key Requirements:
+
+The primary theme of the provided source is the
+implementation of a fundamental business rule concerning
+travel dates, specifically that the end date of a trip must
+occur after its start date. The document also emphasizes the
+crucial role of testing in this implementation.
+
+1. Core Business Rule: End Date Must Be After Start Date
+
+The central requirement is clearly stated in the source:
+
+"Бизнес требование гласит, дата окончания поездки
+(agreementDateTo) должна быть после даты начала (agreementDateFrom)."
+(The business requirement states that the trip end date
+(agreementDateTo) must be after the start date (agreementDateFrom).)
+
+This rule is reiterated as a direct instruction:
+"Добавить валидацию на то, что agreementDateFrom должен быть
+меньше agreementDateTo." (Add validation that agreementDateFrom
+must be less than agreementDateTo.)
+
+This indicates a strict inequality:
+agreementDateFrom < agreementDateTo.
+
+2. Mandatory Testing (Test-Driven Development / Quality Assurance)
+
+A critical and non-negotiable aspect of this task is
+the inclusion of comprehensive testing.
+
+The source explicitly states:
+
+"PS: Не забудьте про тесты! Решение без тестов не принимается!"
+(PS: Don't forget about tests! A solution without tests is not accepted!)
+
+This highlights that the implementation of the validation
+logic alone is insufficient. Demonstrating its correctness
+and robustness through testing is a mandatory deliverable.
+
+Most Important Ideas/Facts:
+
+Variables:
+The key variables involved are agreementDateFrom
+(start date) and agreementDateTo (end date).
+
+Validation Condition:
+The core validation condition is agreementDateFrom < agreementDateTo.
+
+Non-Negotiable Deliverable:
+Tests are an absolute requirement for the solution to be accepted.
+
+Actionable Takeaways:
+
+Implement a validation function or mechanism that
+checks if agreementDateFrom is strictly earlier than agreementDateTo.
+
+Develop a suite of tests to cover various scenarios, including:
+
+Valid date ranges (agreementDateFrom is before agreementDateTo).
+
+Invalid date ranges (agreementDateFrom is after agreementDateTo).
+
+Equal dates (agreementDateFrom is equal to agreementDateTo)
+– the validation should likely fail in this case based on
+the "less than" requirement.
+
+Edge cases (e.g., boundary conditions if time components
+are involved, though the source only mentions dates).
+
+Ensure the test suite is comprehensive enough to satisfy
+the "solution without tests is not accepted" criterion.

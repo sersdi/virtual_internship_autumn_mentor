@@ -1,0 +1,71 @@
+Quiz
+
+1. What is the primary application mentioned for AI
+   models in the context of this material?
+
+2. Which specific AI tool is highlighted as an example
+   for generating text?
+
+3. What is the core reason given for why AI text
+   generation models can be used for writing program code?
+
+4. What is the name of the class for which tests need
+   to be generated using AI?
+
+5. What are the two specific types of tests that
+   are required to be generated using AI?
+
+6. What specific naming convention must be followed
+   for the AI-generated tests?
+
+7. Where should the AI-generated tests be placed
+   in the project structure?
+
+8. What action is suggested if the initial AI-generated
+   tests do not function correctly?
+
+9. Besides generating tests, what comparison task is
+   assigned to the user regarding the tests?
+
+10. What advice is given to users who might face
+    regional restrictions when trying to access ChatGPT?
+
+
+Quiz Answer Key
+
+1. The primary application mentioned is the generation
+   of tests for program code, specifically for the
+   TravelCalculatePremiumServiceImpl class.
+
+2. ChatGPT is the specific AI tool highlighted as
+   an example for generating text, although any other
+   AI text generation tool can also be used.
+
+3. The core reason given is that program code itself
+   is a form of text, making it suitable for generation
+   by AI models designed for text generation.
+
+4. The tests need to be generated for the
+   TravelCalculatePremiumServiceImpl class.
+
+5. Two types of tests are required: one comprehensive
+   test covering all properties, and a separate test
+   case for checking each property individually.
+
+6. The AI-generated tests must be named
+   TravelCalculatePremiumPremiumServiceImplAIOneTest
+   and TravelCalculatePremiumServiceImplAIEachFieldTest.
+
+7. The AI-generated tests should be placed next
+   to the TravelCalculatePremiumServiceImplTest file.
+
+8. If the AI-generated tests do not work, it is
+   suggested to make necessary changes to them to
+   ensure their functionality.
+
+9. The user is tasked with comparing the manually
+   written tests with the tests generated using AI.
+
+10. For users facing regional restrictions, it is
+    advised to use a VPN (Virtual Private Network)
+    like UrbanVPN and select a region where ChatGPT is accessible.

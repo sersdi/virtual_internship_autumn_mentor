@@ -1,0 +1,83 @@
+Quiz: Travel Date Validation
+
+1. What is the primary business requirement stated for travel dates?
+
+2. Which date must come after the other, according to the rule?
+
+3. What is your specific task regarding agreementDateFrom
+   and agreementDateTo?
+
+4. Why is it explicitly mentioned that "solution
+   without tests will not be accepted"?
+
+5. If agreementDateFrom is January 10th and
+   agreementDateTo is January 9th, would this scenario
+   pass the validation? Explain why or why not.
+
+6. Describe what "validation" means in the context
+   of this business requirement.
+
+7. What kind of error would likely occur if this
+   business rule were not implemented?
+
+8. Why is testing considered a crucial part of
+   the development process for this task?
+
+9. Can agreementDateTo be the same as agreementDateFrom
+   according to the stated rule? Explain your answer.
+
+10. What does the term "business rule" signify in the
+    context of this problem?
+
+
+Quiz Answer Key
+
+1. The primary business requirement is that the trip
+   end date (agreementDateTo) must be strictly after
+   the trip start date (agreementDateFrom). This ensures
+   logical temporal order for travel periods.
+
+2. According to the rule, agreementDateTo (the end date)
+   must come after agreementDateFrom (the start date).
+   This establishes the sequence of the travel period.
+
+3. My specific task is to implement validation logic
+   to ensure that agreementDateFrom is strictly less
+   than agreementDateTo. This means writing code that
+   checks this condition.
+
+4. It is explicitly mentioned that "solution without
+   tests will not be accepted" to underscore the critical
+   importance of verifying the correctness and robustness
+   of the implemented logic. Tests prove that the rule is
+   properly enforced.
+
+5. No, if agreementDateFrom is January 10th and agreementDateTo
+   is January 9th, this scenario would not pass validation.
+   The rule states that the end date must be after the start date,
+   and in this case, it is before.
+
+6. In this context, "validation" means checking that the input
+   travel dates (agreementDateFrom and agreementDateTo) conform
+   to the defined business rule. It's the process of ensuring
+   data quality and logical consistency.
+
+7. If this business rule were not implemented, it could lead
+   to illogical or invalid travel bookings where the trip
+   ends before it begins. This would result in data integrity
+   issues and potential operational problems.
+
+8. Testing is considered crucial because it verifies that
+   the implemented validation logic works as intended and
+   catches any errors or edge cases. It ensures the reliability
+   and correctness of the business rule enforcement.
+
+9. No, agreementDateTo cannot be the same as agreementDateFrom
+   according to the stated rule. The phrasing "должна быть после"
+   (must be after) implies a strict inequality, meaning the end
+   date must be later, not equal to, the start date.
+
+10. In this problem, "business rule" signifies a specific policy
+    or condition that governs how data related to travel dates
+    must behave. It's a fundamental requirement set by the business
+    for logical and valid operations.

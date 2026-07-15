@@ -1,0 +1,58 @@
+What is the primary task outlined in the guidelines?
+
+The primary task involves creating a TravelCalculatePremiumRequest
+class. Within this class, developers are required to implement a
+default constructor (a constructor without parameters), a
+constructor to set initial values for all properties, and
+getter/setter methods for all properties of the class.
+
+What are the specific instructions for modifying files?
+
+Developers are strictly instructed to make changes only within
+the files located in their own assigned folder. It is crucial
+not to introduce any modifications into the folders belonging
+to other project participants.
+
+What is the required Git commit message format?
+
+After completing each step of the assignment, developers must
+commit their changes to the local Git repository. The commit
+message should follow a specific format: STEP XXX - DONE. For
+example, STEP 001 - DONE, STEP 002 - DONE, or STEP 100 - DONE.
+This format helps easily identify which step has been completed.
+
+What should be done if an error is committed?
+
+If code containing errors is committed to the repository,
+developers must create a new commit with the necessary corrections.
+The message for this correction commit should be STEP XXX - FIX,
+where XXX corresponds to the step number that was fixed (e.g.,
+STEP 001 - FIX).
+
+How should changes be pushed to the global GitHub repository?
+
+When pushing changes to the global GitHub repository, developers
+are instructed to select the Rebase option. They are also encouraged
+to research the meaning of Git Rebase and Merge options independently.
+
+What are the prerequisites for pushing code to GitHub?
+
+To successfully push code to the global GitHub repository,
+the user must have been granted access rights, and these rights
+must be confirmed. GitHub sends an email with a confirmation link
+to verify repository access.
+
+How can changes made in the current task be quickly identified in IDEA?
+
+In the IDEA development environment, developers can quickly find
+all changes made in the current task by selecting the current
+task's folder (e.g., task_10) and the previous task's folder
+(e.g., task_9) from the left-hand sidebar. Then, from the pop-up menu,
+they should choose the "Compare Directories" option (Ctrl + D).
+
+What is the underlying philosophical quote guiding these guidelines?
+
+The guidelines begin with the quote, "Путь в тысячу миль начинается
+с первого шага" (A journey of a thousand miles begins with a single
+step) by Lao Tzu. This quote serves as a reminder that even large
+projects are completed by taking one step at a time.

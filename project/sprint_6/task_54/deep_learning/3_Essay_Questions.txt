@@ -1,0 +1,21 @@
+Essay Questions
+
+1. Discuss the importance of collaboration between testers
+   and business stakeholders in the software development
+   lifecycle, using the provided text as an example.
+
+2. Explain the concept of "validation" in software development
+   and elaborate on why the date validation described in the
+   text is crucial for the integrity and logic of the insurance system.
+
+3. Analyze the potential business implications and user
+   experience issues that could arise if the identified date
+   validation error were not corrected.
+
+4. Describe the typical workflow from a tester identifying an
+   error to a developer implementing a fix, referencing the
+   specific steps outlined or implied in the provided source.
+
+5. Beyond just validating dates, what other types of data
+   validation might be important for an insurance policy
+   application, and why?

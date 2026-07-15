@@ -1,0 +1,109 @@
+Glossary of Key Terms
+
+.gitignore:
+A special plain text file in a Git repository that lists
+patterns of files and directories that Git should intentionally
+ignore and not track.
+
+Git:
+A distributed version control system used for tracking
+changes in source code during software development,
+facilitating collaboration among developers.
+
+Git Repository:
+A storage location for a project's files and their complete
+history of changes, managed by Git.
+
+Commit:
+The action of saving changes to the Git repository,
+creating a new revision of the project's history.
+
+Java Project:
+A software development project primarily written in the
+Java programming language.
+
+Compiled Files:
+Files containing bytecode or machine-readable instructions,
+generated from source code by a compiler (e.g., *.class files in Java).
+
+Bайт-код (Bytecode):
+An intermediate form of code that a computer's processor
+cannot directly execute but must be interpreted by a virtual
+machine (e.g., Java Virtual Machine for Java bytecode).
+
+target/:
+A common directory name used by Maven to store compiled
+classes, JAR files, and other build artifacts.
+
+build/:
+A common directory name used by Gradle to store compiled
+classes and other build artifacts.
+
+out/:
+A common directory name used by some IDEs, particularly
+IntelliJ IDEA, for outputting compiled classes and build results.
+
+IDE (Integrated Development Environment):
+A software application that provides comprehensive facilities
+to computer programmers for software development (e.g., IntelliJ
+IDEA, Eclipse, Visual Studio Code).
+
+.idea/:
+A directory created by IntelliJ IDEA to store
+project-specific settings and configurations.
+
+*.iml:
+Module files created by IntelliJ IDEA to define project modules.
+
+.vscode/:
+A directory created by Visual Studio Code to store
+workspace settings and configurations.
+
+.classpath, .project, .settings/:
+Files and directories specific to Eclipse projects that
+store project configurations.
+
+Metadata Files:
+Data that describes other data; in this context,
+files created by operating systems to store information
+about other files (e.g., display preferences, caches).
+
+.DS_Store:
+A hidden file created by macOS in directories to store
+custom attributes of its containing folder, such as icon positions.
+
+Thumbs.db:
+A hidden file created by Microsoft Windows in directories
+to store thumbnail images of files for faster browsing.
+
+Log Files (*.log):
+Files that record events that occur in an operating
+system or software program.
+
+Temporary Files (*.tmp, *.bak):
+Files created by programs for short-term data storage,
+often deleted after use.
+
+Local Configuration Files (*.local, *.env):
+Files that contain settings or environment variables
+specific to a user's local development environment or
+sensitive data, which should not be committed to a shared repository.
+
+Dependencies:
+External libraries or modules that a project relies on to function.
+
+node_modules/:
+A directory used by Node.js projects to store installed
+npm packages (JavaScript dependencies).
+
+lib/:
+A directory sometimes used to store manually added
+third-party libraries in a project.
+
+*.jar (Java Archive):
+A package file format used to aggregate many Java class files,
+associated metadata, and resources into one file for distribution.
+
+*.war (Web Archive):
+A file format used to package web applications for deployment
+on a Java EE application server.

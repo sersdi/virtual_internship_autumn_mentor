@@ -1,0 +1,82 @@
+Quiz: Short-Answer Questions
+
+1. What is the primary objective described for the user
+   in relation to the premium calculation task?
+
+2. Which specific component of the application's business
+   logic is identified as needing modification for this task?
+
+3. What is the recommended practice for developers before
+   committing changes to their local repository?
+
+4. Why is it important to run a build of your module before
+   committing to a local repository?
+
+5. What consequence is mentioned for failing the project
+   build on GitHub?
+
+6. How are commits to the global repository tracked and attributed?
+
+7. What is the source of the values needed to fill the response fields?
+
+8. What broader concept is the formation of the response
+   identified as a part of?
+
+9. What is the purpose of running the build before
+   committing locally, besides catching errors?
+
+10. What personal accountability aspect is highlighted
+    regarding commits to the global repository?
+
+
+Answer Key (Quiz)
+
+1. The primary objective for the user is to fill in
+   the response fields using values obtained from the request.
+   This task is part of the application's business logic related
+   to premium calculations.
+
+2. The TravelCalculatePremiumServiceImpl class is specifically
+   identified as the component within the application's business
+   logic that requires modification. This is where the necessary
+   changes for the premium calculation logic should be implemented.
+
+3. Developers are strongly advised to always run a build of
+   their module before committing any changes to their local
+   repository. This proactive step helps in identifying and
+   resolving errors early in the development cycle.
+
+4. Running a build of your module allows developers to
+   catch and correct errors during the development phase,
+   preventing them from being introduced into the global
+   repository. This early detection helps maintain project stability.
+
+5. The text warns that if a developer fails the project build
+   on GitHub, "they will still come for you," implying
+   accountability and potential consequences for disrupting
+   the project's integrity.
+
+6. Commits to the global repository are added under the
+   individual user's account, and the entire commit history
+   is accessible on GitHub. This ensures transparency and
+   personal accountability for all contributions.
+
+7. The values needed to fill the response fields must be
+   taken from the incoming request. This indicates that
+   the premium calculation process relies on data provided externally.
+
+8. The formation of the response is identified as a part of
+   the application's business logic. This emphasizes that
+   how the premium calculation results are presented is
+   integral to the core functionality.
+
+9. Running the build before committing locally also allows
+   for the early correction of errors, preventing them from
+   reaching the global repository. This ensures that the
+   code committed is more likely to be stable and functional.
+
+10. The text highlights that any commits to the global
+    repository are attributed directly to the user, and
+    their entire commit history is visible on GitHub.
+    This underscores the personal responsibility each
+    developer bears for their contributions.

@@ -1,0 +1,51 @@
+Glossary of Key Terms
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format. It is human-readable
+and easy for machines to parse and generate.
+
+Jackson:
+A high-performance JSON processor for Java.
+It is widely used for serializing Java objects to
+JSON and deserializing JSON into Java objects.
+
+Serialization:
+The process of converting a data structure or object
+state into a format that can be stored or transmitted
+and reconstructed later. In this context, converting
+a Java Date object to a JSON string.
+
+Deserialization:
+The process of restoring data that has been stored or
+transmitted back into its original format.
+(Not explicitly covered in problem, but inverse of serialization).
+
+@JsonFormat:
+An annotation provided by the Jackson library.
+It allows developers to specify the format of data when
+it is serialized to JSON, particularly useful for dates and numbers.
+
+yyyy-MM-dd:
+A common date format pattern. yyyy represents the
+four-digit year, MM represents the two-digit month,
+and dd represents the two-digit day of the month.
+
+2021-05-25T00:00:00.000+00:00:
+An example of an ISO 8601 formatted date and time string.
+T separates the date and time, 00:00:00.000 is the time
+(hours:minutes:seconds.milliseconds), and +00:00 is the UTC offset.
+
+Dependency:
+An external library or module that a software project
+relies on to function. In the context of Java, these
+are often managed by build tools like Gradle or Maven.
+
+implementation (Gradle):
+A keyword in Gradle build scripts used to declare a
+dependency that should be made available to the current
+module's runtime and compile classpaths.
+
+Annotation:
+A form of metadata that can be added to Java source code.
+Annotations do not directly affect program execution but
+provide information that tools (like Jackson) can use.

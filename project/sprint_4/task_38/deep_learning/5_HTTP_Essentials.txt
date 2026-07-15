@@ -1,0 +1,82 @@
+HTTP Essentials: Understanding Web Communication Fundamentals
+
+What is the HTTP protocol and why is it important to understand?
+
+The HTTP (Hypertext Transfer Protocol) is an application-layer
+protocol that is fundamental to how we interact with the internet
+every day. It's the protocol our web browsers use to open any website.
+Understanding HTTP is crucial because it's the mechanism by which
+server applications receive requests from users and formulate
+responses. Gaining initial insight into its structure and
+operation is essential for anyone working with web technologies.
+
+At what layer of the network model does HTTP operate?
+
+HTTP operates at the application layer of the network model.
+This means it deals with the specific details of how applications
+communicate, such as the format of requests and responses, rather
+than the lower-level details of data transmission across the network.
+
+What are some of the key request types used in HTTP?
+
+The HTTP protocol defines several key request types, also known
+as HTTP methods, which indicate the desired action to be performed
+on a resource. The most common ones include:
+
+GET:
+Used to request data from a specified resource.
+It should only retrieve data and have no other effect on the data.
+
+POST: Used to submit data to be processed to a specified resource.
+
+PUT: Used to update a resource or create a new one if it doesn't exist.
+
+DELETE: Used to delete a specified resource.
+
+What is the significance of the URL string in HTTP?
+
+The URL (Uniform Resource Locator) string is a critical
+component in HTTP as it serves as the address for
+resources on the web. It precisely identifies where
+a resource is located and how to access it. Understanding
+its format is essential for constructing correct requests
+and navigating web content.
+
+What kind of information can be passed within the URL string?
+
+The URL string can contain various pieces of information
+beyond just the domain and path. It can include parameters,
+often referred to as query parameters, which are appended
+to the URL after a question mark (?). These parameters are
+typically used to pass specific data to the server for filtering,
+sorting, or other processing related to the requested resource.
+
+What is the "body" of an HTTP request and what information
+can it transmit?
+
+The "body" of an HTTP request is a section where additional
+data can be transmitted, particularly for methods like POST
+or PUT. Unlike URL parameters, which are typically small
+pieces of key-value data, the request body can carry larger
+and more complex data structures, such as JSON objects,
+XML documents, or form data. This allows for the submission
+of detailed information to the server, such as user input
+from a form or data for creating new records.
+
+What is the primary goal for someone beginning to learn about HTTP?
+
+The primary goal for someone beginning to learn about the HTTP
+protocol is to form an initial understanding of how the protocol
+is structured and how it operates. This involves grasping the
+fundamental concepts of requests and responses, the different
+types of operations, and the role of components like URLs and
+request bodies.
+
+Are there recommended resources for starting to learn about HTTP?
+
+Yes, there are recommended resources for beginning the study
+of HTTP. These include video explanations such as "Что такое
+HTTP и HTTPS за 9 минут" and "Протокол HTTP что это такое".
+Learners are also encouraged to find and explore additional
+sources, like articles or other videos, if needed, and to
+share any useful findings with their mentors and classmates.

@@ -1,0 +1,31 @@
+Essay Questions
+
+1. Discuss the critical distinction between planning test
+   scenarios and implementing test code. Explain why
+   maintaining this separation of concerns is vital
+   for achieving comprehensive and effective test coverage.
+
+2. Imagine you are a mentor guiding a junior developer
+   on testing practices. Explain the potential pitfalls
+   of a "just start writing tests" approach and articulate
+   the benefits of first crafting a detailed list of test
+   scenarios, using a concrete example to illustrate your points.
+
+3. The source material emphasizes the importance of covering
+   "all application logic." Propose a methodology or set of steps
+   you would follow to ensure your list of test scenarios for a
+   given application genuinely achieves this comprehensive coverage,
+   particularly for an application with "simple" logic.
+
+4. Consider the TravelCalculatePremiumController as the target
+   for testing. Based on the principles outlined in the source,
+   design a hypothetical structure or content for a test scenario
+   document for this controller. Justify your chosen format and
+   content elements.
+
+5. Evaluate the statement: "Working over the list of test scenarios,
+   you will concentrate on what needs to be tested, what business
+   case to cover with a test. Working further on the implementation
+   of the tests, you will think about the technical aspects of
+   writing test code." Discuss the implications of this dual
+   focus on the quality and maintainability of a software project.

@@ -1,0 +1,85 @@
+Briefing: Improving Test Quality by Refactoring Duplicated Code
+
+This briefing document summarizes key themes and
+actionable insights from the provided source on
+improving test quality, specifically focusing on
+the refactoring of duplicated code within the
+TravelCalculatePremiumControllerTest class.
+
+I. Core Problem: Duplicated Test Code
+
+The central issue identified is the presence of a
+significant amount of duplicated code within the tests,
+particularly in TravelCalculatePremiumControllerTest.
+The source explicitly states: "В этих тестах плохо то,
+что в них много дублирующегося кода." (What is bad about
+these tests is that they have a lot of duplicated code.)
+
+II. Consequences of Duplication
+
+The primary consequence of duplicated code is increased
+maintenance difficulty. The mentor emphasizes: "Почему это проблема?
+Потому что чем больше дублирующегося кода, тем сложнее его
+поддерживать." (Why is this a problem? Because the more
+duplicated code there is, the harder it is to maintain.)
+This highlights the direct correlation between code duplication
+and the effort required to manage and update tests.
+
+III. The Goal: High-Quality Test Code
+
+The document stresses the importance of striving for
+high-quality test code. It asserts: "В идеале нужно стремиться
+к написанию качественного тестового кода. Тестовый код должен
+быть в хорошем состоянии иначе он превратиться просто в хлам."
+(Ideally, you should strive to write high-quality test code.
+Test code must be in good condition, otherwise it will simply
+turn into junk.) This underscores that test code, like production
+code, requires attention to quality to remain effective and useful.
+
+IV. Proposed Solution: Separating Test Data and Code
+
+The mentor's key proposal for addressing duplicated code
+is to "разделить тестовые данные и код" (separate test data and code).
+The current problem is that "тестовые данные (запросы и ответы)
+перемешаны с кодом тестов. И это порождает большое количество
+повторений." (test data (requests and responses) are mixed with
+test code. And this generates a large number of repetitions.)
+
+V. Ideal Test Structure
+
+The source outlines an ideal, streamlined structure for
+individual tests after the proposed refactoring:
+
+"берем запрос в виде JSON" (take the request in JSON format)
+
+"выполняем запрос и получаем реальный ответ" (execute the
+request and get the actual response)
+
+"берем ожидаемый ответ" (take the expected response)
+
+"сравниваем ожидаемый ответ с реальным ответом" (compare the
+expected response with the actual response)
+
+The core insight here is that "Отличие каждого теста в этих
+шагах это посылаемый запрос и ожидаемый ответ (данные)."
+(The difference in each test in these steps is the sent
+request and the expected response (data).) By isolating
+these varying data points, "сам код у всех тестов можно
+сделать одинаковым." (the code itself for all tests can
+be made the same.)
+
+VI. Actionable Task
+
+To implement the proposed solution, the following task is assigned:
+
+"создайте папку src/test/resources/rest." (create a
+folder src/test/resources/rest.)
+
+"В этой папке создайте JSON файлы (файлы с расширением .json)
+для каждого запроса и ответа." (In this folder, create JSON
+files (files with the .json extension) for each request and response.)
+
+This task directly supports the separation of test data
+(requests and responses in JSON format) from the test code,
+enabling the reduction of duplication and the improvement of
+overall test quality.

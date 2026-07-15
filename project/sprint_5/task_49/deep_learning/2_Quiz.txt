@@ -1,0 +1,66 @@
+Quiz
+
+1. What is the primary issue identified with the
+   tests in TravelCalculatePremiumControllerTest?
+
+2. Why is code duplication considered a problem in test code?
+
+3. What is the ultimate goal when refactoring duplicated
+   test code, according to the source?
+
+4. What specific elements of the tests are currently
+   "intermingled" and causing duplication?
+
+5. List the four steps that represent the ideal structure
+   of a test after refactoring.
+
+6. According to the mentor's suggestion, what differentiates
+   one test from another in the ideal scenario?
+
+7. How does separating test data from code address the
+   problem of duplication?
+
+8. What new directory is suggested to store the separated test data?
+
+9. What file format should be used for the test data files?
+
+10. What specific type of data should be stored in
+    the newly created JSON files?
+
+
+Quiz Answer Key
+
+1. The primary issue identified is a significant amount
+   of duplicated code within the tests.
+
+2. Code duplication in tests is problematic because
+   it makes the test suite much harder to maintain and
+   can lead to the tests degrading into "junk."
+
+3. The ultimate goal when refactoring duplicated test
+   code is to achieve high-quality and maintainable test code.
+
+4. Test data, specifically requests and responses, are
+   currently intermingled with the test code itself, which
+   leads to a large amount of repetition.
+
+5. The ideal test structure involves taking a request as JSON,
+   executing it to get a real response, taking an expected response,
+   and then comparing the expected and real responses.
+
+6. In the ideal scenario, what differentiates each test is only
+   the specific request being sent and the expected response
+   that is anticipated.
+
+7. Separating test data from code addresses duplication by
+   allowing the core test logic to remain identical across
+   multiple tests, as only the data (requests and expected
+   responses) will change.
+
+8. The suggested new directory to store the separated
+   test data is src/test/resources/rest.
+
+9. The test data files should use the .json file extension.
+
+10. Both requests and their corresponding expected responses
+    should be stored as JSON files in the new directory.

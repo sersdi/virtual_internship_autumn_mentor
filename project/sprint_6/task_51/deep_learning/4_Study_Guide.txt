@@ -1,0 +1,85 @@
+Spring Testing with Annotations: A Study Guide
+
+I. Core Concepts Review
+
+This section outlines key concepts related to the provided
+Spring testing excerpts. Your understanding of these will be
+crucial for the quiz and essay questions.
+
+A. Spring IoC (Inversion of Control) Container
+
+Definition:
+The Spring IoC container is responsible for instantiating,
+configuring, and assembling your application's objects.
+It manages the lifecycle of beans.
+
+Key Principle:
+IoC flips the control flow; instead of your objects creating
+or looking up their dependencies, the container "injects" them.
+
+Relevance to Testing:
+The excerpts state, "Да, Spring IoC работает так же и для тестов!"
+(Yes, Spring IoC works the same way for tests!). This emphasizes
+that the IoC container's dependency management capabilities are
+fully available and beneficial in a testing context, allowing
+tests to leverage the same bean configuration as the application.
+
+B. @Component Annotation
+
+Purpose:
+Marks a Java class as a Spring-managed component. When Spring
+performs component scanning, it discovers these classes and
+registers them as beans in its IoC container.
+
+Functionality:
+It's a general-purpose stereotype annotation. More specific
+annotations like @Repository, @Service, and @Controller are
+specializations of @Component and offer additional semantic
+meaning or features, but @Component itself is sufficient for
+basic bean registration.
+
+Application in Excerpts:
+The instruction "Ваша задача: добавить аннотацию @Component
+на класс JsonFileReader" directly tasks you with making
+JsonFileReader a Spring-managed bean, enabling Spring to
+instantiate and manage it.
+
+C. @Autowired Annotation
+
+Purpose:
+Used for automatic dependency injection. Spring inspects
+classes annotated with @Autowired and attempts to find a
+matching bean in its IoC container to inject into the marked field,
+constructor, or method.
+
+How it Works:
+Spring looks for a bean of the type required by the @Autowired
+field/parameter. If multiple beans of the same type exist, you
+might need additional annotations like @Qualifier to specify which one.
+
+Application in Excerpts:
+The instruction "Воспользуйтесь аннотацией @Autowired в классе
+TravelCalculatePremiumControllerTest для получения зависимости
+JsonFileReader" directs you to use @Autowired within the test
+class to have Spring provide an instance of JsonFileReader
+(which, thanks to @Component, will be a Spring-managed bean)
+to your test. This demonstrates how Spring's dependency injection
+simplifies setting up test environments.
+
+D. Test Resources Management
+
+Standard Directory:
+src/test/resources is the conventional location in Maven/Gradle
+projects for non-code test resources, such as configuration files,
+data files (like JSON), or SQL scripts.
+
+Accessing Resources:
+Within tests, these resources can typically be accessed using
+the classpath.
+
+Application in Excerpts:
+"Замените запросы в тестах на запросы из JSON файлов находящихся
+в директории src/test/resources" indicates that test data, which
+was perhaps hardcoded or generated, should now be loaded from
+external JSON files. This promotes better test data management,
+reusability, and easier maintenance of test cases.

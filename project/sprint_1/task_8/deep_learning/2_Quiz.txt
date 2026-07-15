@@ -1,0 +1,93 @@
+Quiz
+
+Answer each question in 2-3 sentences.
+
+1. What is the fundamental purpose of the .gitignore
+   file in a Git repository?
+
+2. Where should the .gitignore file be located within
+   a project's directory structure?
+
+3. Why is it important to prevent "extra" or "unnecessary"
+   files from being committed to a Git repository?
+
+4. Name two common compiled file types specifically
+   mentioned for Java projects that should be ignored.
+
+5. What are target/ and build/ directories used for,
+   and why are they typically excluded via .gitignore?
+
+6. Provide two examples of IDE-specific files or directories
+   that are commonly ignored.
+
+7. Why should operating system metadata files like
+   .DS_Store or Thumbs.db be added to .gitignore?
+
+8. Besides compiled files, what other category of
+   automatically generated files, often archives, is mentioned
+   for exclusion?
+
+9. Explain why *.local and *.env files are recommended
+   for inclusion in .gitignore.
+
+10. How does the proper use of .gitignore benefit team
+    collaboration on a software project?
+
+
+Quiz Answer Key
+
+1. The .gitignore file's fundamental purpose is to
+   specify which files and directories Git should ignore,
+   preventing them from being tracked and committed to the
+   repository. This helps keep the repository clean and manageable
+   by excluding temporary or unnecessary files.
+
+2. The .gitignore file should always be located in the root
+   directory of the project. This ensures that the ignore rules
+   apply consistently across the entire project structure for
+   all team members.
+
+3. Preventing "extra" or "unnecessary" files from being
+   committed is crucial because these files can increase
+   repository size, lead to merge conflicts, or contain
+   sensitive local configurations. Excluding them streamlines
+   the version control process and focuses on essential project
+   source code.
+
+4. Two common compiled file types for Java projects that
+   should be ignored are *.class files, which are Java bytecode,
+   and compiled archive files like *.jar (Java Archives) or *.war
+   (Web Archives).
+
+5. target/ (Maven) and build/ (Gradle) are package directories
+   used to store compiled classes and other build artifacts
+   generated during the project compilation process. They are
+   typically excluded because they can be regenerated and do
+   not need to be version-controlled, reducing repository clutter.
+
+6. Two examples of IDE-specific files or directories commonly
+   ignored are .idea/, which stores project settings for IntelliJ IDEA,
+   and .project or .classpath files, which are specific to Eclipse.
+
+7. Operating system metadata files like .DS_Store (macOS) and
+   Thumbs.db (Windows) should be added to .gitignore because
+   they are generated automatically by the OS for display
+   purposes and are irrelevant to the project's source code.
+   Including them would only clutter the repository.
+
+8. Besides compiled bytecode, another category of automatically
+   generated files often excluded are archive files such as *.jar
+   (Java archives) and *.war (Web archives). These are deployable
+   packages created from the compiled code.
+
+9. *.local and *.env files are recommended for exclusion because
+   they often contain local configurations or environment variables
+   that might be specific to an individual developer's setup or
+   include sensitive data like API keys. Including them could lead
+   to security risks or configuration conflicts.
+
+10. Proper use of .gitignore benefits team collaboration by
+    ensuring all developers are working with a clean repository
+    free of local or generated files that could cause conflicts
+    or inflate repository size. It streamlines the commit process
+    and allows teams to focus on core code changes.

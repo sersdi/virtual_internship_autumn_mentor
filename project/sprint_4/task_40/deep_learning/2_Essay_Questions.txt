@@ -1,0 +1,27 @@
+Essay Format Questions
+
+1. Discuss the importance of using a tool like Postman
+   in the development and testing lifecycle of an API-driven
+   service, referencing its specific utility in this insurance
+   policy calculation scenario.
+
+2. Analyze the role of JSON as a data interchange format
+   in the context of this exercise. Why is it suitable for
+   transmitting the required policy calculation data, and
+   what are its general advantages over other formats?
+
+3. Explain how the "Headers" and "Body" sections of an
+   HTTP POST request contribute to its functionality in
+   this insurance policy calculation task. What kind of
+   information would typically be placed in each section, and why?
+
+4. Imagine you are the developer of the insurance policy
+   calculation service. Describe the likely steps your
+   service would take upon receiving the HTTP POST request
+   outlined in the study guide, from parsing the request
+   to generating a response.
+
+5. The study guide emphasizes seeking help from a mentor
+   and the internet. Discuss the value of these resources
+   for a developer or tester when working with new tools
+   or complex systems, using this exercise as a specific example.

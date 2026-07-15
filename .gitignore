@@ -1,0 +1,49 @@
+#java specific
+*.class
+*.jar
+# without gradle-wrapper.jar our build will fail
+!gradle/wrapper/gradle-wrapper.jar
+
+#log specific
+*.log
+
+#Mac
+**/.DS_Store
+
+### Gradle ###
+.gradle/
+build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+**/.idea
+*.iws
+*.iml
+*.ipr
+/student_pavel_antonov/documentation/
+/student_pavel_antonov/___forExp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+
+# Dependency directories
+/out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+/target/

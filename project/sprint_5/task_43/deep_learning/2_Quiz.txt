@@ -1,0 +1,67 @@
+Quiz
+
+1. What is the primary characteristic of software
+   development described in the text?
+
+2. Why is it difficult to ensure predictability,
+   continuity, and quality in a software project involving
+   multiple people?
+
+3. What is the main purpose of the Continuous Integration (CI) process?
+
+4. How is the CI process implemented in the described project?
+
+5. When does the project build initiate on the GitHub platform?
+
+6. What does a green checkmark next to a commit signify?
+
+7. What does a red cross next to a commit indicate?
+
+8. What is the recommended action if your commit changes
+   the build status from green to red?
+
+9. How can a developer find the cause of a build error on GitHub?
+
+10. According to the text, what is a key responsibility of
+    a good developer beyond writing code?
+
+
+Quiz Answer Key
+
+1. Software development is described as a continuous and
+   iterative process, progressing step by step, task by task,
+   and functionality by functionality.
+
+2. It is difficult because humans are prone to making mistakes,
+   even experienced programmers, and the more people involved
+   in a project, the more errors will inevitably arise.
+
+3. The Continuous Integration (CI) process is designed to
+   quickly detect and correct errors that arise in a project,
+   preventing them from accumulating into a major problem.
+
+4. In the described project, the CI process is implemented
+   using GitHub Workflow Actions, specifically a file named
+   .github/workflows/build.yaml.
+
+5. The project build on the GitHub platform is launched every
+   time a commit is pushed to the GitHub repository.
+
+6. A green checkmark next to your commit signifies that the
+   project build successfully passed after your commit was made.
+
+7. A red cross next to your commit indicates that the project
+   build finished with an error after your commit.
+
+8. If your commit turns a green build red, you should correct
+   the errors as quickly as possible to restore the build to
+   a green state.
+
+9. To find the cause of an error, click the red cross,
+   then the "Details" link in the popup, navigate to the
+   "build" section, and scroll to the end of the build logs
+   to find problem messages.
+
+10. A good developer should not only be able to write code
+    but also understand what happens to their code after it
+    is created.

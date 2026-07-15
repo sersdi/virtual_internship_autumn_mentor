@@ -1,0 +1,42 @@
+Glossary of Key Terms
+
+Бизнес требование (Business Requirement):
+A specific condition or capability that a system must meet
+or possess to satisfy a contract, standard, specification,
+or other formally imposed document. In this context, it refers
+to the rule about surname validation.
+
+Валидный (Valid):
+Meeting the necessary conditions or requirements; acceptable.
+A "valid" request adheres to all specified rules.
+
+Не валидный (Invalid):
+Not meeting the necessary conditions or requirements;
+unacceptable. An "invalid" request fails to adhere to
+one or more specified rules (e.g., missing a surname).
+
+Реализуйте (Implement):
+To put a decision or plan into effect; to build or
+code the functionality. In this context, it means
+writing the code to enforce the business rule.
+
+Тесты (Tests):
+Procedures or sets of instructions designed to verify
+that a piece of software or a system functions correctly
+and meets its specifications. They are crucial for ensuring
+quality and correctness.
+
+Документация (Documentation):
+Written materials that record the details of a system,
+project, or process. In this context, it refers to collecting
+and organizing system requirements.
+
+Требования к системе (System Requirements):
+Detailed specifications of what a software system must
+do and what properties it must have. These include functional
+and non-functional requirements.
+
+Разработка проекта (Project Development):
+The ongoing process of creating and refining a software
+application or system, from initial conception to deployment
+and maintenance.

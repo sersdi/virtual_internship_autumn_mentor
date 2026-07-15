@@ -1,0 +1,66 @@
+Glossary of Key Terms
+
+Application Layer (Прикладной уровень):
+The highest layer in network models, providing network
+services directly to end-user applications.
+
+Architecture (Архитектура):
+The conceptual design and fundamental operational structure
+of a system, in this context, a computer network.
+
+Computer Networks (Компьютерные сети):
+Interconnected computer systems that are able to share
+resources and exchange data.
+
+Data Link Layer (Канальный уровень):
+The layer responsible for transmitting data frames
+between adjacent network nodes and handling error
+detection and correction at this level.
+
+Ethernet:
+A family of wired networking technologies commonly
+used for local area networks (LANs), defining how data
+is formatted and transmitted over a physical medium.
+
+IP (Internet Protocol) (Протокол IP):
+A core network layer protocol responsible for addressing
+and routing data packets across networks, allowing them to
+travel from source to destination.
+
+Network (Сеть):
+A collection of interconnected devices that can exchange
+data and share resources.
+
+Network Model (Сетевая модель):
+A conceptual framework or set of rules that describe how
+data is transmitted and received across a network, often
+divided into layers (e.g., OSI, TCP/IP).
+
+OSI Model (Модель OSI):
+Open Systems Interconnection model; a conceptual
+seven-layer framework used to understand and standardize
+network functions.
+
+Protocol (Протокол):
+A set of rules and formats that govern how data is
+exchanged between two or more communicating entities
+in a computer network.
+
+Routing (Маршрутизация):
+The process of selecting paths in a network along which
+to send network traffic.
+
+TCP (Transmission Control Protocol) (Протокол TCP):
+A core transport layer protocol that provides reliable,
+ordered, and error-checked delivery of a stream of bytes
+between applications.
+
+TCP/IP (Стек протоколов TCP IP):
+A suite of communication protocols used for the internet
+and similar computer networks. It is often referred to as
+a four- or five-layer model.
+
+Transport Layer (Транспортный уровень):
+The layer responsible for end-to-end communication between
+applications, ensuring reliable data transfer (e.g., through TCP)
+or fast, connectionless transfer (e.g., through UDP).

@@ -1,0 +1,89 @@
+Quiz
+
+1. What is the primary issue identified in
+   the TravelCalculatePremiumControllerTest class?
+
+2. What is the main goal or objective of the
+   task described in the source material?
+
+3. Why is code duplication in test methods considered a problem?
+
+4. After refactoring, what specific benefit
+   related to adding new tests is highlighted?
+
+5. What key technique or "trick" is emphasized
+   for future application in test development?
+
+6. How does separating test data from test code
+   contribute to solving the problem of duplication?
+
+7. What kind of assessment or evaluation is
+   suggested after the refactoring is complete?
+
+8. In which specific class are the duplicated test methods located?
+
+9. What is the implication of the statement
+   "Теперь добавлять новые тесты стало просто"
+   (Now adding new tests has become easy)?
+
+10. The source material instructs the reader to
+    "Запомните этот прием" (Remember this technique).
+    What specific technique is it referring to?
+
+
+Quiz Answer Key
+
+1. The primary issue identified in the
+   TravelCalculatePremiumControllerTest class
+   is clear code duplication within its test methods.
+   This duplication makes the test suite less efficient
+   and harder to manage.
+
+2. The main goal of the task is to perform refactoring
+   on the TravelCalculatePremiumControllerTest class
+   with the specific aim of eliminating the identified
+   code duplication. The ultimate objective is to improve
+   the test suite's maintainability.
+
+3. Code duplication in test methods is a problem because
+   it makes the test suite harder to maintain, update,
+   and extend. Any changes to the duplicated logic would
+   need to be applied in multiple places, increasing the
+   risk of errors and effort.
+
+4. After successful refactoring, a significant benefit
+   highlighted is that adding new tests becomes simple
+   and no longer requires code duplication. This indicates
+   an improved and more scalable test suite.
+
+5. The key technique emphasized for future application
+   is the separation of test data from test code. This
+   approach is presented as a valuable practice to prevent
+   duplication and make testing more efficient.
+
+6. Separating test data from test code contributes to solving
+   duplication by allowing test logic to be written once,
+   while different data sets can be easily plugged in for
+   various test cases. This avoids repeating the same setup
+   or assertion logic multiple times.
+
+7. An assessment or evaluation is suggested after the
+   refactoring is complete, specifically focusing on the result.
+   This step helps confirm that the refactoring has successfully
+   achieved its goal of eliminating duplication and improving
+   the test structure.
+
+8. The duplicated test methods are located in the
+   TravelCalculatePremiumControllerTest class. This class
+   is the specific target for the refactoring effort.
+
+9. The implication of "Now adding new tests has become easy"
+   is that the refactoring has successfully reduced complexity
+   and boilerplate code. This makes the test suite more flexible
+   and encourages the creation of comprehensive tests without
+   significant overhead.
+
+10. The specific technique it is referring to is the
+    separation of test data from test code. The source
+    emphasizes remembering and applying this approach wherever
+    possible to prevent future duplication.

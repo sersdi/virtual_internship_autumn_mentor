@@ -1,0 +1,30 @@
+Essay Questions
+
+1. Discuss the significance of Spring IoC working consistently
+   for both application runtime and test environments, as
+   implied by the source. How does this consistency benefit
+   the development and testing workflow?
+
+2. Elaborate on the combined role of @Component and @Autowired
+   in enabling efficient unit or integration testing within a
+   Spring environment. Provide a detailed example of how these
+   annotations simplify setting up a test case for a class that
+   depends on JsonFileReader.
+
+3. Analyze the architectural implications of moving test data
+   from embedded code to external JSON files located in
+   src/test/resources. What are the benefits in terms of test
+   data management, test code maintainability, and collaboration
+   among developers?
+
+4. Beyond the explicit instructions, consider a more complex
+   Spring application. How might the principles of @Component
+   and @Autowired extend to managing dependencies across various
+   layers (e.g., service, repository) during testing, ensuring
+   that tests accurately reflect real-world interactions?
+
+5. The source briefly mentions JsonFileReader. Imagine you are
+   tasked with implementing this class and its integration into
+   the test. Describe the steps you would take, incorporating the
+   given annotations and considering how the JSON files would be
+   accessed from src/test/resources.

@@ -1,0 +1,58 @@
+Glossary of Key Terms
+
+Refactoring:
+The process of changing a program's internal structure
+without altering its external behavior, primarily to
+improve its comprehensibility and make it easier to modify.
+
+Code Quality:
+A measure of how well a program's code is written,
+considering factors like readability, maintainability,
+expandability, and testability. High code quality facilitates
+easier understanding and modification.
+
+Boy Scout Rule:
+A principle, adapted for programming by Robert C. Martin,
+stating "Leave your code better than it was before you."
+It encourages developers to make small improvements to code
+whenever they encounter it, regardless of authorship.
+
+IT Solution:
+In the context of the text, a software product or system
+designed to meet specific requirements. A "good" IT solution
+also possesses qualities of clarity, expandability, and modifiability.
+
+Sprint:
+In agile software development, a fixed-length period during
+which a team completes a set amount of work, often leading to
+a potentially shippable product increment.
+
+Technical Task (User Story):
+A description of a feature or improvement from the perspective
+of an end-user or a technical need, used in agile methodologies
+to plan and track work.
+
+Functional Style (Programming):
+A programming paradigm that treats computation as the
+evaluation of mathematical functions and avoids changing
+state and mutable data. It often leads to more concise,
+readable, and testable code.
+
+Robert C. Martin:
+A prominent author and software engineer, known as "Uncle Bob,"
+who advocates for clean code and agile software development
+principles. Author of "The Clean Coder."
+
+Martin Fowler:
+A recognized author and speaker on software development,
+particularly known for his work on refactoring. Co-author
+of "Refactoring: Improving the Design of Existing Code."
+
+Kent Beck:
+A software engineer who is one of the creators of
+Extreme Programming (XP) and co-author of "Refactoring:
+Improving the Design of Existing Code."
+
+TravelCalculatePremiumServiceImpl:
+An example class mentioned in the text, serving as a
+specific target for practical refactoring exercises.

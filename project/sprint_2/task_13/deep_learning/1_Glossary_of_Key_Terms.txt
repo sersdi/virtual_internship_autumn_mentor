@@ -1,0 +1,60 @@
+Glossary of Key Terms
+
+Автоматические тесты (Automated Tests):
+Software tests that are executed automatically,
+without human intervention, to verify the functionality
+and correctness of code.
+
+Профессиональное программирование (Professional Programming):
+The practice of software development in an industrial or
+commercial setting, adhering to best practices and quality standards.
+
+Работоспособность (Functionality/Operability):
+The ability of software to perform its intended tasks and
+operate correctly.
+
+Промышленная разработка программного обеспечения
+(Industrial Software Development):
+The large-scale, systematic creation of software for
+commercial or widespread use, often involving teams and
+formal processes.
+
+TravelCalculatePremiumServiceImplTest:
+The specific class designated in the src/test/java directory
+where new automated tests should be written.
+
+src/test/java:
+The standard directory in many Java projects where test
+source code files are located, separate from the main application code.
+
+Комит (Commit):
+The act of saving changes to a version control system
+(like Git), making them a permanent part of the project's history.
+
+GREEN (Зеленый):
+The status or color indicating that all executed automated
+tests have passed successfully without any errors.
+
+GitHub:
+A popular web-based platform for version control
+and collaboration, primarily using Git. Projects
+hosted here often use continuous integration.
+
+Поломать сборку проекта (Break the Project Build):
+To introduce an error or bug into the codebase that
+prevents the project from compiling or being successfully
+assembled into a runnable application.
+
+IDEA:
+Short for IntelliJ IDEA, a widely used integrated development
+environment (IDE) for Java and other programming languages.
+
+Compare Directories (Ctrl + D):
+A feature within IDEA that allows users to compare
+the contents of two different directories, highlighting
+differences between files.
+
+Заполнение ответа (Answer Filling):
+Refers to the specific code developed in a previous
+task that the current assignment requires to be validated
+through automated tests.

@@ -1,0 +1,55 @@
+Glossary of Key Terms
+
+Test Scenarios (Тестовые Сценарии):
+A high-level description of a set of conditions or
+actions under which a system will be tested. They outline
+what needs to be tested but may lack specific data.
+
+Concretization (Конкретика):
+The process of adding specific details, data, and precise
+expected outcomes to abstract test scenarios, making them
+actionable and testable.
+
+Request (Запрос):
+The specific data or input sent to a system or application
+to trigger a particular operation or behavior. In this context,
+it is formatted as JSON.
+
+Response (Ответ):
+The data or output returned by a system or application
+in reply to a request. It contains the results of the operation,
+including any errors. In this context, it is formatted as JSON.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format that is easy for humans
+to read and write and easy for machines to parse and generate.
+It is commonly used for transmitting data between a server and
+web application, as an alternative to XML.
+
+Fields (Поля):
+Individual data attributes or parameters within a structured
+data set (e.g., firstName, lastName, agreementDateFrom).
+
+Errors (Ошибки):
+Messages or indicators returned by a system when an input
+or operation fails to meet specified criteria or constraints.
+
+Validation (Валидация):
+The process of checking that data conforms to specific
+rules or formats (e.g., ensuring a date is in a correct
+format, or a required field is not empty).
+
+Null:
+A special value indicating the absence of any object value.
+In JSON, null often represents that a field is not specified
+or has no value.
+
+Abstract:
+Describing something in a general way, without specific details.
+In the context of test scenarios, it refers to the initial
+high-level descriptions.
+
+Actionable:
+Capable of being acted upon; practical and concrete.
+In this context, test scenarios that are specific enough
+to be directly implemented in testing.

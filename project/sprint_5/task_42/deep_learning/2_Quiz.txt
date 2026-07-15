@@ -1,0 +1,64 @@
+Quiz
+
+1. What is the primary objective given in the source material?
+
+2. In what language is the instruction provided?
+
+3. What specific date format is being mandated?
+
+4. For what purpose is this date format to be used?
+
+5. What does "yyyy" represent in the specified date format?
+
+6. What does "MM" represent in the specified date format?
+
+7. What does "dd" represent in the specified date format?
+
+8. Is the instruction about any date format, or a specific one?
+
+9. What does the word "явно" (yavno) imply about
+   setting the date format?
+
+10. If a query currently uses "MM/dd/yyyy", what
+change would be required based on the source?
+
+
+Quiz Answer Key
+
+1. The primary objective given in the source material
+   is to explicitly set the date format in a query.
+   This ensures consistency and proper interpretation
+   of date values within the query.
+
+2. The instruction is provided in Russian. This suggests
+   the original context might be for a Russian-speaking
+   audience or system.
+
+3. The specific date format being mandated is "yyyy-MM-dd".
+   This is a common international standard for representing dates.
+
+4. This date format is to be used within a "запросе" (query).
+   This indicates it's for data retrieval, manipulation, or
+   interaction with a database or system.
+
+5. "yyyy" represents the four-digit year. For example,
+   if the year is 2023, "yyyy" would be "2023".
+
+6. "MM" represents the two-digit month. For example,
+   January would be "01" and December would be "12".
+
+7. "dd" represents the two-digit day of the month.
+   For example, the first day would be "01" and the twenty-fifth
+   would be "25".
+
+8. The instruction is about a specific date format,
+   "yyyy-MM-dd", not just any arbitrary date format.
+   This emphasizes precision in data handling.
+
+9. "Явно" (yavno), meaning "explicitly" or "clearly,"
+   implies that the date format must be directly stated
+   and not implicitly assumed by the system. It removes ambiguity.
+
+10. If a query currently uses "MM/dd/yyyy", based on the source,
+    the required change would be to reformat dates to "yyyy-MM-dd",
+    changing both the order of components and the separator character.

@@ -1,0 +1,21 @@
+Essay Questions
+
+1. Discuss the advantages and disadvantages of using a console
+   appender as the sole logging destination for a production
+   application compared to development or testing environments.
+
+2. Explain the typical steps a developer would take to integrate
+   Logback into a new Java application, focusing on the
+   configuration aspect.
+
+3. Beyond the console appender, describe at least two other
+   common types of Logback appenders and explain scenarios
+   where each would be particularly useful.
+
+4. Analyze the importance of externalizing logging configuration
+   (e.g., in logback.xml) rather than embedding it directly within
+   the application's source code.
+
+5. How do logging levels (e.g., DEBUG, INFO, WARN, ERROR) interact
+   with appender configurations in Logback to provide flexible
+   control over log output?

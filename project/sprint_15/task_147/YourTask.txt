@@ -1,0 +1,20 @@
+Ваша задача:
+
+1. Скопируйте в /version_2 класс SelectedRisksPremiumCalculator.
+
+2. В классе SelectedRisksPremiumCalculator поменяйте сигнатуру
+List<RiskPremium> calculatePremiumForAllRisks(TravelCalculatePremiumRequestV1 request)
+на
+List<RiskDTO> calculatePremiumForAllRisks(AgreementDTO agreement, PersonDTO person)
+а так же сделайте нужные изменения в коде класса.
+Данный класс должен по полису и персоне рассчитывать все выбранные
+риски для переданной в качестве параметра персоне.
+
+PS: быстро найти все изменения сделанные в текущем задании
+можно в IDEA (закладка слева) выбрав папку текущего задания (например task_10)
+и папку предыдущего задания (например task_9) и в сплывающем меню выбрав пункт
+Compare Directories (Ctrl + D).
+
+PS: не забудьте по окончанию выполнения шага создать и заполнить
+файл /documentation/Task_x_description.txt. Формат заполнения этого
+файла описан в task_1 в файле Learning_reflection.txt.

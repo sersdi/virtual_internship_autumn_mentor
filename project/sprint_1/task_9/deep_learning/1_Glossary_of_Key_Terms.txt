@@ -1,0 +1,83 @@
+Glossary of Key Terms
+
+build.gradle:
+A core Gradle configuration file, located at the root of the
+project, containing the general build configuration for all
+modules within the project.
+
+settings.gradle:
+A core Gradle configuration file, located at the root of
+the project, that defines the multi-module structure by
+listing all individual modules in the repository.
+
+Gradle:
+An open-source build automation tool used for automating
+the building, testing, publishing, and deployment of software projects.
+
+Multi-module project:
+A software project structured into several separate,
+often interdependent, sub-projects or modules.
+
+Module:
+A distinct, self-contained component of a larger
+multi-module Gradle project, which can be built separately.
+
+Build process:
+The sequence of operations (e.g., compiling, testing, packaging)
+performed by a build automation tool like Gradle to transform
+source code into a deployable application.
+
+Dependencies:
+External libraries, frameworks, or other project modules
+that a particular module or project relies on to function correctly.
+
+Maven Central:
+A large, open, and public repository that hosts a vast
+collection of Java libraries, which can be included as
+dependencies in Java and Gradle projects.
+
+Repositories:
+Locations where build tools like Gradle search for and
+download project dependencies.
+
+Gradle plugins:
+Reusable pieces of build logic that extend Gradle's capabilities,
+providing pre-configured tasks and configurations for common
+functionalities (e.g., compiling Java code, integrating with IDEs).
+
+Java plugin:
+A standard Gradle plugin that adds support for building
+Java projects, including tasks for compilation, testing,
+and packaging Java code.
+
+IDEA plugin:
+A Gradle plugin that generates configuration files for
+IntelliJ IDEA, simplifying project import and setup within the IDE.
+
+sourceCompatibility:
+A Gradle setting that specifies the Java language version
+the source code is written in.
+
+targetCompatibility:
+A Gradle setting that specifies the Java Virtual Machine
+(JVM) bytecode version that the compiled code should be
+compatible with.
+
+JDK (Java Development Kit):
+A software development environment used for developing
+Java applications, including the Java Runtime Environment
+(JRE), an interpreter/loader, a compiler (javac), and other tools.
+
+UTF-8:
+A variable-width character encoding capable of encoding
+all characters in the Unicode character set, widely used
+for text files and web pages.
+
+JUnit 5:
+A popular open-source testing framework for Java,
+used for writing and running unit tests.
+
+useJUnitPlatform():
+A configuration within the test block in Gradle that
+instructs the test task to use the JUnit Platform for
+executing tests, allowing support for JUnit 5.

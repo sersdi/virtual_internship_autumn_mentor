@@ -1,0 +1,88 @@
+Quiz
+
+1. What is the primary purpose of JUnit in the context of testing?
+
+2. How does @ExtendWith(MockitoExtension.class) modify the
+   default behavior of JUnit?
+
+3. What is the function of the @Mock annotation?
+
+4. Explain the role of the @InjectMocks annotation.
+
+5. Why is it beneficial to use mock objects in unit testing?
+
+6. Describe the relationship between @ExtendWith and
+   MockitoExtension.class.
+
+7. In what scenario would you typically use @InjectMocks
+   alongside @Mock?
+
+8. What does the phrase "под капотом" ("under the hood")
+   imply when referring to MockitoExtension.class?
+
+9. Why might you want to extend the behavior of JUnit?
+
+10. What specific problem do mock objects help solve
+    when dealing with dependencies?
+
+
+Quiz Answer Key
+
+1. JUnit is a library primarily responsible for managing
+   the execution of unit tests. It provides the framework
+   for structuring and running tests to verify individual
+   components of software.
+
+2. @ExtendWith(MockitoExtension.class) extends JUnit's
+   default behavior by integrating Mockito's functionalities
+   into the test lifecycle. This allows JUnit to automatically
+   handle the creation and injection of mock objects within the tests.
+
+3. The @Mock annotation is used to declare a mock object.
+   When applied to a field, Mockito will create a mock
+   instance of the declared type, allowing testers to
+   control its behavior during a test.
+
+4. The @InjectMocks annotation is used to create an
+   instance of the class under test and automatically
+   inject any fields annotated with @Mock or @Spy into it.
+   This simplifies the setup of the test subject with its
+   mocked dependencies.
+
+5. Mock objects are beneficial in unit testing because
+   they isolate the component being tested from its real
+   dependencies. This ensures that the test only evaluates
+   the logic of the unit itself, preventing external factors
+   from influencing the test results and making tests more
+   reliable and faster.
+
+6. @ExtendWith is a JUnit 5 annotation that allows you
+   to register extensions, and MockitoExtension.class is
+   the specific extension provided by Mockito. Together,
+   they tell JUnit to use Mockito's capabilities, such as
+   automatic mock creation and injection, during the test run.
+
+7. You would typically use @InjectMocks alongside @Mock
+   when you are testing a class that has dependencies
+   on other components. @Mock creates the fake dependencies,
+   and @InjectMocks then takes these fakes and injects them
+   into an instance of the class you are trying to test.
+
+8. The phrase "под капотом" ("under the hood") implies that
+   one should investigate the internal workings or hidden
+   mechanisms of MockitoExtension.class. It suggests
+   understanding how it functions internally to achieve
+   its mock creation and injection capabilities.
+
+9. You might want to extend the behavior of JUnit to
+   integrate third-party libraries, provide custom test
+   execution logic, or simplify common test setup patterns.
+   In this context, extending JUnit allows for seamless
+   integration with Mockito for efficient mock object management.
+
+10. Mock objects help solve the problem of complex or
+    unavailable dependencies during unit testing. Instead
+    of needing a fully functional database, network connection,
+    or other external services, mocks provide controlled,
+    predictable substitutes that allow the unit under test
+    to be isolated and tested effectively.

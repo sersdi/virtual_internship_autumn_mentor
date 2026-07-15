@@ -1,0 +1,73 @@
+Objects in Java: Study Guide
+
+Core Concepts Review
+
+This section outlines the fundamental concepts from
+the provided text, crucial for understanding software
+testing and unit testing with mock objects.
+
+A. Levels of Software Testing
+
+Unit Testing:
+Focuses on individual modules or components (e.g., classes)
+to ensure they function correctly in isolation. Typically
+written by developers.
+
+Integration Testing:
+Verifies the interactions and interfaces between
+different modules or components to find errors in
+their communication. Also typically written by developers.
+
+System Testing:
+Tests the complete, integrated system against defined
+requirements (functional and non-functional) to ensure
+it meets specifications.
+
+Acceptance Testing:
+Conducted by end-users or clients to confirm the system
+is ready for production use and meets their specific needs.
+Can include beta testing.
+
+
+B. The Nature of a "Clean" Unit Test
+
+A clean unit test should test the code within a single class.
+
+It should not create and use instances of other
+production classes that are external dependencies.
+
+The primary goal is to isolate the class under test
+from its dependencies to ensure that only the logic
+within that specific class is being validated.
+
+Creating instances of dependent classes turns a
+unit test into an integration test, as it checks
+the interaction between multiple classes.
+
+C. Mock Objects
+
+Purpose: To substitute external dependencies in a unit test.
+
+Functionality:
+They allow developers to control the behavior of these
+dependencies during testing, without relying on their
+actual implementation.
+
+Benefit:
+Enables true isolation for unit testing, making tests faster,
+more reliable, and easier to debug.
+
+Mockito:
+A popular Java library for creating and managing mock objects.
+
+D. Importance of Self-Learning
+
+The text emphasizes the necessity for developers to
+continuously learn new technologies and concepts independently.
+
+Real-world projects often require developers to research
+and understand new topics without detailed explanations
+from colleagues.
+
+Tools suggested for self-learning include ChatGPT,
+YouTube, Google Search, and books.

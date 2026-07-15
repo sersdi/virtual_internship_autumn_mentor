@@ -1,0 +1,45 @@
+plugins {
+	id 'maven-publish'
+}
+
+dependencies {
+
+	compileOnly('org.projectlombok:lombok:1.18.32')
+	annotationProcessor('org.projectlombok:lombok:1.18.32')
+
+}
+
+jar {
+	enabled = true
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			// Identify the artifact
+			artifact jar  // This refers to the Spring Boot's bootJar task
+
+			// Project coordinates
+			groupId = 'org.javaguru'
+			artifactId = 'insurance-calculator-core-api'
+			version = '1.0.0'
+
+			// Add other metadata as needed
+			pom {
+				name = 'Insurance Calculator Core API'
+				description = 'Core API module'
+				licenses {
+					license {
+						name = 'The Apache License, Version 2.0'
+						url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+					}
+				}
+			}
+		}
+	}
+
+	// Configure the repository location (local Maven repository)
+	repositories {
+		mavenLocal()
+	}
+}

@@ -1,0 +1,27 @@
+Essay Format Questions
+
+1. Discuss the interplay between strict business rules
+   and flexible development practices, using the provided
+   text as a case study. How does the emphasis on "the
+   right place" for code placement reflect this balance?
+
+2. Analyze the significance of "PS: Не забудьте про тесты!
+   Решение без тестов не принимается!" within the context
+   of modern software development. What broader principles
+   of software quality assurance does this statement embody?
+
+3. Elaborate on the practical benefits of creating and
+   maintaining a /documentation folder with files like
+   BusinessRequirements.txt from a project management
+   and team collaboration perspective.
+
+4. How does the source material implicitly suggest an
+   agile approach to requirement gathering, despite its
+   direct tone? Discuss the implications of "collecting
+   requirements as they appear" for project planning.
+
+5. Imagine you are the developer assigned this task.
+   Outline a step-by-step process you would follow, from
+   understanding the business rule to final deployment,
+   ensuring all aspects mentioned in the source material
+   are addressed.

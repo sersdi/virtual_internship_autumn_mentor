@@ -1,0 +1,75 @@
+Briefing: Code Validation Through Automated Testing
+
+This briefing summarizes the key themes and directives
+presented in the provided source, "Excerpts from 'Code
+Validation Through Automated Testing'." The document
+emphasizes the critical role of automated testing in
+professional software development.
+
+Main Themes and Key Ideas:
+
+Automated Testing as Proof of Code Functionality:
+The core message is that in professional programming,
+"the functionality of the written code is proven by
+automated tests" ("В профессиональном программировании
+работоспособность написанного кода доказывается автоматическими
+тестами."). This highlights that tests are not merely a
+supplement but the fundamental method for validating code correctness.
+
+Importance and Widespread Application of Testing:
+Automated testing is presented as an "extremely important
+and widely used tool in industrial software development"
+("Написание тестов это наиважнейший и широко применяемый
+инструмент в промышленной разработке программного обеспечения.").
+This underscores its universal adoption and necessity in the industry.
+
+Specific Task:
+Validate Previous Code: The immediate directive for the reader
+is to "prove, using tests, that your answer-filling code written
+in the previous assignment works correctly" ("Ваша задача: докажите
+при помощи тестов, что ваш код заполнения ответа написанный в
+предыдущем задании работает правильно."). This sets a practical,
+hands-on objective.
+
+Designated Test Location:
+
+The tests are to be written in a specific class:
+TravelCalculatePremiumServiceImplTest, located in the
+src/test/java directory. This provides clear instructions
+on where the new test code should reside within the project structure.
+
+Pre-Commit Testing and Build Integrity (Green Tests):
+A crucial piece of advice is to "remember to execute ALL
+(there will be many in the future) your tests before committing
+and ensure they all pass without errors (GREEN)" ("Совет: перед
+комитом не забывайте выполнить ВСЕ (их в будущем будет много)
+ваши тесты и убедиться, что они все проходят без ошибок (GREEN).").
+The consequence of failing to do so is dire: "Otherwise, you will
+break the project build on GitHub" ("Иначе вы поломаете сборку
+проекта на GitHub."). This emphasizes the importance of a "green"
+build (all tests passing) for maintaining project stability and
+preventing integration issues.
+
+Tip for Identifying Code Changes:
+A practical tip is offered for developers using IDEA
+(presumably IntelliJ IDEA): to quickly find all changes made
+in the current task, one can select the current task's folder
+(e.g., task_10) and the previous task's folder (e.g., task_9)
+and choose "Compare Directories (Ctrl + D)" from the context menu.
+This is a helpful productivity tip for managing code evolution.
+
+
+Most Important Ideas/Facts:
+
+Automated tests are the primary method of proving code
+functionality in professional programming.
+
+Writing tests is an essential and widely used industrial practice.
+
+The immediate task is to test the code from the previous
+assignment using the TravelCalculatePremiumServiceImplTest class.
+
+All tests must pass (be "GREEN") before committing to
+prevent breaking the project build on GitHub.
+
+Failing tests will "break the project build on GitHub".

@@ -1,0 +1,58 @@
+Glossary of Key Terms
+
+Система логирования (Logging System):
+A component or mechanism designed to record events, actions,
+and data within a software system. Its primary purpose is
+to help understand system behavior, diagnose issues, and
+track operations.
+
+Информация (Information):
+Any data or details that are preserved by the logging system
+to provide insights into past system activities.
+
+Ошибки (Errors):
+Malfunctions, defects, or deviations from expected behavior
+within the system that the logging information helps identify
+and eliminate.
+
+Запрос (Request):
+In this context, an object (TravelCalculatePremiumRequest)
+representing a set of data or parameters sent to the system
+for processing.
+
+TravelCalculatePremiumRequest:
+A specific object type mentioned in the source material,
+intended to be transformed and logged. It likely contains
+details related to a travel insurance premium calculation.
+
+Строка (String):
+A sequence of characters. In this context, the target format
+for the transformed object.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format that is human-readable
+and easy for machines to parse and generate. It is commonly
+used for transmitting data between a server and web application,
+and in this case, for logging.
+
+Преобразование объекта в JSON (Object to JSON Transformation):
+The process of converting a structured programming object
+(like TravelCalculatePremiumRequest) into its JSON string
+representation.
+
+Тест (Test):
+A method or set of procedures used to verify that a piece of
+code or a system component functions as expected. In this context,
+used to validate the object-to-JSON conversion solution.
+
+Консоль (Console):
+A text-based interface where system output, including log messages,
+is displayed.
+
+INFO:
+A log level indicating informational messages highlighting the
+progress of the application at a coarse-grained level.
+
+REQUEST:
+A specific label used in the example log output to denote that
+the following JSON string represents a request object.

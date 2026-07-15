@@ -1,0 +1,48 @@
+Glossary of Key Terms
+
+Refactoring:
+The process of restructuring existing computer code—changing
+the factoring—without changing its external behavior. Its
+purpose is to improve nonfunctional attributes of the software,
+such as readability, maintainability, and complexity.
+
+Validation:
+In software development, the process of ensuring that data
+conforms to specific criteria or rules before it is processed
+or stored. It checks for correctness, completeness, and legitimacy.
+
+TravelCalculatePremiumRequestValidator:
+The specific class mentioned in the source material that
+is responsible for validating request data, and is identified
+as needing refactoring.
+
+Single Responsibility Principle (SRP):
+A software design principle stating that every module, class,
+or function should have responsibility over a single part of
+the functionality provided by the software, and that
+responsibility should be entirely encapsulated by the class,
+module or function.
+
+Large Classes:
+Classes that grow excessively in size and functionality,
+often due to accumulating too many responsibilities, making
+them difficult to understand, maintain, and test.
+
+Expansion of Business Functionality:
+The process of adding new features, requirements, or rules
+to the software to meet evolving business needs.
+
+Separate Methods (for Validation):
+The initial implementation approach where each validation rule
+for a specific field is encapsulated within its own method
+inside a single validator class.
+
+Separate Classes (for Validation):
+The proposed refactoring solution where each individual
+validation rule or set of rules is extracted and implemented
+as an independent class.
+
+Testability:
+The ease with which a software component can be tested to
+ensure it performs as expected. Large and complex classes
+often have low testability.

@@ -1,0 +1,50 @@
+Glossary of Key Terms
+
+Senior Developer:
+A highly experienced and skilled software developer whose
+work is characterized by exceptional quality and consistent
+adherence to high standards.
+
+"It'll Do!" (И так сойдет!):
+A mentality or approach in software development characterized
+by a lack of commitment to quality, leading to shortcuts,
+inconsistent solutions, and generally poor work.
+
+Copy/Paste Approach:
+A common bad practice in programming where code is duplicated
+without proper understanding, refactoring, or adaptation,
+often leading to dirty and unmaintainable code.
+
+Dirty Code:
+Code that is difficult to read, understand, maintain, or extend,
+often due to poor structure, lack of comments, or inconsistent styling.
+
+Absence of Tests:
+A lack of automated or manual tests for code, which can lead to
+bugs, regressions, and an inability to confidently refactor or
+extend software.
+
+Bad Architectural Decisions:
+Poorly designed or structured solutions at a high level,
+impacting the scalability, maintainability, and performance
+of a software system.
+
+Personal Quality Standards:
+Self-imposed rules or principles that define a developer's
+minimum acceptable level of quality for their work, below which
+they pledge never to descend.
+
+Unit Tests:
+Automated tests that verify small, isolated units of source code
+(e.g., individual functions or methods) to ensure they behave
+as expected.
+
+Boy Scout Rule:
+A principle in software development that encourages developers
+to always leave the code cleaner than they found it, even if
+they are only making a small change.
+
+Continuous Development/Improvement:
+The ongoing process of expanding, refining, and strictly
+adhering to one's personal quality standards to achieve
+higher levels of proficiency and excellence in software development.

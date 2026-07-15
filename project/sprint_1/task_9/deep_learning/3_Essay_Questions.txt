@@ -1,0 +1,26 @@
+Essay Questions
+
+Discuss the critical roles of build.gradle and settings.gradle
+in defining and managing a multi-module Gradle project. How do
+they complement each other in terms of project configuration and
+structure?
+
+Explain the concept of "dependencies" in the context of
+Gradle projects and how Maven Central facilitates the
+management of these dependencies. What would be the
+implications of not having a repository like Maven Central?
+
+Analyze the importance of specifying sourceCompatibility
+and targetCompatibility in a Gradle project. How do these
+settings impact development, compilation, and deployment,
+and what are the potential consequences of misconfiguring them?
+
+Describe the function and significance of Gradle plugins
+based on the provided text. Using the 'java' and 'idea'
+plugins as examples, elaborate on how they extend Gradle's
+capabilities and simplify project management.
+
+Discuss the benefits of using a standardized character
+encoding like UTF-8 and a specific testing platform like
+JUnit 5 in software development. How do these choices contribute
+to project consistency, reliability, and collaboration?

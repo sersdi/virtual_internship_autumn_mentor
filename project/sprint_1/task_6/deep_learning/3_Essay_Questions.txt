@@ -1,0 +1,21 @@
+Essay Format Questions
+
+1. Discuss the importance of the clean command in a continuous
+   integration/continuous deployment (CI/CD) pipeline. How
+   does it contribute to reliable and repeatable builds?
+
+2. Compare and contrast running the clean command for an
+   entire project versus running it for a specific module.
+   In what scenarios would one be preferred over the other?
+
+3. Explain the relationship between the build folder and the
+   clean command. Why is the deletion of this specific folder
+   crucial for artifact removal?
+
+4. Beyond simply removing files, what are the broader implications
+   of using the clean command on project integrity and developer
+   workflow?
+
+5. Imagine a scenario where a developer neglects to use the
+   clean command regularly. Describe potential problems and
+   errors that might arise during development or deployment.

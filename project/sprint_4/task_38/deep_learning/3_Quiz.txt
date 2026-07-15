@@ -1,0 +1,98 @@
+Quiz
+
+1. What is the primary role of the HTTP protocol in
+   web communication, and at which layer of the networking
+   model does it operate?
+
+2. Explain the main difference in purpose between a
+   GET request and a POST request.
+
+3. Describe what URL parameters are and provide an
+   example of how they might appear in a URL string.
+
+4. When would a server application typically use the
+   HTTP protocol in its operations?
+
+5. What kind of information is usually transmitted
+   within the "body" of an HTTP request?
+
+6. Briefly explain why knowing the different types
+   of HTTP requests (GET, POST, PUT, DELETE) is important
+   for understanding web interactions.
+
+7. Beyond the hostname and path, what other essential
+   information can be specified within the URL string,
+   particularly for filtering or searching?
+
+8. If you are sending a large amount of sensitive user data,
+   such as login credentials, would you prefer to send it via
+   URL parameters or in the request body? Briefly justify your choice.
+
+9. The source material suggests watching specific YouTube videos.
+   How do these external resources contribute to forming an
+   initial understanding of HTTP?
+
+10. What is the overarching goal mentioned in the source
+    material for studying the HTTP protocol?
+
+
+Answer Key (Quiz)
+
+1. The HTTP protocol's primary role is to enable communication
+   between web clients (like browsers) and web servers. It
+   operates at the application layer of the networking model,
+   facilitating the exchange of web-related data.
+
+2. A GET request is primarily used to retrieve data from a
+   specified resource on the server, typically without altering
+   the server's state. In contrast, a POST request is used to
+   send data to the server, often to create a new resource or
+   submit information that might have side effects on the server.
+
+3. URL parameters, also known as query parameters, are key-value
+   pairs appended to the end of a URL to pass additional
+   information to the server. An example is
+   https://example.com/search?query=HTTP&page=2,
+   where query and page are parameters.
+
+4. A server application typically uses the HTTP protocol to
+   receive various requests from users (e.g., browsers) and
+   to formulate appropriate responses back to those users.
+   This enables the server to process client commands and deliver
+   requested content or confirm actions.
+
+5. The "body" of an HTTP request typically transmits larger or
+   more complex data that cannot be easily represented in URL
+   parameters. This often includes form data, JSON objects,
+   XML documents, or files, especially for methods like POST and PUT.
+
+6. Knowing the different types of HTTP requests is crucial
+   because each method signifies a specific intended action
+   on a resource, guiding how the server should process the request.
+   This understanding helps in designing and debugging web
+   applications and interpreting web traffic.
+
+7. Beyond the hostname and path, the URL string can include
+   parameters, also known as query strings, which specify
+   additional information for filtering, searching, or other
+   dynamic interactions. These parameters are appended after
+   a question mark and are formatted as key-value pairs.
+
+8. For sending sensitive user data like login credentials,
+   it is preferable to send it in the request body, typically
+   using a POST request. This is because data in the request
+   body is not usually logged in browser history or server logs
+   in the same way URL parameters are, providing better security
+   and handling of larger data sets.
+
+9. The suggested YouTube videos serve as introductory or
+   supplementary resources to help in forming an initial
+   understanding of HTTP. They likely provide visual
+   explanations and simplify complex concepts, aiding
+   comprehension beyond textual descriptions.
+
+10. The overarching goal mentioned in the source material
+    for studying the HTTP protocol is to form an initial
+    understanding of how the HTTP protocol is structured
+    and how it operates in practice. This foundational
+    knowledge is crucial for anyone interacting with web technologies.

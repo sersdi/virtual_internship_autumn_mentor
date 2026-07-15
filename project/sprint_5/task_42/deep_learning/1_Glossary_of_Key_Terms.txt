@@ -1,0 +1,32 @@
+Glossary of Key Terms
+
+yyyy-MM-dd:
+A standard date format where "yyyy" represents the four-digit year,
+"MM" represents the two-digit month, and "dd" represents the
+two-digit day. The components are separated by hyphens.
+
+Запрос (Zapros):
+Russian for "query." In the context of databases and software,
+a query is a request for data or information from a database or system.
+
+Формат даты (Format daty):
+Russian for "date format." Refers to the specific structure
+and order in which date components (year, month, day) are represented.
+
+Установить (Ustanovit'):
+Russian for "to set" or "to establish." Implies an action
+of defining or configuring something.
+
+Явно (Yavno):
+Russian for "explicitly," "clearly," or "plainly."
+Emphasizes that something must be stated directly and
+not left to assumption or default.
+
+Спецификация (Spetsifikatsiya):
+Russian for "specification." A detailed description of
+the requirements, design, behavior, or other characteristics
+of a system, component, or process.
+
+Ваша задача (Vasha zadacha):
+Russian for "Your task." Indicates a direct instruction
+or assignment given to the user.

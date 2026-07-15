@@ -1,0 +1,37 @@
+Query Date Format: YYYY-MM-DD Explicit Standard
+
+How should dates be formatted in queries?
+Dates should be explicitly formatted as "yyyy-MM-dd" in queries.
+
+What is the required date format?
+The required date format is "yyyy-MM-dd".
+
+Is there a specific instruction for date formatting?
+Yes, the instruction is to explicitly set the date format
+in the query to "yyyy-MM-dd".
+
+Why is "yyyy-MM-dd" the chosen format?
+The source explicitly states "Ваша задача: установить
+явно формат даты в запросе на 'yyyy-MM-dd'", indicating
+this is the designated format for date specification.
+
+Does this apply to all date-related queries?
+The instruction specifies "формат даты в запросе"
+(date format in the query), implying it applies to any
+query where a date needs to be specified.
+
+What does "установить явно" mean in this context?
+"Установить явно" translates to "set explicitly,"
+meaning the date format should not be assumed or
+left to default settings but must be clearly defined
+as "yyyy-MM-dd" within the query.
+
+Are there any other permissible date formats?
+Based on the provided source, "yyyy-MM-dd" is the
+only specified and required date format. No other
+formats are mentioned as permissible.
+
+What is the overall goal of this specification?
+The overall goal is to ensure consistency and clarity
+in date handling within queries by mandating a specific,
+explicit format ("yyyy-MM-dd").

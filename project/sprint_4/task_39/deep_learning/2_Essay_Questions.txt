@@ -1,0 +1,21 @@
+Essay Format Questions
+
+1. Discuss the core principles of REST architecture and
+   explain how they contribute to the scalability and
+   maintainability of distributed systems.
+
+2. Elaborate on the significance of "statelessness"
+   in RESTful systems. How does it simplify server design
+   and improve system reliability?
+
+3. Compare and contrast the use of HTTP GET and POST
+   methods in a REST API. Provide examples of scenarios
+   where each would be the appropriate choice.
+
+4. Explain how the consistent mapping of HTTP methods
+   (GET, POST, PUT, DELETE) to CRUD operations simplifies
+   the development and understanding of RESTful APIs.
+
+5. Beyond the specific HTTP methods and URL structure,
+   what other aspects contribute to a well-designed
+   RESTful API, and why are they important?

@@ -1,0 +1,53 @@
+Glossary of Key Terms
+
+Interface:
+In object-oriented programming, a contract that defines a
+set of methods that a class must implement. It specifies
+what a class does, but not how.
+
+Package-Level Access (Package-Private):
+An access modifier in Java (the default if no modifier is specified)
+that restricts the visibility of a class, method, or field to only
+other classes within the same package.
+
+public:
+An access modifier that makes a class, method, or field
+accessible from any other class in the application.
+
+Optional:
+A container object that may or may not contain a non-null value.
+It is used to represent the presence or absence of a value,
+helping to avoid NullPointerExceptions.
+
+@Component:
+A Spring framework annotation used to mark a class as a
+Spring-managed component. Spring's component scanning will
+detect these classes and register them as beans in the application
+context.
+
+Inversion of Control (IoC):
+A design principle where the control of object creation and
+dependency management is inverted. Instead of an object creating
+its dependencies, a framework (like Spring) injects them,
+leading to looser coupling and improved testability.
+
+Dependency Injection (DI):
+A specific implementation of IoC where an object receives
+its dependencies from an external source (e.g., a constructor,
+setter method) rather than creating them itself.
+
+Encapsulation:
+The bundling of data and methods that operate on the data
+within a single unit, and restricting direct access to some
+of the object's components. It helps in data hiding and
+preventing unintended modifications.
+
+Modularity:
+The degree to which a system's components can be separated
+and recombined, often with the goal of reducing complexity
+and improving maintainability.
+
+Design Pattern:
+A general, reusable solution to a commonly occurring problem
+within a given context in software design. The text mentions
+IoC as a design pattern.

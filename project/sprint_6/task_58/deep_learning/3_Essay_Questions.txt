@@ -1,0 +1,27 @@
+Essay Questions
+
+1. Discuss how the refactoring described in the source material
+   leverages the Inversion of Control (IoC) principle and explain
+   the benefits this brings to the
+   TravelCalculatePremiumRequestValidator class specifically.
+
+2. Analyze the architectural advantages of using a public
+   interface for validation combined with making concrete
+   implementations package-private and placing them in a
+   dedicated package. How does this approach contribute to
+   a more robust and maintainable application design?
+
+3. Explain the role of the Optional return type for the
+   validation method. What problem does it likely solve
+   in the context of validation results, and how might
+   it be handled by the calling code?
+
+4. Consider the impact of this refactoring on the extensibility
+   of the validation logic. How would a new validation rule be
+   added to the system after these changes, and what parts of
+   the existing code would or would not need modification?
+
+5. Describe the importance of modifying tests in response
+   to significant refactoring efforts like the one detailed.
+   What specific types of test changes would be necessary for
+   the TravelCalculatePremiumRequestValidator and why?

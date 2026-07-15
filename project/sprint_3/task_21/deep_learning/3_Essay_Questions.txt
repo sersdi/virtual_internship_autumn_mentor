@@ -1,0 +1,29 @@
+Essay Format Questions
+
+1. Discuss the benefits of using Inversion of Control and
+   Dependency Injection in the context of large-scale
+   software development. Provide specific examples of
+   how these patterns improve maintainability, testability,
+   and scalability.
+
+2. Compare and contrast constructor dependency injection
+   with other potential methods of dependency injection
+   (e.g., setter injection, field injection, though not
+   explicitly mentioned in the source, you can research
+   them briefly for comparison). Explain why constructor
+   injection is often considered a preferred method.
+
+3. Explain the role of the Spring IoC container in managing
+   the lifecycle of objects and resolving dependencies. How does
+   it leverage annotations like @Component to achieve this?
+
+4. Elaborate on the "separation of concerns" principle and how
+   the advice to "extract algorithms into separate classes"
+   aligns with this principle. Discuss the long-term advantages
+   of adhering to this practice.
+
+5. Imagine you are tasked with refactoring an existing monolithic
+   application that does not use IoC/DI. Outline a step-by-step
+   approach for introducing Spring's IoC and Dependency Injection
+   principles into this application, focusing on how you would
+   identify and address dependencies.

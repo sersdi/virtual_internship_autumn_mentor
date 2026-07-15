@@ -1,0 +1,34 @@
+Study Guide
+
+This study guide is designed to help you understand best
+practices in unit testing, particularly the principle of
+"one assertion per test," and to review how java.util.Date
+objects behave in Java.
+
+Key Concepts to Master:
+
+Unit Test Granularity:
+Understanding why a single assertion per test method is considered ideal.
+
+Test Failure Diagnosis:
+How ideal tests facilitate quick and accurate identification
+of root causes for failures.
+
+Code Quality vs. Pragmatism:
+The tension between ideal code/tests and real-world project constraints.
+
+Learning Project Philosophy:
+The importance of focusing on quality and ideal practices
+in an educational setting.
+
+Effective Work Habits:
+The benefit of continuous, uninterrupted blocks of time
+for focused work.
+
+Problem-Solving Algorithm (Unknowns):
+A systematic approach to addressing unknown technical details,
+emphasizing documentation.
+
+java.util.Date Behavior:
+How Date objects store and represent time, and the
+implications for rapid, sequential instantiation.

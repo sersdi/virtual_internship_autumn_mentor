@@ -1,0 +1,38 @@
+Glossary of Key Terms
+
+Build (Собрать / Билдить):
+The process of compiling source code and its dependencies
+into an executable application or deployable artifact.
+
+Gradle:
+An open-source build automation tool known for its
+flexibility and performance, especially in multi-language projects.
+
+Terminal (Консоль):
+A text-based interface used to interact with the operating
+system by typing commands. Also referred to as a command
+prompt or shell.
+
+./gradlew build:
+A Gradle command executed from the terminal that initiates
+a full build of the entire project in the current directory,
+utilizing the Gradle Wrapper.
+
+Gradle Wrapper (gradlew):
+A script (or set of scripts) that allows developers to
+run Gradle builds without having Gradle installed on
+their system. It ensures a consistent Gradle version
+is used across all team members.
+
+Module:
+A distinct, self-contained component within a larger project,
+often representing a specific feature or library.
+
+./gradlew :moduleName:build:
+A Gradle command used to build only a specific module within
+a multi-module project. moduleName is a placeholder for the
+actual name of the module.
+
+Documentation:
+Written materials that provide information about a project,
+its features, and how to use or develop it.

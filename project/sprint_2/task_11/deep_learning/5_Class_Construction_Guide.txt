@@ -1,0 +1,71 @@
+What are the primary tasks for creating the
+TravelCalculatePremiumResponse class?
+
+The main tasks involve creating a default constructor
+(without parameters), a constructor to initialize all
+properties with starting values, and getter/setter methods
+for all properties of the class.
+
+What is the purpose of a default constructor?
+
+A default constructor is a constructor without any parameters.
+It allows for the creation of an object of the
+TravelCalculatePremiumResponse class without needing
+to provide initial values for its properties at the time
+of object instantiation.
+
+Why is it important to create a constructor that sets
+initial values for all properties?
+
+Creating a constructor that sets initial values for
+all properties ensures that when an object of the
+TravelCalculatePremiumResponse class is created,
+its properties can be immediately initialized with specific,
+predefined, or provided values, making the object ready for
+use with relevant data.
+
+What are "get/set methods" and why are they needed?
+
+"Get/set methods" (or getters and setters) are a common
+programming pattern used to access and modify the private
+properties of a class. Get methods retrieve the value of a
+property, while set methods update its value. They are needed
+to encapsulate the class's internal state, allowing controlled
+access to its data and enabling validation or other logic when
+properties are read or written.
+
+What development practice is recommended to keep
+up-to-date with project changes?
+
+It is strongly recommended to always start work on a
+new task or step by executing the Git pull command.
+This command retrieves all changes from the global repository
+to your local computer and integrates them into your working
+copy, ensuring you are always up-to-date.
+
+How can one quickly identify changes made in the current
+task within IDEA?
+
+To quickly find all changes made in the current task
+within IntelliJ IDEA, navigate to the left-hand закладка
+(tab/bookmark), select the folder for the current task
+(e.g., task_10), then select the folder for the previous
+task (e.g., task_9), and from the pop-up menu, choose
+"Compare Directories" (Ctrl + D).
+
+What is the overall goal of these instructions regarding
+class construction?
+
+The overall goal is to correctly implement the fundamental
+components of a well-structured class in an object-oriented
+programming context. This includes proper initialization
+(via constructors) and controlled access to data (via getters
+and setters), which are essential for maintainable and robust code.
+
+Why is it important to be "up to date" with the global repository?
+
+Being "up to date" with the global repository is crucial for
+collaborative development. It ensures that a developer is
+working with the latest version of the codebase, preventing
+conflicts, ensuring all team members are synchronized, and
+allowing for the integration of new features or bug fixes from others.

@@ -1,0 +1,80 @@
+Quiz: Business Rule Enforcement
+
+1. What is the fundamental business rule that needs to
+   be implemented regarding name validation?
+
+2. What is the explicit consequence if a request does
+   not include a surname?
+
+3. Beyond implementing the core logic, what critical
+   development practice is emphasized as mandatory for the solution?
+
+4. Why is the inclusion of tests so important, as stated
+   in the source material?
+
+5. What specific action is required regarding system documentation?
+
+6. What is the recommended name for the folder where
+   documentation should be stored?
+
+7. What kind of file is suggested for recording business
+   requirements within the documentation folder?
+
+8. What is the overarching goal of consolidating all
+   system requirements in one location?
+
+9. What advice is given about the placement of the
+   code that implements the business rule?
+
+10. How does this excerpt highlight the iterative
+    nature of gathering requirements throughout a project's development?
+
+
+Quiz Answer Key
+
+1. The fundamental business rule states that any request
+   submitted without a surname must be considered invalid.
+   This means the system should identify and reject such requests.
+
+2. If a request does not include a surname, it must be
+   deemed invalid. The system's response should reflect
+   this invalidation, preventing further processing of the request.
+
+3. Beyond implementing the core logic, the inclusion of
+   tests is explicitly emphasized as mandatory. A solution
+   without accompanying tests will not be accepted.
+
+4. Tests are important because they ensure the implemented
+   solution functions correctly and adheres to the specified
+   business rules. The source material highlights that a
+   solution without tests is incomplete and unacceptable.
+
+5. A specific action required is to establish a centralized
+   location for collecting system requirements. This involves
+   creating a dedicated folder and a file to record these requirements.
+
+6. The recommended name for the folder where documentation
+   should be stored is /documentation. This creates a clear
+   and organized location for all project-related requirements.
+
+7. A textual document, such as BusinessRequirements.txt,
+   is suggested for recording business requirements within
+   the documentation folder. This provides a simple and
+   accessible format for detailing system needs.
+
+8. The overarching goal of consolidating all system
+   requirements in one location is to ensure clarity,
+   consistency, and easy accessibility for developers
+   throughout the project. It acts as a single source
+   of truth for the application's needs.
+
+9. Advice is given to place the code implementing the
+   business rule in the "correct place." This implies
+   adhering to good software design principles and
+   architectural patterns for maintainability and scalability.
+
+10. This excerpt highlights the iterative nature of
+    gathering requirements by stating that developers
+    should "start collecting requirements as they appear
+    during project development." This indicates that not
+    all requirements are known upfront and evolve over time.

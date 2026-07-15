@@ -1,0 +1,29 @@
+Essay Questions
+
+1. Discuss the architectural benefits of creating dedicated
+   packages for specific functionalities like validation.
+   How does this align with principles of good software design,
+   and what challenges might arise during such a refactoring
+   effort in a large codebase?
+
+2. Beyond the explicit reasons mentioned (many classes, grouping),
+   elaborate on other potential motivations for undertaking the
+   "Validation Classes Refactor" task. Consider aspects like
+   testability, reusability, and onboarding new team members.
+
+3. Imagine you are leading this refactoring effort.
+   Outline a step-by-step plan for moving the validation classes,
+   including considerations for version control, testing, and
+   minimizing disruption to ongoing development.
+
+4. Compare and contrast the impact of this refactoring if the
+   validation classes were previously scattered across many
+   different modules versus if they were already somewhat grouped
+   but not in a dedicated "validations" package. How would the
+   complexity and benefits differ?
+
+5. What are the potential future implications of having a
+   well-defined core/validations package? Consider how this
+   structure might influence the introduction of new validation
+   frameworks, rule engines, or cross-cutting concerns related
+   to data integrity.

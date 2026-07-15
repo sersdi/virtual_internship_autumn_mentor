@@ -1,0 +1,90 @@
+Quiz
+
+Answer each question in 2-3 sentences.
+
+1. What specific type of class construction is required
+   for TravelCalculatePremiumRequest besides a default constructor?
+
+2. What is the primary purpose of creating get/set methods
+   for all properties within the TravelCalculatePremiumRequest class?
+
+3. Why is it crucial for developers to only make changes
+   within their own designated folder and avoid modifying
+   other participants' files?
+
+4. Describe the required format for a Git commit message
+   when a specific development step has been successfully completed.
+
+5. What Git commit message format should be used if a developer
+   needs to commit corrections to previously submitted code?
+
+6. When pushing changes to the global GitHub repository,
+   which specific Git option is recommended, and what action
+   should a developer take regarding this option?
+
+7. How does a developer confirm their access rights to the GitHub repository?
+
+8. What is the significance of the Lao-tzu quote, "A journey
+   of a thousand miles begins with a single step," in the
+   context of this project?
+
+9. Briefly explain how the IDEA development environment
+   can help a developer quickly identify changes made between
+   different project tasks.
+
+10. What are the two main types of constructors explicitly
+    required for the TravelCalculatePremiumRequest class?
+
+
+Quiz Answer Key
+
+1. A constructor that takes parameters to set initial values
+   for all properties of the class is also required. This
+   allows for the instantiation of objects with pre-defined states.
+
+2. The primary purpose of get/set methods is to provide
+   controlled access to the class's internal data (properties).
+   This promotes encapsulation, allowing properties to be read
+   or modified only through defined interfaces, which can include
+   validation or other logic.
+
+3. It is crucial to avoid modifying other participants'
+   files to prevent merge conflicts, maintain code integrity,
+   and ensure that each developer's work is isolated and accountable.
+   This minimizes disruptions and streamlines the collaborative
+   development process.
+
+4. When a development step is successfully completed, the Git
+   commit message should follow the format STEP XXX - DONE.
+   The XXX should be replaced with the specific step number
+   (e.g., STEP 001 - DONE).
+
+5. If a developer needs to commit corrections to previously
+   submitted code, the Git commit message should use the format
+   STEP XXX - FIX. This clearly indicates that the commit
+   addresses a bug or necessary adjustment for a specific step.
+
+6. When pushing changes to GitHub, the Rebase option should
+   be chosen. Developers are instructed to research and understand
+   the differences between Git Rebase and Merge.
+
+7. A developer confirms their access rights to the GitHub
+   repository by checking their email for a confirmation
+   link sent by GitHub. Clicking this link verifies and grants
+   the necessary permissions.
+
+8. The Lao-tzu quote signifies that the project, despite
+   its complexity, should be approached incrementally.
+   It encourages breaking down the large task into smaller,
+   manageable steps, each contributing to the overall completion.
+
+9. In IDEA, a developer can quickly find changes by selecting
+   the current task folder and the previous task folder, then
+   choosing the "Compare Directories" option (Ctrl + D) from
+   the context menu. This highlights differences between the
+   two folders.
+
+10. The two main types of constructors explicitly required
+    for the TravelCalculatePremiumRequest class are a default
+    constructor (without parameters) and a constructor for
+    setting initial values to all properties (with parameters).

@@ -1,0 +1,49 @@
+Glossary of Key Terms
+
+Inversion of Control (IoC):
+A design principle in software engineering where the
+control of object creation and lifecycle management is inverted.
+Instead of the application code managing these aspects directly,
+a framework or container takes control.
+
+Dependency Injection (DI):
+A specific implementation of Inversion of Control. It is a
+technique where an object receives its dependencies (other
+objects it needs to function) from an external source, rather
+than creating them itself.
+
+@Component:
+A Spring annotation that marks a class as a Spring-managed component.
+When a class is annotated with @Component, Spring's IoC container
+automatically detects it and can create and manage its instances.
+
+Constructor Dependency Injection:
+A method of dependency injection where dependencies are
+provided to an object through its constructor parameters.
+Spring automatically resolves and injects the required instances
+when creating the object.
+
+DateTimeService:
+An example class mentioned in the source material,
+intended to encapsulate date and time-related calculation logic,
+specifically the getDaysBetween(...) method.
+
+TravelCalculatePremiumServiceImpl:
+An example class from the source material that initially
+contained logic for calculating days between dates and is
+refactored to use DateTimeService via dependency injection.
+
+Design Pattern:
+A general, reusable solution to a commonly occurring problem
+within a given context in software design. IoC and Dependency
+Injection are examples of design patterns.
+
+Loose Coupling:
+A state where components of a system are largely independent
+of each other. Changes in one component have minimal impact on
+others, which is a major benefit of IoC/DI.
+
+Runtime:
+The phase during which a computer program is executing.
+In the context of Spring, it refers to when the application
+is running and objects are being assembled by the IoC container.

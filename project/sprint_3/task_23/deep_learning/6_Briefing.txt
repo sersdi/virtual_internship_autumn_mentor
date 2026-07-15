@@ -1,0 +1,201 @@
+Briefing Document: Software Testing Levels and Mock Objects in Java
+
+This document summarizes key concepts related to software
+testing levels and the crucial role of mock objects in
+achieving effective unit testing, particularly within Java development.
+
+Main Themes:
+
+Software Testing Levels:
+A structured approach to ensuring software quality through
+distinct testing stages.
+
+Unit Testing Purity:
+The importance of isolating individual code units for
+testing to avoid intertwined dependencies.
+
+Mock Objects (Mockito):
+A technique and library (Mockito in Java) for replacing
+external dependencies in unit tests to achieve isolation and control.
+
+Self-Directed Learning:
+The emphasis on developers' responsibility to independently
+acquire new knowledge and skills.
+
+Most Important Ideas/Facts:
+
+1. Software Testing Levels
+
+The source outlines four fundamental levels of software testing,
+each serving a specific purpose in the development lifecycle:
+
+Unit Testing:
+
+Focus: Individual modules or components (classes).
+
+Goal: To ensure each independent module functions correctly.
+
+Performed by: Developers.
+
+Quote: "На этом уровне тестирования проверяются отдельные
+модули или компоненты программного обеспечения. Цель
+состоит в том, чтобы убедиться, что каждый отдельный модуль
+(класс) работает правильно. Модульные тесты обычно пишутся
+разработчиками." (At this level of testing, individual
+software modules or components are checked. The goal is
+to ensure that each individual module (class) works correctly.
+Unit tests are usually written by developers.)
+
+Integration Testing:
+
+Focus: Interaction between different modules or components.
+
+Goal: To detect errors in interfaces and interactions between parts of the system.
+
+Performed by: Developers.
+
+Quote:
+"После модульного тестирования следует интеграционное
+тестирование, на котором проверяется взаимодействие
+между различными модулями (классами) или компонентами ПО.
+Целью является обнаружение ошибок в интерфейсах и
+взаимодействии между различными частями системы.
+Интеграционные тесты обычно пишутся разработчиками."
+(After unit testing comes integration testing, which
+checks the interaction between various modules (classes)
+or software components. The goal is to detect errors in
+interfaces and interactions between different parts of the system.
+Integration tests are usually written by developers.)
+
+System Testing:
+
+Focus: The complete integrated system.
+
+Goal: To ensure the system meets defined functional
+and non-functional requirements.
+
+Acceptance Testing:
+
+Focus: User or client validation.
+
+Goal:
+To confirm the system is ready for production use and meets
+client requirements.
+
+Can include beta testing with real users in real conditions.
+
+These levels collectively "help ensure that the software
+will work properly at all stages of its development and use,"
+and each level aims to "identify specific types of problems."
+
+2. The Purity of Unit Tests and the Problem of Dependencies
+
+The source highlights a common pitfall in unit testing:
+the creation of real instances of dependent classes.
+It uses the TravelCalculatePremiumServiceImplTest example
+to illustrate this point:
+
+class TravelCalculatePremiumServiceImplTest {
+
+    private DateTimeService dateTimeService;
+
+    private TravelCalculatePremiumServiceImpl service;
+
+
+
+    @BeforeEach
+
+    public void setUp() {
+
+        dateTimeService = new DateTimeService();
+
+        service = new TravelCalculatePremiumServiceImpl(dateTimeService);
+
+    }
+
+}
+
+The source explicitly states: "В такой редакции нет!
+Он создаёт и использует две инстанции продакшн классов:
+DateTimeService и TravelCalculatePremiumServiceImpl.
+То есть по сути этот тест проверяет интеграцию двух классов."
+(In this version, no! It creates and uses two instances of
+production classes: DateTimeService and
+TravelCalculatePremiumServiceImpl. That is, in essence,
+this test checks the integration of two classes.)
+
+This approach violates the principle of a "pure unit test" because:
+
+It tests the integration of classes, not the isolated
+functionality of a single class.
+
+It can lead to a cascade of dependencies, requiring the
+instantiation of many classes just to test one.
+
+Quote: "Чистый юнит тест это тест, который подменяет
+внешние зависимости мок объектами. Он даёт возможность
+тестировать код внутри одного класса, управляя мок объектами
+во время тестирования." (A pure unit test is a test that
+substitutes external dependencies with mock objects. It
+allows testing code within one class by controlling mock
+objects during testing.)
+
+3. Mock Objects and Mockito
+
+To achieve "pure" unit testing, the use of mock objects is essential.
+
+Purpose of Mock Objects:
+They replace external dependencies, allowing developers to
+isolate the code under test and control the behavior of its
+dependencies.
+
+Mockito:
+Identified as "Одной из самых популярных библиотек для
+создания мок объектов на Java" (One of the most popular
+libraries for creating mock objects in Java).
+
+The key task presented is to refactor the
+TravelCalculatePremiumServiceImplTest to use a mock
+object for DateTimeService, setting its desired behavior.
+This is crucial as "Мок объекты и их применение для
+эффективного написания юнит тестов очень важный инструмент,
+который мы будем часто применять в нашем проекте."
+(Mock objects and their application for effective unit
+testing are a very important tool that we will frequently
+use in our project.)
+
+4. The Importance of Self-Directed Learning
+
+The document strongly emphasizes the necessity for developers
+to independently learn new technologies and concepts.
+
+Quote:
+"Это факт, что в реальных проектах на работе нужно
+постоянно изучать новые вещи. Это неотъемлемая часть
+работы хорошего разработчика программного обеспечения."
+(It is a fact that in real-world projects, you constantly
+need to learn new things. This is an integral part of being
+a good software developer.)
+
+The source advises using various resources (ChatGPT,
+YouTube, Google Search, Books) for learning.
+
+It posits that "В реальных проектах очень редко кто-то
+будет вам подробно объяснять тему, которую вы не знаете."
+(In real projects, very rarely will someone explain in detail
+a topic you don't know.)
+
+Mastering new topics independently "получите огромную
+уверенность в своих силах и плюс к карме!" (will give you
+enormous self-confidence and a karma boost!).
+
+Conclusion:
+
+This source provides a foundational understanding of
+software testing levels, stressing the importance of
+unit testing purity. It introduces mock objects,
+specifically Mockito in Java, as a critical tool for
+achieving isolated and effective unit tests. A strong
+underlying message is the imperative for developers to
+engage in continuous, self-directed learning to succeed
+in the dynamic field of software development.

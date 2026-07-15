@@ -1,0 +1,83 @@
+Spring Boot Application Launch Study Guide
+
+Quiz
+
+Instructions: Answer each question in 2-3 sentences.
+
+1. What is the primary objective of the provided
+   task related to Spring Boot?
+
+2. Which specific class is mentioned as the starting
+   point for launching the Spring Boot application?
+
+3. Describe the method suggested for initiating the
+   application from the InsuranceApplication class.
+
+4. What is the crucial follow-up question posed at
+   the end of the instructions regarding application instances?
+
+5. Based on the text, is launching a Spring Boot application
+   a complex or straightforward process?
+
+6. If you wanted to start the application, which file would
+   you most likely open first?
+
+7. What kind of application is being discussed in this context?
+
+8. Does the text provide steps for building or compiling
+   the application, or just launching it?
+
+9. What is the implied expected action for the user to
+   take after reading the instructions?
+
+10. What specific tool or environment is implied to be necessary
+    for "opening" and "running" the InsuranceApplication class?
+
+
+Quiz Answer Key
+
+1. The primary objective of the provided task is to teach
+   the user how to launch a Spring Boot application. It focuses
+   on the practical step of getting the application running.
+
+2. The specific class mentioned as the starting point for
+   launching the Spring Boot application is InsuranceApplication.
+   This class is highlighted as the entry point for execution.
+
+3. The suggested method for initiating the application from the
+   InsuranceApplication class is simply to "open" the class
+   and "run" it. This implies using an Integrated Development
+   Environment (IDE) that supports direct execution of Java classes.
+
+4. The crucial follow-up question posed at the end of the
+   instructions asks whether it is possible to launch two
+   copies of the application simultaneously. This prompts
+   consideration of application instance management.
+
+5. Based on the text, launching a Spring Boot application
+   appears to be a straightforward process, as it only mentions
+   opening and running a single class. There are no complex
+   prerequisites or multi-step procedures detailed.
+
+6. If you wanted to start the application, you would most
+   likely open the InsuranceApplication file or class. This
+   is explicitly stated as the entry point for launching.
+
+7. The kind of application being discussed in this context
+   is a "Spring Boot Application." The text specifically
+   mentions this framework.
+
+8. The text only provides steps for launching the application,
+   specifically by running a class. It does not provide any
+   instructions or details regarding building or compiling the
+   application.
+
+9. The implied expected action for the user to take after
+   reading the instructions is to immediately attempt launching
+   the application by following the simple steps provided. The
+   phrase "Попробуйте выполнить это!" directly encourages this.
+
+10. The text implies that an Integrated Development Environment
+    (IDE) is necessary, as it talks about "opening" a class and
+    "running" it. This kind of direct execution is characteristic
+    of IDE functionalities for Java projects.

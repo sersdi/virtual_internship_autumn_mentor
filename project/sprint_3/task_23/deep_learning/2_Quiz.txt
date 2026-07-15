@@ -1,0 +1,89 @@
+Quiz
+
+1. What is the primary goal of Unit Testing, and who typically
+   writes these tests?
+
+2. How does Integration Testing differ from Unit
+   Testing in terms of what it verifies?
+
+3. Describe the purpose of System Testing. What aspects does it cover?
+
+4. Who usually conducts Acceptance Testing, and what
+   is its main objective?
+
+5. Explain why the TravelCalculatePremiumServiceImplTest
+   example provided in the text is NOT considered a pure unit test.
+
+6. What is the fundamental problem that arises when a
+   unit test creates instances of multiple production classes?
+
+7. Define what a "mock object" is in the context of unit testing.
+
+8. How do mock objects contribute to making a unit test "cleaner"?
+
+9. Name a popular Java library mentioned in the text
+   for creating mock objects.
+
+10. Why is self-directed learning highlighted as a
+    crucial skill for software developers in real-world projects?
+
+
+Quiz Answer Key
+
+1. The primary goal of Unit Testing is to verify that
+   individual modules or components of software work
+   correctly in isolation. These tests are typically
+   written by the developers themselves.
+
+2. Integration Testing verifies the interaction and
+   interfaces between different modules or components,
+   aiming to find errors in how they communicate.
+   Unit Testing, conversely, focuses on testing single
+   modules in isolation.
+
+3. System Testing aims to test the complete integrated
+   system to ensure it conforms to defined requirements.
+   It encompasses both functional and non-functional
+   aspects of the software.
+
+4. Acceptance Testing is typically conducted by the
+   end-user or client. Its main objective is to confirm
+   that the system is ready for production use and meets
+   their specific requirements and expectations.
+
+5. The TravelCalculatePremiumServiceImplTest example
+   is not a pure unit test because it instantiates and
+   uses two production classes (DateTimeService and
+   TravelCalculatePremiumServiceImpl). This means it
+   tests the integration between these classes rather
+   than isolating a single unit.
+
+6. When a unit test creates instances of multiple
+   production classes, it ceases to be a pure unit
+   test and becomes an integration test. This complicates
+   testing by requiring the setup of many interconnected
+   classes just to test one, making tests less isolated
+   and potentially more fragile.
+
+7. A mock object is a simulated object that replaces
+   real external dependencies in a unit test. It allows
+   the developer to define specific behaviors for these
+   dependencies, enabling controlled testing of the class
+   under examination.
+
+8. Mock objects contribute to cleaner unit tests by
+   isolating the code under test from its external dependencies.
+   By substituting real dependencies with mocks, developers can
+   precisely control the environment and inputs for the test,
+   ensuring only the target class's logic is validated.
+
+9. Mockito is a popular Java library specifically mentioned
+   in the text for creating and managing mock objects. It
+   simplifies the process of setting up and using mocks in unit tests.
+
+10. Self-directed learning is highlighted as crucial because,
+    in real-world projects, developers are often expected to
+    independently research and master new technologies or topics.
+    Colleagues may not always have the time to provide detailed
+    explanations, making continuous self-education an essential
+    part of a developer's job.

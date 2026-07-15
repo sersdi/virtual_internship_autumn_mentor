@@ -1,0 +1,78 @@
+Quiz
+
+1. What is the primary business requirement related to
+   the "agreementDateTo" field?
+
+2. What is the consequence if a travel request
+   lacks an "agreementDateTo"?
+
+3. What specific action is required to implement this business rule?
+
+4. Why is it essential to include tests with the implementation?
+
+5. What does "валидация" mean in the context of this document?
+
+6. If a developer submits a solution that correctly
+   implements the validation but omits tests, what is
+   the likely outcome?
+
+7. What kind of request would be considered "valid"
+   according to this business rule?
+
+8. Briefly explain the importance of the phrase
+   "Не забудьте про тесты!"
+
+9. Where would the "agreementDateTo" data typically
+   originate from in this scenario?
+
+10. What is the overall goal of implementing this validation?
+
+
+Quiz Answer Key
+
+1. The primary business requirement is that a travel
+   request must always include an "agreementDateTo"
+   (travel end date). If this field is missing, the
+   request is deemed invalid.
+
+2. If a travel request lacks an "agreementDateTo,"
+   it must be considered "не валидным" (invalid).
+   This means it will not be processed or accepted.
+
+3. The specific action required is to add "валидацию"
+   (validation) for the "agreementDateTo" field, ensuring
+   its presence in every request.
+
+4. Tests are essential because a solution without them
+   will not be accepted. They prove that the implemented
+   validation works correctly and handles various
+   scenarios as expected.
+
+5. In this context, "валидация" means validation,
+   which refers to the process of checking whether the
+   input data (the "agreementDateTo" field) meets the
+   specified criteria (i.e., being present).
+
+6. If a developer submits a solution that correctly
+   implements the validation but omits tests, the solution
+   will not be accepted. The document explicitly states,
+   "Решение без тестов не принимается!"
+
+7. A request would be considered "valid" if it includes an
+   "agreementDateTo" value. Its presence is the key criterion
+   for validity according to this specific rule.
+
+8. The phrase "Не забудьте про тесты!" (Don't forget the tests!)
+   emphasizes the critical importance of testing. It serves
+   as a direct instruction and a strict condition for solution
+   acceptance.
+
+9. The "agreementDateTo" data would typically originate
+   "из запроса" (from the request) itself. This implies that
+   it's a field submitted by the user or system initiating
+   the travel request.
+
+10. The overall goal of implementing this validation is to
+    ensure data integrity and compliance with a critical
+    business rule, preventing the processing of incomplete
+    or ambiguous travel requests.

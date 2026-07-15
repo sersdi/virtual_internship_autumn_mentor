@@ -1,0 +1,88 @@
+Quiz
+
+1. What is the main danger of immediately starting to write
+   tests for an application without prior planning?
+
+2. Why is it considered an incorrect approach to write
+   tests without a clear list of test cases?
+
+3. How does creating a list of test scenarios help prevent
+   forgetting important test cases?
+
+4. What is the primary focus when you are working on compiling
+   a list of test scenarios?
+
+5. What becomes the primary focus when you are actually
+   working on the implementation of the tests?
+
+6. What specific controller is mentioned as the target
+   for creating comprehensive test scenarios?
+
+7. What is the ultimate goal for the test scenarios developed
+   for the TravelCalculatePremiumController?
+
+8. Where should the compiled list of test scenarios be
+   stored within the project structure?
+
+9. What is the recommended format for the file containing
+   the list of test scenarios?
+
+10. Briefly explain how focusing on "what to test" during
+    scenario creation differs from focusing on "how to
+    write test code" during implementation.
+
+
+Quiz Answer Key
+
+1. The main danger of immediately starting to write tests
+   is that you can easily forget one or more important
+   scenarios that must be tested. This can lead to a set
+   of tests that do not fully cover the application's functionality.
+
+2. Writing tests without a clear list of test cases is
+   considered incorrect because it increases the risk of
+   overlooking critical scenarios. This results in incomplete
+   test coverage, leaving important parts of the application untested.
+
+3. Creating a list of test scenarios helps prevent forgetting
+   important test cases by forcing a concentrated effort on
+   defining what needs to be tested. This structured approach
+   ensures all business cases are considered before technical
+   implementation begins.
+
+4. When compiling a list of test scenarios, the primary focus
+   is on identifying what needs to be tested and which business
+   cases need to be covered by a test. This ensures a comprehensive
+   and business-centric approach to testing.
+
+5. When working on the implementation of the tests, the primary
+   focus shifts to the technical aspects of writing the test code
+   itself. This includes considerations like test frameworks,
+   assertion libraries, and code structure.
+
+6. The specific controller mentioned as the target for creating
+   comprehensive test scenarios is the
+   TravelCalculatePremiumController. This implies the need
+   for a thorough test plan for its logic.
+
+7. The ultimate goal for the test scenarios developed for the
+   TravelCalculatePremiumController is to cover all the application's
+   logic. This ensures that every functional path and business rule
+   within the controller is adequately tested.
+
+8. The compiled list of test scenarios should be stored in a
+   file within a documentation folder created at the root of the
+   project. This centralizes test planning documents.
+
+9. The recommended format for the file containing the list of
+   test scenarios is not explicitly specified beyond being a
+   "convenient format." This suggests flexibility, but common
+   choices would include Markdown, plain text, or a structured
+   document format.
+
+10. Focusing on "what to test" during scenario creation means
+    defining the business requirements and functionalities that
+    need verification. In contrast, focusing on "how to write
+    test code" during implementation involves the technical
+    details of translating those scenarios into executable test
+    scripts, including syntax and framework usage.

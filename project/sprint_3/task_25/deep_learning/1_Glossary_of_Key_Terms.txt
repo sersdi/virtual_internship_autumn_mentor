@@ -1,0 +1,42 @@
+Glossary of Key Terms
+
+JUnit:
+A popular open-source testing framework for Java,
+used for writing and running unit tests.
+
+Unit Test:
+A software testing method by which individual units
+or components of a software are tested to determine
+whether they are fit for use.
+
+Mock Object:
+A simulated object that mimics the behavior of real
+objects in controlled ways, typically used in unit
+testing to isolate the code being tested from its dependencies.
+
+Dependency:
+A component or object that another object needs to function correctly.
+
+@ExtendWith:
+A JUnit 5 annotation used to register extensions for a
+test class or method, allowing for custom test execution behavior.
+
+MockitoExtension.class:
+An extension provided by the Mockito framework that
+integrates Mockito's functionalities (like mock creation
+and injection) directly into the JUnit 5 test lifecycle.
+
+@Mock:
+A Mockito annotation used to declare fields as mock objects.
+Mockito will automatically create and manage instances of
+these mock objects.
+
+@InjectMocks:
+A Mockito annotation used to declare a field that represents
+the class under test. Mockito will attempt to inject any
+@Mock (or @Spy) objects into this instance.
+
+"Под капотом" (Under the hood):
+A colloquial expression meaning to understand the internal
+workings or hidden mechanisms of something, beyond its
+superficial appearance or direct use.

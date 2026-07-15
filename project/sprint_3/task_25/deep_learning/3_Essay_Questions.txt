@@ -1,0 +1,26 @@
+Essay Questions
+
+Discuss the advantages of integrating Mockito with
+JUnit for unit testing. How does this integration
+streamline the testing process compared to manual mock
+object creation and management?
+
+Explain the lifecycle of a test when
+@ExtendWith(MockitoExtension.class) is used.
+What steps does the extension perform "under the hood"
+to facilitate testing with mocks?
+
+Compare and contrast the responsibilities of the
+@Mock and @InjectMocks annotations. Illustrate their
+combined use with a hypothetical scenario, explaining
+why both are necessary.
+
+Beyond the specific functionalities mentioned, what
+broader principles of effective unit testing are
+supported by the use of mock objects and a framework like Mockito?
+
+Consider a situation where a developer chooses not to
+use @ExtendWith(MockitoExtension.class) but still
+wants to use Mockito. Describe the potential challenges
+and additional steps they would need to take to achieve
+similar results.

@@ -1,0 +1,53 @@
+Glossary of Key Terms
+
+Algorithm:
+A set of well-defined instructions or a step-by-step
+procedure for solving a problem or performing a computation.
+In the context, it refers to the logic for calculating the
+number of days between two dates.
+
+Class:
+A blueprint or template for creating objects.
+It encapsulates data (properties) and behavior
+(methods) into a single unit.
+
+Encapsulation:
+An object-oriented programming principle that bundles
+data and the methods that operate on the data within a
+single unit (the class). It also restricts direct access
+to some of an object's components, which is referred to
+as information hiding.
+
+Public Part of a Class:
+The elements (e.g., methods, properties) of a class that
+are accessible and visible from outside the class.
+These act as the interface through which other parts
+of the application interact with the class.
+
+Private Part of a Class:
+The elements (e.g., methods, properties) of a class
+that are not directly accessible or visible from outside
+the class. They represent the internal implementation
+details that can be changed without affecting external code.
+
+Modularity:
+A software design technique that separates the
+functionality of a program into independent, interchangeable
+modules, each containing everything necessary to execute only
+one aspect of the desired functionality.
+
+DateTimeService:
+The name of the new class suggested in the text,
+intended to encapsulate the date calculation algorithm.
+
+TravelCalculatePremiumServiceImpl:
+An existing service implementation mentioned in the text,
+which previously contained the date calculation algorithm
+and will eventually utilize the new DateTimeService.
+
+Tests/Testing:
+The process of evaluating a system or its component(s)
+with the intent to find whether it satisfies the specified
+requirements or to verify that it functions as expected.
+In this context, it refers to writing code to check the
+correctness of the DateTimeService.

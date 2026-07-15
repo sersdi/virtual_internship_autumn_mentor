@@ -1,0 +1,29 @@
+Glossary of Key Terms
+
+Spring Boot Application:
+A Java-based, open-source framework used to create stand-alone,
+production-grade Spring applications that you can "just run."
+It simplifies the process of creating Spring applications by
+reducing configuration.
+
+InsuranceApplication:
+The specific class mentioned in the source material that
+serves as the entry point for launching the Spring Boot application.
+In Java, the main method within a class is typically where application
+execution begins.
+
+Launch/Run (Запустить):
+To start or execute an application. In the context of a
+Java application, this typically means executing the main
+method of the designated starting class.
+
+Class (Класс):
+In object-oriented programming (like Java), a blueprint
+for creating objects. It defines the properties (data)
+and behaviors (methods) that an object will have.
+
+Copies of the application (две копии приложения):
+Refers to multiple instances or running versions of the same
+application. The question in the source material prompts
+consideration of whether simultaneous execution of these
+instances is possible and what that might entail.

@@ -1,0 +1,46 @@
+Computer Networking Fundamentals for Programmers
+
+Study Guide
+
+This study guide is designed to help you review your
+understanding of fundamental computer networking concepts,
+specifically tailored for programmers. It covers essential
+components of network architecture, key networking models and
+protocols, and their practical implications for software development.
+
+Key Areas of Focus:
+
+The Role of Networking in Programming:
+Why is networking crucial for modern applications and programmers?
+
+Computer Network Architecture:
+Understanding the basic structure and components of computer networks.
+
+Networking Models:
+Deep dive into the OSI model and the TCP/IP protocol stack.
+
+Network Layers:
+Detailed understanding of the functions and
+responsibilities of each layer (Data Link, Network,
+Transport, Application).
+
+Key Network Protocols:
+Focus on TCP, IP, and the general concept of protocols in networking.
+
+Ethernet Basics: Introduction to a foundational network technology.
+
+Learning Objectives:
+
+Upon completing this review, you should be able to:
+
+Explain why programmers need to understand networking.
+
+Describe the fundamental architecture of computer networks.
+
+Differentiate between the OSI model and the TCP/IP protocol stack.
+
+Identify the functions of each layer in a network model.
+
+Explain the purpose and function of TCP and IP protocols.
+
+Understand the basic principles of Ethernet.

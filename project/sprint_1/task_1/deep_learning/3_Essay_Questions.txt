@@ -1,0 +1,20 @@
+Essay Format Questions
+
+1. Discuss the advantages of using a build tool like Gradle
+   in the development of large Java applications compared
+   to manual compilation and dependency management.
+
+2. Explain the concept of the Gradle wrapper and elaborate
+   on its benefits for project distribution and team collaboration.
+
+3. Describe the essential configuration steps required within
+   IntelliJ IDEA to correctly set up a Java project to work
+   with Gradle, including specific settings for JDK and Gradle JVM.
+
+4. Compare and contrast the roles of gradle-wrapper.jar and
+   gradle-wrapper.properties within a Gradle project. How do
+   they work together to facilitate project setup?
+
+5. Outline the process of how Gradle handles project dependencies,
+   from initial configuration to their availability within the
+   project, and explain the significance of this process.

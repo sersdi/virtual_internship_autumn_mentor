@@ -1,0 +1,27 @@
+Essay Questions
+
+1. Discuss the limitations of string-based comparison
+   for structured data like JSON. How do these limitations
+   impact software testing, and why is an alternative approach
+   crucial in this specific scenario?
+
+2. Propose and elaborate on at least two distinct technical
+   approaches or libraries that could be used to achieve
+   format-independent JSON comparison. For each, describe
+   its underlying principle and how it addresses the
+   challenges mentioned in the source material.
+
+3. Explain the importance of the src/test/resources
+   directory in the context of software development and testing.
+   How does placing test data here contribute to good practices,
+   and what are the benefits for maintainability and collaboration?
+
+4. Imagine you are tasked with implementing the solution.
+   Outline the steps you would take, from initial investigation
+   to final implementation and testing, to ensure the new JSON
+   comparison method is robust and reliable.
+
+5. Beyond the explicit problem of JSON comparison, what broader
+   principles of robust testing and data handling can be inferred
+   from the requirements described in the source material? How do
+   these principles apply to other areas of software development?

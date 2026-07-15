@@ -1,0 +1,28 @@
+Essay Format Questions
+
+1. Discuss the trade-offs between using Lombok's constructor
+   generation annotations (e.g., @RequiredArgsConstructor)
+   and manually writing constructors in Java classes.
+   Consider aspects like code readability, maintainability,
+   and build process.
+
+2. Explain in detail why "Field Injection is Evil,"
+   drawing upon potential issues such as testability,
+   immutability, and dependency management. Contrast this
+   with alternative dependency injection methods.
+
+3. Imagine you are onboarding a new developer to a
+   project that heavily uses Lombok. What are the key points
+   you would emphasize regarding how Lombok works, especially
+   concerning generated code and the build process?
+
+4. Analyze how the choice of AccessLevel.PACKAGE for a
+   generated constructor using @RequiredArgsConstructor
+   aligns with principles of encapsulation and modular design
+   in Java. Provide a scenario where this access level would
+   be particularly beneficial.
+
+5. Beyond constructors, what other types of boilerplate
+   code does Lombok address, and how do these features
+   collectively contribute to cleaner and more efficient
+   Java development?

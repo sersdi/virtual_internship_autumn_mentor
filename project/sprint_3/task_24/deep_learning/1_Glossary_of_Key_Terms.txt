@@ -1,0 +1,64 @@
+Glossary of Key Terms
+
+Inversion of Control (IoC):
+A design principle in which the control over the creation
+and lifecycle of objects, as well as the management of
+their dependencies, is transferred from the individual
+components to an external container or framework. Instead
+of components "pulling" their dependencies, the dependencies
+are "pushed" to them.
+
+Dependency Injection (DI):
+A specific design pattern and technique for achieving
+Inversion of Control. It involves a component receiving
+its dependencies from an external source rather than
+creating them itself or looking them up.
+
+Dependency:
+An object or service that another object needs to perform
+its function. For example, a UserService might depend on
+a UserRepository to access user data.
+
+Coupling:
+The degree to which one component or module depends on another.
+High coupling means components are tightly intertwined, making
+ changes in one potentially impact others. Low/Loose coupling
+ is desired, meaning components are more independent.
+
+Constructor Injection:
+A type of Dependency Injection where dependencies are
+provided to a class through its constructor arguments.
+This ensures that an object is created with all its necessary
+dependencies, promoting immutability and valid state.
+
+Setter (Method) Injection:
+A type of Dependency Injection where dependencies are
+provided to a class through public setter methods after
+the object has been instantiated. This method is often
+used for optional dependencies or when dependencies need
+to be changed dynamically.
+
+Field (Property) Injection:
+A type of Dependency Injection where dependencies are
+directly injected into fields (properties) of a class,
+often using reflection by a DI framework. While concise,
+it can hide dependencies and make unit testing difficult
+without the framework.
+
+Loose Coupling:
+A desirable characteristic in software design where
+components have minimal direct knowledge of or reliance
+on the concrete implementations of other components. They
+typically interact through abstractions or interfaces.
+
+Testability:
+The ease with which a software component or system
+can be tested. DI significantly improves testability
+by allowing easy substitution of real dependencies with
+test doubles (mocks or stubs).
+
+Immutability:
+A state where an object's internal state cannot be
+modified after it has been created. Constructor injection
+often supports immutability by ensuring all dependencies
+are set at creation time.

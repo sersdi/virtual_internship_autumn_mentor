@@ -1,0 +1,50 @@
+Glossary of Key Terms
+
+Validation (валидация):
+The process of checking if data or input meets certain
+criteria or constraints.
+
+Module (модуль):
+A distinct and independent unit of code, often grouped
+into a package, designed to perform a specific function.
+It encapsulates related functionalities.
+
+Package (пакет):
+A namespace that organizes a set of related classes and interfaces.
+In this context, /core/validations is a package.
+
+Interface (интерфейс):
+A contract that defines a set of methods that a class must
+implement. It specifies what a class does, but not how it does it.
+In this context, it refers to a public-facing API for a module.
+
+Class (класс):
+A blueprint or template for creating objects,
+providing initial values for state (member variables)
+and implementations of behavior (member functions or methods).
+
+Public Interface (публичный интерфейс):
+The parts of a module or class that are accessible and
+visible to other parts of the code. It defines how other
+code can interact with the module.
+
+Package Level Access (package level access):
+An access modifier that restricts the visibility of a class,
+method, or field to only members within the same package.
+It means the element is not visible outside its containing package.
+
+Refactoring (рефакторинг):
+The process of restructuring existing computer code—changing
+the factoring—without changing its external behavior.
+Its purpose is to improve non-functional attributes of the software,
+such as readability, maintainability, and complexity.
+
+Localization (Локализация):
+The act of concentrating related functionalities or parts
+of a solution into a single, defined area (e.g., a package or module),
+preventing them from being scattered throughout the codebase.
+
+Information Hiding:
+An important design principle where the internal implementation
+details of a module are kept hidden from other modules, and only
+the necessary public interface is exposed.

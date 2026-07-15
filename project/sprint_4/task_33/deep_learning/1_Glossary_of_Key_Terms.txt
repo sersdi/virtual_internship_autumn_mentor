@@ -1,0 +1,58 @@
+Glossary of Key Terms
+
+Business Requirements:
+The specific needs, goals, or functions that a
+software system is intended to fulfill from the
+perspective of the business or end-user.
+
+Technical Solution:
+The specific code, architecture, and design choices
+made by developers to implement and satisfy business requirements.
+
+Code Duplication (Duplicated Code):
+Instances where identical or very similar blocks of
+code appear in multiple places within a software system.
+Generally considered a "bad practice" in clean code.
+
+Code Optimization:
+The process of modifying a software system to make
+it run more efficiently or to use fewer resources,
+often by reducing redundant code or simplifying logic.
+
+Technical Dependencies:
+Relationships in the code where changes to one part
+of the system necessarily affect other parts, often
+due to shared functions or data structures.
+
+Business Dependencies:
+Relationships inherent in the business logic where one
+requirement naturally influences or is linked to another.
+
+Divergence (of Solutions):
+The state where a technical solution starts to become
+significantly different from, or less reflective of,
+the underlying business solution or process.
+
+Context:
+The specific circumstances, environment, or surrounding
+conditions within which a software development decision is made,
+heavily influencing the "best" approach.
+
+Clean Code:
+A philosophy or set of principles for writing software
+that is easy to read, understand, and maintain, often
+emphasizing readability, simplicity, and avoiding duplication.
+
+Axioms:
+Self-evident truths or propositions that are accepted without proof.
+The mentor argues that "clean code" rules are not axioms,
+implying flexibility in their application.
+
+Alternative Solutions:
+Different viable ways to design or implement a particular
+feature or solve a problem in software development.
+
+Collaboration:
+The act of working jointly with others, especially in
+an intellectual endeavor, often emphasized by the mentor
+for finding solutions beyond individual capabilities.

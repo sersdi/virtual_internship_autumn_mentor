@@ -1,0 +1,72 @@
+Quiz: Short-Answer Questions
+
+1. What is the primary objective of the task described
+   in the source material?
+
+2. Which specific class is the focus of the
+   validation and debugging exercise?
+
+3. What type of tests are you asked to write
+   for the TravelCalculatePremiumRequestValidator class?
+
+4. Beyond writing tests, what other critical
+   task is required concerning the
+   TravelCalculatePremiumRequestValidator?
+
+5. In the context of software development, what
+   is the purpose of a unit test?
+
+6. Why is it important to "find an error and fix it"
+   in a validator class?
+
+7. What kind of information would you expect a
+   TravelCalculatePremiumRequestValidator to validate?
+
+8. Briefly describe the relationship between writing
+   unit tests and finding errors.
+
+9. If you successfully complete the task, what will
+   be the two main outcomes of your work?
+
+Quiz Answer Key
+
+1. The primary objective is to write unit tests for the
+   TravelCalculatePremiumRequestValidator class, find
+   an error within it, and then correct that error.
+
+2. The specific class that is the focus of the validation
+   and debugging exercise is TravelCalculatePremiumRequestValidator.
+
+3. You are asked to write unit tests for the
+   TravelCalculatePremiumRequestValidator class.
+
+4. Beyond writing tests, you are also required to
+   find an error in the TravelCalculatePremiumRequestValidator
+   class and subsequently correct it.
+
+5. The purpose of a unit test in software development is to
+   test individual units or components of a software application
+   to ensure they work as intended. This helps isolate and
+   identify issues early in the development cycle.
+
+6. It is important to find and fix errors in a validator
+   class because a faulty validator can allow invalid or
+   incorrect data to be processed, leading to incorrect
+   calculations, system failures, or security vulnerabilities
+   in a larger application.
+
+7. A TravelCalculatePremiumRequestValidator would typically
+   validate input parameters related to travel premium calculation
+   requests, such as dates, traveler ages, destinations,
+   coverage types, and other relevant data to ensure they
+   are valid and in the correct format.
+
+8. Writing unit tests helps in finding errors by systematically
+   testing different inputs and scenarios for a piece of code.
+   If the code does not behave as expected for a given test,
+   it indicates an error that needs to be investigated and fixed.
+
+9. If the task is successfully completed, the two main
+   outcomes will be a set of robust unit tests for the
+   validator and a corrected, error-free version of the
+   TravelCalculatePremiumRequestValidator class.

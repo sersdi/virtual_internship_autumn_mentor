@@ -1,0 +1,78 @@
+Quiz
+
+Instructions: Answer each question in 2-3 sentences.
+
+1. Explain why the gradle build command functions without
+   additional configuration, specifically regarding its
+   knowledge of project code locations.
+
+2. What is the historical reason for the
+   "Maven project structure" being named as such?
+
+3. Describe the primary purpose of the src/main directory
+   within the Maven project structure.
+
+4. What type of files would you typically find in the
+   src/main/resources directory?
+
+5. Where would a developer place Java code written
+   specifically for testing purposes?
+
+6. Distinguish between the contents of src/main/java and src/test/java.
+
+7. If a project needed to include non-code assets (like
+   configuration files) for its production environment, in
+   which directory should they be placed according to Maven structure?
+
+8. Briefly explain the benefit of using a standardized
+   project structure like Maven's in modern software development.
+
+
+III. Quiz Answer Key
+
+1. The gradle build command works "out of the box"
+   because it assumes a standard project layout. This
+   standard layout, known as the Maven project structure,
+   dictates where production code and test code are located,
+   allowing Gradle to find them by default.
+
+2. The "Maven project structure" gets its name because
+   it was first introduced and widely adopted in projects
+   managed by the Maven build tool. Maven established
+   this convention, which was then embraced by other build
+   tools like Gradle.
+
+3. The primary purpose of the src/main directory is
+   to house all the production-ready code and resources
+   for the application. This ensures that only the necessary
+   components for the final build are included, separating
+   them from testing or development-only files.
+
+4. In the src/main/resources directory, you would typically
+   find production-related resource files. These might include
+   configuration files, property files, XML definitions,
+   or other non-code assets that the application needs at runtime.
+
+5. A developer would place Java code written specifically
+   for testing purposes in the src/test/java directory.
+   This clear separation helps in organizing tests and
+   ensuring they are not bundled with the main application
+   code during deployment.
+
+6. src/main/java contains the actual production Java code
+   (classes) that forms the core functionality of the application.
+   In contrast, src/test/java contains Java code specifically
+   for testing the production code, such as unit tests or
+   integration tests.
+
+7. If a project needed to include non-code assets like
+   configuration files for its production environment,
+   they should be placed in the src/main/resources directory
+   according to the Maven structure. This location is
+   designated for production-ready resource files.
+
+8. Using a standardized project structure like Maven's
+   offers significant benefits by promoting consistency
+   and predictability across projects. This standardization
+   makes it easier for developers to navigate new codebases,
+   reduces setup time, and simplifies the build process.

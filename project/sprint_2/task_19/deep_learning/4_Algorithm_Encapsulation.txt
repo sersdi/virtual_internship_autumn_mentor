@@ -1,0 +1,67 @@
+Algorithm Encapsulation: The Fortress Approach to Software Design
+
+Why should algorithms be moved into separate classes?
+
+Algorithms are often moved into separate classes to encapsulate
+their functionality, making them more manageable and isolated.
+This practice can be likened to a "fortress" for the algorithm:
+the class acts as the fortress, its public interface (methods,
+properties) are the gates, and its private internal
+implementation is what's inside the walls.
+
+What is the benefit of encapsulating an algorithm within its own class?
+
+Encapsulating an algorithm within its own class allows
+for its internal implementation to be modified independently
+of the rest of the application's code. As long as the public
+interface (the "gates" of the fortress) remains unchanged,
+internal alterations to the algorithm will not affect other
+parts of the application.
+
+How does this approach contribute to building large
+and complex applications?
+
+In large and complex applications, this separation is
+highly beneficial because it enables developers to modify
+one part of the application without inadvertently impacting
+other components. This significantly reduces the risk of
+introducing bugs and simplifies maintenance.
+
+What is the "public part" of a class in this analogy?
+
+The "public part" of a class, in the fortress analogy,
+represents the "gates" of the fortress. These are the
+elements of the class (like public methods and properties)
+that are accessible from outside the class, allowing other
+parts of the application to interact with it.
+
+What is the "private part" of a class in this analogy?
+
+The "private part" of a class, in the fortress analogy,
+represents the "houses and streets inside" the fortress.
+These are the internal details of the class (like private
+properties and methods) that are not visible or directly
+accessible from outside the class.
+
+What is the main task described in the source material?
+
+The main task is to create a new class called DateTimeService.
+This new class should house the algorithm for calculating the
+number of days between two dates, which was previously in
+another method.
+
+Should the TravelCalculatePremiumServiceImpl class be
+modified in this step?
+
+No, the TravelCalculatePremiumServiceImpl class should
+not be modified in this specific step. The objective of
+this step is solely to create the new DateTimeService class,
+copy the date calculation algorithm into it, and write tests
+for this new class.
+
+What kind of tests need to be created for the new class?
+
+New tests need to be created specifically for the
+DateTimeService class to ensure the correct functioning
+of the date calculation algorithm moved into it. This will
+involve creating a new test class dedicated to testing DateTimeService.

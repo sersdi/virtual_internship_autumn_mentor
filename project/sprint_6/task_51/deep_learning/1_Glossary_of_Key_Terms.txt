@@ -1,0 +1,52 @@
+Glossary of Key Terms
+
+@Autowired:
+A Spring annotation used for automatic dependency injection.
+When placed on a field, constructor, or method, Spring attempts
+to find a matching bean in its IoC container and inject it.
+
+@Component:
+A general-purpose Spring annotation that marks a class as
+a Spring-managed component. Classes annotated with @Component
+are automatically detected by Spring's component scanning and
+registered as beans in the IoC container.
+
+Bean:
+In Spring, a bean is an object that is instantiated, assembled,
+and managed by the Spring IoC container. These objects form the
+backbone of your application.
+
+Dependency Injection (DI):
+A design pattern where the dependencies of an object are provided
+to it rather than the object creating them itself. Spring's IoC
+container implements DI.
+
+IoC (Inversion of Control):
+A design principle where the control of object creation and
+lifecycle is inverted from the application itself to a framework
+or container (like Spring).
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format often used for transmitting
+data between a server and web application, or for storing
+configuration and test data.
+
+JsonFileReader:
+A placeholder class mentioned in the source, implicitly
+responsible for reading data from JSON files.
+
+src/test/resources:
+A standard directory in Maven/Gradle projects used to store
+non-code resources (like configuration files, data files, or
+test scripts) specifically for testing purposes. These resources
+are typically available on the classpath during test execution.
+
+Spring IoC Container:
+The core of the Spring Framework, responsible for managing the
+lifecycle of Spring beans, including their instantiation,
+configuration, and assembly.
+
+TravelCalculatePremiumControllerTest:
+A placeholder test class mentioned in the source, intended for
+testing a controller related to premium calculation, and where
+JsonFileReader dependency needs to be injected.

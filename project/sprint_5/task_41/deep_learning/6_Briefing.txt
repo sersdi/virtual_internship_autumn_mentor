@@ -1,0 +1,82 @@
+Briefing Document:
+Formatting JSON Dates with Jackson and @JsonFormat
+
+This briefing document summarizes the key information
+and tasks related to formatting JSON dates using the
+Jackson library and the @JsonFormat annotation, based
+on the provided source material.
+
+1. Problem Statement: Unexpected Date Format in JSON Response
+
+The core issue identified is that dates within a JSON
+response are displayed in an "unusual format."
+
+Example of the Problem:
+
+Expected/Desired Input Format:
+{
+  "personFirstName" : "Vasja",
+  "personLastName" : "Pupkin",
+  "agreementDateFrom" : "2021-05-25",
+  "agreementDateTo" : "2021-05-29"
+}
+Actual Output Format (Problematic):
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "agreementDateFrom": "2021-05-25T00:00:00.000+00:00",
+  "agreementDateTo": "2021-05-29T00:00:00.000+00:00",
+  "agreementPrice": 4
+}
+
+As seen in the "Actual Output Format," the dates
+agreementDateFrom and agreementDateTo are appended
+with time information (T00:00:00.000+00:00), which
+deviates from the simpler "yyyy-MM-dd" format present in the input.
+
+2. Objective: Change Date Format to "yyyy-MM-dd"
+
+The primary task is to "change the date format in the
+response to 'yyyy-MM-dd'." This implies that the time
+components should be removed from the JSON output for date fields.
+
+3. Proposed Solution & Tools: Jackson Library
+and @JsonFormat Annotation
+
+The mentor's recommendation for solving this problem
+involves two key elements:
+
+Jackson Library:
+The source explicitly states the use of
+implementation('com.fasterxml.jackson.core:jackson-core:2.14.2').
+Jackson is a popular Java library for processing JSON data,
+including serialization (converting Java objects to JSON)
+and deserialization (converting JSON to Java objects).
+
+@JsonFormat Annotation:
+The mentor advises using the @JsonFormat annotation.
+The task requires understanding "what it is" and
+"finding examples of its use on the internet."
+This annotation is a feature provided by the Jackson
+library to customize how Java objects are serialized
+into JSON and deserialized from JSON, particularly for
+data types like dates and numbers.
+
+4. Key Takeaways & Actions:
+
+Understand Jackson's Role:
+Jackson is essential for JSON processing in Java.
+
+Master @JsonFormat:
+This annotation is the direct tool for specifying the
+desired date format ("yyyy-MM-dd") during JSON serialization.
+Its usage typically involves placing it on date fields within
+Java POJOs (Plain Old Java Objects) that are being converted to JSON.
+
+Research and Implementation:
+The task explicitly includes researching examples of
+@JsonFormat usage, which will be crucial for implementing
+the solution correctly. This research should focus on how
+to apply the pattern yyyy-MM-dd to java.util.Date or
+java.time.LocalDate (or similar date types) using this annotation.

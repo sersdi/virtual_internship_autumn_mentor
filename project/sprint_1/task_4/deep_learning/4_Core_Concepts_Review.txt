@@ -1,0 +1,20 @@
+Core Concepts Review
+
+1. Gradle Build Command and Default Behavior:
+* Why does the gradle build command work "out of the box" or by default?
+* How does Gradle know where the production code and test code are located within a project?
+
+2. Maven Project Structure:
+* What is the origin of the "Maven project structure" name?
+* What are the main components of the Maven project structure?
+* Describe the purpose of each subdirectory within src.
+* Why is this specific project structure used in modern development?
+
+3. Key Directories and Their Contents:
+* src
+* src/main
+* src/main/java
+* src/main/resources
+* src/test
+* src/test/java
+* src/test/resources

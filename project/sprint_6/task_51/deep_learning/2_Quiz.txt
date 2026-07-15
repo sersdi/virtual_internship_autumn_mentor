@@ -1,0 +1,101 @@
+Short-Answer Quiz
+
+1. What is the primary purpose of the @Component annotation
+   in Spring, according to the provided text?
+
+2. Explain why it's beneficial for Spring IoC to "work the
+   same way for tests," as mentioned in the source.
+
+3. How does the @Autowired annotation facilitate dependency
+   management within the TravelCalculatePremiumControllerTest class?
+
+4. Why might you choose to place JSON files used for testing
+   in the src/test/resources directory rather than directly
+   in the src/test/java directory?
+
+5. Based on the instructions, what specific action needs to
+   be taken regarding the JsonFileReader class to make it
+   available for injection?
+
+6. If TravelCalculatePremiumControllerTest needs an instance
+   of JsonFileReader, what Spring mechanism ensures it receives
+   one without manual instantiation?
+
+7. What is the general concept behind "replacing requests in
+   tests with requests from JSON files"?
+
+8. Briefly describe the role of the Spring IoC container in
+   the context of managing beans like JsonFileReader.
+
+9. Consider a scenario where JsonFileReader is not annotated
+   with @Component. What would be the likely outcome when
+   @Autowired is used to inject it into
+   TravelCalculatePremiumControllerTest?
+
+10. The instructions imply a shift in how test data is handled.
+    What are the potential advantages of sourcing test data from
+    external JSON files over hardcoding it within the test code?
+
+
+Quiz Answer Key
+
+1. The primary purpose of the @Component annotation, according to
+   the text, is to mark the JsonFileReader class as a
+   Spring-managed component. This allows Spring to detect,
+   instantiate, and manage JsonFileReader as a bean within
+   its IoC container.
+
+2. It is beneficial for Spring IoC to "work the same way for tests"
+   because it allows test classes to leverage Spring's dependency
+   injection capabilities. This means tests can receive their
+   dependencies (like JsonFileReader) automatically from the
+   Spring container, simplifying test setup and making tests
+   more consistent with the application's runtime environment.
+
+3. The @Autowired annotation facilitates dependency management
+   by instructing Spring to automatically provide an instance
+   of JsonFileReader to the TravelCalculatePremiumControllerTest
+   class. This eliminates the need for manual object creation or
+   lookup within the test, ensuring that the test has the necessary
+   dependency to execute its logic.
+
+4. Placing JSON files in src/test/resources is a standard practice
+   because this directory is specifically designated for
+   test-related non-code assets. This convention helps organize
+   the project, ensures these files are available on the classpath
+   during testing, and separates them from source code.
+
+5. According to the instructions, the specific action needed for
+   the JsonFileReader class is to add the @Component annotation
+   to it. This makes it a Spring-managed bean, allowing the IoC
+   container to recognize and provide instances of it for injection.
+
+6. If TravelCalculatePremiumControllerTest needs an instance of
+   JsonFileReader, the Spring IoC container, working in conjunction
+   with the @Autowired annotation, ensures it receives one. Spring
+   will find the JsonFileReader bean (due to @Component) and inject
+   it into the test class.
+
+7. The general concept behind "replacing requests in tests with
+   requests from JSON files" is to externalize and standardize
+   test data. Instead of embedding request payloads directly
+   into test code, tests will load these payloads from predefined
+   JSON files, promoting data reusability and easier test maintenance.
+
+8. The Spring IoC container's role is to manage the lifecycle of
+   objects (beans), including JsonFileReader, by creating,
+   configuring, and assembling them. For tests, it provides a
+   consistent environment where dependencies are automatically
+   injected, mirroring the application's runtime setup.
+
+9. If JsonFileReader were not annotated with @Component, using
+   @Autowired to inject it into TravelCalculatePremiumControllerTest
+   would likely result in an error, such as a
+   NoSuchBeanDefinitionException. Spring would not be able to
+   find a JsonFileReader bean in its container to inject.
+
+10. Sourcing test data from external JSON files offers advantages
+    like improved readability and maintainability of test code,
+    as data is separate from logic. It also promotes reusability
+    of test data across multiple tests and makes it easier to
+    update or extend test scenarios without modifying code.

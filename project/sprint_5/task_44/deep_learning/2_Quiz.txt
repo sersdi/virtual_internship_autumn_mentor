@@ -1,0 +1,77 @@
+Quiz
+
+1. What does the acronym KISS stand for?
+
+2. In the context of software design, what core idea does
+   the KISS principle advocate for?
+
+3. Why does the KISS principle suggest that simple designs
+   are generally more effective?
+
+4. According to the KISS principle, what should be
+   favored over complexity in design?
+
+5. How does the KISS principle relate to the avoidance of complexity?
+
+6. Beyond software, what other areas are mentioned where
+   the KISS principle can be applied?
+
+7. What is the primary objective of applying the KISS
+   principle in software development?
+
+8. If a design solution becomes overly complex, what might
+   the KISS principle suggest as a corrective action?
+
+9. Is the KISS principle exclusively for programmers,
+   or does it have broader applicability?
+
+10. What is the fundamental problem that the KISS principle
+    aims to address in design and development?
+
+
+Answer Key (Quiz)
+
+1. KISS stands for Keep It Simple, Stupid.
+
+2. The KISS principle advocates for favoring simplicity
+   over complexity in the design of software, solutions,
+   systems, and products. It suggests that keeping things
+   straightforward leads to better functionality.
+
+3. The KISS principle suggests that simple designs, solutions,
+   systems, and products work best. This is because simplicity
+   often leads to greater clarity, easier understanding,
+   and fewer potential points of failure.
+
+4. According to the KISS principle, simplicity should be
+   favored over complexity. This means actively choosing
+   straightforward solutions rather than overly intricate ones.
+
+5. The KISS principle strongly advises avoiding complexity
+   as much as possible. It views complexity as a detriment
+   that can hinder the effectiveness and maintainability of designs.
+
+6. Beyond software, the KISS principle is mentioned as applicable
+   to designs, solutions, systems, and products in general.
+   This indicates its broad relevance across various
+   problem-solving domains.
+
+7. The primary objective of applying the KISS principle in
+   software development is to ensure that designs and products
+   are as effective and functional as possible. This is achieved
+   by reducing unnecessary complications.
+
+8. If a design solution becomes overly complex, the KISS principle
+   would suggest a re-evaluation to simplify it. This might
+   involve breaking down components, streamlining processes,
+   or removing extraneous features.
+
+9. The source material indicates that the KISS principle
+   applies to designs, solutions, systems, and products, not
+   just programmers. While it's a software design principle,
+   its core message is universally applicable to problem-solving.
+
+10. The fundamental problem the KISS principle aims to address
+    is the common tendency for designs and solutions to become
+    unnecessarily complicated. It seeks to counteract this by
+    promoting a clear bias towards simplicity.

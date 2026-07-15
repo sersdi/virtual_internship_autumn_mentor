@@ -1,0 +1,54 @@
+Glossary of Key Terms
+
+Continuous Integration (CI):
+A software development practice where developers frequently
+merge their code changes into a central repository, after
+which automated builds and tests are run. Its primary goal
+is to detect and address integration errors as early as possible.
+
+Iterative Process:
+A process of repeating a sequence of operations until
+the desired outcome is achieved. In software development,
+it refers to building software in small, incremental steps.
+
+Commit:
+A record of changes to a file or set of files in a version
+control system like Git. It represents a specific point in
+the project's history.
+
+Push:
+The act of uploading local repository commits to a remote
+repository, such as GitHub.
+
+GitHub Repository:
+A storage location on GitHub for a software project,
+including all its files and revision history.
+
+GitHub Workflow Actions:
+An automation platform provided by GitHub that allows
+developers to automate tasks and workflows within their
+repositories, such as building, testing, and deploying code.
+
+.github/workflows/build.yaml:
+A specific configuration file used by GitHub Workflow Actions
+that defines the parameters and steps for building a project
+on the GitHub platform.
+
+Build:
+The process of compiling source code into an executable
+program or deployable artifact. In the context of CI,
+it often includes running tests.
+
+Build Logs:
+Detailed records of the steps and output generated during
+a build process, which are crucial for diagnosing errors.
+
+Red Cross / Green Checkmark:
+Visual indicators in GitHub next to a commit that show
+the status of the associated CI build. A green checkmark
+means the build passed, while a red cross means it failed.
+
+Error Snowball:
+A metaphor for how small, unaddressed errors can accumulate
+and grow rapidly into larger, more severe problems that threaten
+the entire project.

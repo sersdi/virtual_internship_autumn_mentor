@@ -1,0 +1,28 @@
+Essay Questions
+
+1. Discuss the critical importance of input data validation
+   in the broader context of IT solution development.
+   Why is it considered indispensable, especially in
+   applications with significant human interaction?
+
+2. Analyze the role of human error in driving the necessity
+   for robust input data validation. Provide specific examples
+   of common human mistakes and explain how validation
+   mechanisms address them.
+
+3. Elaborate on the challenges involved in implementing
+   effective input data validation. Considering the mentor's
+   provision of a prototype, what might be the complexities
+   that necessitate such a starting point rather than a simple
+   directive?
+
+4. Describe the process a developer would undertake when
+   incorporating a validation prototype, such as the one
+   provided by the mentor, into their project. What are the
+   key steps, considerations, and potential benefits or drawbacks
+   of using a prototype?
+
+5. Imagine an IT solution without proper input data validation.
+   Discuss the potential negative consequences for the application's
+   functionality, data integrity, user experience, and overall
+   system reliability.

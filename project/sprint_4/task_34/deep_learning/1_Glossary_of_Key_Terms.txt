@@ -1,0 +1,24 @@
+Glossary of Key Terms
+
+agreementDateFrom:
+Represents the start date of a trip or agreement.
+
+agreementDateTo:
+Represents the end date of a trip or agreement.
+
+Business Rule:
+A specific condition or principle that governs a
+particular aspect of a business process or data.
+In this context, it's the requirement that the end date
+must be after the start date.
+
+Validation:
+The process of checking data to ensure it meets certain
+criteria or rules (e.g., format, range, logical consistency)
+before it is processed or stored.
+
+Testing:
+The process of evaluating a system or its component(s)
+with the intent to find whether it satisfies the specified
+requirements or to identify defects. For this task, it's
+explicitly required to prove the validation logic works.

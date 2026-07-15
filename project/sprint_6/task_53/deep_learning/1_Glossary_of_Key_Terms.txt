@@ -1,0 +1,35 @@
+Glossary of Key Terms
+
+Duplication (of code):
+The presence of identical or nearly identical blocks of code
+in multiple locations within a codebase. In testing, this
+often means similar setup, execution, and assertion logic
+repeated across different test methods.
+
+Refactoring:
+The process of restructuring existing computer code without
+changing its external behavior. The goal is to improve
+nonfunctional attributes of the software, such as readability,
+maintainability, and complexity.
+
+Test Methods:
+Functions or procedures within a test class designed to verify
+a specific unit of code's behavior. In the source, these are
+the methods within TravelCalculatePremiumControllerTest.
+
+TravelCalculatePremiumControllerTest:
+The specific class mentioned in the source material as containing
+duplicated test methods that need to be refactored.
+
+Separation of Test Data from Test Code:
+A testing principle and refactoring technique where the actual
+input values, expected outputs, and other test-specific parameters
+are stored and managed separately from the test logic
+(e.g., the setup, action, and assertion steps). This allows the
+same test logic to be reused with different data sets.
+
+Test Suite:
+A collection of test cases and/or test scripts used to test a
+software program to determine if it has met its objectives.
+Refactoring aims to improve the overall quality and maintainability
+of the test suite.

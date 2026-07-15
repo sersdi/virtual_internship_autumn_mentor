@@ -1,0 +1,83 @@
+Quiz
+
+1. What is the primary goal of the "Automated Test
+   Scenario Implementation" process?
+
+2. What information should each test scenario in the
+   list include, beyond just a description of the scenario itself?
+
+3. In what specific format should the requests and expected
+   responses be provided?
+
+4. Which class is designated for the implementation of
+   these automated tests?
+
+5. What is the significance of the "по аналогии с
+   данным примером" instruction regarding the implementation?
+
+6. Before beginning the implementation, what two crucial
+   pieces of information should already be prepared for each
+   test scenario?
+
+7. What kind of tests are being created in this process:
+   manual, automated, or a mix?
+
+8. Why is it important to include expected responses in
+   the test scenarios?
+
+9. What does the phrase "реализовать эти тестовые сценарии"
+   specifically mean in this context?
+
+10. What benefit does automating these test scenarios provide?
+
+
+Quiz Answer Key
+
+1. The primary goal is to implement previously defined test
+   scenarios as automated tests. This involves transforming a
+   list of scenarios with JSON requests and responses into
+   executable code.
+
+2. Beyond a description, each test scenario in the list
+   should include concrete requests and expected responses.
+   These details are crucial for defining the precise conditions
+   and expected outcomes of the test.
+
+3. The requests and expected responses should be provided in
+   JSON format. This standardized format ensures consistency
+   and ease of processing by automated test frameworks.
+
+4. The TravelCalculatePremiumControllerTest class is designated
+   for the implementation of these automated tests. This specific
+   class is where all the testing logic will reside.
+
+5. The "по аналогии с данным примером" (by analogy with this example)
+   instruction means that the implementation should follow the
+   structure and conventions of an existing example within the
+   TravelCalculatePremiumControllerTest class. This ensures
+   consistency and proper integration.
+
+6. Before beginning, for each test scenario, specific requests
+   and their corresponding expected responses should already
+   be prepared. These form the input and validation criteria
+   for the automated tests.
+
+7. The tests being created in this process are automated tests.
+   The document explicitly states the task is to "реализовать
+   эти тестовые сценарии в виде автоматических тестов" (implement
+   these test scenarios as automated tests).
+
+8. It is important to include expected responses because they
+   define the criteria for a test to pass or fail. Without an
+   expected response, there is no way to verify if the system
+   behaved correctly.
+
+9. In this context, "реализовать эти тестовые сценарии" means
+   to write the necessary code within the designated class that
+   executes each scenario, sends the defined request, and verifies
+   the actual response against the expected one.
+
+10. Automating these test scenarios provides several benefits,
+    including increased efficiency, consistency in testing,
+    the ability to run tests frequently, and faster feedback
+    on code changes.

@@ -1,0 +1,30 @@
+Essay Format Questions
+
+1. Discuss the pedagogical approach taken in this developer's
+   guide, particularly the decision to start with "simple"
+   tasks and introduce "fake values." How do these choices
+   contribute to effective developer onboarding and project management?
+
+2. Analyze the importance of the instruction "Good programmer
+   should learn to feel when to write new code and when to
+   find a ready-made solution." Provide examples of common
+   programming tasks where finding a ready-made solution is
+   preferable and explain why.
+
+3. Elaborate on the emphasis placed on testing in this guide.
+   Why is it crucial for developers to test their changes,
+   modify existing tests, and ensure all tests pass before
+   committing to the repository? What are the potential
+   consequences of neglecting these steps?
+
+4. Consider the concept of agreementPrice being a "fake value"
+   initially. Discuss how this approach allows for iterative
+   development and helps manage complexity in software projects.
+   What are the benefits and potential drawbacks of using
+   placeholders like this?
+
+5. This guide touches upon several aspects beyond just coding,
+   such as "communication with a mentor and colleagues."
+   Discuss the role of non-technical skills like communication
+   and collaboration in a successful software development team,
+   as implied by this introductory task.

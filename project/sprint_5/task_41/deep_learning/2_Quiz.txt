@@ -1,0 +1,87 @@
+Quiz
+
+1. What is the main problem described in the provided
+   scenario regarding JSON responses?
+
+2. What library is recommended by the mentor to address
+   the date formatting issue?
+
+3. What specific annotation is suggested for changing
+   the date format in the JSON response?
+
+4. What is the desired date format specified in the problem statement?
+
+5. Provide an example of the "strange format" dates are
+   initially appearing in.
+
+6. In the Ответ (Answer) section, what is the value of agreementPrice?
+
+7. What dependency snippet is provided for incorporating
+   the Jackson library?
+
+8. Briefly explain the purpose of the @JsonFormat annotation
+   in the context of this problem.
+
+9. Why might a developer want to change the date format
+   from the default verbose one to a simpler one like "yyyy-MM-dd"?
+
+10. If you were to search for examples of @JsonFormat usage,
+    what terms would you likely include in your search query
+    based on the mentor's advice?
+
+
+Quiz Answer Key
+
+1. The main problem is that dates in the JSON response
+   are displayed in a verbose and "strange format"
+   (e.g., 2021-05-25T00:00:00.000+00:00) instead of the
+   desired simpler format like "yyyy-MM-dd". This discrepancy
+   needs to be resolved.
+
+2. The mentor recommends using the
+   com.fasterxml.jackson.core:jackson-core library,
+   specifically version 2.14.2, to address the date formatting issue.
+   Jackson is a popular library for processing JSON data in Java
+   applications.
+
+3. The specific annotation suggested for changing the date
+   format in the JSON response is @JsonFormat. This annotation
+   is part of the Jackson library and provides powerful
+   capabilities for customizing JSON serialization.
+
+4. The desired date format specified in the problem statement
+   for the answer is "yyyy-MM-dd". This is a common and concise
+   format for representing dates without time information.
+
+5. An example of the "strange format" dates are initially
+   appearing in is 2021-05-25T00:00:00.000+00:00. This format
+   includes time components (T00:00:00.000) and timezone offset
+   (+00:00), which are not desired in this scenario.
+
+6. In the Ответ (Answer) section of the provided JSON,
+   the value of agreementPrice is 4. This field appears
+   alongside the formatted person and agreement date information.
+
+7. The dependency snippet provided for incorporating the
+   Jackson library is
+   implementation('com.fasterxml.jackson.core:jackson-core:2.14.2').
+   This line is typically used in build configuration files like
+   Gradle to include the necessary library.
+
+8. The @JsonFormat annotation's purpose in this context is to
+   control the format of dates when they are serialized into JSON.
+   By applying it to a date field, developers can specify a custom
+   pattern like "yyyy-MM-dd" to override Jackson's default
+   serialization.
+
+9. A developer might want to change the date format to a simpler
+   one like "yyyy-MM-dd" for several reasons, including: better
+   readability for human consumers, consistency with other
+   systems or APIs, and to reduce the size of the JSON payload
+   if time and timezone information are irrelevant.
+
+10. If searching for examples of @JsonFormat usage, one would
+    likely include terms such as "Jackson @JsonFormat example,"
+    "format date JSON Jackson," or "Jackson custom date format."
+    These terms would help in finding relevant code snippets and
+    documentation.

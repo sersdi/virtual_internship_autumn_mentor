@@ -1,0 +1,47 @@
+Glossary of Key Terms
+
+AI (Artificial Intelligence):
+The simulation of human intelligence processes by machines,
+especially computer systems. These processes include learning,
+reasoning, and self-correction.
+
+ChatGPT:
+A large language model chatbot developed by OpenAI,
+capable of generating human-like text responses based
+on the input it receives.
+
+Programmatic Code:
+Instructions written in a specific programming language
+that a computer can understand and execute to perform a task.
+
+Test Generation:
+The process of automatically creating test cases for
+software to verify its functionality and identify defects.
+
+Test Case:
+A set of conditions or variables under which a tester
+will determine whether an application, software system,
+or one of its features is working correctly.
+
+TravelCalculatePremiumServiceImpl:
+The specific class mentioned in the source material for which
+AI-generated tests are to be created. This implies it's a service
+implementation responsible for calculating travel premiums.
+
+TravelCalculatePremiumServiceImplAIOneTest:
+The required name for the AI-generated test that covers all
+properties of the TravelCalculatePremiumServiceImpl class
+in a single test.
+
+TravelCalculatePremiumServiceImplAIEachFieldTest:
+The required name for the AI-generated test suite that
+includes separate test cases for verifying each individual
+property of the TravelCalculatePremiumServiceImpl class.
+
+VPN (Virtual Private Network):
+A technology that creates a secure, encrypted connection over
+a less secure network, such as the internet. It can be used
+to bypass regional restrictions on online services.
+
+chat.openai.com:
+The official website for accessing OpenAI's ChatGPT service.

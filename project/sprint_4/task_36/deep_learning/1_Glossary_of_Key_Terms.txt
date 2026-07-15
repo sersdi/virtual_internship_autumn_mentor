@@ -1,0 +1,43 @@
+Glossary of Key Terms
+
+Underwriting:
+The process of calculating the price of an insurance
+policy by assessing the risk of insuring a particular
+individual or entity.
+
+Risk Assessment:
+The evaluation of factors (e.g., age, health, occupation, location)
+to determine the likelihood of a claim being made and the potential
+cost of that claim.
+
+Premium:
+The amount of money an individual or entity pays for an
+insurance policy.
+
+Policyholder: The individual or entity who owns an insurance policy.
+
+Insurer: The company or entity that provides insurance.
+
+Claim:
+A formal request by a policyholder to an insurance company
+for payment or services based on the terms of their insurance policy.
+
+TravelCalculatePremiumServiceImpl:
+The specific code component identified by the mentor as
+needing refactoring due to its lack of explicit underwriting
+representation.
+
+Business Process:
+A collection of related, structured activities or tasks that
+produce a specific service or product for a particular customer
+or market.
+
+Code Alignment:
+The principle that a software's structure and logic should
+mirror the real-world business process it automates.
+
+Refactoring:
+The process of restructuring existing computer code,
+without changing its external behavior, to improve its
+non-functional attributes such as readability, maintainability,
+or efficiency.

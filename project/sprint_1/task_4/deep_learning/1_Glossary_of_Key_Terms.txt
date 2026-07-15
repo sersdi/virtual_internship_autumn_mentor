@@ -1,0 +1,70 @@
+Glossary of Key Terms
+
+Gradle:
+A powerful and flexible open-source build automation
+tool used for automating the building, testing, publishing,
+and deployment of software.
+
+Maven:
+A software project management and comprehension tool.
+It can build, report and document projects from a central
+piece of information. Maven established the project structure
+that Gradle often uses by default.
+
+Build Tool:
+Software that automates the creation of an executable
+application from source code. It manages dependencies,
+compiles code, runs tests, and packages the application.
+
+Maven Project Structure:
+A standardized directory layout for software projects,
+originally popularized by the Maven build tool. It defines
+specific locations for source code, test code, resources,
+and other project artifacts.
+
+src:
+The top-level directory within the Maven project structure
+that contains all source code and resources for the project.
+
+src/main:
+A subdirectory within src that holds all the production-ready
+code and resources of the application.
+
+src/main/java:
+The directory within src/main specifically for
+Java production code classes.
+
+src/main/resources:
+The directory within src/main for production-ready
+resource files (e.g., configuration files, property files, XML).
+
+src/test:
+A subdirectory within src that holds all the test-related
+code and resources for the application.
+
+src/test/java:
+The directory within src/test specifically for Java
+test code (e.g., unit tests, integration tests).
+
+src/test/resources:
+The directory within src/test for test-specific resource files.
+
+Production Code:
+The actual code that implements the core functionality
+of the software application and is intended for deployment
+and use by end-users.
+
+Test Code:
+Code written specifically to verify the correct
+behavior of the production code, often including unit tests,
+integration tests, and other automated tests.
+
+gradle build:
+A command executed in the terminal that instructs Gradle
+to compile the source code, run tests, and package the
+project into a distributable format.
+
+"Out of the box" / "По дефолту" (By default):
+Refers to functionality that works without requiring any
+special configuration or setup from the user, relying on
+pre-defined conventions.

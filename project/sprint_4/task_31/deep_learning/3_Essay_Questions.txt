@@ -1,0 +1,28 @@
+Essay Format Questions
+
+1. Discuss the implications of not implementing the
+   agreementDateFrom validation rule. What potential
+   business problems or inconsistencies could arise?
+
+2. Imagine you are designing the error message for an
+   invalid request due to a missing agreementDateFrom.
+   What information should this message convey to a
+   user or another system, and why is clear communication
+   important in this context?
+
+3. Beyond simply checking for presence, what additional
+   validation rules might be sensible to apply to
+   agreementDateFrom in a real-world travel agreement system?
+   Justify your suggestions.
+
+4. Explain the importance of the "PS: Не забудьте про тесты!
+   Решение без тестов не принимается!" instruction in the
+   context of software development best practices.
+   What specific benefits do thorough tests provide
+   for this particular validation?
+
+5. Consider how this validation rule might fit into
+   a larger system architecture. Where would this validation
+   typically occur (e.g., frontend, backend API, database layer),
+   and what are the advantages and disadvantages of placing
+   it in different locations?

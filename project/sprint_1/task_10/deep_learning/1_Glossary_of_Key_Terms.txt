@@ -1,0 +1,81 @@
+Glossary of Key Terms
+
+Class:
+A blueprint or template for creating objects, providing
+initial values for state (member variables) and implementations
+of behavior (member functions or methods).
+
+Constructor:
+A special method in a class that is automatically called
+when an object of that class is created. It is used to
+initialize the object's state.
+
+Default Constructor:
+A constructor that takes no parameters. It initializes an
+object with default values for its properties.
+
+Parameterized Constructor:
+A constructor that accepts one or more parameters
+to initialize the properties of an object with specific
+values provided at the time of creation.
+
+Get Method (Getter/Accessor):
+A method used to retrieve (get) the value of a private
+property of an object.
+
+Set Method (Setter/Mutator):
+A method used to modify (set) the value of a private
+property of an object.
+
+Encapsulation:
+An object-oriented programming principle that bundles
+data (properties) and the methods that operate on the
+data within a single unit (class), and restricts direct
+access to some of the object's components.
+
+Git:
+A distributed version control system used for tracking
+changes in source code during software development,
+allowing multiple developers to work on the same project concurrently.
+
+Local Repository:
+A copy of the Git repository stored on a developer's
+local machine, where they commit their changes before
+pushing them to a global repository.
+
+Global Repository (Remote Repository):
+A centralized Git repository (e.g., on GitHub) that serves
+as the main source of truth for a project, where all developers
+push their changes and pull updates from.
+
+Commit:
+A snapshot of the changes made to the codebase at a
+specific point in time, recorded in the Git repository.
+Each commit has a unique identifier and a commit message.
+
+Commit Message:
+A short description associated with a Git commit,
+explaining the changes made in that commit.
+
+Push:
+The action of uploading local Git commits to a remote
+(global) repository.
+
+GitHub:
+A web-based platform for version control and collaboration,
+providing hosting for Git repositories.
+
+Git Rebase:
+A Git operation that reapplies commits from one branch
+onto another, typically to create a linear history and
+avoid merge commits.
+
+Git Merge:
+A Git operation that combines the history of two or
+more branches into a single branch, typically creating
+a new "merge commit."
+
+IDEA (IntelliJ IDEA):
+A popular integrated development environment (IDE)
+for Java and other programming languages, known for
+its powerful code analysis and development tools.

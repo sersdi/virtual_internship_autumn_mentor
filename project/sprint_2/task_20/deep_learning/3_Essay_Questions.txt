@@ -1,0 +1,29 @@
+Essay Questions
+
+1. Compare and contrast the DateTimeServiceV1
+   and DateTimeServiceV2 implementations, focusing
+   on their design principles, reusability, and
+   impact on system performance.
+
+2. Discuss the concept of "state" in object-oriented
+   programming. Explain how the presence or absence
+   of state fundamentally alters how objects are used
+   and their implications for application design,
+   particularly concerning resource management.
+
+3. Explain why the principles of statelessness are
+   particularly important in the context of multithreaded
+   applications. Use the provided text's hints about
+   "thread safety" to elaborate on your answer.
+
+4. Imagine you are designing a new software component.
+   Describe a scenario where you would intentionally
+   choose to implement a stateful object and another
+   scenario where a stateless object would be the preferred
+   design. Justify your choices with reasoning beyond just performance.
+
+5. The text suggests that creating "extra" objects negatively
+   impacts performance. Elaborate on the mechanisms by which
+   object creation and deletion affect system resources,
+   including CPU cycles and memory, and how this relates
+   to the choice between stateless and stateful designs.

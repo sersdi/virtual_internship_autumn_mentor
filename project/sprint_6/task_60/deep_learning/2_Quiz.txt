@@ -1,0 +1,82 @@
+Quiz
+
+1. Why is self-directed learning considered a key skill
+   for good developers in the IT world?
+
+2. What specific technology topic is provided as an
+   example for the student to research and learn independently?
+
+3. According to the text, what are the first four general
+   questions one should aim to answer when approaching a
+   new topic systemically?
+
+4. What is the purpose of trying the simplest examples
+   of a new technology on one's own project?
+
+5. After gaining an initial understanding, how does
+   the text suggest a learner should deepen their knowledge of a topic?
+
+6. How do more complex examples contribute to the learning
+   process outlined in the text?
+
+7. What is the recommended time commitment for the
+   self-directed learning exercise described?
+
+8. Why is it important to discuss acquired knowledge
+   with classmates or an instructor?
+
+9. What is the initial step for a developer when embarking
+   on self-directed learning, regarding information gathering?
+
+10. The text emphasizes a "systemic" approach to learning.
+    Briefly explain what this entails in the context of
+    the provided instructions.
+
+
+Quiz Answer Key
+
+1. Self-directed learning is crucial because the IT world
+   changes rapidly, with new technologies and approaches
+   constantly emerging. Developers must be able to find
+   information and independently learn new things to stay
+   current and effective.
+
+2. The specific technology topic provided as an example
+   for independent research and learning is "logging systems
+   in Java applications."
+
+3. The first four general questions to answer when approaching
+   a new topic systemically are: "what is it?", "why is it used?",
+   "how does it generally work?", and "how is it structured?".
+
+4. The purpose of trying the simplest examples on one's own
+   project is to gain an initial understanding and first
+   impression of how the new technology works in practice.
+
+5. After gaining an initial understanding, the text suggests
+   deepening knowledge by finding a more profound explanation
+   of the topic and striving to enhance one's understanding.
+
+6. More complex examples contribute by allowing the learner
+   to apply deeper knowledge and further solidify their
+   understanding of the technology in more intricate scenarios
+   on their project.
+
+7. The recommended time commitment for the self-directed
+   learning exercise described is 1 to 2 hours.
+
+8. It is important to discuss acquired knowledge with
+   classmates or an instructor to solidify understanding,
+   gain new perspectives, and potentially clarify any lingering
+   questions or misconceptions.
+
+9. The initial step for a developer when embarking on self-directed
+   learning, regarding information gathering, is to find general
+   information that answers the fundamental questions about the topic.
+
+10. A "systemic" approach to learning entails starting with general,
+    foundational information to build a broad understanding,
+    then progressing to practical application with simple examples,
+    followed by deeper theoretical exploration and application of
+    more complex examples, and finally, consolidating knowledge
+    through discussion.

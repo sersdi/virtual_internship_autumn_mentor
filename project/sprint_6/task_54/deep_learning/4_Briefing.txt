@@ -1,0 +1,84 @@
+Briefing Document: Insurance Policy Validation - Future Dates Only
+
+Subject:
+Addressing a critical bug identified during software
+testing regarding insurance policy date validation.
+
+1. Executive Summary
+
+A significant logical error has been identified in
+the insurance policy application where the agreementDateFrom
+and agreementDateTo fields allow users to specify dates in
+the past. This effectively permits the "purchase of insurance
+for a trip to the past," which is illogical and incorrect from
+a business perspective. Business stakeholders have confirmed
+that insurance policy cost calculations should only be based
+on future dates. The immediate task is to implement the
+necessary validation to enforce this requirement and update
+all associated tests.
+
+2. Key Issues and Findings
+
+The core issue revolves around the application's current
+lack of validation for date fields, specifically:
+
+agreementDateFrom: The start date of the insurance policy.
+
+agreementDateTo: The end date of the insurance policy.
+
+These fields currently accept past dates, leading to an
+absurd scenario where "страховку можно приобрести на путешествие
+в прошлое?" (insurance can be purchased for a trip to the past?).
+
+3. Business Logic and Requirements
+
+The business has provided clear guidance on the expected behavior:
+
+No Past Dates: "Бизнес подтвердил, что расчёт стоимости
+полиса страхования не должен основываться на датах из прошлого."
+(The business confirmed that the calculation of the insurance
+policy cost should not be based on dates from the past.)
+
+Future Dates Only: "Допустимы только даты из будущего."
+(Only future dates are permissible.)
+
+Logical Premise: The underlying rationale is that
+"рассчитывать стоимость полиса страхования в прошлом
+не имеет смысла" (calculating the cost of an insurance
+policy in the past makes no sense).
+
+4. Required Action
+
+The primary task is to implement robust validation for
+the agreementDateFrom and agreementDateTo fields. This
+validation must ensure that only future dates are accepted
+for these parameters.
+
+5. Impacted Areas
+
+Codebase:
+The specific module or function responsible for processing
+the agreementDateFrom and agreementDateTo parameters in the
+insurance policy request.
+
+Test Suite:
+All existing tests related to insurance policy creation,
+date validation, and cost calculation will need to be reviewed
+and updated to reflect the new "future dates only" requirement.
+The source explicitly states: "не забудьте при реализации
+исправить все тесты" (don't forget to fix all tests during
+implementation).
+
+6. Recommendations
+
+Prioritize the implementation of the date validation logic
+for agreementDateFrom and agreementDateTo.
+
+Ensure the validation accurately identifies and rejects any past dates.
+
+Thoroughly review and update all relevant unit, integration,
+and end-to-end tests to confirm the new validation works as
+expected and that no regressions are introduced.
+
+Consider adding clear error messages to the user interface
+when invalid (past) dates are entered.

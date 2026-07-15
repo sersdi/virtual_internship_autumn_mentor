@@ -1,0 +1,26 @@
+Essay Questions
+
+1. Discuss the mentor's perspective on the relationship
+   between "business requirements" and "technical solutions."
+   How does he argue for aligning them, even if it means
+   compromising on some "clean code" principles?
+
+2. Analyze the pros and cons of the intern's initial
+   "optimization" in TravelCalculatePremiumValidator
+   from both a technical and a business perspective,
+   based on the mentor's detailed explanation.
+
+3. The mentor states that "finding the optimal balance
+   between these two things is the true art of creating programs."
+   Elaborate on what these "two things" are and why achieving
+   balance is considered an art rather than a science.
+
+4. Explain the concept of "context dependency" in choosing
+   a technical solution, as presented by the mentor. Provide
+   examples of how different contexts might lead to different
+   "optimal" choices regarding code duplication versus optimization.
+
+5. Beyond technical skills, what key meta-skills or approaches
+   to problem-solving does the mentor emphasize for a successful
+   developer? How do these relate to continuous learning and
+   collaboration?

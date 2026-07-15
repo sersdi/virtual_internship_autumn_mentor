@@ -1,0 +1,97 @@
+Quiz
+
+1. What is the primary difference between stateless
+   and stateful objects based on the provided examples?
+
+2. How does the DateTimeServiceV1 class demonstrate
+   the concept of a stateless object?
+
+3. Why is the DateTimeServiceV2 class considered a stateful object?
+
+4. In the context of the DateTimeService examples,
+   which implementation (V1 or V2) is more efficient
+   for repeated calculations? Justify your answer.
+
+5. What negative impact can creating "extra" objects
+   (as seen in the V2 example) have on system performance?
+
+6. The text compares stateless objects to what mathematical
+   concept? Explain the analogy.
+
+7. What is defined as the "state of an object" in the
+   provided material?
+
+8. Why is the ability to reuse instances of a class
+   an advantage, particularly when designing classes
+   for specific algorithms?
+
+9. The text asks the reader to research why stateless
+   objects are considered "thread-safe." Based on the
+   inherent characteristics of stateless objects described,
+   what might be a key reason for this?
+
+10. Conversely, why might stateful objects not be considered "thread-safe"?
+
+
+Answer Key
+
+1. The primary difference lies in whether an object stores
+   data that changes over time (stateful) or if it operates
+   solely on input parameters without retaining internal
+   data (stateless). Stateless objects do not have properties
+   that change their internal state, while stateful objects do.
+
+2. DateTimeServiceV1 is stateless because its getDaysBetween
+   method takes all necessary parameters (date1, date2) as
+   input and performs calculations without relying on or
+   modifying any internal object properties. It has no internal state.
+
+3. DateTimeServiceV2 is stateful because it stores date1
+   and date2 as private instance variables. These variables
+   represent the object's internal state, which is set at object
+   creation and affects subsequent method calls (though in this
+   specific example, the method only uses the pre-set state).
+
+4. V1 is more efficient for repeated calculations. It allows
+   for the creation of a single DateTimeServiceV1 instance
+   which can then be reused multiple times by passing different
+   dates as arguments, avoiding the overhead of creating new
+   objects for each calculation.
+
+5. Creating "extra" objects negatively impacts overall
+   system performance because the system must spend additional
+   time on object creation and subsequently on their deletion
+   from memory once they are no longer needed, leading to
+   increased memory management overhead.
+
+6. The text compares stateless objects to mathematical functions.
+   This analogy highlights that stateless objects take input
+   parameters, perform a calculation based on these inputs,
+   and return a result, without modifying any internal state,
+   much like a mathematical function returns an output based
+   on its inputs.
+
+7. The state of an object is defined as the set of all its
+   properties and their values at a specific moment in time.
+   This includes any internal data that the object holds and
+   that can change.
+
+8. The ability to reuse instances of a class, particularly
+   when designing classes for specific algorithms, is an
+   advantage because it leads to better performance.
+   Reusing a single instance avoids the computational
+   overhead associated with repeatedly creating and destroying
+   "extra" objects.
+
+9. Stateless objects are considered thread-safe because they
+   do not have any mutable internal state that can be shared
+   and concurrently modified by multiple threads. Each operation
+   is self-contained and only depends on its input parameters,
+   preventing race conditions.
+
+10. Stateful objects are often not considered thread-safe
+    because they store mutable internal data. When multiple
+    threads try to access and modify this shared internal
+    state concurrently, it can lead to inconsistent data,
+    race conditions, and unpredictable behavior if not properly
+    synchronized.

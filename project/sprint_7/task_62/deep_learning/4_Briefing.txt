@@ -1,0 +1,90 @@
+Briefing Document: Logging System - Object to JSON Transformation
+
+This document outlines the core requirements and expected
+outcomes for a logging system tasked with transforming Java
+objects into JSON strings for persistent storage and error diagnosis.
+
+Main Themes:
+
+Purpose of Logging:
+The primary goal of the logging system is to record information
+that can later illuminate system activities, aiding in the
+identification and resolution of errors. As stated in the source:
+"Система логирования предназначена для сохранения любой информации,
+которая в будущем может пролить свет на то, что делала система
+и помочь выявить и устранить ошибки." (The logging system is
+designed to save any information that in the future can shed
+light on what the system was doing and help identify and
+eliminate errors.)
+
+Object to JSON Transformation:
+A key functional requirement is the conversion of a specific
+Java object, TravelCalculatePremiumRequest, into a JSON formatted
+string. This transformation is crucial for standardized, readable,
+and machine-parsable logging.
+
+Logging Mechanism:
+The transformed JSON string must then be logged into the system.
+The example output indicates a standard logging framework
+(e.g., Log4j or SLF4J) is expected, showing a timestamp,
+thread information, log level (INFO), logger name, and the
+"REQUEST:" prefix followed by the JSON string.
+
+Developer Task & Resource Utilization:
+The task explicitly instructs the developer to find an existing
+solution for object-to-JSON conversion online and to validate
+it with tests. This implies a preference for leveraging existing
+libraries (e.g., Jackson, Gson) rather than implementing a custom
+serialization mechanism. The instruction is: "PS: воспользуйтесь
+интернетом, найдите решение предназначенное для преобразования
+объекта в JSON, проверьте его при помощи теста." (PS: use the
+internet, find a solution designed for converting an object to JSON,
+test it using a test.)
+
+Most Important Ideas/Facts:
+
+Core Problem:
+Transforming a TravelCalculatePremiumRequest object into a
+JSON string.
+
+Target Format: The output must be a valid JSON string.
+
+Logging Output Example:
+The provided example 2023-03-13 07:43:25,915 [http-nio-8080-exec-4]
+INFO l.j.j.i.r.TravelCalculatePremiumRequestLogger - REQUEST:
+{"personFirstName":"Vasja","personLastName":"Pupkin",
+"agreementDateFrom":"2040-01-01","agreementDateTo":"2040-01-10"}
+illustrates the precise expected console output format, including:
+
+Timestamp (2023-03-13 07:43:25,915)
+
+Thread information ([http-nio-8080-exec-4])
+
+Log Level (INFO)
+
+Logger Name (l.j.j.i.r.TravelCalculatePremiumRequestLogger)
+
+A "REQUEST:" prefix before the JSON payload.
+
+The structure of the JSON string, containing fields like
+personFirstName, personLastName, agreementDateFrom,
+and agreementDateTo.
+
+Recommended Approach:
+Utilize existing libraries/solutions found online for
+JSON conversion (e.g., Jackson, Gson).
+
+Quality Assurance: The solution must be validated with tests.
+
+Purpose of Logging:
+To facilitate debugging and understanding system behavior.
+
+Key Takeaways:
+
+The central objective is to implement robust and informative
+logging for TravelCalculatePremiumRequest objects by converting
+them to JSON strings. This should be achieved by leveraging
+readily available libraries for serialization and integrating
+them into a standard logging framework, ensuring the output
+matches the specified format for effective error diagnosis
+and system monitoring.

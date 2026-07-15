@@ -1,0 +1,42 @@
+Refactoring Duplicated Test Code: A Study Guide
+
+I. Core Concepts and Problems
+
+Problem Identified:
+Duplication of code within tests, specifically in
+TravelCalculatePremiumControllerTest.
+
+Consequences of Duplication:
+Increased difficulty in maintenance.
+
+Degradation of test quality ("turning into junk").
+
+Goal of Refactoring:
+Achieve high-quality test code that is maintainable.
+
+Root Cause of Duplication (in this context):
+Test data (requests and responses) are intermingled
+with the test code itself, leading to repeated patterns.
+
+II. Proposed Solution: Separation of Concerns
+
+Key Idea: Separate test data from test code.
+
+Ideal Test Structure (after refactoring): Load request (as JSON).
+
+Execute request and obtain actual response.
+
+Load expected response.
+
+Compare expected response with actual response.
+
+Benefit of Separation:
+The core test logic (steps 1-4, excluding data) can be
+made identical for all tests, as only the input request
+and expected output response vary.
+
+Practical Implementation:
+Create a dedicated directory: src/test/resources/rest.
+
+Store test data (requests and responses) in separate
+JSON files within this directory.

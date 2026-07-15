@@ -1,0 +1,40 @@
+Glossary of Key Terms
+
+Бизнес требование (Business Requirement):
+A statement describing a goal, need, or condition that
+a system or solution must satisfy. In this context,
+it's the rule about the travel start date.
+
+Запрос (Request):
+A message sent by a client or another system to a server,
+typically asking for data or to perform an action.
+
+Дата начала поездки (Travel Start Date):
+The specific date when a travel agreement is intended to begin.
+This is the crucial piece of information for the validation.
+
+agreementDateFrom:
+The specific field name within the request that holds
+the travel start date.
+
+Не валидным (Not Valid/Invalid):
+Describes a state where a request or data does not meet the
+specified criteria or rules.
+
+Валидация (Validation):
+The process of checking data to ensure it is correct,
+complete, and conforms to specified rules or constraints.
+
+Реализуйте (Implement):
+To put a plan or rule into effect; to code the functionality.
+
+Тесты (Tests):
+Software programs or procedures designed to verify that a
+system or a part of it functions correctly and meets
+its requirements.
+
+Решение без тестов не принимается
+(Solution without tests is not accepted):
+A strict directive indicating that the implemented code
+must be accompanied by comprehensive tests to be considered
+complete and acceptable.

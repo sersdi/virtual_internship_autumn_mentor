@@ -1,0 +1,73 @@
+Quiz
+
+1. Why is input data validation considered an essential
+   component of almost any IT solution?
+
+2. In what specific scenario does input data validation
+   become particularly relevant and why?
+
+3. Name two common types of human errors that input data
+   validation is designed to prevent or detect.
+
+4. Is the implementation of input data validation described
+   as an easy or challenging task?
+
+5. What has the mentor provided to assist with the
+   implementation of data validation?
+
+6. How is the mentor's provided code described in terms
+   of its completeness or functionality?
+
+7. What is the initial task for the student concerning
+   the mentor's validation prototype?
+
+8. What action should the student take if they encounter
+   questions while studying the validation code?
+
+9. What is the final step the student needs to perform
+   with the mentor's validation code?
+
+10. Why is human error a significant factor that necessitates
+    robust input data validation?
+
+
+Quiz Answer Key
+
+1. Input data validation is essential because it addresses
+   the inherent fallibility of human interaction with applications,
+   preventing errors like empty fields or incorrect data types
+   from compromising data integrity and system functionality.
+
+2. It becomes particularly relevant when a human interacts
+   with an application because humans are prone to making mistakes,
+   which can lead to invalid or missing input data.
+
+3. Two common types of human errors are leaving important fields
+   unfilled and entering incorrect data types, such as letters
+   instead of numbers in a numerical field.
+
+4. The implementation of input data validation is explicitly
+   described as "not the simplest task," indicating it is
+   considered a challenging assignment.
+
+5. The mentor has provided a prototype code for validation,
+   which serves as a starting point or example for the student's
+   implementation.
+
+6. The mentor's code is described as a "prototype," which implies
+   it might not be a fully or perfectly working solution, but
+   rather a foundational example.
+
+7. The initial task for the student is to familiarize themselves
+   with the validation prototype and understand how it functions.
+
+8. If questions arise during the study of the validation code,
+   the student is encouraged to ask them.
+
+9. The final step is to implement the validation code provided
+   by the mentor into their own project.
+
+10. Human error is a significant factor because people are
+    inherently prone to making mistakes, such as overlooking
+    required fields or inputting data in an incorrect format,
+    which directly impacts the quality and usability of IT solutions.

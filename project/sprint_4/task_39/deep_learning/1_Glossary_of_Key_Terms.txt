@@ -1,0 +1,48 @@
+Glossary of Key Terms
+
+1. REST (Representational State Transfer):
+An architectural style for distributed hypermedia systems,
+often used for building web services. It emphasizes a
+stateless client-server communication model and a uniform interface.
+
+2. RESTful System:
+A software system that adheres to the architectural
+principles and constraints of REST.
+
+3. HTTP (Hypertext Transfer Protocol):
+The underlying protocol used for communication on the World
+Wide Web. REST heavily leverages HTTP's methods and stateless nature.
+
+4. URL (Uniform Resource Locator):
+A unique address used to identify and locate a resource
+on the internet. In REST, each resource is identified
+by a unique URL.
+
+5. GET:
+An HTTP method used to request data from a specified resource.
+It is idempotent and safe, meaning it doesn't change the server's
+state. Maps to the "Read" CRUD operation.
+
+6. POST:
+An HTTP method used to send data to a server to create a new
+resource or to perform other non-idempotent operations.
+Maps to the "Create" CRUD operation.
+
+7. PUT:
+An HTTP method used to update an existing resource or
+create a new one if it doesn't exist at the specified URL.
+It is idempotent. Maps to the "Update" CRUD operation.
+
+8. DELETE:
+An HTTP method used to request the removal of a specified resource.
+It is idempotent. Maps to the "Delete" CRUD operation.
+
+9. CRUD Operations:
+An acronym representing the four basic functions that
+persistent storage applications should be able to perform:
+Create, Read, Update, and Delete. These operations have a
+direct mapping to HTTP methods in REST.
+
+10. Resource:
+Any information that can be named, represented, or manipulated
+in a RESTful system. Resources are identified by URLs.

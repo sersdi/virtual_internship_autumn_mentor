@@ -1,0 +1,57 @@
+Briefing Document: Mockito Extension for JUnit Testing
+
+This document provides a briefing on the core concepts
+of using the Mockito Extension with JUnit for testing,
+based on the provided source material.
+
+Main Themes and Key Ideas:
+
+The primary theme revolves around the integration of
+Mockito with JUnit for simplified mock object creation
+and dependency injection in unit tests. The source highlights
+the role of JUnit as a test execution manager and emphasizes
+the extendibility of its behavior to accommodate tools like Mockito.
+
+1. JUnit as a Test Runner and Its Extensibility:
+JUnit is identified as the foundational library for executing
+unit tests. The source states: "JUnit - это библиотека,
+которая управляет запуском юнит тестов." (JUnit is a library
+that manages the execution of unit tests.) Crucially, it points
+out that JUnit's behavior can be extended, which is precisely
+how the Mockito integration is achieved.
+
+2. @ExtendWith(MockitoExtension.class) for JUnit Integration:
+This annotation is presented as the mechanism for integrating
+Mockito's functionalities into JUnit tests. The document instructs
+the reader to "Узнайте, что эта штука делает под капотом."
+(Find out what this thing does under the hood.) This implies
+that @ExtendWith(MockitoExtension.class) is responsible for
+setting up the necessary environment for Mockito to work within
+a JUnit test context. It essentially tells JUnit to use Mockito's
+extensions during test execution.
+
+3. @Mock and @InjectMocks Annotations for Mock Object Management:
+The source specifically directs the reader to learn about these
+two annotations. It states: "Так же узнайте что такое аннотации
+@Mock и @InjectMocks." (Also find out what @Mock and @InjectMocks
+annotations are.) This highlights their importance in the Mockito
+framework for: * @Mock: Likely for declaring mock objects, which
+are test doubles that simulate the behavior of real objects without
+involving their actual implementation. * @InjectMocks: Likely for
+automatically injecting these mock objects into the test subject
+(the class being tested), simplifying the setup of dependencies.
+
+4. Approach for Mock Object Creation and Dependency Injection:
+The opening statement of the source encourages a specific approach:
+"Попробуйте применить подход описанный ниже для создания мок
+объектов и внедрения их в качестве зависимостей." (Try to apply
+the approach described below for creating mock objects and
+injecting them as dependencies.) This strongly suggests that
+the subsequent information about @ExtendWith, @Mock, and
+@InjectMocks outlines the recommended method for handling
+mock objects and their dependencies within JUnit tests using Mockito.
+
+In essence, the briefing from the source material emphasizes a
+streamlined approach to unit testing by leveraging Mockito's
+annotations to create and inject mock dependencies, all
+facilitated by JUnit's extensibility.

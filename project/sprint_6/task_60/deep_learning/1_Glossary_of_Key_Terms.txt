@@ -1,0 +1,51 @@
+Glossary of Key Terms
+
+Self-directed learning:
+The ability to independently find, process, and understand
+new information without constant external guidance.
+
+IT world:
+Refers to the rapidly evolving global industry of information
+technology, encompassing software, hardware, networks, and services.
+
+Technologies, approaches, libraries:
+Specific tools, methodologies, and collections of pre-written
+code that developers use in their work.
+
+Logging system:
+A component or framework in software applications used to
+record events, operations, and data for debugging, monitoring,
+and auditing purposes.
+
+Java applications:
+Software programs built using the Java programming language.
+
+Systemic approach:
+A structured and organized method of learning that progresses
+from general understanding to specific details and practical
+application.
+
+General information:
+Broad overview knowledge about a topic that answers fundamental
+questions like "what is it?" and "how does it work?".
+
+Simple examples:
+Basic, easy-to-understand instances or implementations of a
+technology used to grasp its core functionality.
+
+Deeper explanation:
+More detailed and in-depth theoretical knowledge that builds
+upon initial understanding.
+
+Complex examples:
+More intricate or advanced applications of a technology
+that demonstrate its capabilities in more nuanced scenarios.
+
+Project:
+A personal or work-related software development task or
+application where new technologies can be tested and integrated.
+
+Discuss acquired knowledge:
+The act of sharing and reviewing newly learned information
+with others (classmates, instructors) to solidify understanding
+and gain different perspectives.

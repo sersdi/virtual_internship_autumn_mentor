@@ -1,0 +1,54 @@
+plugins {
+	id 'maven-publish'
+}
+
+ext {
+	set("springBootVersion", "3.4.5")
+}
+
+dependencies {
+
+	implementation project(":project:sprint_17:task_163_java_modules:core_api")
+
+	compileOnly('org.projectlombok:lombok:1.18.32')
+	annotationProcessor('org.projectlombok:lombok:1.18.32')
+
+	implementation('com.fasterxml.jackson.core:jackson-databind:2.14.2')
+
+	implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+}
+
+jar {
+	enabled = true
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			// Identify the artifact
+			artifact jar  // This refers to the Spring Boot's bootJar task
+
+			// Project coordinates
+			groupId = 'org.javaguru'
+			artifactId = 'insurance-calculator-adapter-dto'
+			version = '1.0.0'
+
+			// Add other metadata as needed
+			pom {
+				name = 'Insurance Calculator Core API'
+				description = 'Core API module'
+				licenses {
+					license {
+						name = 'The Apache License, Version 2.0'
+						url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+					}
+				}
+			}
+		}
+	}
+
+	// Configure the repository location (local Maven repository)
+	repositories {
+		mavenLocal()
+	}
+}

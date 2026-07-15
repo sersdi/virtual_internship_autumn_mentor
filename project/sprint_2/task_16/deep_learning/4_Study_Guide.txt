@@ -1,0 +1,58 @@
+Java Monetary Precision with BigDecimal: Study Guide
+
+I. Understanding the Core Problem
+
+This section aims to solidify your understanding
+of why BigDecimal is essential for handling monetary values in Java.
+
+The Flaws of float and double for Money:
+
+What are float and double data types in Java?
+
+How are float and double stored internally (e.g., binary
+representation of decimal numbers)?
+
+Explain the concept of "floating-point imprecision"
+when dealing with decimal numbers.
+
+Provide a simple example demonstrating why 0.1 + 0.2
+does not equal 0.3 using float or double.
+
+What are the potential real-world consequences of
+using float or double for financial calculations
+(e.g., rounding errors, lost cents, incorrect totals)?
+
+The Solution: BigDecimal: What is BigDecimal in Java?
+
+How does BigDecimal represent numbers internally
+(contrast with float/double)?
+
+Explain how BigDecimal addresses the imprecision
+issues of float and double.
+
+Describe the benefits of using BigDecimal for
+monetary calculations (accuracy, control over rounding, scale).
+
+II. Practical Application and Project Context
+
+This section focuses on the practical application
+of BigDecimal within the given project context.
+
+TravelCalculatePremiumResponse and agreementPrice:
+
+Based on the provided prompt, what is the specific task
+related to agreementPrice?
+
+Why is it crucial that agreementPrice be of type
+BigDecimal in the TravelCalculatePremiumResponse?
+
+Consider the implications if agreementPrice were,
+for example, a double.
+
+Broader Development Context:
+The prompt mentions "много гуглить и изучать нового."
+Why is continuous learning and independent research
+("googling") emphasized in real-world IT system development?
+
+How does understanding core concepts like BigDecimal
+contribute to building robust and reliable Java applications?

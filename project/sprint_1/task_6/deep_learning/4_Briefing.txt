@@ -1,0 +1,58 @@
+Briefing: Gradle Clean - Artifact Removal Essentials
+
+This briefing summarizes the key information regarding
+artifact removal using the Gradle clean command, based
+on the provided excerpts from
+"Gradle Clean: Artifact Removal Essentials."
+
+Main Theme: Artifact Removal and the clean Command
+
+The core theme of the source is the process of removing
+artifacts (files) created by Gradle during the application
+build process. This is primarily achieved through the use of
+the clean command.
+
+Most Important Ideas/Facts:
+
+Definition of Artifacts:
+Artifacts are explicitly defined as "files created by Gradle
+in the application build process." These files are typically
+found within the build folder.
+
+Location of Artifacts:
+The source clearly states, "In the build folder are the
+artifacts created by Gradle in the application build process."
+It further notes that this folder "is usually highlighted red in IDEA."
+
+Purpose of clean Command:
+The clean command is introduced as a "useful command"
+that "removes all artifacts created by Gradle during the build."
+It explicitly states that "The Gradle clean command removes the
+build folder, that is, it removes all artifacts created during
+the application build process."
+
+Analogy to build Command:
+The source repeatedly draws an analogy between the clean
+and build commands, suggesting similar execution methods.
+
+Execution Methods for clean:
+The clean command can be executed in two primary ways:
+
+From the Gradle Tab (IDE):
+The user is instructed to "run the clean command from the
+Gradle tab for the entire project and only for your module."
+This implies an integrated development environment (IDE) like
+IntelliJ IDEA.
+
+From the Terminal:
+The source provides specific command-line examples:
+
+./gradlew clean: To clean the entire project.
+
+./gradlew :internship:clean: To clean a specific module
+(in this example, named internship).
+
+In summary, the clean command is an essential Gradle
+tool for managing build-generated files, ensuring a
+clean slate for subsequent builds by removing the
+entire build directory and its contents.

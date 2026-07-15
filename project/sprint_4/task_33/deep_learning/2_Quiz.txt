@@ -1,0 +1,95 @@
+Quiz
+
+1. What was the intern's initial problem and proposed
+   solution regarding the validatePersonName and validateDate methods?
+
+2. According to the mentor, what are the two main
+   approaches to implementing business requirements in code?
+
+3. What is the primary drawback of the "optimization"
+   approach (removing duplicate methods) from a business perspective?
+
+4. What is a key advantage of the approach where each
+   business requirement is implemented separately,
+   even if it leads to code duplication?
+
+5. Why does the mentor suggest that an overly
+   optimized technical solution can become "hell to support"
+   in complex systems?
+
+6. What does the mentor mean by stating that "clean
+   code and all empirical rules of writing code are not axioms"?
+
+7. How does the mentor define the "true art of programming"?
+
+8. What crucial step does the mentor advise developers
+   to take when faced with a problem, beyond just
+   implementing one solution?
+
+9. Why does the mentor emphasize that university
+   education often fails to prepare students for
+   real-world development challenges like the one discussed?
+
+10. What advice does the mentor give regarding situations
+    where a developer cannot see alternative solutions?
+
+
+Quiz Answer Key
+
+1. The intern noticed two sets of almost identical
+   validation methods (for names and dates) and consolidated
+   them into two generic validatePersonName and validateDate
+   methods to avoid code duplication, believing it was a good
+   optimization.
+
+2. The two main approaches are: optimizing to remove repeating
+   methods, or implementing each business requirement separately,
+   even if it means some code duplication.
+
+3. The primary drawback is that it introduces technical
+   dependencies between business requirements in the code,
+   which do not exist in the business logic, making future
+   changes more complex as one change might affect unrelated
+   requirements.
+
+4. A key advantage of implementing each business requirement
+   separately is that the technical solution very closely
+   mirrors the business requirements, making it much easier
+   to identify and modify the code for a specific business
+   change without impacting other requirements.
+
+5. An overly optimized technical solution becomes "hell to support"
+   because it diverges significantly from the business solution.
+   This makes it incredibly difficult to trace which specific
+   piece of code implements a particular business requirement,
+   leading to confusion and maintenance nightmares.
+
+6. The mentor means that while "clean code" principles offer
+   valuable guidance, they are not absolute truths to be
+   followed rigidly. Every solution has trade-offs, and the
+   best approach depends on the specific context rather than
+   a universal rule.
+
+7. The mentor defines the true art of programming as finding
+   the optimal balance between creating a technically robust
+   and "cool" solution and ensuring that the technical
+   implementation remains as close as possible to the
+   business process it automates.
+
+8. The mentor advises developers to always seek out and
+   evaluate alternative solutions. By comparing the pros
+   and cons of multiple approaches, a developer can make
+   a more informed decision about which solution is best
+   for the given context.
+
+9. University education often fails because it uses oversimplified,
+   "detached from reality" examples. These examples don't present
+   the complex trade-offs and nuanced decisions that are common
+   in real-world software development, thus leaving students
+   unprepared.
+
+10. The mentor advises that if a developer cannot see alternatives,
+    it means they lack sufficient knowledge, experience, or context.
+    In such situations, it is crucial to seek help from others
+    (collaborate) to find better solutions and expand one's
+    perspective.

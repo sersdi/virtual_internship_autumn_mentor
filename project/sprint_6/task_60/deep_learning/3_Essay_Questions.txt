@@ -1,0 +1,29 @@
+Essay Questions
+
+1. Analyze the role of active experimentation (applying examples
+   to one's own project) in the self-directed learning process
+   described. How does this differ from purely theoretical learning,
+   and what are its benefits for developers?
+
+2. Discuss the importance of the initial information-gathering phase,
+   specifically addressing the four guiding questions provided.
+   How do these questions lay the groundwork for effective
+   self-directed learning, and what could be the consequences
+   of skipping this step?
+
+3. The text suggests a specific time frame for the learning
+   exercise and emphasizes discussion with peers or instructors.
+   Elaborate on how these two elements—time management and
+   collaboration—contribute to the success and sustainability
+   of self-directed learning for developers.
+
+4. Compare and contrast the process of learning "simple examples"
+   versus "more complex examples" within the context of the systemic
+   approach. How does the progression from simple to complex examples
+   contribute to a comprehensive understanding of a new technology?
+
+5. Beyond the explicit steps mentioned, what implicit skills or
+   attitudes are necessary for a developer to effectively master
+   self-directed learning as described in the text? Provide
+   examples of how these might manifest in a real-world learning
+   scenario.

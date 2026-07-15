@@ -1,0 +1,86 @@
+Project Briefing: Validation Classes Refactor
+
+Subject: Refactoring and Organization of Validation Classes
+
+1. Executive Summary
+
+This briefing outlines a critical refactoring task concerning
+the organization of validation classes within the project.
+The primary objective is to extract all existing validation
+classes into a dedicated package, specifically core/validations.
+This initiative aims to improve code structure, maintainability,
+and clarity due to the significant number of these classes.
+
+2. Main Themes and Objectives
+
+The core theme of the "Validation Classes Refactor"
+initiative is code organization and maintainability.
+The central objective is to consolidate numerous validation
+classes into a single, clearly defined location.
+
+The source explicitly states:
+
+Task:
+"Ваша задача: вынести классы валидаций в отдельный пакет
+(core/validations)." (Your task: move validation classes
+into a separate package (core/validations)).
+
+Justification:
+"Этих классов много, поэтому их нужно сгруппировать
+в отдельном пакете (если конечно вы это еще не сделали)."
+(There are many of these classes, so they need to be grouped
+into a separate package (if you haven't already done so)).
+
+This indicates a recognition of current potential
+disorganization or scattering of these classes,
+and a proactive step to centralize them.
+
+3. Key Ideas and Facts
+
+Target Location:
+The designated package for all validation classes is
+core/validations. This specific path should be strictly
+adhered to for consistency.
+
+Reason for Refactor:
+The sheer volume of validation classes is the primary driver
+for this refactoring effort. Grouping them together is
+essential for manageability.
+
+Implied Current State:
+The phrase "(если конечно вы это еще не сделали)" suggests
+a possibility that some, or all, validation classes might
+already be somewhat grouped, but the directive is to ensure
+all are consistently moved to the core/validations package.
+It implies a need for verification and potential relocation.
+
+Benefits:
+While not explicitly stated in the provided excerpt,
+the implied benefits of this refactor include:
+
+Improved code readability and navigability.
+
+Easier maintenance and updates of validation logic.
+
+Reduced risk of redundancy or inconsistencies across
+validation implementations.
+
+Clearer separation of concerns within the core module.
+
+4. Action Items / Recommendations
+
+Based on the provided source, the immediate action item is to:
+
+Identify all existing validation classes across the codebase.
+
+Relocate these identified classes to the core/validations package.
+
+Ensure all necessary imports and references to these classes
+are updated throughout the project to reflect their new location.
+
+Verify that this refactoring has not been partially or fully
+completed already, and if so, confirm its full and consistent
+implementation according to the directive.
+
+This refactoring is crucial for enhancing the overall
+structure and maintainability of the project's core components.

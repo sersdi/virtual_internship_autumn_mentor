@@ -1,0 +1,77 @@
+Continuous Integration: Ensuring Software Quality and Stability
+
+What is the fundamental nature of software development,
+and what challenges does it present?
+
+Software development is an iterative and continuous process,
+built step-by-step, task-by-task, and functionality-by-functionality.
+Key properties like predictability, continuity, and quality are
+crucial. However, these are difficult to ensure because multiple
+people work on a project, and humans are inherently prone to making
+mistakes, even experienced senior developers. The more people
+involved, the more errors will inevitably arise.
+
+Why is it crucial to address errors quickly in a software project?
+
+If errors are ignored, they accumulate rapidly and can quickly
+turn into a "snowball" that can destroy the entire project.
+Therefore, errors that arise in a project must be detected and
+corrected as quickly as possible to maintain project health and
+prevent unmanageable issues.
+
+What is Continuous Integration (CI), and what is its primary purpose?
+
+Continuous Integration (CI) is a powerful mechanism designed for
+the early detection of errors and to keep a project in a working
+state. Its primary purpose is to quickly identify and fix mistakes
+introduced during the development process, preventing them from
+accumulating and causing significant problems.
+
+How is the CI process implemented in the described project,
+and when does it run?
+
+In the described project, the CI process is implemented using
+GitHub Workflow Actions, specifically a file named
+.github/workflows/build.yaml. This special file contains
+the project's build parameters on the GitHub platform. The
+project build is automatically triggered every time a commit
+is pushed to the GitHub repository.
+
+What do the "green checkmark" and "red cross" next to a
+commit signify in the CI process?
+
+After a project build is completed, a visual indicator
+appears next to your commit: a green checkmark or a red cross.
+A green checkmark signifies that the project build successfully
+passed after your commit. Conversely, a red cross indicates that
+the project build after your commit failed with an error.
+
+What action should be taken if a commit changes a green
+build to a red build?
+
+If the build was green before your commit and turned red afterward,
+it means that your latest changes introduced errors into the project.
+In this situation, the errors must be eliminated as quickly as
+possible to return the build to a green (successful) state.
+
+How can a developer diagnose the cause of a failed CI build?
+
+To find out the cause of an error, click on the red cross
+next to your commit. A small pop-up will appear; click on
+the "Details" link within it. This will open a page displaying
+the build results executed on the GitHub server. From there,
+open the "build" section and scroll through the build process
+logs to the end. Messages indicating the problems and errors
+that occurred during the build can usually be found somewhere
+near the end of the logs.
+
+Why is it important for a developer to understand what
+happens to their code after it's created, beyond just writing it?
+
+A good developer should not only be able to write code but
+also understand what happens to their code after it is created.
+This includes understanding the CI process, how builds are run,
+how to interpret build results, and how to debug and fix issues
+identified by the CI system. This holistic understanding is
+crucial for maintaining project quality and ensuring smooth
+development.

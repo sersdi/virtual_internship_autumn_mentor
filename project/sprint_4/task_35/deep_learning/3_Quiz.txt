@@ -1,0 +1,87 @@
+Quiz
+
+1. What distinguishes a "good IT solution" from one that
+   merely fulfills all requirements?
+
+2. Explain the "Boy Scout Rule" as applied to programming,
+   according to Robert C. Martin.
+
+3. Define refactoring and state its primary objective.
+
+4. Why is it important to make even small improvements to
+   code you encounter, even if you didn't write it?
+
+5. What should a programmer do if a necessary code
+   improvement extends beyond the scope of their current task?
+
+6. How do the accumulated effects of positive and
+   negative changes manifest in a codebase over time?
+
+7. Who ultimately determines the quality of the code,
+   according to the source material?
+
+8. Which two classic books are recommended for further
+   study on refactoring and clean code?
+
+9. What specific programming style is suggested as a
+   hint for improving code readability during refactoring?
+
+10. What is the overarching goal when refactoring the
+    TravelCalculatePremiumServiceImpl class?
+
+
+Quiz Answer Key
+
+1. A "good IT solution" not only meets all requirements
+   but is also easy to understand, expand, and modify.
+   This emphasizes its long-term maintainability and adaptability,
+   making it more valuable than a solution that just works.
+
+2. Robert C. Martin rephrases the "Boy Scout Rule" for
+   programming as "Leave your code better than it was before you."
+   This means that if you encounter a difficult section of code,
+   you should make it at least slightly better, regardless of
+   who wrote it.
+
+3. Refactoring is the process of changing a program's internal
+   structure without altering its external behavior. Its main
+   objective is to improve the code's comprehensibility and
+   facilitate future modifications.
+
+4. Making small improvements to encountered code is crucial
+   because positive changes accumulate over time, preventing
+   the codebase from degrading. It contributes to a culture
+   of continuous improvement, making the code easier for
+   future developers to work with.
+
+5. If a significant code improvement goes beyond the current
+   task's scope, the programmer should create a new technical
+   task or user story for it. This new task should be
+   well-described and can then be prioritized for a subsequent sprint.
+
+6. Over time, positive changes, such as consistent refactoring,
+   lead to a gradual improvement and enhancement of the
+   application's code. Conversely, negative changes or
+   neglect cause the code to gradually decay and become
+   difficult to manage, akin to a "cesspool."
+
+7. According to the source material, the ultimate quality
+   of the code depends entirely on the developers themselves.
+   Their commitment to improving code and applying principles
+   like the Boy Scout Rule is paramount.
+
+8. The two classic books recommended are "Refactoring:
+   Improving the Design of Existing Code" by Martin Fowler
+   and Kent Beck, and "The Clean Coder" by Robert C. Martin.
+   These are essential reads for understanding refactoring and
+   clean code principles.
+
+9. The suggested programming style as a hint for improving
+   code readability during refactoring is the functional
+   programming style. This approach can often lead to more
+   concise and understandable code.
+
+10. The overarching goal when refactoring the
+    TravelCalculatePremiumServiceImpl class is to improve
+    the readability of its code. This improvement also serves
+    to prepare the code for easier future changes and expansions.

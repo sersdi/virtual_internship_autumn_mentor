@@ -1,0 +1,64 @@
+Briefing Document: JSON Test Comparison Refinement
+
+This document outlines a new task focused on refining
+the comparison of test answers by transitioning from
+direct string comparison to robust JSON file comparison.
+The primary objective is to ensure accurate test result
+validation despite variations in string formatting.
+
+Main Themes and Most Important Ideas/Facts:
+
+Shift from String Comparison to JSON File Comparison:
+The core task is to replace the current method of comparing
+test answers with a system that compares answers sourced from
+JSON files. This signifies a fundamental change in how test
+result validation is performed.
+
+Quote:
+"Ваша задача: замените сравнение ответов в тестах на сравнение
+ответов из JSON файлов находящихся в директории src/test/resources."
+(Your task: replace the comparison of answers in tests with the
+comparison of answers from JSON files located in the
+src/test/resources directory.)
+
+Addressing String Formatting Issues:
+A significant problem identified with the current string
+comparison method is its sensitivity to formatting discrepancies.
+Minor variations like extra spaces or line breaks can lead to
+incorrect test results.
+
+Quote:
+"Если вы будете просто брать тело ответа как строку и сравнивать
+ее с JSON ответом из файла, то вы столкнётесь с проблемой формата
+строк. Один лишний пробел или перенос строки будет приводить к не
+правильному результату." (If you just take the response body as a
+string and compare it with the JSON response from the file,
+you will encounter a string format problem. One extra space or
+line break will lead to an incorrect result.)
+
+Requirement for Format-Independent JSON Comparison:
+The solution must ensure that JSON files are considered identical
+if their data is the same, regardless of superficial formatting
+differences such as extra spaces or line breaks. This implies the
+need for a parser or library that can normalize JSON structures
+before comparison or intelligently compare their semantic content.
+
+Quote:
+"PS: найдите способ сравнивать JSON не зависящий от формата,
+а зависящий от данных внутри. Если данные одинаковые, но JSON
+отличаются лишними пробелами или переносами строк они должны
+считаться одинаковыми." (PS: find a way to compare JSON that
+is independent of the format, but dependent on the data inside.
+If the data is the same, but the JSON differs by extra spaces or
+line breaks, they should be considered the same.)
+
+Key Takeaways:
+
+The project aims to enhance the reliability of test result
+comparison by implementing a more sophisticated JSON comparison
+method. The crucial aspect of this task is to find or develop a
+technique that can intelligently compare JSON content based on
+its data, rather than its exact textual representation, thereby
+eliminating false negatives caused by formatting inconsistencies.
+The JSON files for comparison will be located in the
+src/test/resources directory.

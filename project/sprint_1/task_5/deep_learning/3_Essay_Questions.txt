@@ -1,0 +1,27 @@
+Essay Format Questions
+
+1. Discuss the significance of the build folder's orange
+   highlight in the Idea development environment.
+   How does this visual cue contribute to a developer's
+   workflow and understanding of a project's structure?
+
+2. Imagine you are troubleshooting an issue where your
+   application is not running correctly after a Gradle build.
+   Describe how you would use the contents of the build/libs
+   and build/classes/java/main folders to begin your investigation.
+
+3. Explain the importance of separating production bytecode
+   from test bytecode within the build/classes directory.
+   What are the practical benefits of this organizational
+   structure for developers and the build process?
+
+4. The source mentions that the generated and resources
+   folders will be explored in more detail later. Based on
+   your general knowledge of software development, hypothesize
+   what types of files you might expect to find in these folders
+   and why they are necessary for an application.
+
+5. Beyond simply exploring the build folder, the source emphasizes
+   documenting the task. Discuss the broader importance of detailed
+   documentation in a software development project, particularly
+   in the context of build processes and artifacts.

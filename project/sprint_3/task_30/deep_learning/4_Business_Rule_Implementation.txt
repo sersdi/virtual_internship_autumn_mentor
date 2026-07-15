@@ -1,0 +1,45 @@
+Business Rule Implementation, Testing, and Documentation
+
+What is the core business rule that needs to be implemented?
+
+The core business rule states that any request without a
+last name (фамилии) must be considered invalid.
+
+What is the primary task for the developer based on this business rule?
+
+The primary task for the developer is to implement this
+business rule, specifically ensuring that requests lacking
+a last name are flagged as invalid.
+
+Where should the code implementation of this
+business rule ideally be placed?
+
+The source emphasizes that the code implementation should
+be placed in the "correct place," implying that developers
+should consider the architectural structure and ensure
+logical organization of the code.
+
+Why are tests explicitly mentioned as a crucial part of the solution?
+
+Tests are explicitly mentioned as crucial because a solution
+without tests will not be accepted. This highlights the
+importance of ensuring the correctness and reliability
+of the implemented business rule through proper testing.
+
+What new practice related to documentation is introduced
+for the developer?
+
+What kind of information should be stored in
+the BusinessRequirements.txt file?
+
+All application requirements encountered
+during the project development should be
+recorded in the BusinessRequirements.txt file.
+
+What is the overall implication of these instructions
+for software development?
+
+The instructions emphasize a structured approach
+to software development, integrating business
+rule implementation with testing and comprehensive
+documentation from the outset of a project.

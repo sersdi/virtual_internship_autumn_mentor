@@ -1,0 +1,24 @@
+Essay Format Questions
+
+1. Discuss the potential business implications and
+   risks of not implementing the "Travel End Date Validation" rule.
+   Consider scenarios where missing end dates could lead to
+   operational or financial problems.
+
+2. Outline a comprehensive test plan for validating the
+   "agreementDateTo" field. What specific test cases
+   (e.g., valid, invalid, edge cases) would you include,
+   and what would be the expected outcomes for each?
+
+3. Beyond simply checking for presence, what other types
+   of validation might be beneficial for the "agreementDateTo"
+   field (e.g., format, logical consistency with start date), and why are they important?
+
+4. Imagine you are presenting this business requirement
+   to a team of developers. Explain how you would articulate
+   the importance of this rule and the necessity of testing,
+   drawing directly from the provided source material.
+
+5. How does the principle of "fail fast" relate to the
+   "Travel End Date Validation" requirement? Discuss the
+   benefits of identifying invalid requests early in the process.

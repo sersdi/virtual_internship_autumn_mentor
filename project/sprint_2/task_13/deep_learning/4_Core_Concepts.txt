@@ -1,0 +1,33 @@
+Core Concepts
+
+This section outlines the fundamental ideas presented in
+the source material regarding code validation.
+
+Purpose of Automated Testing:
+Automated tests serve to prove the functionality and correctness
+of written code in professional programming. They are a crucial
+and widely used tool in industrial software development.
+
+Importance of Writing Tests:
+Writing tests is identified as the most important and
+extensively applied method for ensuring code quality in
+a professional setting.
+
+Practical Application:
+The primary task for the reader is to validate their
+previously written code (answer filling code) using tests.
+
+Location for Tests:
+Tests should be written within the
+TravelCalculatePremiumServiceImplTest class,
+located in the src/test/java test directory.
+
+Pre-Commit Best Practice:
+Before committing changes, it is essential to execute
+all tests and ensure they pass without errors ("GREEN").
+Failure to do so will break the project build on GitHub.
+
+Locating Changes in IDEA:
+To quickly find changes made in the current task,
+use the "Compare Directories" feature (Ctrl + D) in IDEA,
+selecting the current and previous task folders.

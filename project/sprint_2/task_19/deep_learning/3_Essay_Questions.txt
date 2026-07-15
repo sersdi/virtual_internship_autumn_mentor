@@ -1,0 +1,28 @@
+Essay Format Questions
+
+1. Discuss the concept of "encapsulation" as presented
+   in the provided text, using the "fortress" analogy
+   to elaborate on its benefits in software development,
+   particularly concerning algorithm implementation.
+
+2. Explain why isolating an algorithm in its own class,
+   as described, is particularly valuable in "large complex
+   applications." Provide examples of how this modularity
+   contributes to maintainability and scalability.
+
+3. Analyze the immediate and future implications of separating
+   the DateTimeService from TravelCalculatePremiumServiceImpl.
+   What are the short-term requirements, and what future
+   benefits are hinted at by this architectural decision?
+
+4. The text emphasizes creating tests for the new
+   DateTimeService class. Discuss the importance of writing
+   tests for newly encapsulated algorithms or services.
+   How do these tests support the principles of modularity
+   and independent change highlighted in the text?
+
+5. Beyond the practical task of moving the algorithm,
+   what overarching software design principle is being
+   demonstrated and advocated for in this excerpt? How
+   does this principle contribute to creating more robust
+   and flexible applications?

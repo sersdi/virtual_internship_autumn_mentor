@@ -1,0 +1,54 @@
+Quiz
+
+1. What is the main goal of creating a JsonFileReader
+   class according to the provided text?
+
+2. Where is the JsonFileReader class intended to be created?
+
+3. What is the name of the method within the
+   JsonFileReader class that is explicitly mentioned?
+
+4. What type of argument does the readJsonFromFile method accept?
+
+5. What is the expected return type of the readJsonFromFile method?
+
+6. What external resource is suggested for finding
+   examples related to file reading?
+
+7. Specifically, what kind of file path is mentioned
+   in the suggestion for external examples?
+
+8. How should the newly written code be validated or tested?
+
+9. What specific type of files are mentioned as the
+   targets for testing the implemented code?
+
+Quiz Answer Key
+
+1. The main goal is to separate test data from test code,
+   indicating a move towards a more organized and maintainable
+   testing approach.
+
+2. The JsonFileReader class is intended to be created within
+   the "test directory" of the project.
+
+3. The method explicitly mentioned within the JsonFileReader
+   class is readJsonFromFile.
+
+4. The readJsonFromFile method accepts a String type argument,
+   which represents the file path.
+
+5. The expected return type of the readJsonFromFile method
+   is a String, which will contain the content of the JSON file.
+
+6. The suggestion is to find examples on the internet
+   (в интернете) for how to implement file reading functionality.
+
+7. The suggestion specifically mentions finding examples
+   on how to read files from the "classpath."
+
+8. The newly written code should be validated or tested
+   against previously created JSON files.
+
+9. The specific type of files mentioned for testing the
+   implemented code are "previously created JSON files."

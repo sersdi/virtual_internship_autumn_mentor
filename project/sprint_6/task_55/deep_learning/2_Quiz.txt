@@ -1,0 +1,86 @@
+Quiz
+
+1. What is the primary characteristic that
+   distinguishes a senior-level developer from others,
+   according to the mentor?
+
+2. Provide two specific examples of poor quality indicators
+   that stem from the "It'll do!" approach mentioned in the text.
+
+3. What is identified as the fundamental reason why most
+   programmers produce inconsistent quality in their work?
+
+4. Define what "personal quality standards" are in the
+   context of the provided text.
+
+5. What is the purpose of establishing personal quality
+   standards for a developer?
+
+6. List one specific example of a personal quality
+   standard provided in the text.
+
+7. What is the "Boy Scout rule" as described in the text,
+   and what does it encourage developers to do?
+
+8. What two ongoing actions are developers encouraged
+   to take regarding their personal quality standards?
+
+9. How does strictly adhering to personal quality
+   standards help a developer stand out from the general mass?
+
+10. What is the ultimate long-term outcome for a
+    developer who consistently follows and improves
+    their personal quality standards?
+
+
+Quiz Answer Key
+
+1. According to the mentor, the primary characteristic
+   that distinguishes a senior-level developer from others
+   is the quality of their work. They consistently strive
+   for and achieve high standards in their development efforts.
+
+2. Two specific examples of poor quality indicators stemming
+   from the "It'll do!" approach are the "copy/paste" approach
+   to code and the presence of dirty code. These practices
+   often lead to unmaintainable and unreliable software.
+
+3. The fundamental reason identified for inconsistent
+   quality among most programmers is the absence of their
+   own defined quality standards. Without these standards,
+   their work quality can fluctuate significantly.
+
+4. Personal quality standards are defined as a developer's
+   self-imposed minimum level of quality, below which they
+   will never allow their work to fall. They represent a
+   commitment to consistently high standards.
+
+5. The purpose of establishing personal quality standards
+   is to ensure a consistent baseline of high-quality work
+   and to prevent a developer from ever descending below
+   that self-defined threshold of excellence.
+
+6. One specific example of a personal quality standard
+   provided is: "I will always write unit tests for my code."
+   This ensures a basic level of code verification and reliability.
+
+7. The "Boy Scout rule" encourages developers to always strive
+   to improve the code they are working with, even if they
+   are only fixing a small bug. It promotes leaving the
+   codebase in a better state than they found it.
+
+8. Developers are encouraged to both strictly monitor the
+   adherence to their current standards and to regularly
+   expand and enhance them. This ensures continuous
+   improvement and growth.
+
+9. Strictly adhering to personal quality standards helps
+   a developer stand out by demonstrating a consistent
+   commitment to excellence and continuous improvement.
+   This sets them apart from those who produce inconsistent work.
+
+10. The ultimate long-term outcome for a developer who
+    consistently follows and improves their personal quality
+    standards is achieving great heights in the art of
+    software development. This implies reaching senior
+    or even higher levels of expertise and recognition.

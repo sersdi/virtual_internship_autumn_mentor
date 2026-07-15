@@ -1,0 +1,24 @@
+Essay Format Questions
+
+1. Discuss the advantages and potential disadvantages of
+   using Project Lombok in a large-scale Java application.
+   Consider aspects like code readability, maintainability,
+   and potential debugging challenges.
+
+2. Explain the concept of "boilerplate code" in Java and
+   elaborate on how Lombok addresses this problem. Provide
+   specific examples of code that Lombok typically replaces.
+
+3. Describe the steps involved in setting up Project Lombok
+   in a new Java project using IntelliJ IDEA, as outlined
+   in the provided material. Detail the purpose of each
+   configuration step.
+
+4. Compare and contrast the @NoArgsConstructor and
+   @AllArgsConstructor annotations. In what scenarios
+   would you typically use one over the other, or both simultaneously?
+
+5. Research and explain how Lombok's annotation processing
+   works under the hood during the compilation phase. What
+   is the role of the Java Annotation Processing Tool (APT)
+   in this process?

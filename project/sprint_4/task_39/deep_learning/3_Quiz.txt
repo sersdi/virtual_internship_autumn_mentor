@@ -1,0 +1,72 @@
+Quiz
+
+1. What does the acronym REST stand for, and what kind
+   of systems is it typically used for?
+
+2. Who coined the term REST, and in what year?
+   What significant protocol was he also involved in authoring?
+
+3. What is a "RESTful system"?
+
+4. Briefly describe the relationship between HTTP and REST.
+
+5. Why is the formation of unique URLs important in REST architecture?
+
+6. Explain the purpose of the HTTP GET method in the context of REST.
+
+7. What is the primary function of the HTTP POST
+   method in a RESTful system?
+
+8. How does the HTTP PUT method relate to CRUD operations?
+
+9. What is the role of the HTTP DELETE method in REST?
+
+10. Name the four basic CRUD operations and explain
+    how they map to HTTP methods in REST.
+
+
+Quiz Answer Key
+
+1. REST stands for Representational State Transfer.
+   It is typically used for building web services in
+   distributed systems, such as the World Wide Web.
+
+2. The term REST was coined in 2000 by Roy Fielding,
+   who was also one of the authors of the HTTP protocol.
+
+3. A "RESTful system" refers to a system that supports
+   and adheres to the principles and architectural style of REST.
+
+4. HTTP serves as the foundational protocol for REST.
+   REST leverages HTTP methods (like GET, POST, PUT, DELETE)
+   and its stateless nature to implement its architectural
+   style for web services.
+
+5. The formation of unique URLs is crucial in REST because
+   each resource in a RESTful system is identified by a unique URL.
+   This allows clients to accurately request and interact with
+   specific resources.
+
+6. The HTTP GET method in REST is primarily used to retrieve
+   data from the server. It corresponds to the "Read" operation
+   in CRUD, allowing clients to fetch the current state of a resource.
+
+7. The HTTP POST method in a RESTful system is typically used
+   to create new resources on the server. It can also be used
+   to send data that is not intended to update an existing
+   resource or for operations that don't fit into the other
+   HTTP methods.
+
+8. The HTTP PUT method relates to CRUD operations by being
+   mapped to the "Update" operation. It is used to modify or
+   replace an existing resource on the server with the data
+   provided in the request body.
+
+9. The HTTP DELETE method in REST is used to remove a specified
+   resource from the server. It directly maps to the "Delete"
+   operation in CRUD.
+
+10. The four basic CRUD operations are Create, Read, Update,
+    and Delete. They map to HTTP methods as follows: Create
+    maps to POST, Read maps to GET, Update maps to PUT,
+    and Delete maps to DELETE.

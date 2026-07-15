@@ -1,0 +1,65 @@
+Glossary of Key Terms
+
+Build Tool:
+A program or set of programs used to automate the creation
+of executable applications from source code. In this context,
+Gradle is the build tool.
+
+Gradle:
+An open-source build automation system that uses a
+Groovy-based Domain Specific Language (DSL) or Kotlin DSL
+instead of XML for declaring project configuration.
+
+IntelliJ IDEA:
+An integrated development environment (IDE) for Java,
+Kotlin, Groovy, and other JVM languages.
+
+Dependencies:
+External libraries or modules that a project relies on to
+function correctly.
+
+Reload all Gradle projects:
+A specific command within the Gradle tab (represented by two arrows)
+that updates Gradle's understanding of the project's structure and
+dependencies. Essential after changes to build.gradle files or
+adding new dependencies.
+
+Full project build:
+The process of compiling and assembling all modules and components
+within an entire project.
+
+Module:
+A distinct, self-contained unit within a larger project,
+often representing a specific feature or component.
+
+Terminal:
+A text-based interface used to interact with the operating system,
+allowing users to execute commands.
+
+gradlew (Gradle Wrapper script for Unix):
+A shell script that allows users to execute Gradle builds without
+requiring a local Gradle installation. It downloads the necessary
+Gradle distribution if not already present.
+
+gradlew.bat (Gradle Wrapper script for Windows):
+The batch file equivalent of gradlew for Windows operating systems.
+
+JAVA_HOME:
+An environment variable that points to the installation directory
+of the Java Development Kit (JDK). It is crucial for Java applications
+and build tools like Gradle to locate the Java Runtime Environment
+(JRE) and Java Virtual Machine (JVM).
+
+JDK (Java Development Kit):
+A software development environment used for developing Java
+applications and applets. It includes the JRE, a compiler (javac),
+and other tools.
+
+JVM (Java Virtual Machine):
+An abstract machine that enables a computer to run Java programs.
+It is the component of the JRE that executes Java bytecode.
+
+Gradle Wrapper:
+A small script that ensures consistency in Gradle builds across
+different environments by automatically downloading and using a
+specific Gradle version.

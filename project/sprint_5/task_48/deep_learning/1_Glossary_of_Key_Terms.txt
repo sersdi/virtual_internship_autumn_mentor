@@ -1,0 +1,46 @@
+Glossary of Key Terms
+
+Тестовые сценарии (Test Scenarios):
+Detailed descriptions of specific tests that need
+to be performed to verify the functionality of a system.
+They outline the initial conditions, inputs, and expected outcomes.
+
+Автоматические тесты (Automated Tests):
+Tests that are executed by software programs without manual
+human intervention. They are designed to run repeatedly and
+quickly to check for regressions or validate new features.
+
+JSON формат (JSON Format):
+(JavaScript Object Notation) A lightweight data-interchange
+format that is easy for humans to read and write and easy for
+machines to parse and generate. It is commonly used for
+transmitting data between a server and web application,
+as an alternative to XML.
+
+Запросы (Requests):
+Messages sent from a client (e.g., a test script) to a
+server asking for information or to perform an action.
+In the context of testing, these are the inputs provided to
+the system under test.
+
+Ожидаемые ответы (Expected Responses):
+The pre-defined or predicted outcomes that a system should
+produce when given a specific request or input. They serve as
+the criteria for evaluating whether a test passes or fails.
+
+TravelCalculatePremiumControllerTest:
+The specific class (likely a Java class for a Spring Boot
+application) where the automated tests related to the
+TravelCalculatePremiumController functionality are to be implemented.
+This class typically contains methods that represent individual
+test cases.
+
+Реализовать (Implement):
+To put a plan or a set of specifications into effect;
+to create the code or system that fulfills the requirements.
+
+По аналогии с данным примером (By analogy with this example):
+An instruction to follow the pattern, structure, or methodology
+demonstrated in a given example when performing a task.
+This promotes consistency and ensures adherence to established
+coding standards.

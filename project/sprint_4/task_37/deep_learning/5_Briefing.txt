@@ -1,0 +1,116 @@
+Briefing: Networking Fundamentals for Programmers
+
+This briefing document outlines the key themes and essential
+concepts for programmers regarding computer networks,
+drawing from the provided excerpts of "Networking Fundamentals
+for Programmers." The overarching goal for programmers is to
+develop an initial understanding of how computer networks are
+structured and function.
+
+Main Themes:
+
+Interconnectedness of Applications:
+Programs developed by programmers rarely exist in isolation.
+They are typically applications that communicate with each
+other and allow users to access them. This necessitates the
+use of networks.
+
+Importance of Network Understanding for Programmers:
+A good programmer must understand how the network through
+which their application's data is transmitted is structured
+and works. This knowledge is crucial for developing robust
+and efficient applications.
+
+Fundamental Network Concepts:
+The curriculum emphasizes delving into the core components
+and principles governing network operations, including architecture,
+layered models, and specific protocols.
+
+Most Important Ideas/Facts:
+
+Necessity of Networks for Applications:
+
+"Разрабатываемые программистами программы очень редко
+могут существовать в изоляции от внешнего мира. Обычно
+это приложения, которые общаются между собой и дают возможность
+пользователям получить к ним доступ." (Programs developed by
+programmers very rarely can exist in isolation from the
+outside world. Usually, these are applications that communicate
+with each other and allow users to access them.)
+
+Since applications are deployed and run on different computers,
+a network is used to ensure communication between them.
+
+Programmer's Role in Network Comprehension:
+
+"Хороший программист должен понимать как устроена и работает сеть,
+через которую передаются данные его приложений."
+(A good programmer must understand how the network through
+which his applications' data is transmitted is structured and works.)
+
+The "task" (Задача этого шага) is explicitly stated as
+"to get acquainted with the network device" (познакомиться
+с устройством сети).
+
+Key Areas of Study:
+Programmers should immerse themselves in learning about
+network structure and the protocols that ensure their operation.
+Specifically, they need to gain as much information as possible about:
+
+Computer Network Architecture:
+Understanding the overall design and organization of networks.
+
+Network Model Layers:
+Familiarity with the different layers in a network model, including:
+
+Link Layer (канальный)
+
+Internetwork Layer (межсетевой)
+
+Transport Layer (транспортный)
+
+Application Layer (прикладной)
+
+Protocols Used in Computer Networks:
+General knowledge of various network protocols.
+
+TCP Protocol (протоколе TCI):
+A specific focus on the Transmission Control Protocol.
+
+IP Protocol (протоколе IP):
+A specific focus on the Internet Protocol.
+
+Recommended Learning Resources:
+The document provides specific starting points for learning,
+including:
+
+https://selectel.ru/blog/tcp-ip-for-beginners/
+
+https://selectel.ru/blog/osi-for-beginners/
+
+"Основы сетей передачи данных." (Basics of Data Transmission Networks.)
+
+"Модель OSI и стек протоколов TCP IP." (OSI Model and TCP/IP Protocol Stack.)
+
+"Основы Ethernet." (Ethernet Fundamentals.)
+
+https://www.youtube.com/watch?v=Z-a7MNStFQs ("What is TCP/IP: Explained simply")
+
+https://www.youtube.com/watch?v=2I1HnSN1H9o
+
+Self-Directed Learning and Collaboration:
+Programmers are encouraged to find additional sources
+if necessary and to share useful resources (articles or videos)
+with mentors and fellow students.
+
+Ultimate Goal:
+"Ваша цель сформировать у себя начальное понимание того как
+устроены и работают компьютерные сети." (Your goal is to form
+an initial understanding of how computer networks are structured
+and work.)
+
+In essence, the provided text underscores that network
+knowledge is not an auxiliary skill but a fundamental
+requirement for modern programmers to effectively design,
+implement, and troubleshoot applications that inherently rely
+on communication across diverse computing environments.

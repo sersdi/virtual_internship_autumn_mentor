@@ -1,0 +1,79 @@
+Quiz
+
+1. What is the primary purpose of automated tests in
+   professional programming, according to the source?
+
+2. Why is writing tests considered a crucial activity
+   in industrial software development?
+
+3. Where specifically should the tests for the "answer
+   filling code" be written?
+
+4. What is the recommended action before committing any
+   changes to the project?
+
+5. What consequence can arise if tests are not executed
+   and passed successfully before a commit?
+
+6. What color or status indicates that all tests have
+   passed without errors?
+
+7. What specific type of code is the reader tasked with
+   validating using tests?
+
+8. Which IDE feature is suggested for quickly identifying
+   changes between different task versions?
+
+9. Why is it important to ensure all tests pass, not just a subset?
+
+10. In which main directory should the test files typically reside?
+
+
+Quiz Answer Key
+
+1. Automated tests in professional programming primarily
+   serve to prove the functionality and correctness of written code.
+   They act as a reliable method to demonstrate that the code
+   works as intended.
+
+2. Writing tests is considered crucial because it is the
+   most important and widely applied instrument for ensuring
+   the quality and reliability of software in industrial development.
+   It helps catch bugs and ensures code robustness.
+
+3. The tests for the "answer filling code" should specifically
+   be written within the TravelCalculatePremiumServiceImplTest class.
+   This class is located in the designated test directory for the
+   project.
+
+4. Before committing any changes, the recommended action is
+   to execute all existing tests. It is imperative to ensure
+   that every test passes successfully and displays a "GREEN" status.
+
+5. If tests are not executed and passed successfully before a
+   commit, it will lead to breaking the project build on GitHub.
+   This can disrupt the continuous integration process and affect
+   other developers.
+
+6. The color or status that indicates all tests have passed
+   without errors is "GREEN." This visual cue signifies that
+   the code is functioning correctly according to the defined tests.
+
+7. The reader is specifically tasked with validating their
+   "answer filling code" using automated tests. This refers to
+   the code written in a previous assignment that handles filling
+   in answers.
+
+8. The IDE feature suggested for quickly identifying changes
+   between different task versions is "Compare Directories"
+   (Ctrl + D) in IDEA. This allows for a side-by-side comparison
+   of two selected folders.
+
+9. It is important to ensure all tests pass because future
+   developments will add many more tests. Failing to pass all
+   tests, even old ones, will break the project build and indicate
+   a regression.
+
+10. The test files should typically reside in the src/test/java
+    directory. This is the standard location for unit and
+    integration tests in many Java projects.

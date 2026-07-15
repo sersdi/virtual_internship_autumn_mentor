@@ -1,0 +1,22 @@
+Essay Format Questions
+
+1. Discuss the advantages and disadvantages of performing
+   a full project build versus a selective module build
+   using Gradle terminal commands. In what specific scenarios
+   would each approach be more appropriate?
+
+2. Explain the role of the gradlew script in the context
+   of the provided commands. How does its use contribute
+   to project portability and consistency across different
+   development environments?
+
+3. Beyond the commands provided, speculate on other potential
+   Gradle commands a developer might use from the terminal
+   for different phases of a project's lifecycle (e.g.,
+   testing, cleaning, running). How might these commands be structured?
+
+4. Imagine you are onboarding a new developer to a project
+   that utilizes Gradle. Develop a brief training module
+   explaining how to use Gradle commands from the terminal,
+   incorporating all the key information from the source
+   material and emphasizing best practices.

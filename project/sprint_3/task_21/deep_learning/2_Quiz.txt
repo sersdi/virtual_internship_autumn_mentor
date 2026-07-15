@@ -1,0 +1,90 @@
+Quiz: Short Answer Questions
+
+1. What is the primary purpose of the @Component annotation in Spring?
+
+2. Explain the relationship between Inversion
+   of Control (IoC) and Dependency Injection (DI).
+
+3. Describe what "constructor dependency injection" entails.
+
+4. Why is Dependency Injection considered a key
+   design pattern for building large applications?
+
+5. What problem does moving an algorithm
+   (like date calculation) into a separate class help to solve?
+
+6. How does Spring "glue together" objects in
+   an application at runtime using IoC/DI?
+
+7. What change is required in TravelCalculatePremiumServiceImpl
+   to utilize DateTimeService via constructor injection?
+
+8. Why is it important to update tests after making
+   changes related to dependency injection?
+
+9. In the context of the provided material, what is
+   the "old code" that needs to be removed from
+   TravelCalculatePremiumServiceImpl?
+
+10. What advice is given regarding the practice
+    of extracting algorithms into separate classes?
+
+
+Quiz Answer Key
+
+1. The @Component annotation in Spring marks a class
+   as a Spring-managed component. This allows Spring's
+   Inversion of Control container to detect and manage
+   the lifecycle of this class, making it eligible for
+   dependency injection.
+
+2. Inversion of Control is a broader design principle
+   where the control of object creation and lifecycle
+   management is inverted from the application code to a
+   framework or container. Dependency Injection is a specific
+   implementation of IoC, where dependencies are provided
+   to an object rather than the object creating them itself.
+
+3. Constructor dependency injection is a method where an
+   object receives its dependencies through its constructor
+   parameters. Spring automatically provides the required
+   instances of these dependencies when creating an object
+   that has such a constructor.
+
+4. Dependency Injection is crucial for large applications
+   because it promotes loose coupling, enhances testability,
+   and improves modularity. It allows components to be developed
+   independently and then assembled by the framework, simplifying
+   maintenance and scaling.
+
+5. Moving an algorithm into a separate class helps to achieve
+   separation of concerns and promotes reusability. It isolates
+   the specific logic, making it easier to test, modify, and use
+   in other parts of the application without affecting the main class.
+
+6. Spring, through its IoC container, reads annotations
+   like @Component and identifies the dependencies of classes
+   (e.g., via constructors). It then instantiates these classes
+   and injects their required dependencies, effectively "gluing"
+   the application's objects together at runtime.
+
+7. To utilize DateTimeService in TravelCalculatePremiumServiceImpl
+   via constructor injection, a constructor must be added to
+   TravelCalculatePremiumServiceImpl that accepts an instance
+   of DateTimeService as a parameter and saves it to a class property.
+
+8. Updating tests after making changes related to dependency
+   injection is crucial to ensure that the application still
+   behaves as expected and to accommodate the new way dependencies
+   are provided. This ensures the integrity and correctness of
+   the application's logic.
+
+9. The "old code" that needs to be removed from
+   TravelCalculatePremiumServiceImpl is the original code
+   responsible for calculating the number of days between dates.
+   This logic is now handled by the DateTimeService class.
+
+10. The advice given is to remember and widely use the technique
+    of extracting algorithms into separate classes. This is
+    presented as a very effective and common practice in
+    software development that promotes good design and maintainability.

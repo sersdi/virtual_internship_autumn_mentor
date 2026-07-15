@@ -1,0 +1,95 @@
+Quiz
+
+1. What is the primary motivation for creating a common
+   interface for validation classes?
+
+2. What is the specific name suggested for the method
+   within the new validation interface, and what are its
+   parameters and return type?
+
+3. Why are the concrete validation classes changed to
+   package-level access after the new interface is introduced?
+
+4. Where is the new common interface expected to be placed
+   within the project structure?
+
+5. How does Spring facilitate the injection of multiple
+   validation components into the
+   TravelCalculatePremiumRequestValidator?
+
+6. What type of variable is introduced in
+   TravelCalculatePremiumRequestValidator to hold
+   the injected validation components?
+
+7. Does the order in which validations are applied
+   within TravelCalculatePremiumRequestValidator matter,
+   according to the provided text?
+
+8. What is the main benefit of using a public interface
+   in conjunction with IoC, as mentioned in the text?
+
+9. Why is it important to update the existing tests
+   after these changes are implemented?
+
+10. What architectural principle is demonstrated by
+    placing concrete implementations with package-level
+    access into a separate package alongside their public interface?
+
+
+Answer Key
+
+1. The primary motivation for creating a common interface
+   is to standardize the public part of all validation classes,
+   ensuring they all expose the same method signature for
+   validation logic. This creates a unified contract for
+   interacting with any validation.
+
+2. The suggested method name for the new interface is execute(...).
+   It is designed to accept a request as a parameter and return
+   an Optional, reflecting the existing functionality of the
+   validation classes.
+
+3. Concrete validation classes are changed to package-level
+   access to hide their specific implementations from external
+   modules. This improves encapsulation, ensuring that other
+   parts of the application interact only with the common interface,
+   not the concrete classes directly.
+
+4. The new common interface is expected to be placed within
+   the core/validations package. This helps organize the project
+   by grouping related validation contracts into a dedicated and
+   logical location.
+
+5. Spring facilitates this by leveraging its @Component annotation
+   and Inversion of Control (IoC). When a class requests a List
+   of objects implementing a specific interface in its constructor,
+   Spring automatically gathers and injects all @Component-annotated
+   classes that implement that interface.
+
+6. A private List travelValidations instance variable is introduced
+   in TravelCalculatePremiumRequestValidator. This variable will
+   hold the collection of injected validation components, allowing
+   the validator to iterate through them.
+
+7. No, according to the provided text, the order in which
+   validations are applied within
+   TravelCalculatePremiumRequestValidator does not matter.
+   The main objective is simply to apply all of them to the request.
+
+8. The main benefit is the ability to hide specific implementations
+   (making them package-level access) while still exposing a
+   consistent public contract. This allows for creating well-defined,
+   encapsulated modules within the application.
+
+9. It is important to update existing tests because the
+   TravelCalculatePremiumRequestValidator's constructor
+   signature will change, and the way validations are
+   provided to it will also be altered (now via dependency injection).
+   Old tests will likely fail without these adjustments.
+
+10. This demonstrates the architectural principle of modularity
+    and strong encapsulation. By creating a public interface
+    and housing its package-private implementations within a
+    specific package, a self-contained and well-defined module
+    is created, improving the overall structure and maintainability
+    of the application.

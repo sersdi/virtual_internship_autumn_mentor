@@ -1,0 +1,50 @@
+Glossary of Key Terms
+
+Code Readability:
+The ease with which a human can understand the purpose,
+control flow, and detailed operation of a piece of code.
+
+Technical Language (in code):
+Code written in a way that emphasizes the underlying
+technical mechanisms and API calls, often requiring
+knowledge of specific programming constructs or library
+functions to understand its purpose.
+
+Business Language (in code):
+Code written in a way that directly reflects the domain
+concepts, business rules, and high-level operations,
+making its purpose clear from a business perspective.
+
+calculatePremium():
+The example method name used in the source material,
+intended to calculate an insurance or agreement premium.
+
+Date.getTime():
+A Java method that returns the number of milliseconds
+since January 1, 1970, 00:00:00 GMT, represented by a Date object.
+
+TimeUnit.DAYS.convert:
+A utility method (likely from java.util.concurrent.TimeUnit)
+used to convert a given time duration from one unit (e.g.,
+milliseconds) to another (e.g., days).
+
+Method Extraction:
+The refactoring technique of moving a segment of code
+from one method into a new, separate method, often to
+improve modularity and readability.
+
+Refactoring:
+The process of restructuring existing computer
+code—changing the factoring—without changing its
+external behavior. It is intended to improve non-functional
+attributes of the software, such as readability and maintainability.
+
+daysBetween:
+The name of a variable in the initial code snippet
+representing the number of days calculated between two dates.
+
+Cognitive Load:
+The total amount of mental effort being used in the
+working memory. In programming, high cognitive load can
+result from complex or unclear code, requiring more mental
+effort to understand.

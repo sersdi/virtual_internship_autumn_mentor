@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the different methods for executing Gradle build
+   commands described in the source material, detailing the
+   advantages and disadvantages of each method in a development
+   workflow.
+
+2. Explain the critical role of the JAVA_HOME environment
+   variable in enabling Gradle operations from the terminal.
+   How does its absence impact the developer's ability to
+   build projects?
+
+3. Compare and contrast the process of performing a full
+   project build versus building a single module in Gradle.
+   When might a developer choose one over the other, and what
+   are the implications for efficiency?
+
+4. Describe the importance of managing dependencies in a Gradle
+   project as hinted by the "Reload all Gradle projects"
+   functionality. How does Gradle facilitate this, and what
+   problems might arise if this step is neglected?
+
+5. Analyze the overall workflow suggested by the instructions,
+   from opening the Gradle tab to documenting the completed task.
+   How does this structured approach contribute to effective
+   project management and development?

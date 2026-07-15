@@ -1,0 +1,45 @@
+Controller Testing for Travel Premium Calculation
+
+What is the primary goal of the "Controller Testing for
+Travel Premium Calculation" document?
+
+The main goal is to guide the user in understanding how
+to test the TravelCalculatePremiumController. The mentor
+wants to write tests for this controller, enabling the
+ability to run the entire application, send HTTP POST
+requests with JSON payloads, and then verify the responses.
+
+Which specific component is the focus of these tests?
+
+The tests are focused on the TravelCalculatePremiumController.
+
+What kind of requests will these tests simulate?
+
+The tests will simulate HTTP POST requests.
+
+What type of data will be sent with these requests?
+
+The data sent with these requests will be in JSON format.
+
+What is the expected outcome of running these tests?
+
+The expected outcome is to verify the responses received
+after sending the HTTP POST requests with JSON data.
+
+Is there an existing example for this testing process?
+
+Yes, the mentor has already created an example of such a
+test in the TravelCalculatePremiumControllerTest class.
+
+What is the user's main task related to this example?
+
+The user's main task is to understand how the
+TravelCalculatePremiumControllerTest controller test works.
+
+Why is it important to test the controller in this manner?
+
+Testing the controller in this manner allows for verification
+of the entire application's functionality, from receiving an
+HTTP request to processing the JSON payload and generating the
+correct response, without needing to run the application
+components in isolation.

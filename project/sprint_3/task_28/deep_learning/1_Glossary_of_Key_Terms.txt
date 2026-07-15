@@ -1,0 +1,43 @@
+Glossary of Key Terms
+
+Input Data Validation (Валидация входных данных):
+The process of ensuring that data entered into an IT system
+is accurate, complete, and adheres to predefined rules and
+formats. It is crucial for maintaining data integrity and
+system functionality.
+
+IT Solution (ИТ решение):
+A software application, system, or service designed to solve
+a specific problem or fulfill a particular need within an
+information technology context.
+
+Human Interaction (Взаимодействие человека):
+The process by which users engage with and provide input
+to a software application or system.
+
+Human Error (Человеку по своей природе свойственно ошибаться):
+Mistakes or inaccuracies introduced by human users during data
+entry or system interaction, such as leaving fields blank or
+entering incorrect data types.
+
+Prototype (Прототип):
+An early, often incomplete or partially functional,
+version of a software solution or component, provided
+as a starting point for development or for understanding a concept.
+
+Mentor (Ментор):
+An experienced individual who provides guidance, advice,
+and resources to a less experienced person, in this context,
+assisting with software development tasks.
+
+Project (Проект):
+The specific software development effort or application
+being worked on by the student.
+
+Implement/Embed (Внедрите):
+To integrate or incorporate code or functionality
+into an existing system or project.
+
+Study/Familiarize (Ознакомиться):
+To carefully review and understand the workings
+of a piece of code or a system.

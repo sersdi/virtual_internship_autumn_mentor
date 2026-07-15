@@ -1,0 +1,84 @@
+Quiz
+
+1. What is the core business requirement outlined in
+   the source material?
+
+2. Which specific field from the request is targeted for validation?
+
+3. What is the expected outcome if the agreementDateFrom
+   field is missing from a request?
+
+4. Why is the absence of agreementDateFrom considered an invalid state?
+
+5. What is the primary task given to the implementer
+   based on this requirement?
+
+6. What is the explicit instruction regarding
+   testing for this implementation?
+
+7. What consequence is stated for a solution submitted without tests?
+
+8. In a broader sense, why are tests crucial
+   for implementing business rules like this?
+
+9. If you were to implement this, what kind
+   of test cases would you prioritize?
+
+10. Does this business rule imply any specific
+    format or range for agreementDateFrom beyond its presence?
+
+
+Quiz Answer Key
+
+1. The core business requirement is that a request
+   without a travel start date (agreementDateFrom)
+   must be considered invalid. This ensures that
+   all travel agreements have a defined beginning.
+
+2. The specific field targeted for validation is
+   agreementDateFrom, which represents the start
+   date of the travel agreement. This field's presence
+   is critical for a valid request.
+
+3. If the agreementDateFrom field is missing from a
+   request, the request should be considered invalid.
+   The system should reject or flag such requests
+   as non-compliant with the business rule.
+
+4. The absence of agreementDateFrom is considered
+   invalid because the business requires a clear
+   start date for any travel agreement. Without this date,
+   the agreement is incomplete or ill-defined from a
+   business perspective.
+
+5. The primary task given to the implementer is to
+   implement this business rule, specifically by
+   adding validation for the agreementDateFrom field
+   from the request. This involves coding the logic
+   to check for its presence.
+
+6. The explicit instruction regarding testing is
+   "Не забудьте про тесты!" (Don't forget about tests!).
+   This emphasizes the critical importance of writing
+   tests for the implemented solution.
+
+7. The stated consequence for a solution submitted
+   without tests is that it will not be accepted
+   ("Решение без тестов не принимается!"). This
+   underscores the non-negotiable nature of including tests.
+
+8. Tests are crucial for implementing business rules
+   like this because they verify that the implemented
+   logic correctly enforces the requirement and prevents
+   regressions. They ensure the system behaves as expected
+   under various conditions.
+
+9. If implementing this, I would prioritize test cases
+   for a request without agreementDateFrom to confirm
+   it's invalid, and test cases for a request with
+   agreementDateFrom to confirm it's valid.
+
+10. This business rule primarily focuses on the presence
+    of agreementDateFrom. It does not explicitly imply
+    any specific format (e.g., YYYY-MM-DD) or range
+    (e.g., future dates only) for the date, only that it must exist.

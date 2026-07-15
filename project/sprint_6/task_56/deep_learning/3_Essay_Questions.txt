@@ -1,0 +1,28 @@
+Essay Questions
+
+1. Discuss the implications of violating the Single
+   Responsibility Principle (SRP) in software design,
+   using the TravelCalculatePremiumRequestValidator
+   class as an example. How do such violations impact
+   maintainability, scalability, and testability?
+
+2. Elaborate on the advantages of extracting individual
+   validation logic into separate classes. How does this
+   approach improve the overall architecture and flexibility
+   of the request processing system?
+
+3. Imagine you are a lead developer tasked with presenting
+   the refactoring plan for TravelCalculatePremiumRequestValidator
+   to your team. Outline the key problems you would highlight and
+   justify your proposed solution, addressing potential team concerns.
+
+4. Beyond the issues mentioned in the text (SRP violation,
+   testing difficulty, expansion issues), what other potential
+   benefits might arise from refactoring a monolithic validation
+   class into smaller, focused validation units? Consider aspects
+   like code reusability, readability, and debugging.
+
+5. Describe a scenario where the proposed refactoring might
+   introduce new complexities or challenges. How would you
+   mitigate these potential issues while still adhering to
+   the principles of good software design?

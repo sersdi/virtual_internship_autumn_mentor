@@ -1,0 +1,54 @@
+Glossary of Key Terms
+
+Stateless Object:
+An object that does not maintain any internal state or
+data between method calls. Its methods operate solely
+on the input parameters provided, and it does not store
+information that changes over time.
+
+Stateful Object:
+An object that stores and maintains internal state
+or data (properties and their values) which can change
+over its lifetime and influence subsequent method calls.
+
+State of an Object:
+The collection of all properties (instance variables)
+of an object and their current values at a specific point
+in time. This defines the object's current condition.
+
+Multithreaded Applications:
+Software applications designed to execute multiple parts
+of their code concurrently as separate threads of execution.
+This can improve performance but introduces challenges related
+to shared resources.
+
+Thread-Safe:
+Refers to code or data structures that can be safely
+accessed and modified by multiple threads concurrently
+without causing data corruption, race conditions, or
+unexpected behavior.
+
+Performance (System Performance):
+A measure of how quickly and efficiently a computer
+system or application can complete tasks, often
+evaluated by metrics such as speed, resource consumption
+(CPU, memory), and throughput.
+
+Object Instantiation:
+The process of creating a new instance (object) of a class.
+This involves allocating memory for the object and initializing
+its properties.
+
+Garbage Collection:
+An automatic memory management process in some programming
+languages (like Java, as implied by TimeUnit) that reclaims
+memory occupied by objects that are no longer referenced or
+needed by the program, freeing it up for future use.
+
+Race Condition:
+A situation that can occur in multithreaded environments
+where the outcome of a program depends on the relative timing
+or interleaving of operations performed by multiple threads,
+leading to unpredictable or incorrect results.
+
+Reusability: The ability to use existing software components (like objects or functions) in different parts of an application or in different applications, reducing development time and improving code consistency.

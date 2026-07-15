@@ -1,0 +1,51 @@
+plugins {
+	id 'maven-publish'
+}
+
+ext {
+	set("springBootVersion", "3.4.5")
+}
+
+dependencies {
+
+	implementation project(":project:sprint_17:task_163_java_modules:core_domain")
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
+
+}
+
+jar {
+	enabled = true
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			// Identify the artifact
+			artifact jar  // This refers to the Spring Boot's bootJar task
+
+			// Project coordinates
+			groupId = 'org.javaguru'
+			artifactId = 'insurance-calculator-core-repositories'
+			version = '1.0.0'
+
+			// Add other metadata as needed
+			// Add other metadata as needed
+			pom {
+				name = 'Insurance Calculator Core Repositories'
+				description = 'Core Repositories Java Module'
+				licenses {
+					license {
+						name = 'The Apache License, Version 2.0'
+						url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+					}
+				}
+			}
+		}
+	}
+
+	// Configure the repository location (local Maven repository)
+	repositories {
+		mavenLocal()
+	}
+}

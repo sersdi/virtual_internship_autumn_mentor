@@ -1,0 +1,43 @@
+Study Guide: Postman for Insurance Policy Calculation
+
+I. Purpose of the Exercise
+
+This exercise aims to demonstrate how a developed service
+for calculating insurance policy costs will be used.
+It specifically focuses on interacting with this service
+via HTTP requests using the Postman application.
+
+II. Key Steps and Tools
+
+Application Launch:
+The primary task is to launch the application designed
+for insurance policy calculation.
+
+HTTP Request Generation:
+Create and send an HTTP request to this application.
+
+Postman Application:
+This is the designated tool for creating and sending HTTP requests.
+It can be downloaded from https://www.postman.com/downloads/.
+
+HTTP POST Request:
+The specific type of HTTP request to be created is a POST request.
+
+Request Configuration (Headers & Body):
+Headers: Configure the headers section of the POST request.
+Refer to Postman_request_headers.png for an example.
+
+Body (JSON):
+Configure the body section of the POST request using JSON
+format. Refer to Postman_request_body.png for an example.
+
+Example JSON Body:{
+"personFirstName" : "Vasja",
+"personLastName" : "Pupkin",
+"agreementDateFrom" : "2021-05-25",
+"agreementDateTo" : "2021-05-29"
+}
+
+Troubleshooting and Support: The document anticipates
+questions and encourages seeking help from a mentor and
+leveraging internet resources.

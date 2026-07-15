@@ -1,0 +1,59 @@
+Developer Onboarding: Initial Tasks and Best Practices
+
+What is the primary task described in the provided document?
+
+The primary task is to calculate the agreementPrice property.
+Currently, this is a "fake" value set to the number of days
+between agreementDateFrom and agreementDateTo. Real business
+requirements for this property will be introduced later.
+
+How should the "days between two dates" be calculated in Java?
+
+The document explicitly instructs the developer to search
+online ("загуглите") for a standard Java solution to calculate
+the number of days between two dates. This emphasizes using
+existing solutions rather than writing custom code for standard
+problems.
+
+What is the purpose of these initial, seemingly simple tasks?
+
+These initial tasks are designed to help developers gradually
+integrate into the project. The goals are to familiarize them
+with the development process, establish communication with mentors
+and colleagues, and build confidence before tackling more complex
+assignments.
+
+What is the importance of testing in this development process?
+
+Testing is crucial. Developers are instructed to test their changes,
+modify existing tests if necessary to ensure they continue to work,
+and always run all tests before committing changes to the repository.
+All tests must pass ("be green") before a commit.
+
+What should a developer do if tests fail before a commit?
+
+If tests fail or "break," the developer must fix them before
+committing any changes. Committing broken tests is explicitly
+discouraged.
+
+Why is it important for a programmer to know when
+to use existing solutions versus writing new code?
+
+The document highlights that a good programmer should develop
+an intuition for when to write new code and when to find and
+apply a ready-made solution for a standard problem. This
+promotes efficiency, best practices, and leveraging the vast
+resources available in the programming community.
+
+Will the complexity of the tasks remain the same throughout the project?
+
+No, the document explicitly states that the assignments will
+gradually become more and more complex as the developer progresses.
+
+What is the current status of the agreementPrice value
+in the initial stages of the project?
+
+Currently, the agreementPrice value is a "fake" or
+placeholder value. The true business requirements
+for this property are not yet implemented and will
+be introduced around "step 30" of the project.

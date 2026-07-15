@@ -1,0 +1,57 @@
+Path to Senior Developer: Quality Standards - Study Guide
+
+I. Core Concepts & Understanding
+
+This section focuses on the fundamental ideas presented in the text.
+
+The Defining Characteristic of a Senior Developer:
+According to the mentor, what is the key differentiator
+between a senior developer and others?
+
+The "It'll Do" Approach:
+What does the phrase "И так сойдет!" (It'll do!) refer
+to in the context of programming, and what are its common
+manifestations?
+
+Root Cause of Poor Quality:
+What does the mentor identify as the primary reason
+for inconsistent or low-quality work among programmers?
+
+Personal Quality Standards:
+What are personal quality standards, and what is their purpose?
+
+Examples of Personal Quality Standards:
+What two specific examples of personal quality standards are provided?
+
+Maintaining and Improving Standards:
+What is the ongoing responsibility regarding one's personal
+quality standards?
+
+Benefits of Adhering to Standards:
+What are the ultimate advantages of having and strictly
+following personal quality standards?
+
+II. Critical Thinking & Application
+
+This section encourages deeper engagement with the material.
+
+Impact of Copy/Paste:
+How does the "copy/paste" approach contribute to poor
+quality solutions in software development?
+
+The "Boy Scout Rule":
+Explain the "Boy Scout rule" in the context of programming
+and its potential benefits.
+
+Developing Your Own Standards:
+Beyond the examples given, brainstorm at least two other
+potential personal quality standards a developer might adopt.
+
+Overcoming "It'll Do":
+How can the establishment of personal quality standards
+help a programmer overcome the "It'll do!" mentality?
+
+Mentorship Perspective:
+How does the mentor's perspective on quality standards
+differ from what might be a common, less structured
+approach to development?

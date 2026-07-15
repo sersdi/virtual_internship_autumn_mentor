@@ -1,0 +1,15 @@
+ext {
+	set("springBootVersion", "3.4.5")
+}
+
+dependencies {
+
+	implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+
+	testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+
+	test {
+		useJUnitPlatform()
+	}
+
+}

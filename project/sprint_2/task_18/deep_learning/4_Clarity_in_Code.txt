@@ -1,0 +1,83 @@
+Clarity in Code: Bridging Technical and Business Logic
+
+What is the core problem identified with the
+provided calculatePremium() code snippet?
+
+The core problem is that the code is written in a
+purely technical language with little connection to
+the business domain. While it calculates daysBetween,
+understanding how it does so requires knowledge of technical
+details like Date.getTime() returning milliseconds and
+TimeUnit.DAYS.convert performing conversions. This makes
+the code difficult to quickly understand and find within
+a large application.
+
+Why is technically-focused code considered problematic
+for business understanding?
+
+Technically-focused code, even simple snippets, often
+requires developers to understand the underlying technical
+implementations (e.g., specific unit conversions, data types)
+to grasp its function. This creates a barrier to understanding
+the business logic, making it harder for stakeholders (including
+developers and business analysts) to quickly comprehend what the
+code does in a business context.
+
+What are the negative consequences of having
+hard-to-understand code in a large application?
+
+In large applications with thousands of classes,
+difficult-to-understand code leads to significant
+time and effort spent on deciphering its purpose.
+This slows down development, debugging, and maintenance,
+as developers constantly need to invest "additional effort
+and time" to understand even simple algorithms, let alone
+more complex ones.
+
+How can the readability and business relevance of code be improved?
+
+The primary way to improve code readability and business
+relevance is to break down complex code into smaller,
+self-contained methods. These methods should then be
+given "cool" (i.e., descriptive and meaningful) names
+that clearly communicate their purpose in a way that
+is immediately understandable, even without diving into
+the technical implementation.
+
+What is the key principle for naming methods to enhance readability?
+
+The key principle is to choose method names that, when read,
+instantly convey what the method accomplishes. The goal is
+for the name itself to explain the method's function,
+reducing the need to inspect the method's internal code
+to understand its purpose.
+
+What constitutes a "small, complete action" in the
+context of code improvement?
+
+A "small, complete action" refers to a segment of
+code that performs a singular, finished task.
+Identifying and extracting these self-contained
+actions into separate methods is crucial for
+improving code modularity and readability. For example,
+calculating the number of days between two dates is a "small,
+complete action" that can be encapsulated in its own method.
+
+Why is it beneficial to extract "small, complete actions"
+into separate methods?
+
+Extracting "small, complete actions" into separate methods
+improves code organization, makes the code easier to read
+and understand, and promotes reusability. Each method then
+represents a clearly defined piece of functionality, making
+the overall algorithm more comprehensible and maintainable.
+
+What is the ultimate goal of improving code readability
+in a business context?
+
+The ultimate goal is to create code that is not only
+functional but also easily comprehensible to anyone involved,
+bridging the gap between technical implementation and business
+logic. By making code more readable and business-aligned,
+it becomes easier to find, understand, and maintain, ultimately
+saving time and effort in the long run.

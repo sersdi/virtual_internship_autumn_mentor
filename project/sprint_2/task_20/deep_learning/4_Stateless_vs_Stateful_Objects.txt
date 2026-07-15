@@ -1,0 +1,95 @@
+Stateless vs. Stateful Objects: A Comprehensive Comparison
+
+What is the core difference between stateless and stateful objects?
+
+Stateless objects do not maintain any internal state or data
+that changes during their lifetime. They operate purely on
+input parameters provided to their methods and produce an
+output without altering themselves. In contrast, stateful
+objects possess internal properties or variables whose values
+can change over time as methods are invoked, thus maintaining
+a "state."
+
+Why are DateTimeServiceV1 and DateTimeServiceV2
+used to illustrate stateless and stateful concepts?
+
+DateTimeServiceV1 is stateless because its getDaysBetween
+method takes date1 and date2 as parameters and performs a
+calculation without storing these dates internally or
+having any other mutable properties. Each call to
+getDaysBetween is independent. DateTimeServiceV2,
+on the other hand, is stateful because it stores date1
+and date2 as private instance variables upon construction.
+These internal dates define the object's state, and subsequent
+calls to getDaysBetween rely on this stored state.
+
+Which implementation (DateTimeServiceV1 or DateTimeServiceV2)
+is generally preferred for repeated calculations, and why?
+
+DateTimeServiceV1 is preferred for repeated calculations.
+This is because a single instance of DateTimeServiceV1 can
+be reused multiple times to perform different calculations
+by simply passing new parameters to its method. In contrast,
+for DateTimeServiceV2, a new instance must be created for
+each new calculation, as its state (the dates it operates on)
+is set during construction and cannot be easily changed for
+subsequent, different calculations without creating a new object.
+
+How does the choice between stateless and stateful
+objects impact system performance?
+
+Choosing stateful objects when stateless would suffice
+can negatively impact system performance. This is because
+stateful objects often require creating "excessive" new
+instances for each operation, as seen with DateTimeServiceV2.
+Object creation and subsequent garbage collection
+(deletion from memory) consume additional processing time,
+leading to performance overhead. Stateless objects, by allowing
+instance reuse, minimize these overheads.
+
+How does the concept of "state" relate to an object's properties?
+
+An object's "state" is defined as the collection of all its
+properties (instance variables) and their current values at
+any given moment. For a stateless object, there are no such
+internal properties whose values change, meaning its state
+effectively remains constant or non-existent in terms of
+mutable data. For a stateful object, the values of its
+properties can vary, thus changing its state over time.
+
+Why are stateless objects considered "mathematical functions"
+in terms of their behavior?
+
+Stateless objects are often compared to mathematical functions
+because they exhibit similar behavior: they take input parameters,
+perform calculations based solely on those inputs, and return a
+result, without causing any side effects or altering their internal
+condition. Just like f(x) = x + 1 always produces the same output
+for a given x regardless of previous calls, a stateless object's
+method will always produce the same output for the same input
+parameters.
+
+Why are stateless objects inherently thread-safe?
+
+Stateless objects are thread-safe because they do not maintain
+any mutable internal state that can be shared and modified by
+multiple threads concurrently. Since they only operate on input
+parameters and return a result without affecting their own
+internal data, there is no risk of race conditions or data
+corruption when multiple threads access the same stateless
+object instance simultaneously. Each thread's operation is
+isolated to its own input and local variables within the method.
+
+Why are stateful objects not inherently thread-safe,
+and what are the implications for multi-threaded applications?
+
+Stateful objects are not inherently thread-safe because their
+internal mutable state can be accessed and modified by multiple
+threads concurrently. If one thread modifies the object's state
+while another thread is reading or modifying it, it can lead to
+inconsistent data, unexpected behavior, and difficult-to-debug
+bugs (race conditions). In multi-threaded applications, stateful
+objects typically require synchronization mechanisms (like locks)
+to ensure that only one thread can access or modify the critical
+sections of the object's state at a time, which adds complexity
+and can impact performance.

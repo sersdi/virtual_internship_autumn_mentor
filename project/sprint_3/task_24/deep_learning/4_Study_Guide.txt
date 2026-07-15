@@ -1,0 +1,79 @@
+Inversion of Control (IoC) and Dependency Injection Study Guide
+
+I. Core Concepts of Inversion of Control (IoC)
+
+Definition of IoC: Understand what Inversion of Control
+means in the context of software design. How does it
+"invert" the traditional flow of control?
+
+Purpose of IoC: Why is IoC a desirable design principle?
+What problems does it aim to solve (e.g., coupling, testability)?
+
+Relationship between IoC and Dependency Injection (DI):
+How is DI a specific implementation or pattern for achieving IoC?
+
+
+II. Dependency Injection (DI) Methods
+
+Constructor Injection:Mechanism:
+How are dependencies provided to a class using its constructor?
+
+Advantages:
+What are the key benefits (e.g., immutability,
+guaranteed dependencies, clear API)?
+
+Disadvantages/Considerations:
+Are there any drawbacks or specific scenarios where
+it might be less ideal?
+
+Setter (Method) Injection:Mechanism:
+How are dependencies provided via public setter methods?
+
+Advantages:
+What are its strengths (e.g., optional dependencies, mutable objects)?
+
+Disadvantages/Considerations:
+What are the potential pitfalls (e.g., mutable state,
+incomplete objects)?
+
+Field (Property) Injection:Mechanism:
+How are dependencies directly injected into public
+or even private fields/properties?
+
+Advantages:
+What are its perceived benefits (e.g., conciseness)?
+
+Disadvantages/Considerations:
+Why is it often considered "evil" or less desirable
+(e.g., hidden dependencies, difficult testing, strong
+coupling to DI framework)?
+
+
+III. Choosing the Right Dependency Injection Method
+
+Best Practices:
+Which method is generally recommended as the primary choice and why?
+
+Trade-offs:
+Understand the scenarios where each method might
+be more or less appropriate.
+
+Comparison of Methods:
+Be able to articulate the key differences and relative
+merits/demerits of each injection type.
+
+
+IV. Benefits of Dependency Injection
+
+Loose Coupling:
+How does DI reduce the tight coupling between classes?
+
+Testability:
+How does DI facilitate easier unit testing of components?
+
+Maintainability and Extensibility:
+How does DI contribute to more maintainable and easily
+extendable codebases?
+
+Configuration Flexibility:
+How does DI allow for flexible configuration of applications?

@@ -1,0 +1,23 @@
+Essay Questions
+
+1. Discuss the benefits of separating test data from test
+   code, as suggested by the source material. How does
+   a JsonFileReader contribute to this separation?
+
+2. Elaborate on the challenges or considerations involved
+   in implementing the readJsonFromFile method. What steps
+   would typically be involved in its implementation,
+   considering the "TODO" comment?
+
+3. Explain the significance of reading files "from classpath"
+   in the context of a testing framework. Why might this
+   approach be preferred over directly specifying an absolute
+   file path?
+
+4. Beyond simply returning a string, what further processing
+   or transformations might be necessary for the JSON data once
+   it's read from the file, especially in the context of test data?
+
+5. Propose a high-level test plan for the JsonFileReader class,
+   outlining different scenarios and types of JSON files you
+   would use to ensure its robustness.

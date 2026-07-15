@@ -1,0 +1,64 @@
+Glossary of Key Terms
+
+Class (Java):
+A blueprint or template for creating objects. It defines
+the properties (attributes) and behaviors (methods) that
+objects of that class will have.
+
+Constructor:
+A special method in a class that is automatically called
+when an object of that class is created. Its primary purpose
+is to initialize the object's state.
+
+Default Constructor:
+A constructor that does not take any arguments (parameters).
+If no constructor is explicitly defined in a class, Java provides
+a default constructor automatically.
+
+Parameterized Constructor:
+A constructor that takes one or more arguments (parameters).
+It is used to initialize an object's instance variables with
+specific values provided during object creation.
+
+Properties (Class):
+Also known as attributes or fields, these are variables defined
+within a class that hold data for an object of that class.
+
+Get Methods (Getters):
+Methods used to retrieve (get) the value of a private
+instance variable. They provide read access to a property.
+
+Set Methods (Setters):
+Methods used to modify (set) the value of a private
+instance variable. They provide write access to a property,
+often including validation logic.
+
+Encapsulation:
+An object-oriented programming principle that bundles
+data (properties) and methods that operate on the data
+within a single unit (a class), and restricts direct access
+to some of the object's components. Get/set methods are key
+to achieving encapsulation.
+
+Git:
+A distributed version control system for tracking changes
+in source code during software development.
+
+Git pull:
+A Git command used to fetch changes from a remote repository
+and integrate them into the current local branch. It is a
+combination of git fetch and git merge.
+
+Global Repository:
+A central or shared repository (often on a server like GitHub
+or GitLab) where all committed changes for a project are stored
+and from which developers can pull updates and push their
+contributions.
+
+IntelliJ IDEA:
+A popular integrated development environment (IDE) for Java development.
+
+Compare Directories (IntelliJ IDEA):
+A feature in IntelliJ IDEA that allows developers to visually
+compare the contents of two different directories, highlighting
+differences between files.

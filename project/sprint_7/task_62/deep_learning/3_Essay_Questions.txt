@@ -1,0 +1,26 @@
+Essay Questions
+
+1. Discuss the importance of a robust logging system
+   in software development, drawing upon the provided
+   source material's explanation of its purpose and
+   the practical task described.
+
+2. Explain the concept of "object to JSON transformation"
+   in the context of system logging. Why is JSON a suitable
+   format for logging structured data like a
+   TravelCalculatePremiumRequest?
+
+3. Analyze the instruction to "use the internet" and
+   "check it with a test." What does this suggest about
+   common development practices and the need for validation
+   in software engineering?
+
+4. Consider the TravelCalculatePremiumRequest example.
+   If this request were to be expanded with more fields
+   (e.g., insuranceType, sumInsured), how would the
+   object-to-JSON transformation handle these new fields,
+   and what benefits would a flexible transformation method offer?
+
+5. Hypothesize potential challenges or considerations when
+   implementing the object-to-JSON transformation for a
+   logging system, beyond simply finding a solution on the internet.

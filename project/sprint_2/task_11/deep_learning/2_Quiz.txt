@@ -1,0 +1,73 @@
+Quiz: Short Answer Questions
+
+Answer each question in 2-3 sentences.
+
+1. What is the primary objective given for
+   the TravelCalculatePremiumResponse class?
+
+2. Name the two types of constructors that
+   need to be created for the TravelCalculatePremiumResponse class.
+
+3. What is a "default constructor"?
+
+4. What is the purpose of a constructor that takes parameters?
+
+5. What are "get/set methods" commonly referred
+   to as in object-oriented programming?
+
+6. Why are get/set methods important for class properties?
+
+7. What Git command is recommended to be executed
+   at the beginning of a new task?
+
+8. Why is it important to use Git pull before starting a new task?
+
+9. How can you quickly identify changes made in the
+   current task using IntelliJ IDEA?
+
+10. What is the keyboard shortcut for "Compare Directories"
+    in IntelliJ IDEA?
+
+
+Answer Key: Quiz
+
+1. The primary objective is to create the
+   TravelCalculatePremiumResponse class, including specific
+   types of constructors and get/set methods for all its properties.
+
+2. The two types of constructors that need to be created are
+   a default constructor (without parameters) and a constructor
+   for setting initial values for all properties.
+
+3. A default constructor is a constructor that does not take
+   any parameters. It typically initializes instance variables
+   to their default values or performs other basic setup.
+
+4. A constructor that takes parameters is used to initialize
+   the instance variables of a new object with specific values
+   provided at the time of object creation. This allows for
+   customized object states.
+
+5. Get/set methods are commonly referred to as "accessors"
+   and "mutators," respectively, or collectively as "getters"
+   and "setters" in object-oriented programming.
+
+6. Get/set methods are important because they provide controlled
+   access to a class's properties, enforcing encapsulation and
+   allowing for validation or custom logic when data is accessed
+   or modified.
+
+7. The Git command recommended to be executed at the beginning
+   of a new task is Git pull.
+
+8. It is important to use Git pull to ensure that you have
+   all the latest changes from the global repository on your
+   local machine, keeping your working copy up to date.
+
+9. You can quickly identify changes made in the current task
+   in IntelliJ IDEA by selecting the current task's folder
+   and the previous task's folder in the left sidebar and
+   choosing "Compare Directories."
+
+10. The keyboard shortcut for "Compare Directories"
+    in IntelliJ IDEA is Ctrl + D.

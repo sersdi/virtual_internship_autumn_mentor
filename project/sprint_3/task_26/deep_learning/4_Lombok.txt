@@ -1,0 +1,71 @@
+Lombok: Streamlining Java Code with Annotation Processing
+
+What is Lombok and what is its primary purpose?
+
+Lombok is a Java library used to reduce boilerplate code.
+Its primary purpose is to automatically generate common
+methods like getters, setters, constructors (no-argument
+and all-argument), and more, allowing developers to write
+cleaner, more concise code.
+
+How do you add Lombok to a project?
+
+To add Lombok to a project, you need to include specific
+dependencies in your build configuration. For example, in
+Gradle, you would add compileOnly, annotationProcessor,
+testCompileOnly, and testAnnotationProcessor dependencies
+for the Lombok library, specifying the desired version
+(e.g., org.projectlombok:lombok:1.18.32).
+
+What specific build tool configuration is mentioned
+for Lombok integration?
+
+The sources specifically mention adding Lombok dependencies
+using compileOnly, annotationProcessor, testCompileOnly,
+and testAnnotationProcessor for the
+org.projectlombok:lombok:1.18.32 artifact.
+This implies a build system like Gradle is being used.
+
+What IDE setting is crucial for Lombok to function
+correctly in IntelliJ IDEA?
+
+For Lombok to work correctly in IntelliJ IDEA, you must
+enable annotation processing. This is done by navigating
+to File -> Settings and checking the "Enable annotation processing"
+option.
+
+Which Lombok annotations are explicitly mentioned for
+generating getters, setters, and constructors?
+
+The annotations explicitly mentioned for generating getters,
+setters, and constructors are @Getter, @Setter,
+@NoArgsConstructor, and @AllArgsConstructor.
+
+What kind of classes are suggested as ideal candidates
+for applying Lombok annotations like @Getter, @Setter,
+@NoArgsConstructor, and @AllArgsConstructor?
+
+The sources suggest applying Lombok annotations like
+@Getter, @Setter, @NoArgsConstructor, and @AllArgsConstructor
+to "request and response classes." This implies data
+transfer objects (DTOs) or similar classes that primarily
+hold data are good candidates for Lombok's code generation.
+
+Beyond the mentioned annotations, what is encouraged
+regarding Lombok's capabilities?
+
+Beyond the specific annotations mentioned, the sources
+encourage users to "read and experiment with Lombok
+annotations described in the article" (referencing the
+Habr.com link). This suggests that Lombok offers a
+wider range of annotations and functionalities than
+just getters, setters, and constructors, and users
+should explore them.
+
+What is the overall benefit of using Lombok as implied by the sources?
+
+The overall benefit of using Lombok, as implied by
+the sources, is to simplify code and reduce verbosity
+by automatically generating common methods. This leads
+to cleaner, more maintainable code, allowing developers
+to focus on core business logic rather than boilerplate.

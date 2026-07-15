@@ -1,0 +1,46 @@
+Glossary of Key Terms
+
+Business Logic:
+The core rules and processes that define how an
+application operates and processes data. In this context,
+it includes the calculations for travel premiums and the
+formation of the response.
+
+Commit:
+The act of saving changes to a repository (either local or global).
+Each commit represents a specific set of modifications and has
+an associated history.
+
+Global Repository:
+A central, shared code repository (likely on a platform like GitHub)
+where all developers' finalized and approved code resides.
+It's the main source for the project's codebase.
+
+Local Repository:
+A copy of the project's code repository stored on a developer's
+individual machine. Developers work on their local repository
+before pushing changes to the global repository.
+
+Module:
+A distinct, self-contained unit of code within a larger
+software project. It performs a specific function and can
+be built and tested independently.
+
+Request:
+An incoming communication or data packet to the application,
+from which values are to be extracted for processing (e.g., to
+calculate premium).
+
+Response:
+The output or data returned by the application after processing
+a request. Its formation is part of the business logic.
+
+Run Build:
+The process of compiling and assembling the source code
+of a module or project into an executable form, often
+including dependency resolution and error checking.
+
+TravelCalculatePremiumServiceImpl:
+The specific class identified as the location for implementing
+changes related to the travel premium calculation logic within
+the application.

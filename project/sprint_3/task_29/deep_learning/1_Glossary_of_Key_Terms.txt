@@ -1,0 +1,28 @@
+Glossary of Key Terms
+
+Unit Tests:
+Small, isolated tests written by developers to verify
+that individual units or components of source code are
+working as intended.
+
+Validator Class:
+A software class designed to check whether input data
+meets specified criteria or rules, ensuring data integrity
+and correctness before processing.
+
+Debugging:
+The process of identifying, analyzing, and removing
+errors (bugs) from computer hardware or software.
+
+TravelCalculatePremiumRequestValidator:
+The specific class mentioned in the source material,
+responsible for validating requests related to calculating
+travel premiums.
+
+Error:
+A mistake or fault in a computer program that causes it
+to produce incorrect or unexpected results, or to crash.
+
+Source Material:
+The provided text excerpts from "Travel Premium Calculator:
+Validation and Debugging."

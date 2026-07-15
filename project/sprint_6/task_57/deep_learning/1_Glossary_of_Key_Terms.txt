@@ -1,0 +1,17 @@
+Glossary of Key Terms
+
+Рефакторинг (Refactoring):
+The process of restructuring existing computer code—changing
+the factoring—without changing its external behavior.
+Its goal is to improve code readability, maintainability,
+and reduce complexity.
+
+Пакет (Package):
+In programming, a mechanism for organizing related classes
+and interfaces into a single unit, providing a namespace
+and controlling visibility.
+
+Организация кода (Code Organization):
+The systematic arrangement of code files, directories,
+and modules to improve readability, maintainability,
+and scalability of a software project.

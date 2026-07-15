@@ -1,0 +1,67 @@
+Git Commit Guidelines and Class Construction Study Guide
+
+I. Core Concepts Review
+
+This section outlines the key principles and tasks
+described in the provided excerpts.
+
+Lao-tzu Quote:
+"A journey of a thousand miles begins with a single step."
+This quote emphasizes the iterative nature of software development,
+where large projects are completed through a series of small,
+manageable steps.
+
+TravelCalculatePremiumRequest Class Construction:
+The primary task involves developing the TravelCalculatePremiumRequest
+class. This class is central to the project, and its proper
+construction is crucial.
+
+Required Constructors:Default Constructor:
+A constructor that takes no parameters. This allows for
+object creation without initial values.
+
+Parameterized Constructor:
+A constructor designed to initialize all properties of the
+class with provided values upon object creation.
+
+Get/Set Methods (Accessors/Mutators):
+These methods are essential for encapsulating class properties,
+allowing controlled access and modification of their values.
+
+File Modification Restrictions:
+Developers are strictly instructed to only modify files
+within their own designated folder. Modifying files belonging
+to other participants is prohibited to maintain project integrity
+and prevent conflicts.
+
+Git Workflow:Committing Changes:
+After completing each step of the assignment, changes must be
+committed to the local Git repository.
+
+Pushing Changes:
+After committing, changes must be pushed to the global Git
+repository on GitHub.
+
+Git Commit Message Format:Completion:
+STEP XXX - DONE (e.g., STEP 001 - DONE). This format clearly
+indicates the completion of a specific step.
+
+Fixes:
+STEP XXX - FIX (e.g., STEP 001 - FIX). This format is used
+when committing corrections to previous work.
+
+Git Push Option:
+When pushing changes to GitHub, the Rebase option should be chosen.
+Understanding the difference between Rebase and Merge is explicitly
+stated as a required research topic.
+
+GitHub Access Confirmation:
+Access to the global repository requires specific rights,
+which are confirmed via an email from GitHub containing a
+confirmation link.
+
+Locating Changes (IDEA):
+The Integrated Development Environment (IDEA) offers a
+feature (Compare Directories - Ctrl + D) to quickly
+identify changes between different task folders (e.g.,
+task_10 and task_9).

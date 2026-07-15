@@ -1,0 +1,54 @@
+Glossary of Key Terms
+
+float:
+A primitive data type in Java representing a single-precision
+32-bit floating-point number. It is susceptible to precision
+errors when representing decimal values.
+
+double:
+A primitive data type in Java representing a double-precision
+64-bit floating-point number. While offering more precision
+than float, it still suffers from the same fundamental
+floating-point imprecision issues for exact decimal arithmetic.
+
+Floating-point Imprecision:
+The inability of binary floating-point representations
+(float, double) to exactly represent all decimal numbers,
+leading to tiny, accumulated errors in calculations.
+
+BigDecimal:
+A class in Java's java.math package that provides support
+for arbitrary-precision signed decimal numbers. It is designed
+for exact decimal arithmetic, making it ideal for financial
+and monetary calculations.
+
+TravelCalculatePremiumResponse:
+(Contextual) A hypothetical Java class or data structure
+within a project, expected to contain information related
+to the calculation of a travel premium.
+
+agreementPrice:
+(Contextual) A property or field within the
+TravelCalculatePremiumResponse object, specifically designated
+to hold a monetary value representing a price or premium.
+The prompt specifies it must be of type BigDecimal.
+
+Binary Representation:
+The way computers store numbers using only two symbols
+(0s and 1s). Floating-point numbers are converted to binary
+approximations, which can cause precision issues for exact
+decimal values.
+
+Scale (BigDecimal):
+In BigDecimal, the number of digits to the right of the
+decimal point. It defines the precision of the number.
+
+Unscaled Value (BigDecimal):
+In BigDecimal, the integer value that, when multiplied
+by ten to the power of negative scale, gives the actual number.
+This allows for exact internal representation.
+
+Real-world IT Systems Development:
+Refers to the practical process of building software
+applications for actual use, often involving complex
+requirements, collaboration, and continuous learning.

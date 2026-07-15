@@ -1,0 +1,41 @@
+Glossary of Key Terms
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format. It is human-readable
+and easy for machines to parse and generate. Used for transmitting
+data between a server and web application, among other uses.
+
+Format Dependence:
+Refers to a comparison method that is sensitive to superficial
+characteristics like whitespace, line breaks, or the order of keys,
+even if the underlying data content is identical.
+
+Data Dependence:
+Refers to a comparison method that focuses solely on the actual
+content and structure of the data, ignoring irrelevant formatting
+differences.
+
+src/test/resources:
+A common directory convention in software projects, particularly
+Java, used to store non-code resources (like test data, configuration
+files, or mock responses) that are needed during the execution of
+tests.
+
+String Comparison:
+A method of comparing two sequences of characters directly,
+character by character. This method is highly sensitive to any
+differences, including whitespace.
+
+Line Break:
+A special character or sequence of characters (e.g., \n for newline,
+\r\n for carriage return and newline) used to indicate the end of a
+line of text and the beginning of a new one.
+
+Whitespace:
+Any non-printing characters that represent horizontal or vertical
+space in text, such as spaces, tabs, and line breaks.
+
+Incorrect Result (in testing):
+A situation where a test provides an erroneous outcome (e.g.,
+reporting a pass when it should fail, or vice-versa) due to a
+flaw in the test's logic or comparison method.

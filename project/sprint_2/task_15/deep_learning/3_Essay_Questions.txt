@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the advantages and potential challenges of using
+   AI tools like ChatGPT for generating programmatic tests.
+   Consider aspects such as efficiency, accuracy, and the need
+   for human intervention.
+
+2. Elaborate on the statement "программный код это текст!"
+   (program code is text!). How does this fundamental
+   understanding enable the application of AI text generation
+   models to software development tasks, specifically testing?
+
+3. Compare and contrast the process of writing tests manually
+   versus generating them with an AI tool as described in the source.
+   What are the implications for software development workflows and
+   developer roles?
+
+4. Imagine you are a software development team lead. How would
+   you integrate AI-generated tests into your team's existing
+   testing strategy? What guidelines would you establish for
+   their use and review?
+
+5. Beyond test generation, what other applications might AI
+   text generation models have in the software development lifecycle,
+   based on the principle that "program code is text"? Brainstorm
+   at least three potential uses.

@@ -1,0 +1,94 @@
+Quiz
+
+1. Why is it important for programmers to understand
+   how computer networks work?
+
+2. What is the primary purpose of a network in the
+   context of applications developed by programmers?
+
+3. Name two major models or stacks used to describe
+   network communication.
+
+4. Briefly describe the function of the Application
+   Layer in a network model.
+
+5. What is the main responsibility of the Network
+   Layer (or Internet Layer in TCP/IP)?
+
+6. Explain the core difference in function between
+   the TCP and IP protocols.
+
+7. Which layer is responsible for ensuring reliable,
+   ordered, and error-checked delivery of data?
+
+8. What is Ethernet, and why is it important in networking?
+
+9. Why are protocols essential for communication in computer networks?
+
+10. Give an example of how an application you
+    might develop would rely on network communication.
+
+
+Quiz Answer Key
+
+1. Programmers need to understand networking because
+   their applications rarely exist in isolation.
+   Applications often communicate with each other
+   and allow users to access them, which inherently
+   relies on network communication. A good understanding
+   ensures efficient and robust application design.
+
+2. The primary purpose of a network is to enable
+   communication between applications and users that
+   are deployed and running on different computers.
+   It provides the infrastructure for data exchange,
+   allowing distributed systems to function cohesively.
+
+3. Two major models used to describe network communication
+   are the OSI (Open Systems Interconnection) model and
+   the TCP/IP protocol stack. Both provide a conceptual
+   framework for understanding how data travels across networks.
+
+4. The Application Layer is the top layer in network
+   models and provides network services directly to
+   end-user applications. It handles high-level protocols
+   that allow applications to interact with the network,
+   such as HTTP for web browsing or SMTP for email.
+
+5. The main responsibility of the Network Layer
+   (or Internet Layer) is to handle logical addressing
+   and routing of data packets across different networks.
+   It ensures that packets can find their way from the source
+   to the destination, even if they need to traverse multiple
+   intermediate networks.
+
+6. IP (Internet Protocol) is primarily responsible for
+   addressing and routing packets across networks, acting
+   like a postal service for data. TCP (Transmission Control
+   Protocol), on the other hand, provides reliable, ordered,
+   and error-checked delivery of a stream of bytes between
+   applications, ensuring data integrity.
+
+7. The Transport Layer is responsible for ensuring reliable,
+   ordered, and error-checked delivery of data between processes
+   on different hosts. Protocols like TCP operate at this layer
+   to guarantee that data arrives at its destination complete
+   and in the correct sequence.
+
+8. Ethernet is a widely used family of computer networking
+   technologies for local area networks (LANs). It defines
+   how data is transmitted over physical cables and is important
+   because it forms the backbone of most wired network connections,
+   providing the physical and data link layer foundation.
+
+9. Protocols are essential for communication in computer
+   networks because they provide a standardized set of rules
+   and formats that devices must follow to exchange data.
+   Without protocols, devices would not understand each other's
+   messages, leading to chaotic and impossible communication.
+
+10. An application like a real-time multiplayer online game
+    would heavily rely on network communication. It needs to
+    send player movements, chat messages, and game state updates
+    between all connected players' computers and a central server,
+    requiring constant and low-latency network interaction.

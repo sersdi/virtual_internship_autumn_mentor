@@ -1,0 +1,26 @@
+Essay Format Questions
+
+1. Discuss the importance of aligning technical solutions
+   with underlying business processes. Use the provided
+   context of underwriting to illustrate how a misaligned
+   code structure can hinder understanding and maintenance.
+
+2. Propose a high-level architectural or design change to
+   TravelCalculatePremiumServiceImpl that would address the
+   mentor's feedback. Describe how this change would make
+   the underwriting process explicit and central within the code.
+
+3. Analyze the relationship between risk assessment and
+   premium determination in the underwriting process.
+   How do these two concepts interact to achieve the goal
+   of a "fair and sustainable" policy price?
+
+4. Beyond the specific problem of underwriting not being explicit,
+   what general principles of software design and clean code are
+   highlighted by the mentor's feedback regarding
+   TravelCalculatePremiumServiceImpl?
+
+5. Imagine you are the developer tasked with implementing
+   the refactoring. Outline the steps you would take, from
+   initial planning to testing, to ensure the changes
+   successfully meet the mentor's expectations.

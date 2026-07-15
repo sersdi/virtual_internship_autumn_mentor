@@ -1,0 +1,125 @@
+Briefing Document: Stateless vs. Stateful Objects in Programming
+
+This briefing document summarizes the key concepts
+of stateless and stateful objects in programming,
+drawing from the provided source "Stateless vs Stateful
+Objects in Programming." It highlights their characteristics,
+performance implications, and relevance in multi-threaded applications.
+
+1. Core Concepts: Stateless and Stateful Objects
+
+The source introduces the fundamental distinction between
+"stateless" and "stateful" objects.
+
+State of an Object:
+The "state of an object is a set of all object properties
+and their values at a certain point in time."
+
+Stateless Objects:
+
+Definition:
+Objects that "do not have state." This means they do
+not store any internal properties whose values change
+during their use.
+
+Characteristics:
+They "receive input parameters in the form of method parameters,
+calculate a result based on them, and simply return it, without
+changing their state."
+
+They are analogous to "mathematical functions" in their operation.
+
+Example (DateTimeServiceV1):
+The DateTimeServiceV1 class is stateless because its
+getDaysBetween method takes date1 and date2 as input parameters,
+performs a calculation, and returns a result without modifying
+any internal state of the DateTimeServiceV1 instance itself.
+"Instances of the DateTimeServiceV1 class are objects that have
+no state."
+
+Stateful Objects:
+
+Definition:
+Objects that "possess state." They store internal data
+(properties) that can vary over time.
+
+Characteristics:
+They "store the values of two dates (date1 and date2)"
+as internal properties, as shown in DateTimeServiceV2.
+
+"Instances of the DateTimeServiceV2 class cannot be reused."
+
+Example (DateTimeServiceV2):
+The DateTimeServiceV2 class is stateful because it has
+private Date date1; and private Date date2; as member variables,
+which hold the data it operates on.
+
+2. Performance Implications
+
+The choice between stateless and stateful implementations
+can significantly impact system performance, particularly
+when repeated operations are required.
+
+Stateless (V1) Performance Advantage:
+
+For multiple calculations, "V1 code example" demonstrates
+that "only one instance of the DateTimeServiceV1 class is created."
+
+This leads to better performance because "creating 'extra'
+objects will negatively affect the overall system performance,"
+as the system has to "spend additional time creating objects and
+then deleting them from memory after they are no longer needed."
+
+Stateful (V2) Performance Disadvantage:
+
+The "V2 code example" shows that "as many as three instances
+of the DateTimeServiceV2 class are created" for three separate
+calculations.
+
+This repeated object creation and subsequent garbage
+collection introduce overhead, making the stateful
+approach less efficient for repetitive tasks where
+the object's internal state needs to be re-initialized each time.
+
+3. Multi-threading and Thread Safety
+
+A crucial aspect highlighted by the source is the
+relationship between object state and multi-threading.
+
+Importance in Multi-threaded Applications:
+The concepts of stateless and stateful objects are
+"very important, especially if you want to use these
+objects to create multi-threaded applications."
+
+Stateless Objects are Thread-Safe:
+
+"Such stateless objects are safe to use in multi-threaded computations."
+
+The source explicitly tasks the reader to "find out why
+stateless objects are considered thread-safe."
+This implies that their lack of mutable internal state
+prevents race conditions and data corruption when accessed
+concurrently by multiple threads.
+
+Stateful Objects are Not Thread-Safe:
+
+The source also tasks the reader to "find out why
+stateful objects are not thread-safe." This suggests
+that because stateful objects maintain internal mutable state,
+concurrent access by multiple threads can lead to unpredictable
+behavior, inconsistent data, and bugs due to race conditions.
+
+4. Reusability and Design Principles
+
+The document emphasizes the benefits of designing classes
+as stateless for reusability.
+
+Reusability:
+"Very often in programming, we create classes to
+implement certain algorithms. By making these classes stateless,
+we open the door to multiple uses of instances of such classes."
+
+Design Goal:
+The ability to reuse a single instance of a stateless
+object for numerous operations is a significant design advantage,
+contributing to cleaner code and better resource management.

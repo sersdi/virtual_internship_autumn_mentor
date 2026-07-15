@@ -1,0 +1,49 @@
+Glossary of Key Terms
+
+Controller (Контроллер):
+In the context of web applications, a controller is a component
+that handles incoming requests, processes input, interacts with
+models (data), and selects views (output). Here,
+TravelCalculatePremiumController specifically handles
+requests related to travel premium calculation.
+
+HTTP POST Request:
+A method used by the Hypertext Transfer Protocol (HTTP) to
+send data to a web server. It is commonly used when submitting
+forms or sending data to be processed, like the JSON payload for
+premium calculation.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format. It is human-readable and
+easy for machines to parse and generate, making it a popular
+choice for transmitting data between a client and a server.
+
+Test (Тест):
+In software development, a test is a piece of code written to
+verify the functionality of another piece of code. Tests ensure
+that software behaves as expected under various conditions.
+
+Controller Test:
+A type of automated test that specifically verifies the
+functionality of a controller, often by simulating HTTP
+requests and examining the responses.
+
+TravelCalculatePremiumController:
+The specific controller in question, responsible for calculating
+travel premiums.
+
+TravelCalculatePremiumControllerTest:
+The class containing example tests for the
+TravelCalculatePremiumController. This class demonstrates
+how to write tests for this particular controller.
+
+Поднимать приложение целиком (Raise the entire application):
+To start or launch the entire application, including all its
+necessary components and services, to create a fully functional
+environment for testing. This is often done for integration or
+end-to-end tests.
+
+Ответ (Response):
+The data or information sent back by the server to the client
+after processing an HTTP request. In testing, the response is
+checked to ensure it matches the expected output.

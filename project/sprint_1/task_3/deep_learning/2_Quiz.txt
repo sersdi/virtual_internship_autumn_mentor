@@ -1,0 +1,66 @@
+Quiz
+
+Instructions: Answer each question in 2-3 sentences.
+
+1. What is the main advantage of using Gradle commands
+   directly from the terminal rather than through an
+   IDE's graphical interface?
+
+2. Describe the steps a user would take to initiate
+   a full project build using a Gradle command.
+
+3. Why might a developer opt to use ./gradlew :internship:build
+   instead of ./gradlew build for their project?
+
+4. Explain the significance of the . character in the
+   ./gradlew build command.
+
+5. If a project has multiple modules, how would the
+   command structure change to build a module named "backend"?
+
+6. Where is the "Terminal" tab typically located in
+   an integrated development environment?
+
+7. Briefly explain why building only a specific module
+   can be more convenient for large projects.
+
+
+III. Quiz Answer Key
+
+1. The main advantage of using Gradle commands from the
+   terminal is direct control over the build process,
+   which can be particularly useful for automation scripts
+   or when an IDE's build tools are not preferred. It also
+   offers a consistent way to build projects across different
+   environments.
+
+2. To initiate a full project build, a user must first open
+   the "Terminal" tab within their development environment.
+   Then, they would type the command ./gradlew build into
+   the terminal window and press Enter.
+
+3. A developer might opt for ./gradlew :internship:build
+   if the project is large and a full build takes too long.
+   This command specifically targets and builds only the
+   "internship" module, saving time and resources.
+
+4. The . character in ./gradlew build signifies the current
+   directory. When combined with /, it indicates that the gradlew
+   script should be executed from the current working directory,
+   ensuring the correct wrapper is used.
+
+5. If a project has multiple modules and the user wanted
+   to build a module named "backend," the command structure
+   would be ./gradlew :backend:build. This follows the pattern
+   of specifying the module name after the colon.
+
+6. The "Terminal" tab is typically located in the lower
+   panel of tools within a development environment.
+   This common placement makes it easily accessible
+   for executing command-line instructions.
+
+7. Building only a specific module can be more convenient
+   for large projects because a full project build can be
+   very time-consuming. Targeting just one module allows
+   for quicker compilation and testing of individual components,
+   improving development efficiency.

@@ -1,0 +1,28 @@
+Essay Format Questions
+
+1. Discuss the potential consequences for a system
+   or business if the travel date validation logic
+   described in the source material were not implemented.
+   Consider data integrity, user experience, and operational
+   efficiency.
+
+2. Explain, in detail, the importance of including tests
+   when implementing business logic, as emphasized in the
+   source material. What types of tests would be most
+   appropriate for this specific validation rule, and why?
+
+3. Imagine you are tasked with designing the user interface
+   for inputting travel dates. How would the business rule
+   (agreementDateTo > agreementDateFrom) influence your
+   design choices to prevent invalid inputs and guide the user?
+
+4. Beyond the simple validation agreementDateTo > agreementDateFrom,
+   what other related business rules or edge cases might a more
+   comprehensive travel date validation system need to consider?
+   Propose at least three additional rules.
+
+5. Describe a scenario where a non-strict inequality
+   (agreementDateTo >= agreementDateFrom) might be a valid
+   business rule for a different context, contrasting it
+   with the strict inequality required here. What implications
+   would this change have on testing and implementation?

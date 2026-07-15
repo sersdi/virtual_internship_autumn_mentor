@@ -1,0 +1,48 @@
+Glossary of Key Terms
+
+Тестировщик (Tester):
+An individual responsible for identifying bugs, errors,
+and inconsistencies in software applications by systematically
+testing them.
+
+Тестирование (Testing):
+The process of evaluating a software application to detect
+errors and ensure it meets specified requirements and expected
+behavior.
+
+Ошибка (Error/Bug):
+A flaw or defect in a software program that causes it to
+produce an incorrect or unexpected result, or to behave
+in unintended ways.
+
+Поля запроса (Request fields):
+Specific parameters or data inputs that are sent as part
+of a request to a software system, e.g., "agreementDateFrom"
+and "agreementDateTo."
+
+Прошлое (Past): Referring to a time that has already occurred.
+
+Будущее (Future): Referring to a time that is yet to come.
+
+Валидация (Validation):
+The process of checking whether data inputs are clean,
+correct, and useful for processing, ensuring they meet
+predefined rules and constraints.
+
+Расчет стоимости полиса (Policy cost calculation):
+The process of determining the premium or price of an insurance
+policy based on various factors.
+
+Бизнес (Business):
+In the context of software development, this often refers
+to the stakeholders, product owners, or departments that
+define the requirements and desired functionality of the software.
+
+Реализовать (Implement):
+To put a plan or design into effect; in software, to write
+the code that brings a feature or fix to fruition.
+
+Исправить все тесты (Fix all tests):
+To update or correct existing automated tests to reflect
+changes in the application's logic or requirements, ensuring
+they continue to accurately verify functionality.

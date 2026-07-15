@@ -1,0 +1,31 @@
+Essay Format Questions
+
+1. Discuss the trade-offs between writing code that is
+   "purely technical" and code that has a strong "connection
+   to business," as described in the source. How do these
+   different approaches impact development time, long-term
+   maintenance, and collaboration within a software team?
+
+2. The source emphasizes naming conventions, particularly
+   for extracted methods. Elaborate on why "cool names"
+   that immediately convey a method's purpose are crucial
+   for code readability and maintainability. Provide examples
+   of how a poor name versus a good name for the date calculation
+   method could affect comprehension.
+
+3. Analyze the principle of "breaking code into small pieces
+   and placing them in methods with cool names." How does this
+   principle relate to other well-known software engineering
+   concepts such as modularity, encapsulation, and single
+   responsibility?
+
+4. Consider the scenario of a "large application (of thousands
+   of classes)." Explain how the readability issues identified
+   in the source (e.g., technical code, difficult to find) would
+   be amplified in such a large-scale system, and how the proposed
+   solutions mitigate these challenges.
+
+5. Beyond the specific example of date calculation, identify
+   and explain other common "technical details" that often
+   appear in production code and could benefit from being
+   extracted into well-named methods to improve business readability.

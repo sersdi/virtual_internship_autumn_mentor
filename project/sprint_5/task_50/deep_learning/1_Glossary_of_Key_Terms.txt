@@ -1,0 +1,42 @@
+Glossary of Key Terms
+
+Test Data:
+Information or input used by software tests to verify
+the behavior of a program.
+
+Test Code:
+The programming instructions written to perform tests
+on other software.
+
+JSON (JavaScript Object Notation):
+A lightweight data-interchange format. It is easy for
+humans to read and write and easy for machines to parse and generate.
+
+JsonFileReader:
+A proposed class specifically designed to read content
+from JSON files.
+
+readJsonFromFile:
+A method within the JsonFileReader class responsible
+for reading a JSON file given its path.
+
+filePath:
+A string representing the location of a file within a file system.
+
+classpath:
+In Java, a parameter that specifies the location
+of user-defined classes and packages. Reading from
+the classpath ensures that files can be found regardless
+of the current working directory.
+
+public class:
+A class declaration indicating that the class is
+accessible from any other class.
+
+public String:
+A method return type and access modifier, indicating
+the method returns a String and is accessible from any other class.
+
+Test Directory:
+A specific folder within a project's structure designated
+for storing test-related files.

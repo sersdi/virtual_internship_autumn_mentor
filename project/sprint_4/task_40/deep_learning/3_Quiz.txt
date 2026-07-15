@@ -1,0 +1,83 @@
+Quiz: Postman for Insurance Policy Calculation
+
+1. What is the primary goal of this exercise from the
+   perspective of a service developer?
+
+2. Which specific software application is recommended
+   for creating and sending HTTP requests in this scenario?
+
+3. What type of HTTP request is required to calculate
+   the insurance policy cost?
+
+4. Besides the HTTP request type, which two main
+   sections of the Postman request need to be configured?
+
+5. What file formats or examples are provided to
+   guide the configuration of the HTTP request sections?
+
+6. Describe the purpose of the JSON example provided
+   in the "Body" section.
+
+7. What specific information about an individual
+   is included in the example JSON body?
+
+8. What date-related information is necessary for
+   the insurance policy calculation, according to the JSON example?
+
+9. If a user encounters difficulties or has questions
+   during this process, what two resources are suggested for assistance?
+
+10. What action needs to be taken with the developed
+    application before an HTTP request can be sent to it?
+
+
+Quiz Answer Key
+
+1. The primary goal from a service developer's perspective
+   is to demonstrate how the developed service for calculating
+   insurance policy costs will be utilized by end-users,
+   specifically through HTTP requests. This helps visualize
+   the practical application of their work.
+
+2. The specific software application recommended for
+   creating and sending HTTP requests in this scenario is Postman.
+   Users are directed to download it from its official website.
+
+3. To calculate the insurance policy cost, an HTTP POST
+   request is required. This type of request is typically
+   used to send data to a server to create or update a resource.
+
+4. Besides the HTTP request type, the two main sections
+   of the Postman request that need to be configured are
+   the Headers and the Body. These sections carry crucial
+   information for the server to process the request.
+
+5. To guide the configuration of the HTTP request sections,
+   example image files are provided: Postman_request_headers.png
+   for headers and Postman_request_body.png for the body.
+   A JSON code example is also given for the body.
+
+6. The purpose of the JSON example provided in the "Body"
+   section is to illustrate the structure and type of data
+   that needs to be sent to the service for calculating the
+   insurance policy. It serves as a template for the required
+   input parameters.
+
+7. The example JSON body includes the individual's first name
+   ("personFirstName") and last name ("personLastName").
+   These details are essential for identifying the person
+   for whom the policy is being calculated.
+
+8. The necessary date-related information for the insurance
+   policy calculation, as shown in the JSON example, includes
+   "agreementDateFrom" and "agreementDateTo." These likely
+   represent the start and end dates of the insurance agreement period.
+
+9. If a user encounters difficulties or has questions during
+   this process, the document suggests seeking help from a mentor.
+   It also encourages leveraging the vast resources available on
+   the internet for troubleshooting.
+
+10. Before an HTTP request can be sent to the developed application,
+    it must first be launched or "запустить приложение." The
+    request is intended to interact with this running service.

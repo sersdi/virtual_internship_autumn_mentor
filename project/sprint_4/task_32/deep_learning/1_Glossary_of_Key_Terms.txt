@@ -1,0 +1,28 @@
+Glossary of Key Terms
+
+agreementDateTo (дата окончания поездки):
+The travel end date. This is the specific field that
+requires validation.
+
+Бизнес требование (Business Requirement):
+A statement describing a condition or capability that
+a solution must meet. In this context, it's the rule
+that a travel request must have an end date.
+
+валидация (Validation):
+The process of checking whether input data is correct,
+meaningful, and secure. Here, it refers to verifying the
+presence of "agreementDateTo."
+
+запрос (Request):
+A formal communication or data packet submitted to a system.
+In this context, it refers to a travel request.
+
+не валидным (invalid):
+Not meeting the specified criteria or rules; unacceptable.
+A request without an "agreementDateTo" is considered invalid.
+
+Решение без тестов не принимается!
+(Solution without tests is not accepted!):
+A critical directive emphasizing that the implementation
+must be accompanied by comprehensive tests to prove its functionality.

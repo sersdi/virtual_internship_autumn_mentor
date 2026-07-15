@@ -1,0 +1,92 @@
+Quiz
+
+1. What is the fundamental idea behind Inversion of Control (IoC)?
+
+2. How does Dependency Injection (DI) serve as a concrete
+   implementation of IoC?
+
+3. Describe the mechanism of Constructor Injection.
+   What is one major advantage of this method?
+
+4. Explain how Setter (Method) Injection works.
+   When might it be a suitable choice over Constructor Injection?
+
+5. What is Field (Property) Injection? Why is it
+   generally advised against in most scenarios?
+
+6. List two significant benefits that arise from
+   applying Dependency Injection in a software project.
+
+7. How does Dependency Injection improve the testability of a class?
+
+8. What is meant by "loose coupling" in the context of IoC and DI?
+
+9. If a class absolutely requires a dependency to
+   function correctly, which injection method is generally
+   preferred and why?
+
+10. Briefly explain one drawback associated with Setter
+    (Method) Injection.
+
+
+Quiz Answer Key
+
+1. The fundamental idea behind Inversion of Control (IoC)
+   is to invert the control of object creation and
+   dependency management from the dependent class to
+   an external container or framework. Instead of a
+   class creating its dependencies, it receives them
+   from an external source.
+
+2. Dependency Injection (DI) is a specific design pattern
+   used to achieve Inversion of Control. It provides a
+   mechanism for injecting (supplying) dependencies into
+   a class rather than the class creating or looking up
+   those dependencies itself.
+
+3. Constructor Injection provides dependencies to a class
+   through its constructor arguments. A major advantage
+   is that it ensures all required dependencies are present
+   when an object is created, making the object's state
+   valid from its inception and promoting immutability.
+
+4. Setter (Method) Injection involves providing dependencies
+   to a class via public setter methods after the object
+   has been instantiated. It might be suitable when a
+   dependency is optional, or when you need to change a
+   dependency dynamically after object creation.
+
+5. Field (Property) Injection directly injects dependencies
+   into public or private fields of a class, often using
+   reflection. It is generally advised against because it
+   hides dependencies, makes unit testing more difficult
+   without a DI framework, and couples the class strongly
+   to the injection mechanism.
+
+6. Two significant benefits of applying Dependency Injection
+   are improved testability and reduced coupling between
+   components. These lead to more robust and maintainable codebases.
+
+7. Dependency Injection improves testability by allowing
+   test doubles (mocks or stubs) to be easily injected in
+   place of real dependencies during unit testing. This
+   isolates the component under test, making tests faster
+   and more reliable.
+
+8. "Loose coupling" in the context of IoC and DI means
+   that components have minimal direct knowledge or
+   dependencies on each other's concrete implementations.
+   They interact through abstractions, making it easier to
+   change or replace one component without affecting others.
+
+9. If a class absolutely requires a dependency to function
+   correctly, Constructor Injection is generally preferred.
+   This is because it guarantees that the required dependency
+   is provided at the time of object creation, preventing the
+   object from being in an invalid or incomplete state.
+
+10. One drawback associated with Setter (Method) Injection
+    is that it can lead to objects being in an invalid or
+    incomplete state if not all required setters are called.
+    It also makes it possible for dependencies to be changed
+    after construction, potentially introducing mutable state.

@@ -1,0 +1,53 @@
+Glossary of Key Terms
+
+agreementPrice:
+The property or variable that developers are tasked with calculating.
+Initially, its value is determined by the number of days between
+two dates, but this is a placeholder for future, more complex
+business logic.
+
+agreementDateFrom:
+The starting date used in the calculation of agreementPrice.
+
+agreementDateTo:
+The ending date used in the calculation of agreementPrice.
+
+"Fake Value":
+A temporary or placeholder value for a variable or property,
+indicating that its true, complex business requirements will
+be implemented at a later stage of the project.
+
+Standard Solution (in Java context):
+A pre-existing, well-tested, and commonly accepted method
+or library function within the Java ecosystem (e.g.,
+in java.time package) for performing a specific,
+common task, such as calculating the difference between dates.
+
+Commit (to repository):
+The action of saving a set of changes to a version
+control system (like Git), making them a permanent
+part of the project's history and available to other team members.
+
+Tests (Software Tests):
+Automated or manual checks designed to verify that a piece
+of software functions correctly and meets its requirements.
+
+"Green" Tests:
+A common visual indicator in testing frameworks that
+signifies all tests have passed without any errors or failures.
+
+Broken Tests:
+Tests that are failing or producing errors, indicating an
+issue with the code or the test itself.
+
+Mentor:
+An experienced developer who provides guidance, support,
+and feedback to less experienced team members.
+
+Colleagues:
+Fellow team members or peers working on the same project.
+
+Repository:
+A centralized storage location where all the project's code,
+files, and revision history are maintained, typically managed
+by a version control system.

@@ -1,0 +1,74 @@
+Gradle Project Build Essentials: Study Guide
+
+Quiz
+
+1. What is the primary purpose of Gradle in this project context?
+
+2. Where can the Gradle tab be found in IntelliJ IDEA?
+
+3. What specific action should be taken after adding new
+   dependencies to a project, and why is it important?
+
+4. Describe the steps to initiate a full project build
+   using the Gradle window.
+
+5. Why might a full project build take a significant
+   amount of time to complete?
+
+6. How can a user build only a specific module
+   (e.g., 'internship') within the Gradle window?
+
+7. Which files are used to run Gradle commands from
+   the terminal on Unix and Windows systems, respectively?
+
+8. What environment variable is crucial for the correct
+   execution of Gradle scripts from the terminal?
+
+9. Explain how the JAVA_HOME environment variable facilitates
+   the operation of Gradle wrapper scripts.
+
+10. What documentation task is mentioned at the end
+    of the instructions for completing a step?
+
+Quiz Answer Key
+
+1. Gradle is used as the build tool for the project,
+   enabling the compilation and assembly of project components.
+
+2. The Gradle tab can be found on the right side of the
+   IntelliJ IDEA interface.
+
+3. After adding new dependencies, one must use the "Reload
+   all Gradle projects" symbol (two arrows) in the Gradle tab.
+   This is crucial to ensure Gradle recognizes and incorporates
+   the new dependencies.
+
+4. To initiate a full project build, navigate to
+   Tasks -> build -> build within the Gradle window and
+   execute this command.
+
+5. A full project build may take a significant amount
+   of time because the project contains numerous modules
+   that all need to be compiled and assembled.
+
+6. To build only a specific module like 'internship',
+   select the module's name in the Gradle window, then
+   navigate to internship -> Tasks -> build -> build and
+   execute that command.
+
+7. The gradlew script is used for Unix systems, while
+   gradlew.bat is used for Windows systems to run Gradle
+   commands from the terminal.
+
+8. The JAVA_HOME environment variable is crucial for the
+   correct operation of Gradle scripts when run from the terminal.
+
+9. Using JAVA_HOME, the scripts locate the installed JDK,
+   find the JVM within it, and then use the JVM to launch the
+   Gradle wrapper as a Java library. Without it, Gradle commands
+   cannot be run from the terminal.
+
+10. At the end of completing a step, users are instructed to
+    create and fill out the file
+    /documentation/Task_x_description.txt, following the format
+    described in task_1 in Learning_reflection.txt.

@@ -1,0 +1,99 @@
+Quiz
+
+1. What is the primary goal of the "Validation Classes Refactor"
+   task? The main objective is to move existing validation
+   classes into a separate, dedicated package. This action
+   aims to improve code organization and maintainability by
+   consolidating related classes.
+
+2. Where should the validation classes be moved, according to
+   the instructions? The validation classes should be moved
+   to a specific package path: core/validations. This indicates
+   a hierarchical structure where 'validations' reside within a
+   'core' directory.
+
+3. Why is it necessary to group these classes into a separate package?
+   The instruction explicitly states "there are many of these
+   classes," implying a significant number. Grouping them helps
+   to manage this volume, making them easier to locate, understand,
+   and maintain within the codebase.
+
+4. What problem does the refactoring effort implicitly address
+   regarding the current state of the validation classes? The
+   refactoring implicitly addresses a potential lack of organization
+   or scattered placement of these classes. By mandating their
+   relocation, it suggests they might currently be intermingled
+   with other code, hindering clarity.
+
+5. What benefit does creating a dedicated package for validation
+   classes offer for future development? A dedicated package
+   makes it easier for developers to find all validation logic
+   in one place. This consistency simplifies future modifications,
+   additions, or debugging related to data validation.
+
+6. Does the instruction suggest that this refactoring might already
+   be partially or fully complete in some cases? Yes, the phrase
+   "(если конечно вы это еще не сделали)" translates to "if you
+   haven't done it already," suggesting that some developers
+   might have already independently organized these classes.
+   This indicates flexibility in the implementation.
+
+7. What does "вынести" mean in the context of this task? "Вынести"
+   translates to "to move out" or "to extract." In this context,
+   it means to physically relocate the class files from their
+   current directory to the specified new package.
+
+8. How might this refactoring contribute to a cleaner architectural
+   design? By separating validation logic into its own module, the
+   refactoring promotes the Single Responsibility Principle. This
+   means validation concerns are isolated, leading to a more modular
+   and less tightly coupled application architecture.
+
+9. What is the implied state of the core directory based on the
+   instruction core/validations? The instruction implies that a
+   core directory or module already exists or is a foundational
+   part of the project structure. The validations package is
+   intended to be a sub-package within this established core area.
+
+10. What is the overall purpose of refactoring in software
+    development, as exemplified by this task? Refactoring, as
+    shown here, aims to improve the internal structure of code
+    without changing its external behavior. It makes the code
+    easier to understand, cheaper to modify, and more robust,
+    ultimately enhancing developer productivity and software quality.
+
+
+Answer Key
+
+1. To move existing validation classes into a separate,
+   dedicated package, core/validations, to improve code organization.
+
+2. The validation classes should be moved to the
+   core/validations package.
+
+3. Because there are "many of these classes,"
+   grouping them makes them easier to manage, find, and maintain.
+
+4. It implicitly addresses the issue of validation
+   classes being unorganized or scattered throughout the codebase.
+
+5. It simplifies future development by providing a clear,
+   centralized location for all validation logic, making it
+   easier to modify or add new validations.
+
+6. Yes, the instruction includes "if you haven't done it already,"
+   indicating that some might have already performed this organization.
+
+7. "Вынести" means "to move out" or "to extract,"
+   referring to the relocation of the class files.
+
+8. It contributes to cleaner architectural design by
+   promoting separation of concerns and modularity,
+   isolating validation logic.
+
+9. It implies that a core directory or module is an
+   existing or foundational part of the project's structure.
+
+10. The overall purpose is to improve the internal
+    structure and maintainability of the code without
+    altering its external functionality, making it easier to work with.

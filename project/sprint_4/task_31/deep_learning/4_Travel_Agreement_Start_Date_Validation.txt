@@ -1,0 +1,65 @@
+Travel Agreement Start Date Validation
+
+What is the core business requirement described in the source?
+
+The core business requirement states that a request without
+a travel agreement start date (referred to as agreementDateFrom)
+must be considered invalid. In simpler terms, the agreementDateFrom
+field is mandatory for any travel agreement request.
+
+What is the primary task for the implementer based on this requirement?
+
+The primary task is to implement this business rule.
+This means adding a validation check for the agreementDateFrom
+field in the request to ensure it is always present.
+
+Which specific field needs to be validated?
+
+The specific field that requires validation is agreementDateFrom,
+which represents the travel agreement start date.
+
+What is the consequence if the agreementDateFrom is missing from a request?
+
+If the agreementDateFrom is missing from a request, the request
+should be deemed "not valid" (не валидным).
+
+What crucial aspect is highlighted as mandatory
+for the solution, besides the implementation of the business rule?
+
+It is explicitly stated that "don't forget about tests!"
+(Не забудьте про тесты!). The solution without tests will
+not be accepted (Решение без тестов не принимается!).
+This emphasizes the importance of thorough testing for
+the implemented validation.
+
+What kind of software development activity does this task fall under?
+
+This task falls under software development, specifically related
+to implementing input validation or business rule enforcement
+within an application.
+
+Why is it important to have tests for this validation?
+
+Tests are crucial to ensure that the validation logic correctly
+identifies requests with missing agreementDateFrom as invalid and
+allows valid requests to pass. They guarantee the reliability
+and correctness of the implemented business rule and prevent
+regressions.
+
+In a practical sense, what would a developer need to
+do to fulfill this request?
+
+A developer would need to:
+
+Identify the part of the code that processes travel agreement requests.
+
+Add a validation check to ensure that the
+agreementDateFrom field is present and not null/empty
+in the incoming request.
+
+Implement logic to reject or flag the request as invalid
+if the agreementDateFrom is missing.
+
+Write unit tests and/or integration tests to verify
+that the validation works as expected for both valid
+and invalid scenarios.

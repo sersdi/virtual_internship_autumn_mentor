@@ -1,0 +1,162 @@
+Understanding REST: Architecture, Methods, and Benefits
+
+What is REST?
+
+REST, or Representational State Transfer, is an architectural
+style for distributed systems, most notably used for building
+web services. It was introduced in 2000 by Roy Fielding, one
+of the authors of the HTTP protocol. Systems that adhere to the
+REST architectural style are referred to as RESTful systems.
+The core purpose of REST is to define a set of constraints for
+how a distributed system should behave, making it simpler,
+more scalable, and more maintainable.
+
+What is the relationship between HTTP and REST?
+
+HTTP (Hypertext Transfer Protocol) is the foundation of
+data communication for the World Wide Web, and it is intrinsically
+linked with REST. While REST is an architectural style,
+HTTP is the protocol that largely implements the principles
+of REST in web services. RESTful systems extensively leverage
+HTTP methods (like GET, POST, PUT, DELETE) and HTTP's stateless
+communication model to interact with resources. In essence,
+HTTP provides the practical mechanism through which RESTful
+principles are realized on the web.
+
+How are unique URLs formed in REST?
+
+In REST, Uniform Resource Locators (URLs) are used to uniquely
+identify and locate resources. Each resource in a RESTful system
+should have a distinct URL. These URLs are designed to be
+hierarchical and human-readable, representing the path to a
+specific resource or a collection of resources. For example,
+/users might represent a collection of users, while /users/123
+would represent a specific user with the ID 123. The structure
+of the URL helps in organizing and accessing data in a logical manner.
+
+What are the main HTTP methods used in REST and what do they do?
+
+The primary HTTP methods used in RESTful APIs are GET, POST, PUT,
+and DELETE. Each of these methods has a specific semantic meaning
+and is intended for a particular type of operation on a resource:
+
+GET:
+Used to retrieve (read) a resource or a collection of resources.
+GET requests should be idempotent and safe, meaning they don't
+change the state of the server.
+
+POST:
+Used to create a new resource or to submit data to be processed.
+POST requests are not idempotent and can have side effects.
+
+PUT:
+Used to update an existing resource or to create a resource
+if it does not already exist at a specified URI. PUT requests
+are idempotent, meaning multiple identical requests will have
+the same effect as a single request.
+
+DELETE:
+Used to remove (delete) a specific resource. DELETE requests
+are also idempotent.
+
+How do HTTP methods map to CRUD operations?
+
+The HTTP methods in REST directly map to the standard Create,
+Read, Update, and Delete (CRUD) operations, which are fundamental
+to database and application interactions:
+
+Create:
+Mapped to the POST method. When you want to add a new record
+or resource, you send a POST request to the collection's URL.
+
+Read:
+Mapped to the GET method. To retrieve data, whether a
+single item or a list of items, you use a GET request to
+the resource's or collection's URL.
+
+Update:
+Mapped to the PUT method. To modify an existing resource,
+you send a PUT request to the specific resource's URL with
+the updated data.
+
+Delete:
+Mapped to the DELETE method. To remove a resource, you send
+a DELETE request to the specific resource's URL.
+
+Why is REST important for web services?
+
+REST is important for web services because it provides a simple,
+stateless, and scalable way for different systems to communicate
+over the internet. By adhering to a set of well-defined constraints
+and leveraging standard HTTP methods, RESTful web services are
+easy to understand, develop, and consume. This architectural
+style promotes interoperability, allowing diverse clients and
+servers to interact seamlessly, which is crucial for the
+interconnected nature of the World Wide Web.
+
+What does it mean for a system to be "RESTful"?
+
+A system is considered "RESTful" if it adheres to the
+architectural constraints defined by REST. This primarily includes:
+
+Client-Server Architecture:
+Separation of concerns between the client (user interface)
+and the server (data storage).
+
+Statelessness:
+Each request from client to server must contain all the
+information necessary to understand the request, and the
+server should not store any client context between requests.
+
+Cacheability:
+Responses must explicitly or implicitly define themselves
+as cacheable or non-cacheable to prevent clients from
+reusing stale or inappropriate data.
+
+Layered System:
+A client cannot ordinarily tell whether it is connected
+directly to the end server, or to an intermediary along the way.
+
+Uniform Interface:
+This is the most critical constraint and includes:
+
+Identification of Resources: Resources are identified by URIs.
+
+Manipulation of Resources Through Representations:
+Clients manipulate resources using representations (e.g., JSON, XML).
+
+Self-descriptive Messages:
+Each message includes enough information to describe how
+to process the message.
+
+Hypermedia as the Engine of Application State (HATEOAS):
+The client interacts with the server through hypermedia
+links provided by the server.
+
+What are some of the benefits of using REST?
+
+Using REST offers several benefits for building distributed
+systems and web services:
+
+Simplicity:
+REST is relatively straightforward to understand and implement,
+especially compared to other architectural styles.
+
+Scalability:
+The stateless nature of REST allows for easier scaling of servers,
+as any server can handle any client request without relying on
+previous session information.
+
+Flexibility:
+Clients and servers can evolve independently without
+breaking the system, as long as the resource representations
+remain consistent.
+
+Interoperability:
+Because it relies on standard HTTP methods and common
+data formats (like JSON and XML), RESTful services can
+be easily consumed by a wide range of clients and platforms.
+
+Performance:
+Cacheability and statelessness can contribute to
+improved performance by reducing server load and network traffic.

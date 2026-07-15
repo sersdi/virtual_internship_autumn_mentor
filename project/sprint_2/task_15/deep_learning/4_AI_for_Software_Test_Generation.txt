@@ -1,0 +1,56 @@
+1. What is the main idea of the provided text?
+
+The main idea is to explore the use of Artificial Intelligence (AI)
+text generation models, specifically ChatGPT, for creating tests
+for software code. It proposes an exercise for users to generate
+test cases for a specific class and then compare them to manually
+written tests.
+
+2. Why is AI suggested for generating code tests?
+
+AI models for text generation are suggested for creating code
+tests because programming code itself is essentially text.
+This makes it feasible for AI tools designed to generate text
+to also generate code, including test cases.
+
+3. What specific task is outlined for users in relation
+   to AI code testing?
+
+Users are tasked with using ChatGPT or a similar AI text
+generation tool to create tests for a class named
+TravelCalculatePremiumServiceImpl. They need to generate
+two types of tests: one comprehensive test covering all
+properties, and individual test cases for each property.
+
+4. What are the required names for the AI-generated tests?
+
+The AI-generated tests must be named
+TravelCalculatePremiumServiceImplAIOneTest for the
+comprehensive test and
+TravelCalculatePremiumServiceImplAIEachFieldTest
+for the individual field tests.
+
+5. Where should the AI-generated tests be placed?
+
+The AI-generated tests should be placed alongside the
+existing TravelCalculatePremiumServiceImplTest file.
+
+6. Are modifications allowed for the AI-generated tests?
+
+Yes, users are explicitly instructed to make any necessary
+changes to the AI-generated tests to ensure they function correctly.
+
+7. What comparison is encouraged after generating the AI tests?
+
+Users are encouraged to compare the tests they wrote manually
+with the tests generated using AI tools. This suggests an
+evaluation of the AI's effectiveness and perhaps the quality difference.
+
+8. Are there any practical tips provided for accessing ChatGPT?
+
+Yes, practical tips are provided. Users are advised that ChatGPT
+has a free version (with limitations) and requires registration
+on its website (https://chat.openai.com). For regions where
+ChatGPT is unavailable, the use of a free VPN like UrbanVPN
+is suggested, with instructions to select a region where
+ChatGPT is accessible.

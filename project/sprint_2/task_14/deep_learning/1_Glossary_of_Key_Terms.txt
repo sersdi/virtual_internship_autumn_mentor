@@ -1,0 +1,49 @@
+Glossary of Key Terms
+
+Unit Test:
+A software testing method by which individual units or
+components of a software are tested. The goal is to
+validate that each unit of the software performs as designed.
+
+Assertion:
+A statement in a test that checks if a condition is true.
+If the condition is false, the test fails. assertEquals
+is a common type of assertion.
+
+assertEquals:
+A common assertion method used in unit testing frameworks to
+check if two values are equal. If they are not equal, the test fails.
+
+TravelCalculatePremiumServiceImplTest:
+The name of the test class provided in the example, designed to
+test the TravelCalculatePremiumServiceImpl class.
+
+@Test annotation:
+A JUnit annotation that marks a method as a test method,
+indicating that it should be executed by the test runner.
+
+TravelCalculatePremiumRequest:
+An object representing the input data for the calculatePremium service.
+
+TravelCalculatePremiumResponse:
+An object representing the output data returned by the
+calculatePremium service.
+
+Code Review:
+A systematic examination of computer source code by
+software developers other than the author of the code.
+It is often used to improve code quality.
+
+javadoc:
+A documentation generator from Oracle (formerly Sun Microsystems)
+for the Java language that generates API documentation in HTML
+format from source files. It is the standard for documenting
+Java classes and methods.
+
+java.util.Date:
+A class in Java's standard library that represents a specific
+instant in time, with millisecond precision.
+
+Millisecond (ms):
+One thousandth of a second. Used to measure very small
+intervals of time in computing.

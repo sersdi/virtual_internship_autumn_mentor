@@ -1,0 +1,59 @@
+Glossary of Key Terms
+
+HTTP (Hypertext Transfer Protocol):
+An application layer protocol for transmitting hypermedia
+documents, such as HTML. It is the foundation of data
+communication for the World Wide Web.
+
+Application Layer Protocol:
+The highest layer in the TCP/IP model, responsible for
+enabling user applications to access network services.
+HTTP operates at this layer.
+
+Server Application:
+Software running on a server that processes requests
+from clients (e.g., web browsers) and sends back responses,
+often utilizing protocols like HTTP.
+
+Request (HTTP Request):
+A message sent by a client (e.g., browser) to a server
+asking for a specific action or resource.
+
+Response (HTTP Response):
+A message sent by a server back to a client in reply
+to an HTTP request, containing the requested resource
+or information about the action taken.
+
+GET Request:
+An HTTP method used to request data from a specified resource.
+It should only retrieve data and have no other effect on the
+server (idempotent and safe).
+
+POST Request:
+An HTTP method used to send data to a server to create or
+update a resource. It often has side effects on the server
+and is not idempotent.
+
+PUT Request:
+An HTTP method used to update or replace a target resource
+with the uploaded content. It is idempotent, meaning multiple
+identical requests have the same effect as a single one.
+
+DELETE Request:
+An HTTP method used to remove a specified resource from the server.
+
+URL (Uniform Resource Locator):
+A specific character string that constitutes a reference
+to a resource. It specifies the location of a resource
+on a computer network and a means of retrieving it.
+
+URL Parameters (Query Parameters):
+Key-value pairs appended to the end of a URL after a
+question mark (?), used to pass additional data to the
+server for filtering, searching, or identifying specific resources.
+
+Request Body (HTTP Request Body):
+The part of an HTTP request that contains the data being
+sent to the server, typically used with POST and PUT methods
+for larger or more complex data payloads like form submissions,
+JSON, or XML.

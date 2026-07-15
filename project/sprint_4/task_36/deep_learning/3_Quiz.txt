@@ -1,0 +1,81 @@
+Quiz: Underwriting Process and Code Alignment
+
+1. What is the primary purpose of "underwriting" in
+   the insurance industry, as described in the source material?
+
+2. List three factors typically considered during
+   the risk assessment phase of underwriting.
+
+3. According to the mentor, what is the main
+   deficiency of the current TravelCalculatePremiumServiceImpl code?
+
+4. Why is it important for the code to explicitly
+   reflect the underwriting process?
+
+5. Where does the calculation of the insurance policy
+   cost currently occur in the TravelCalculatePremiumServiceImpl?
+
+6. What is the main goal of refactoring the
+   TravelCalculatePremiumServiceImpl code?
+
+7. How should a good technical solution relate
+   to the business process it automates?
+
+8. What is the significance of "fair and sustainable"
+   premiums in the context of underwriting?
+
+9. What advice does the mentor give if one has no
+   ideas for how to refactor the code?
+
+10. Besides changing the code itself, what is another
+    crucial step to remember when refactoring?
+
+
+Quiz Answer Key
+
+1. The primary purpose of underwriting is to calculate
+   the price of an insurance policy by assessing the risk
+   of insuring an individual or entity. This ensures premiums
+   are fair and sustainable.
+
+2. Factors typically considered during risk assessment
+   include age, health, occupation, location, and other
+   relevant information. Any three of these would be a correct answer.
+
+3. The main deficiency is that the TravelCalculatePremiumServiceImpl
+   code does not clearly emphasize where the calculation of the
+   insurance policy cost (underwriting) takes place. It's
+   currently implicitly occurring during response creation.
+
+4. It is important for the code to explicitly reflect the
+   underwriting process because underwriting is the main
+   purpose and core functionality for which the application
+   is being created. The code should clearly represent this
+   central business operation.
+
+5. The calculation of the insurance policy cost currently
+   happens "somewhere during the creation of the response"
+   within the TravelCalculatePremiumServiceImpl, rather than
+   being a distinct, emphasized step.
+
+6. The main goal of refactoring the TravelCalculatePremiumServiceImpl
+   code is to make the underwriting (insurance premium calculation)
+   explicit and central, aligning the code more closely with the
+   actual business process it automates.
+
+7. A good technical solution should be similar to or closely
+   mirror the business process it automates. This means its
+   structure and logic should reflect the real-world steps
+   and concepts.
+
+8. "Fair and sustainable" premiums are significant because
+   they ensure that the price of the policy is equitable for
+   the policyholder while also allowing the insurer to cover
+   potential claims and operate profitably in the long term.
+
+9. If one has no ideas on how to refactor the code, the mentor
+   suggests consulting with the mentor or looking at the proposed
+   solution.
+
+10. Besides changing the code itself, it is crucial to remember
+    to update the corresponding tests when making changes to the code.

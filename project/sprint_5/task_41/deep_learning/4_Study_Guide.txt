@@ -1,0 +1,23 @@
+Jackson Date Formatting Study Guide
+
+Core Concepts
+
+This study guide focuses on resolving a specific issue:
+dates in JSON responses appearing in an unexpected,
+verbose format (e.g., 2021-05-25T00:00:00.000+00:00)
+when a simpler format (e.g., yyyy-MM-dd) is desired.
+
+The solution involves using the Jackson library and its
+@JsonFormat annotation.
+
+Key Learning Objectives:
+
+Understand the problem statement:
+the discrepancy between desired and actual date formats in JSON.
+
+Identify Jackson as the recommended library for
+JSON processing in this context.
+
+Grasp the purpose and application of the @JsonFormat annotation.
+
+Learn how to specify a custom date format using @JsonFormat.

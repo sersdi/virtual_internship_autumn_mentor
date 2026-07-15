@@ -1,0 +1,89 @@
+Quiz
+
+1. What is the primary drawback of a unit test that
+   includes multiple assertions, as illustrated in the
+   provided example?
+
+2. According to the source, what is considered an
+   "ideal" test, and why is this ideal important for
+   diagnosing failures?
+
+3. Why do real-world projects often deviate from the
+   "ideal" testing practices described in the text?
+
+4. What is the main goal of this "educational project"
+   regarding code quality and testing?
+
+5. How does the source recommend structuring work time
+   for better immersion and quality when working on a project?
+
+6. When encountering an unknown technical detail, such as the
+   behavior of java.util.Date, what is the recommended first
+   step in problem-solving?
+
+7. What specific documentation is suggested for understanding
+   the java.util.Date class?
+
+8. Briefly explain why dateFrom and dateTo might be different
+   even when instantiated sequentially with new Date().
+
+9. What is the "cunning question" posed in the text, and what
+   concept is it designed to highlight?
+
+10. What is the fundamental principle regarding computer
+    execution speed that is relevant to the "cunning question"?
+
+
+Quiz Answer Key
+
+1. The primary drawback of a unit test with multiple assertions
+   is that if the test fails, it is immediately unclear which
+   specific assertion caused the failure, making debugging
+   more challenging.
+
+2. An "ideal" test is one that contains only a single assertion.
+   This is important because if such a test fails, developers can
+   immediately pinpoint the exact reason for the failure,
+   streamlining the debugging process.
+
+3. Real-world projects often deviate from ideal testing
+   practices due to factors like strict deadlines, high stress,
+   and the pragmatic need to simply have tests for code review,
+   even if their quality is compromised.
+
+4. The main goal of this educational project is to demonstrate
+   and allow participants to experience high-quality, elegant
+   code and simple solutions, fostering a different, more
+   thoughtful approach to programming.
+
+5. The source recommends allocating large, continuous blocks
+   of time for work (e.g., one hour uninterrupted rather than
+   four 15-minute segments) because it allows for deeper
+   immersion in the project and higher quality output.
+
+6. When encountering an unknown technical detail,
+   the recommended first step is to avoid guessing or panicking,
+   and instead develop a clear algorithm of actions, starting
+   with studying official documentation.
+
+7. For understanding the java.util.Date class, the suggested
+   documentation is the javadoc for java.util.Date, which is
+   the official Java documentation for that class.
+
+8. dateFrom and dateTo might be different because new Date()
+   captures the current time down to the millisecond. Even if
+   called in rapid succession, the computer's speed means a
+   few milliseconds, or even microseconds, could pass between
+   the two instantiations, resulting in slightly different time values.
+
+9. The "cunning question" asks whether dateFrom and dateTo
+   will be different or identical when both are instantiated
+   with new Date() sequentially. It's designed to highlight
+   the importance of understanding underlying data storage
+   and the precision of time measurements in computing.
+
+10. The fundamental principle relevant to the "cunning question"
+    is that a computer can execute a vast number of commands
+    in milliseconds. This extreme speed means that even seemingly
+    simultaneous operations might have minute time differences
+    that affect precise time values.

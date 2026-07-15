@@ -1,0 +1,25 @@
+Essay Questions
+
+1. Discuss the long-term consequences of neglecting
+   test code quality, as described in the source,
+   and explain how refactoring addresses these issues.
+
+2. Elaborate on the "separation of concerns" principle
+   as applied to test code, using the provided example
+   of separating test data from test logic. What are the
+   broader benefits of this principle in software development?
+
+3. Imagine you are explaining the refactoring task to
+   a new team member. Describe the current problem in
+   TravelCalculatePremiumControllerTest and walk them
+   through the proposed solution, emphasizing the practical
+   steps and expected outcomes.
+
+4. Beyond the specific problem of duplicated requests and responses,
+   how might the principles of quality test code and
+   maintainability discussed in the source apply to
+   other common issues in test suites? Provide hypothetical examples.
+
+5. Critique the proposed refactoring solution. Are there any
+   potential drawbacks or challenges that might arise during
+   its implementation? How might these be mitigated?

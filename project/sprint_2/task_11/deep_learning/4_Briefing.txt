@@ -1,0 +1,84 @@
+Briefing Document: TravelCalculatePremiumResponse Class Construction
+
+This briefing document summarizes the key requirements
+and recommendations for the construction of the
+TravelCalculatePremiumResponse class, as outlined in
+the provided source.
+
+Main Themes and Most Important Ideas/Facts:
+
+The core task revolves around defining the structure
+and essential functionalities of the TravelCalculatePremiumResponse
+class. This involves implementing specific types of constructors
+and standard access methods for its properties.
+
+1. Class Construction Requirements:
+
+The primary objective is to create the TravelCalculatePremiumResponse
+class with the following components:
+
+Default Constructor:
+A constructor without any parameters. This is crucial for
+creating instances of the class without immediately assigning
+initial values to its properties. The source explicitly states:
+"- дефолтный конструктор (конструктор без параметров);".
+
+Parameterized Constructor for Initialization:
+A constructor designed to set initial values for all properties
+within the class. This allows for convenient object creation
+where all necessary data is provided at instantiation.
+The source specifies: "- конструктор для задания начальных
+значений всем свойствам;".
+
+Getter and Setter Methods:
+For every property within the class, both get (getter)
+and set (setter) methods must be implemented. These methods
+are fundamental for encapsulated data access, allowing
+controlled retrieval and modification of property values.
+The source clearly states: "- get/set методы для всех свойств класса.".
+
+2. Version Control Best Practice (Git Pull):
+
+A significant recommendation provided is the consistent
+use of Git pull at the beginning of each new task or step.
+This practice ensures that the local working copy is
+synchronized with the global repository, incorporating
+any recent changes.
+
+Staying Up-to-Date:
+The source emphasizes, "Эта команда подтянет все изменения
+из глобального репозитория к вам на компьютер и добавит их
+в вашу рабочую копию. Так вы всегда будете up to date!".
+This highlights the importance of maintaining an updated
+codebase to avoid conflicts and work with the latest version
+of the project.
+
+3. Tooling for Change Tracking (IDEA - Compare Directories):
+
+The source provides a helpful tip for identifying changes
+made between different tasks, specifically within the IDEA
+(IntelliJ IDEA) development environment.
+
+Efficient Change Identification:
+To quickly find all changes made in the current task,
+users can select the current task's folder (e.g., task_10)
+and the previous task's folder (e.g., task_9) in IDEA's left sidebar.
+By right-clicking and selecting "Compare Directories (Ctrl + D)",
+developers can visualize the differences, streamlining the review
+process. The source states: "PS: быстро найти все изменения
+сделанные в текущем задании можно в IDEA (закладка слева) выбрав
+папку текущего задания (например task_10) и папку предыдущего
+задания (например task_9) и в сплывающем меню выбрав пункт
+Compare Directories (Ctrl + D)."
+
+Conclusion:
+The primary focus for the TravelCalculatePremiumResponse
+class is on foundational object-oriented programming principles:
+proper construction (default and parameterized constructors)
+and controlled property access (getters and setters).
+Beyond the core coding tasks, the document stresses the
+importance of good development practices, specifically
+emphasizing regular use of Git pull for repository
+synchronization and leveraging IDE features for efficient
+change tracking.
+

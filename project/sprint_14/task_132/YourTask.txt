@@ -1,0 +1,30 @@
+Клиент в срочном порядке попросил создать в приложении
+веб страницу с расчётом премии. Клиент хочет дать возможность
+своим сотрудникам и партнёрам использовать веб страницу для
+более удобной работы сотрудников с приложением.
+
+Ментор внёс изменения в приложение и создал требуемую веб страницу.
+
+Изменения коснулись:
+build.gradle - добавлена зависимость Thymeleaf
+src/main/resources/application.properties - добавлена конфигурация Thymeleaf
+src/main/resources/templates - добавлен шаблон страницы на Thymeleaf
+src/main/java/org/javaguru/java2/insurance/web - добавлен контроллер веб страницы
+src/main/java/org/javaguru/java2/insurance/rest/TravelCalculatePremiumController.java - изменён URL
+src/test/java/org/javaguru/java2/insurance/rest/TravelCalculatePremiumControllerTestCase.java - изменён URL
+
+Ваша задача:
+
+Разобраться с изменениями сделанными менторов в приложении.
+Узнать про HTTP GET, POST, Thymeleaf, URL, HTML.
+Прояснить при помощи интернета или задать все возникшие вопросы ментору.
+Запустить приложение и по тестировать созданную ментором веб страницу.
+
+PS: быстро найти все изменения сделанные в текущем задании
+можно в IDEA (закладка слева) выбрав папку текущего задания (например task_10)
+и папку предыдущего задания (например task_9) и в сплывающем меню выбрав пункт
+Compare Directories (Ctrl + D).
+
+PS: не забудьте по окончанию выполнения шага создать и заполнить
+файл /documentation/Task_x_description.txt. Формат заполнения этого
+файла описан в task_1 в файле Learning_reflection.txt.

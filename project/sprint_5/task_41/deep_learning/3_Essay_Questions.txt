@@ -1,0 +1,23 @@
+Essay Questions
+
+1. Discuss the advantages of using a dedicated library
+   like Jackson for JSON processing compared to manual
+   string manipulation for data serialization and deserialization.
+
+2. Explain how the @JsonFormat annotation simplifies date
+   formatting in Java objects when converting them to JSON,
+   particularly in contrast to older or more manual methods.
+
+3. Describe a hypothetical scenario where specifying a
+   precise time zone or time component using @JsonFormat
+   would be crucial, and how this differs from the problem
+   presented in the source material.
+
+4. Beyond date formatting, research and explain at least
+   two other common use cases or functionalities provided
+   by the Jackson library through annotations.
+
+5. Imagine you are onboarding a new developer to your team.
+   Draft a short explanation of why the
+   implementation('com.fasterxml.jackson.core:jackson-core:2.14.2')
+   line is necessary and where they would typically add it in a project.

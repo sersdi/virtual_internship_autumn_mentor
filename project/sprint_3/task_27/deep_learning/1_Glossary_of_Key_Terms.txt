@@ -1,0 +1,54 @@
+Glossary of Key Terms
+
+Lombok:
+A Java library that automatically plugs into your build
+process to generate boilerplate code (like constructors,
+getters, setters) at compile time, reducing verbosity in source code.
+
+@RequiredArgsConstructor:
+A Lombok annotation that automatically generates a constructor
+with arguments for all final fields in a class that are not initialized.
+
+AccessLevel.PACKAGE:
+An enumeration value used with Lombok annotations to specify
+that the generated constructor or method should have
+package-private access (visible only within the same package).
+
+Field Injection:
+A dependency injection technique where dependencies are
+injected directly into private fields of a class, typically
+using annotations (e.g., @Autowired in Spring).
+
+Boilerplate Code:
+Sections of code that are repeated in multiple places with
+little or no variation, often considered necessary but tedious
+to write manually (e.g., constructors, getters, setters).
+
+final field:
+A field in Java that, once initialized, its value cannot be
+changed. Lombok's @RequiredArgsConstructor specifically
+targets these for constructor parameters.
+
+IDEA (IntelliJ IDEA):
+A popular integrated development environment (IDE) for
+Java development. When building a project with IDEA,
+compiled code goes to out/production/classes.
+
+Gradle:
+A popular build automation tool used for Java projects.
+When building with Gradle, compiled code goes to build/classes.
+
+Dependency Injection (DI):
+A software design pattern that allows for the removal of
+hard-coded dependencies by injecting them at runtime,
+typically via constructors, setters, or fields.
+
+Testability:
+The ease with which a software component or system can
+be tested to ensure it functions correctly. Field injection
+can negatively impact testability.
+
+Immutability:
+The characteristic of an object whose state cannot be
+modified after it is created. final fields contribute
+to immutability.

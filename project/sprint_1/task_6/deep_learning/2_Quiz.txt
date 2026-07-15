@@ -1,0 +1,81 @@
+Gradle Clean: Artifact Removal Essentials Study Guide
+
+I. Quiz
+
+Instructions: Answer each question in 2-3 sentences.
+
+1. What is the primary purpose of the Gradle clean command?
+
+2. Where are the artifacts created by Gradle typically
+   located before they are removed by the clean command?
+
+3. Why might someone want to remove artifacts generated
+   during the build process?
+
+4. Besides the clean command, what other Gradle command
+   is mentioned as being analogous in its usage?
+
+5. What visual cue is mentioned in IDEA that indicates
+   the presence of build artifacts?
+
+6. How can you execute the clean command for an entire
+   project from the terminal?
+
+7. How can you execute the clean command for a specific
+   module from the terminal, using "internship" as an example
+   module name?
+
+8. What specific folder does the Gradle clean command delete?
+
+9. In what general location (e.g., a specific tool's interface)
+   can the clean command be launched besides the terminal?
+
+10. What does the term "artifact" refer to in the context of
+    Gradle builds?
+
+
+II. Quiz Answer Key
+
+1. The primary purpose of the Gradle clean command is to
+   remove artifacts (files) that were created by Gradle during
+   the application build process. It helps in ensuring a clean
+   slate for subsequent builds.
+
+2. The artifacts created by Gradle are typically located in
+   the build folder. This folder is where all the generated files
+   from the build process are stored.
+
+3. Someone might want to remove artifacts to ensure that a new
+   build starts from a clean state, preventing potential issues
+   caused by old or corrupted build products. It also helps in
+   freeing up disk space.
+
+4. The Gradle build command is mentioned as being analogous
+   to the clean command in its usage. Both commands can be run
+   for the entire project or specific modules.
+
+5. In IDEA, the build folder, where artifacts are located,
+   is typically highlighted in red. This visual cue helps users
+   quickly identify the folder containing the build products.
+
+6. To execute the clean command for an entire project from the
+   terminal, you would use the command ./gradlew clean. This
+   command targets all modules within the project.
+
+7. To execute the clean command for a specific module
+   (e.g., "internship") from the terminal, you would
+   use the command ./gradlew :internship:clean.
+   This specifies the target module for the clean operation.
+
+8. The Gradle clean command specifically deletes the build folder.
+   By removing this folder, it effectively eliminates all artifacts
+   created during the application's build process.
+
+9. Besides the terminal, the clean command can also be launched
+   from the Gradle tab within an Integrated Development Environment
+   (IDE) like IDEA, allowing for easy execution through the GUI.
+
+10. In the context of Gradle builds, an "artifact" refers to
+    any file or output that is generated during the build process.
+    This includes compiled code, packaged applications, and other
+    intermediate files.

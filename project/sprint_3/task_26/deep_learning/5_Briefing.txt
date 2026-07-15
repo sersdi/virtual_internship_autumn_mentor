@@ -1,0 +1,96 @@
+Briefing Document: Project Lombok - Core Functionality and Setup
+
+This briefing document summarizes the key themes,
+most important ideas, and practical steps related to Project Lombok,
+based on the provided sources.
+
+Main Themes:
+The primary themes emerging from the provided sources are:
+
+Purpose of Lombok:
+Lombok is a Java library designed to reduce boilerplate code.
+
+Setup and Configuration:
+Integrating Lombok into a project requires specific dependency
+declarations and IDE (IntelliJ IDEA) configuration.
+
+Core Annotations for Code Generation:
+Lombok offers annotations that automate the generation of
+common methods (getters, setters, constructors).
+
+Experimentation and Further Exploration:
+The sources encourage hands-on experimentation with various
+Lombok annotations beyond the basic examples.
+
+Most Important Ideas/Facts:
+
+Boilerplate Reduction:
+The central purpose of Lombok is to "Узнайте для чего
+используют библиотеку Lombok," which translates to
+"find out what the Lombok library is used for."
+The answer, implied by the context of generating getters,
+setters, and constructors, is to reduce repetitive,
+boilerplate code in Java applications. This makes code cleaner,
+more concise, and easier to read and maintain.
+
+Essential Dependencies for Maven/Gradle:
+To add Lombok to a project, specific dependencies are required.
+The provided snippet outlines these:
+
+compileOnly('org.projectlombok:lombok:1.18.32')
+annotationProcessor('org.projectlombok:lombok:1.18.32')
+testCompileOnly('org.projectlombok:lombok:1.18.32')
+testAnnotationProcessor('org.projectlombok:lombok:1.18.32')
+
+This indicates that Lombok is a "compile-time only" and
+"annotation processor" dependency, meaning it operates
+during the compilation phase to inject code, rather than
+being part of the runtime JAR. The inclusion of testCompileOnly
+and testAnnotationProcessor ensures its benefits extend to test
+code as well.
+
+IntelliJ IDEA Configuration:
+A crucial step for IntelliJ IDEA users is to enable annotation
+processing. The source explicitly states:
+В IntelliJIdea File -> Settings -> "Enable annotation processing"
+поставить галочку! This translates to:
+"In IntelliJ IDEA File -> Settings ->
+'Enable annotation processing' check the box!"
+This setting is vital for Lombok's annotation processors
+to run correctly and generate the code within the IDE's understanding.
+
+Key Annotations for Common Methods:
+The sources highlight specific annotations for automating
+method generation:
+
+@Getter:
+Automatically generates all getter methods for the fields in a class.
+
+@Setter:
+Automatically generates all setter methods for the fields in a class.
+
+@NoArgsConstructor:
+Generates a constructor with no arguments. This is often
+necessary for frameworks that rely on default constructors
+for instantiation.
+
+@AllArgsConstructor:
+Generates a constructor with arguments for all fields in the class.
+
+These annotations are specifically mentioned for
+"Примените Lombok для генерации get/set методов и
+конструкторов для классов запроса и ответа," meaning
+"Apply Lombok for generating get/set methods and constructors
+for request and response classes." This suggests their
+utility in Data Transfer Objects (DTOs) or similar simple
+data-holding classes.
+
+Further Learning and Experimentation:
+The instruction "Прочитайте и поэкспериментируйте с
+Lombok аннотациями описанными в статье:
+https://habr.com/ru/articles/812101/"
+encourages users to go beyond the basic examples.
+This implies that Lombok offers a wider range of annotations
+(e.g., @Data, @ToString, @EqualsAndHashCode, @Builder, @Slf4j)
+that can further reduce boilerplate and enhance productivity,
+warranting deeper exploration.

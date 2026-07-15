@@ -1,0 +1,59 @@
+What is the primary purpose of automated testing
+in professional programming?
+
+Automated testing is crucial in professional programming
+for demonstrating the correct functionality and reliability
+of written code. It serves as a fundamental and widely adopted
+tool in industrial software development.
+
+Where should tests for the code be written?
+
+Tests for the code should be written in the
+TravelCalculatePremiumServiceImplTest class, which is
+located in the test directory src/test/java.
+
+What is the specific task related to testing mentioned in the source?
+
+The task is to prove that the "answer filling code" written
+in the previous assignment works correctly by using tests.
+
+Why is it important to run all tests before committing changes?
+
+It is crucial to run all tests and ensure they pass without
+errors (are "GREEN") before committing changes. Failing to
+do so will "break the project build on GitHub." This emphasizes
+the importance of maintaining a working and stable codebase.
+
+What is the implication of "breaking the project build on GitHub"?
+
+"Breaking the project build on GitHub" means that the changes
+introduced will cause the automated build process of the project
+to fail, preventing successful integration of the new code and
+potentially disrupting further development by others.
+
+What is a useful tip for finding changes made in the current assignment?
+
+A useful tip for quickly finding all changes made in the
+current assignment is to use an IDE like IntelliJ IDEA.
+By selecting the current task's folder (e.g., task_10)
+and the previous task's folder (e.g., task_9) in the
+left-hand bookmark, and then choosing "Compare Directories"
+(Ctrl + D) from the pop-up menu, you can easily see all the
+modifications.
+
+What is the significance of tests being "GREEN"?
+
+When tests are "GREEN," it signifies that they have all
+passed successfully without any errors. This indicates
+that the code is functioning as expected and meets the
+requirements defined by the tests.
+
+How does automated testing contribute to the
+overall software development process?
+
+Automated testing contributes significantly to the
+overall software development process by ensuring code
+quality, preventing regressions (new changes breaking
+old functionality), and providing confidence in the
+software's stability. It is an "essential and widely
+used tool in industrial software development."

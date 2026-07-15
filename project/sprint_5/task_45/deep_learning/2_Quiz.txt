@@ -1,0 +1,75 @@
+Quiz: Short-Answer Questions
+
+1. What is the primary goal of writing tests for the
+   TravelCalculatePremiumController?
+
+2. What kind of request will be sent to the controller during testing?
+
+3. What is expected to be included within the HTTP POST request?
+
+4. What is the purpose of checking the "ответ" (response)
+   after sending the request?
+
+5. Who is identified as wanting to write tests for the controller?
+
+6. In what specific class can an example of this type of test be found?
+
+7. What kind of application setup is required to perform these tests?
+
+8. What is the student's main task concerning the
+   TravelCalculatePremiumControllerTest?
+
+9. Why is it beneficial to be able to "поднимать приложение целиком"
+   (raise the entire application) for these tests?
+
+10. What specific part of the application is the
+    TravelCalculatePremiumController responsible for?
+
+
+Answer Key: Quiz
+
+1. The primary goal is to write tests for the
+   TravelCalculatePremiumController to ensure its proper
+   functionality. This allows for verification of its
+   behavior when processing requests.
+
+2. An HTTP POST request will be sent to the controller
+   during testing. This is a standard method for submitting
+   data to a server.
+
+3. A JSON payload is expected to be included within the
+   HTTP POST request. This JSON will contain the data
+   necessary for the controller to perform its calculations.
+
+4. Checking the "ответ" (response) is crucial to verify
+   that the controller processes the request correctly and
+   returns the expected result. This confirms the controller's
+   logic is sound.
+
+5. The "Ментор" (Mentor) is identified as wanting to write
+   these tests for the controller. They are guiding the
+   process of implementing controller tests.
+
+6. An example of this type of test can be found in the
+   TravelCalculatePremiumControllerTest class. This class
+   serves as a reference for how to structure and write such tests.
+
+7. To perform these tests, it is necessary to "поднимать
+   приложение целиком" (raise the entire application).
+   This means the full application environment needs to be
+   running to simulate a real-world interaction.
+
+8. The student's main task is to understand how the
+   TravelCalculatePremiumControllerTest works. This involves
+   analyzing the provided example and comprehending its testing
+   methodology.
+
+9. Being able to "поднимать приложение целиком" for these
+   tests is beneficial because it allows for end-to-end
+   testing of the controller. This ensures that the controller
+   functions correctly within the context of the entire application,
+   including its dependencies.
+
+10. The TravelCalculatePremiumController is responsible for
+    "Travel Premium Calculation." This suggests it handles
+    the logic for calculating insurance premiums related to travel.

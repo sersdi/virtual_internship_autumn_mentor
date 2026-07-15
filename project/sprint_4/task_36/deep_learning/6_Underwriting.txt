@@ -1,0 +1,68 @@
+Underwriting: Business Process Alignment in Code
+
+What is underwriting in the context of insurance?
+
+Underwriting is the process of calculating the price of an
+insurance policy. It involves assessing the risk of insuring
+a particular individual or entity by evaluating factors such
+as age, health, occupation, location, and other relevant information.
+
+What is the purpose of underwriting?
+
+The purpose of underwriting is to determine the appropriate
+premium to charge for a policy. This is based on the
+likelihood of a claim being made and the potential cost
+of that claim, ensuring premiums are fair and sustainable
+for both the insurer and the policyholder.
+
+Why is underwriting considered a key part of the insurance industry?
+
+Underwriting is crucial because it ensures that premiums are
+set at a level that accurately reflects the risk involved,
+thereby balancing the financial viability for the insurer
+with affordability for the policyholder.
+
+What was the problem identified with the
+TravelCalculatePremiumServiceImpl code?
+
+The primary issue with the TravelCalculatePremiumServiceImpl
+code was that it did not clearly reflect the core business
+process of underwriting. The calculation of the insurance
+policy cost (underwriting) was happening implicitly somewhere
+during the creation of the response, rather than being a
+distinct and emphasized part of the code.
+
+Why is it important for code to reflect the business
+process it automates?
+
+It is important for code to mirror the business process
+it automates because it leads to a more understandable,
+maintainable, and accurate technical solution. When the
+code's structure aligns with the real-world process, it
+becomes easier for developers to comprehend, modify, and
+ensure it correctly addresses the business requirements.
+
+What was the mentor's main suggestion for improving the code?
+
+The mentor suggested refactoring the code to explicitly
+highlight and centralize the underwriting (insurance premium
+calculation) process. The goal was to make this core function
+clearly identifiable and central within the application,
+reflecting its importance in the business process.
+
+What is the ultimate goal when modifying the
+TravelCalculatePremiumServiceImpl code?
+
+The ultimate goal is to re-engineer the code so that
+it closely aligns with the actual business process of
+underwriting, making the calculation of the insurance
+premium a clear and central activity within the code,
+rather than an implicit one.
+
+What accompanying task should not be forgotten when changing the code?
+
+When modifying the code to better reflect the underwriting
+process, it is crucial not to forget about updating and
+ensuring the accompanying tests. Tests play a vital role
+in verifying that the changes made to the code are correct
+and that the system continues to function as expected.

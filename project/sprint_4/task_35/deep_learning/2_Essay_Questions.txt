@@ -1,0 +1,30 @@
+Essay Format Questions
+
+1. Discuss the multi-faceted definition of a "good IT solution"
+   presented in the text. How does this definition extend beyond
+   mere functional requirements, and why are these additional
+   qualities crucial for professional programming?
+
+2. Explain the "Boy Scout Rule" in detail, both in its
+   original context and as adapted by Robert C. Martin
+   for programming. Provide arguments for why adhering
+   to this rule is essential for maintaining and improving
+   code quality over time, even when dealing with legacy code.
+
+3. Analyze the concept of refactoring as described in
+   the source. What is its core definition and primary goal?
+   Furthermore, explain how refactoring contributes to the
+   long-term health of a codebase and supports future
+   development efforts.
+
+4. The text states, "Positive changes over time accumulate,
+   just as negative changes do." Elaborate on this statement,
+   providing examples of how both continuous improvement and
+   neglect can impact a software project's codebase over an
+   extended period.
+
+5. Imagine you are a mentor to a new programmer. Based on the
+   provided text, what key advice would you give them regarding
+   their responsibility for code quality and the importance of
+   continuous improvement? Include specific principles and
+   resources mentioned in the material.

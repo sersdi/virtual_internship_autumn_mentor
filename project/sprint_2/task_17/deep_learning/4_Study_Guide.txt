@@ -1,0 +1,84 @@
+Study Guide
+
+This guide focuses on the provided excerpts, which serve as
+an introductory task for developers. The core objective is
+to calculate the agreementPrice based on the number of days
+between two dates. While this is initially a "fake" value,
+it lays the groundwork for future, more complex business requirements.
+
+Key Learning Objectives:
+
+Understanding the Core Task:
+Grasping the immediate requirement to calculate the
+agreementPrice using the duration between agreementDateFrom
+and agreementDateTo.
+
+Leveraging Existing Solutions:
+Recognizing the emphasis on finding and utilizing standard
+Java solutions for date calculations rather than writing
+custom code for common problems. This highlights a crucial
+principle of good programming practice.
+
+Development Process Familiarization:
+Understanding the intent of these initial "simple"
+tasks – to acclimate developers to the project,
+development process, and team interaction.
+
+Importance of Testing:
+Comprehending the critical role of testing, including
+modifying existing tests, and ensuring all tests pass
+before committing code.
+
+Core Concepts to Master:
+
+agreementPrice Calculation:
+The formula is explicitly defined: agreementPrice = days
+between agreementDateFrom and agreementDateTo.
+
+Java Date Calculation:
+The requirement to search for and implement a standard
+Java solution for calculating the difference between two dates.
+This implies knowledge of Java's java.time package or similar
+date/time APIs.
+
+"Fake Value" Concept:
+Understanding that the current agreementPrice is a placeholder,
+and its true business logic will be implemented later.
+This introduces the idea of incremental development.
+
+Best Practices in Programming:
+The advice to "feel when to write new code and when to find
+a ready-made solution" emphasizes efficiency, reliability,
+and code maintainability.
+
+Testing Workflow:
+
+The clear instructions regarding testing:
+
+Test changes.
+Modify existing tests if necessary.
+Run all tests before committing.
+Fix broken tests before committing.
+Ensure all tests are "green" (pass).
+
+Gradual Complexity:
+The reassurance that initial tasks are simple to facilitate
+a smooth onboarding process, with tasks gradually increasing
+in difficulty.
+
+Communication and Collaboration:
+The implicit emphasis on interacting with mentors and colleagues.
+
+Self-Assessment Questions (for personal reflection):
+
+How would I approach finding a standard Java solution for calculating days between two dates?
+
+Why is it important to use standard solutions
+rather than writing custom code for common tasks?
+
+What steps would I take if my tests failed after making changes?
+
+How does the concept of a "fake value" apply to
+real-world software development?
+
+What are the benefits of starting with simple tasks in a new project?

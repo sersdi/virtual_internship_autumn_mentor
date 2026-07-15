@@ -1,0 +1,86 @@
+Quiz
+
+1. Why are float and double generally considered unsuitable
+   for storing monetary values in Java?
+
+2. Explain the primary difference in how BigDecimal
+   stores numerical values compared to float or double.
+
+3. What specific type should the agreementPrice property
+   have in the TravelCalculatePremiumResponse based on
+   the provided instructions?
+
+4. Briefly describe one common issue that can arise from
+   using floating-point types for financial calculations.
+
+5. How does BigDecimal help ensure accuracy when performing
+   arithmetic operations on monetary amounts?
+
+6. What is the purpose of the agreementPrice property in
+   the TravelCalculatePremiumResponse context?
+
+7. Why is the task of adding agreementPrice to
+   TravelCalculatePremiumResponse specifically highlighted
+   in the prompt?
+
+8. Beyond monetary values, in what other scenarios might
+   BigDecimal be preferred over float or double?
+
+9. The prompt encourages "googling" and learning new things.
+   How does this reflect the nature of real-world Java development?
+
+10. What fundamental problem does BigDecimal solve that
+    float and double cannot when dealing with precise decimal
+    arithmetic?
+
+
+Quiz Answer Key
+
+1. float and double use binary representations that cannot
+   perfectly represent all decimal fractions, leading to
+   floating-point imprecision. This can result in tiny,
+   unpredictable rounding errors during arithmetic operations,
+   which are unacceptable for financial calculations.
+
+2. BigDecimal stores numbers as an unscaled integer value
+   and a scale, allowing for exact representation of decimal
+   numbers without the binary approximation issues of float or double.
+   This ensures precise arithmetic for financial calculations.
+
+3. Based on the provided instructions, the agreementPrice
+   property in the TravelCalculatePremiumResponse should be of
+   type BigDecimal.
+
+4. One common issue is that simple arithmetic operations,
+   like adding two seemingly exact decimal numbers, can
+   produce a result with a tiny fractional error when
+   using floating-point types, leading to incorrect totals.
+
+5. BigDecimal ensures accuracy by performing exact decimal
+   arithmetic, avoiding the approximations inherent in
+   floating-point representations. It maintains precision
+   by storing numbers as an unscaled integer and a scale.
+
+6. The agreementPrice property is intended to represent
+   a monetary value, likely the final price or premium
+   of an agreement, within the TravelCalculatePremiumResponse object.
+
+7. The task of adding agreementPrice of type BigDecimal
+   is highlighted to specifically introduce the developer
+   to the necessity and proper usage of BigDecimal for
+   monetary values in Java.
+
+8. BigDecimal might be preferred in any scenario requiring
+   exact decimal arithmetic, such as scientific calculations,
+   measurements that demand high precision, or cryptographic
+   applications where even tiny inaccuracies are unacceptable.
+
+9. The emphasis on "googling" and continuous learning
+   reflects that software development is a dynamic field
+   where new technologies and best practices emerge constantly,
+   requiring developers to independently research and adapt.
+
+10. BigDecimal solves the fundamental problem of floating-point
+    imprecision when representing and performing calculations
+    on decimal numbers, ensuring that all decimal values,
+    especially monetary ones, are handled with exact precision.

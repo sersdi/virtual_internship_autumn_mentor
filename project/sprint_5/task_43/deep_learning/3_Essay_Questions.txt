@@ -1,0 +1,24 @@
+Essay Questions
+
+1. Discuss the concept of "error snowball" in software
+   development as described in the text. How does
+   Continuous Integration (CI) act as a preventative
+   measure against this phenomenon?
+
+2. Explain the significance of the visual feedback
+   (green checkmark/red cross) provided by GitHub
+   Workflow Actions in the context of CI. How does
+   this immediate feedback contribute to maintaining project health?
+
+3. Describe the practical steps a developer should take
+   when a CI build fails due to their recent commit. What
+   is the importance of these steps for project stability?
+
+4. Beyond error detection, what broader benefits does the text
+   imply CI brings to the software development process,
+   particularly concerning predictability, continuity, and quality?
+
+5. The text suggests developers should "understand what happens
+   to their code after its creation." Elaborate on why this
+   understanding is crucial for a "good developer" in a CI/CD
+   environment.

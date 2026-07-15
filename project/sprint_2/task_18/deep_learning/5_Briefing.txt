@@ -1,0 +1,90 @@
+Briefing Document: Code Readability and Business Relevance
+
+This briefing document summarizes key themes and ideas
+from the provided source, "Code Readability: The Business
+Case," focusing on the importance of clear, business-centric
+code for maintainability and efficiency.
+
+Main Themes:
+
+The Problem of Technically-Focused Code:
+The source highlights that code written solely in technical
+terms, even simple examples, can be difficult to understand
+and maintain. It lacks a direct connection to the business
+domain, making it hard to navigate in large applications.
+
+The Cost of Poor Readability:
+Unreadable or overly technical code incurs significant
+costs in terms of time and effort for developers.
+Understanding such code requires knowledge of specific
+technical details and takes longer, especially when
+encountering numerous complex algorithms daily.
+
+The Solution:
+
+Business-Centric Readability through Method Extraction:
+The primary proposed solution is to improve code readability
+by breaking down complex logic into smaller, well-named methods.
+The emphasis is on giving these methods names that clearly
+convey their business purpose rather than their technical
+implementation.
+
+Most Important Ideas/Facts:
+
+Illustrative Example of Poor Readability:
+The source provides a concrete example of calculating
+daysBetween two dates:
+
+long diff = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+var daysBetween = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+response.setAgreementPrice(new BigDecimal(daysBetween));
+
+The author critiques this as "написан сугубо техническим языком"
+(written in purely technical language), noting its
+"мало связи с бизнесом" (little connection to business)
+beyond the variable name daysBetween.
+
+Reasons for Difficulty in Understanding Technical Code:
+
+It requires knowledge of "технические детали" (technical details)
+such as Date.getTime() returning milliseconds as a long and
+TimeUnit.DAYS.convert converting milliseconds to days.
+
+This complexity is magnified in "большом приложении
+(из тысяч классов)" (a large application (of thousands of classes)),
+making it "крайне сложно" (extremely difficult) to find and understand.
+
+Impact of Poor Readability on Productivity:
+
+The author poses rhetorical questions highlighting
+the cumulative cost: "Сколько времени и сил вы потратите
+на их изучение?" (How much time and effort will you spend
+studying them?) This implies a significant drain on resources
+when developers constantly encounter unreadable code.
+
+The Power of Meaningful Naming:
+The core advice for improvement is to "Придумайте классное
+название этому методу. Такое название, прочитав которое будет
+сразу понятно, что этот метод делает." (Come up with a cool
+name for this method. Such a name that, upon reading it,
+it will be immediately clear what this method does.)
+This emphasizes the importance of names reflecting the
+purpose rather than just the mechanics.
+
+Method Extraction as a Readability Strategy:
+
+"Ваша задача: вынесите код расчета количества дней между
+датами в отдельный метод." (Your task: extract the code
+for calculating the number of days between dates into a
+separate method.)
+
+"Разбейте его на небольшие кусочки, поместите кусочки
+кода в методы и дайте этим метода классные названия!"
+(Break it into small pieces, put the code pieces into
+methods and give these methods cool names!)
+
+"ищите кусочки, которые делают маленькое, но законченное действие.
+Выносите эти кусочки в отдельные методы." (look for pieces
+that perform a small but complete action. Extract these
+pieces into separate methods.) This provides a clear,
+actionable strategy for improving code quality.

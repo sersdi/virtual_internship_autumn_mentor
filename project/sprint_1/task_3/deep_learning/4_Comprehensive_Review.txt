@@ -1,0 +1,22 @@
+Comprehensive Review
+
+This section will guide you through the core concepts
+and practical applications of Gradle commands executed
+via the terminal, as presented in the source material.
+
+1. Purpose of Gradle Terminal Commands:
+- What is the primary function of using Gradle commands from the terminal?
+- Where are these commands typically executed within a development environment?
+
+2. Executing a Full Project Build:
+- What is the specific command used to trigger a complete project build?
+- Describe the process of executing this command.
+
+3. Understanding . and / in ./gradlew build:
+- What does the ./ prefix signify in the command ./gradlew build?
+- Why is it important to include this prefix when running the command?
+
+4. Selective Module Building:
+- Why might a developer choose to build only a specific module instead of the entire project?
+- What command is used to build a particular module, and how does it differ from the full build command?
+- What does :internship:build specifically target in the example provided?
