@@ -21,6 +21,10 @@ subprojects {
 		mavenCentral()
 	}
 
+	dependencies {
+		testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+	}
+
 	compileJava {
 		options.encoding = "UTF-8"
 	}
