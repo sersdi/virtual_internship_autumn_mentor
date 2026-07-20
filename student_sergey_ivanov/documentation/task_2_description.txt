@@ -1,0 +1,31 @@
+Запуск команд Gradle из терминала обеспечивается
+    следующими файлами (скриптами) в нашем проекте:
+        - gradlew  - для unix систем
+        - gradlew.bat - для windows
+Для правильной работы этим скриптам требуется
+наличие установленного параметра окружения JAVA_HOME.
+То есть эти скрипты используя JAVA_HOME находят
+путь до установленной на вашем компьютере JDK,
+в ней находят JVM и с помощью нее запускают
+Gradle wrapper (как Java библиотеку). Без
+прописанной JAVA_HOME выполнить команды Gradle
+из терминала не получится.
+
+После выполнения task2, я узнал какие действия выполняет команда build в Gradle.
+А именно:
+21:14:40: Executing ':project:build'…
+          > Task :project:compileJava NO-SOURCE
+          > Task :project:processResources NO-SOURCE
+          > Task :project:classes UP-TO-DATE
+          > Task :project:jar UP-TO-DATE
+          > Task :project:assemble UP-TO-DATE
+          > Task :project:compileTestJava NO-SOURCE
+          > Task :project:processTestResources NO-SOURCE
+          > Task :project:testClasses UP-TO-DATE
+          > Task :project:test NO-SOURCE
+          > Task :project:check UP-TO-DATE
+          > Task :project:build UP-TO-DATE
+
+          BUILD SUCCESSFUL in 2s
+          1 actionable task: 1 up-to-date
+          21:14:43: Execution finished ':project:build'.
