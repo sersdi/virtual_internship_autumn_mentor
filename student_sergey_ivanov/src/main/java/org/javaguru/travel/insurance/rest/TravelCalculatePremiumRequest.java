@@ -9,8 +9,7 @@ public class TravelCalculatePremiumRequest {
     private Date agreementDateFrom;
     private Date agreementDateTo;
 
-    public TravelCalculatePremiumRequest() {
-    }
+    public TravelCalculatePremiumRequest() {}
 
     public TravelCalculatePremiumRequest(String personFirstName, String personLastName, Date agreementDateFrom, Date agreementDateTo) {
         this.personFirstName = personFirstName;
