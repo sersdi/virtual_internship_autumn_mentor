@@ -1,0 +1,6 @@
+Добавил поле agreementPrice в класс TravelCalculatePremiumResponse(для него создал гетер и сетер).
+В класс TravelCalculatePremiumServiceImpl добавил логику просчета количества дней между датами agreementDateFrom и agreementDateTo и присвоение этого значения в поле agreementPrice.
+    long diff = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+    var daysBetween = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+    response.setAgreementPrice(new BigDecimal(daysBetween));
+Создал тест в TravelCalculatePremiumServiceImplTest -shouldPopulateAgreementPrice().
