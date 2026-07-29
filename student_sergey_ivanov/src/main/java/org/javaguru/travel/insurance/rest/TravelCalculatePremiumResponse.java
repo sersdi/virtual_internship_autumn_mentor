@@ -9,7 +9,7 @@ public class TravelCalculatePremiumResponse {
     private String personLastName;
     private Date agreementDateFrom;
     private Date agreementDateTo;
-    private BigDecimal agreementPrice;
+    private BigDecimal agreementPrice ;
 
     public TravelCalculatePremiumResponse(){}
 
