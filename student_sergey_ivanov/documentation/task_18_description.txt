@@ -1,0 +1,2 @@
+Упростил логику просчета количества дней между датами agreementDateFrom и agreementDateTo.
+Написал метод calculateAgreementDurationInDays в классе TravelCalculatePremiumServiceImpl.
