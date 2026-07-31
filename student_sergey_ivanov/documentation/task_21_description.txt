@@ -1,0 +1,16 @@
+Повесил аннотацию @Component на класс DateTimeService.
+В классе TravelCalculatePremiumServiceImpl добавил объект класса dateTimeService;
+Добавил в конструктор класса TravelCalculatePremiumServiceImpl класс dateTimeService.
+(для получения внешней зависимости - constructor dependency injection)
+Вызвал метод getDaysBetween у dateTimeService в переменной daysBetween(удалил старый метод).
+
+Починил тесты в TravelCalculatePremiumServiceImplTest:
+добавил:
+    private DateTimeService dateTimeService;
+    private TravelCalculatePremiumServiceImpl service;
+
+    @BeforeEach
+    public void setUp() {
+        dateTimeService = new DateTimeService();
+        service = new TravelCalculatePremiumServiceImpl(dateTimeService);
+    }

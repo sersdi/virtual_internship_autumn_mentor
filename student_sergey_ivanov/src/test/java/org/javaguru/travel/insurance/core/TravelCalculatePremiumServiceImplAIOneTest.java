@@ -8,7 +8,7 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class    TravelCalculatePremiumServiceImplAIOneTest {
+public class TravelCalculatePremiumServiceImplAIOneTest {
 
     private final TravelCalculatePremiumServiceImpl service = new TravelCalculatePremiumServiceImpl();
 

@@ -5,10 +5,17 @@ import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.util.concurrent.TimeUnit;
 
 @Component
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
+
+    private DateTimeService dateTimeService;
+
+    public TravelCalculatePremiumServiceImpl(DateTimeService dateTimeService){
+        this.dateTimeService = dateTimeService;
+    }
+
+    public TravelCalculatePremiumServiceImpl(){}
 
     @Override
     public TravelCalculatePremiumResponse calculatePremium(TravelCalculatePremiumRequest request) {
@@ -18,15 +25,11 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
         response.setAgreementDateFrom(request.getAgreementDateFrom());
         response.setAgreementDateTo(request.getAgreementDateTo());
 
-        var daysBetween = calculateAgreementDurationInDays(request);
+        var daysBetween = dateTimeService.getDaysBetween(request.getAgreementDateFrom(),request.getAgreementDateTo());
         response.setAgreementPrice(new BigDecimal(daysBetween));
 
         return response;
     }
 
-    private long calculateAgreementDurationInDays(TravelCalculatePremiumRequest request) {
-        long diff = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
-        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-    }
-
 }
+
