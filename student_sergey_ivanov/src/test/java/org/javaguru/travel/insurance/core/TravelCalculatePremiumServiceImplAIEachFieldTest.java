@@ -10,7 +10,8 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TravelCalculatePremiumServiceImplAIEachFieldTest {
-    private DateTimeService dateTimeService;
+
+    private DateTimeService dateTimeService = new DateTimeService();
     private TravelCalculatePremiumServiceImpl service;
 
     @BeforeEach
