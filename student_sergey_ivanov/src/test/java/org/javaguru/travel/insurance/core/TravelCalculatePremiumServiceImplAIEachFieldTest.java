@@ -2,6 +2,7 @@ package org.javaguru.travel.insurance.core;
 
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -9,19 +10,21 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TravelCalculatePremiumServiceImplAIEachFieldTest {
+    private DateTimeService dateTimeService;
+    private TravelCalculatePremiumServiceImpl service;
 
-    private final TravelCalculatePremiumServiceImpl service = new TravelCalculatePremiumServiceImpl();
-
+    @BeforeEach
+    public void setUp() {
+        dateTimeService = new DateTimeService();
+        service = new TravelCalculatePremiumServiceImpl(dateTimeService);
+    }
     /**
      * Тест проверяет свойство personFirstName
      */
     @Test
     public void testShouldSetPersonFirstName() {
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
-        request.setPersonFirstName("John");
-
+        var request = createRequestWithAllFields();
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
-
         assertEquals("John", response.getPersonFirstName());
     }
 
@@ -30,12 +33,9 @@ public class TravelCalculatePremiumServiceImplAIEachFieldTest {
      */
     @Test
     public void testShouldSetPersonLastName() {
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
-        request.setPersonLastName("Doe");
-
+        var request = createRequestWithAllFields();
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
-
-        assertEquals("Doe", response.getPersonLastName());
+        assertEquals("Peterson", response.getPersonLastName());
     }
 
     /**
@@ -43,13 +43,9 @@ public class TravelCalculatePremiumServiceImplAIEachFieldTest {
      */
     @Test
     public void testShouldSetAgreementDateFrom() {
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
-        Date startDate = new Date();
-        request.setAgreementDateFrom(startDate);
-
+        var request = createRequestWithAllFields();
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
-
-        assertEquals(startDate, response.getAgreementDateFrom());
+        assertEquals(request.getAgreementDateFrom(), response.getAgreementDateFrom());
     }
 
     /**
@@ -57,12 +53,17 @@ public class TravelCalculatePremiumServiceImplAIEachFieldTest {
      */
     @Test
     public void testShouldSetAgreementDateTo() {
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
-        Date endDate = new Date();
-        request.setAgreementDateTo(endDate);
-
+        var request = createRequestWithAllFields();
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
+        assertEquals(request.getAgreementDateTo(), response.getAgreementDateTo());
+    }
 
-        assertEquals(endDate, response.getAgreementDateTo());
+    private TravelCalculatePremiumRequest createRequestWithAllFields() {
+        var request = new TravelCalculatePremiumRequest();
+        request.setPersonFirstName("John");
+        request.setPersonLastName("Peterson");
+        request.setAgreementDateFrom(new Date());
+        request.setAgreementDateTo(new Date());
+        return request;
     }
 }
