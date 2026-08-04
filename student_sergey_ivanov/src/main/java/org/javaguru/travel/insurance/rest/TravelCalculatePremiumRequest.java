@@ -1,11 +1,11 @@
 package org.javaguru.travel.insurance.rest;
 
-import java.util.Date;
-
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Date;
 
 @Getter
 @Setter
