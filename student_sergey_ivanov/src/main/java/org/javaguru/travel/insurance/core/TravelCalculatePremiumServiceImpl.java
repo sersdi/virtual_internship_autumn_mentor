@@ -1,5 +1,7 @@
 package org.javaguru.travel.insurance.core;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
 import org.springframework.stereotype.Component;
@@ -7,15 +9,10 @@ import org.springframework.stereotype.Component;
 import java.math.BigDecimal;
 
 @Component
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)  // lombok создал конструктор  без модификатора доступа.
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
 
-    private DateTimeService dateTimeService;
-    //внедрили зависимость dateTimeService через конструктор
-    public TravelCalculatePremiumServiceImpl(DateTimeService dateTimeService){
-        this.dateTimeService = dateTimeService;
-    }
-
-    public TravelCalculatePremiumServiceImpl(){}
+    private final DateTimeService dateTimeService;
 
     @Override
     public TravelCalculatePremiumResponse calculatePremium(TravelCalculatePremiumRequest request) {
