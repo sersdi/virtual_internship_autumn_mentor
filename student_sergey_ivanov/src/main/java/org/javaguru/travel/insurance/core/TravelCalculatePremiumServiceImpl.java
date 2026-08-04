@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
 
     private DateTimeService dateTimeService;
-
+    //внедрили зависимость dateTimeService через конструктор
     public TravelCalculatePremiumServiceImpl(DateTimeService dateTimeService){
         this.dateTimeService = dateTimeService;
     }
