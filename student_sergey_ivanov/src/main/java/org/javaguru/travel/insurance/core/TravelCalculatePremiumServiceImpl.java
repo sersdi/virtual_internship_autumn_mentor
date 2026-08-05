@@ -2,20 +2,28 @@ package org.javaguru.travel.insurance.core;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
-import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
-import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
+import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
+import org.javaguru.travel.insurance.dto.TravelCalculatePremiumResponse;
+import org.javaguru.travel.insurance.dto.ValidationError;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Component
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)  // lombok создал конструктор  без модификатора доступа.
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)  // lombok создал конструктор для final полей с доступом по пакету
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
 
+    private final TravelCalculatePremiumRequestValidator requestValidator;  // создаем зависимость с валидатором
     private final DateTimeService dateTimeService;
 
     @Override
     public TravelCalculatePremiumResponse calculatePremium(TravelCalculatePremiumRequest request) {
+        List<ValidationError> errors = requestValidator.validate(request);
+        if (!errors.isEmpty()) {
+            return new TravelCalculatePremiumResponse(errors);
+        }
+
         TravelCalculatePremiumResponse response = new TravelCalculatePremiumResponse();
         response.setPersonFirstName(request.getPersonFirstName());
         response.setPersonLastName(request.getPersonLastName());
