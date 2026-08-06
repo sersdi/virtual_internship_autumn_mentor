@@ -3,7 +3,9 @@ package org.javaguru.travel.insurance.core;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -75,6 +77,25 @@ public class TravelCalculatePremiumRequestValidatorTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("firstName");
         when(request.getPersonLastName()).thenReturn("lastName");
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertTrue(errors.isEmpty());
+    }
+
+    @Test
+    public void shouldReturnErrorWhenPersonDateFromIsNull(){
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getAgreementDateFrom()).thenReturn(null);
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertFalse(errors.isEmpty());
+        assertEquals(1, errors.size());
+        assertEquals("personDateFrom", errors.get(0).getField());
+        assertEquals("Must not be empty!", errors.get(0).getField());
+    }
+
+    @Test
+    public void shouldReturnNotErrorWhenPersonDateFromIsPresent(){
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getAgreementDateFrom()).thenReturn(new Date());
         List<ValidationError> errors = requestValidator.validate(request);
         assertTrue(errors.isEmpty());
     }

@@ -1,0 +1,4 @@
+В классе TravelCalculatePremiumRequestValidator:
+    -добавил валидацию в методе Validate даты начала поездки.
+    -добавил метод добавления ошибки validatePersonDateFrom.
+В классе TravelCalculatePremiumRequestValidatorTest написал тесты, в которых  проверил метод validatePersonDateFrom, при null и при каком-то значении.
