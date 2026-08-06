@@ -1,1 +1,3 @@
-Нужно найти ошибку в классе TravelCalculatePremiumRequestValidator
+Нужно найти ошибку в классе TravelCalculatePremiumRequestValidator.
+Проверил тестами.
+Ошибка была в методе validatePersonFirstName который возвращал в условии lastname вместо firstname.
