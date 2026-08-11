@@ -6,3 +6,8 @@
 
 3. Запрос без даты окончания поездки(agreementDateTo) должен считаться не валидным.
 Добавить валидацию на agreementDateTo из запроса.
+
+4. Дата окончания поездки
+   (agreementDateTo) должна быть после даты начала (agreementDateFrom).
+   Добавить валидацию на то, что agreementDateFrom
+   должен быть меньше agreementDateTo.

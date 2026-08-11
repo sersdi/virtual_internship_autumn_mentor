@@ -113,4 +113,28 @@ public class TravelCalculatePremiumRequestValidatorTest {
         assertEquals("Must not be empty!", errors.get(0).getMessage());
     }
 
+    @Test
+    public void shouldReturnErrorWhenAgreementDateDiffIsTrue(){
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getPersonFirstName()).thenReturn("firstName");
+        when(request.getPersonLastName()).thenReturn("lastName");
+        when(request.getAgreementDateFrom()).thenReturn(new Date(2026,11,1));
+        when(request.getAgreementDateTo()).thenReturn(new Date(2025,11,28));
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertFalse(errors.isEmpty());
+        assertEquals(1, errors.size());
+        assertEquals("dateDiff", errors.get(0).getField());
+        assertEquals("dateFrom must be smaller than DateTo!", errors.get(0).getMessage());
+    }
+    @Test
+    public void shouldNotReturnErrorWhenAgreementDateDiffIsFalse(){
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getPersonFirstName()).thenReturn("firstName");
+        when(request.getPersonLastName()).thenReturn("lastName");
+        when(request.getAgreementDateFrom()).thenReturn(new Date(2026, 11, 1));
+        when(request.getAgreementDateTo()).thenReturn(new Date(2026, 11, 28));
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertTrue(errors.isEmpty());
+    }
+
 }

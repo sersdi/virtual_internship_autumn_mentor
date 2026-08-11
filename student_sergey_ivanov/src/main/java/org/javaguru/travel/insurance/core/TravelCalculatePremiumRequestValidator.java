@@ -13,10 +13,13 @@ class TravelCalculatePremiumRequestValidator {
 
     public List<ValidationError> validate(TravelCalculatePremiumRequest request) {
         List<ValidationError> errors = new ArrayList<>();
-        validatePersonFirstName(request).ifPresent(errors::add); // добавил валидацию имени
-        validatePersonLastName(request).ifPresent(errors::add); // добавил валидацию  фамилии
-        validatePersonDateFrom(request).ifPresent(errors::add); // добавил валидацию даты начала поездки
-        validatePersonDateTo(request).ifPresent(errors::add); // добавил валидацию даты окончания поездки
+        validatePersonFirstName(request).ifPresent(errors::add);  // добавил валидацию имени
+        validatePersonLastName(request).ifPresent(errors::add);  // добавил валидацию  фамилии
+        validateAgreementDateFrom(request).ifPresent(errors::add); // добавил валидацию даты начала поездки
+        validateAgreementDateTo(request).ifPresent(errors::add);   // добавил валидацию даты окончания поездки
+        if(request.getAgreementDateFrom() != null && request.getAgreementDateTo() != null) {
+            validateAgreementDateDiff(request).ifPresent(errors::add);                          // добавил валидацию на dateFrom<dateTo
+        }
         return errors;
     }
 
@@ -32,15 +35,22 @@ class TravelCalculatePremiumRequestValidator {
                 : Optional.empty();
     }
 
-    private Optional<ValidationError> validatePersonDateFrom(TravelCalculatePremiumRequest request) {
+    private Optional<ValidationError> validateAgreementDateFrom(TravelCalculatePremiumRequest request) {
         return (request.getAgreementDateFrom() == null)
                 ? Optional.of(new ValidationError("agreementDateFrom","Must not be empty!"))
                 : Optional.empty();
     }
 
-    private Optional<ValidationError> validatePersonDateTo(TravelCalculatePremiumRequest request){
+    private Optional<ValidationError> validateAgreementDateTo(TravelCalculatePremiumRequest request){
         return (request.getAgreementDateTo() == null)
                 ? Optional.of(new ValidationError("agreementDateTo", "Must not be empty!"))
                 : Optional.empty();
     }
+
+    private Optional<ValidationError> validateAgreementDateDiff(TravelCalculatePremiumRequest request) {
+        return(request.getAgreementDateFrom().getTime() > request.getAgreementDateTo().getTime())
+                ? Optional.of(new ValidationError("dateDiff", "dateFrom must be smaller than DateTo!"))
+                : Optional.empty();
+    }
+
 }
