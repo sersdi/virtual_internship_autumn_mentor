@@ -13,9 +13,10 @@ class TravelCalculatePremiumRequestValidator {
 
     public List<ValidationError> validate(TravelCalculatePremiumRequest request) {
         List<ValidationError> errors = new ArrayList<>();
-        validatePersonFirstName(request).ifPresent(errors::add);
+        validatePersonFirstName(request).ifPresent(errors::add); // добавил валидацию имени
         validatePersonLastName(request).ifPresent(errors::add); // добавил валидацию  фамилии
         validatePersonDateFrom(request).ifPresent(errors::add); // добавил валидацию даты начала поездки
+        validatePersonDateTo(request).ifPresent(errors::add); // добавил валидацию даты окончания поездки
         return errors;
     }
 
@@ -37,4 +38,9 @@ class TravelCalculatePremiumRequestValidator {
                 : Optional.empty();
     }
 
+    private Optional<ValidationError> validatePersonDateTo(TravelCalculatePremiumRequest request){
+        return (request.getAgreementDateTo() == null)
+                ? Optional.of(new ValidationError("agreementDateTo", "Must not be empty!"))
+                : Optional.empty();
+    }
 }
