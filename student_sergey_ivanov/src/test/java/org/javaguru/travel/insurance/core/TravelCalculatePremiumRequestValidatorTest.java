@@ -5,6 +5,8 @@ import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -114,27 +116,49 @@ public class TravelCalculatePremiumRequestValidatorTest {
     }
 
     @Test
-    public void shouldReturnErrorWhenAgreementDateDiffIsTrue(){
+    public void shouldReturnErrorWhenDateFromIsEqualsDateTo() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("firstName");
         when(request.getPersonLastName()).thenReturn("lastName");
-        when(request.getAgreementDateFrom()).thenReturn(new Date(2026,11,1));
-        when(request.getAgreementDateTo()).thenReturn(new Date(2025,11,28));
+        when(request.getAgreementDateFrom()).thenReturn(createDate("01.01.2023"));
+        when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2023"));
         List<ValidationError> errors = requestValidator.validate(request);
         assertFalse(errors.isEmpty());
         assertEquals(1, errors.size());
-        assertEquals("dateDiff", errors.get(0).getField());
-        assertEquals("dateFrom must be smaller than DateTo!", errors.get(0).getMessage());
+        assertEquals("agreementDateFrom", errors.get(0).getField());
+        assertEquals("Must be less then agreementDateTo!", errors.get(0).getMessage());
     }
+
     @Test
-    public void shouldNotReturnErrorWhenAgreementDateDiffIsFalse(){
+    public void shouldReturnErrorWhenDateFromIsAfterDateTo() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("firstName");
         when(request.getPersonLastName()).thenReturn("lastName");
-        when(request.getAgreementDateFrom()).thenReturn(new Date(2026, 11, 1));
-        when(request.getAgreementDateTo()).thenReturn(new Date(2026, 11, 28));
+        when(request.getAgreementDateFrom()).thenReturn(createDate("10.01.2023"));
+        when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2023"));
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertFalse(errors.isEmpty());
+        assertEquals(1, errors.size());
+        assertEquals("agreementDateFrom", errors.get(0).getField());
+        assertEquals("Must be less then agreementDateTo!", errors.get(0).getMessage());
+    }
+
+    @Test
+    public void shouldNotReturnErrorWhenPersonFirstNameIsPresent() {
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getPersonFirstName()).thenReturn("firstName");
+        when(request.getPersonLastName()).thenReturn("lastName");
+        when(request.getAgreementDateFrom()).thenReturn(createDate("01.01.2023"));
+        when(request.getAgreementDateTo()).thenReturn(createDate("10.01.2023"));
         List<ValidationError> errors = requestValidator.validate(request);
         assertTrue(errors.isEmpty());
     }
 
+    private Date createDate(String dateStr) {
+        try {
+            return new SimpleDateFormat("dd.MM.yyyy").parse(dateStr);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

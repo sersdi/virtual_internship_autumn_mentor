@@ -5,6 +5,7 @@ import org.javaguru.travel.insurance.dto.ValidationError;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,9 +18,7 @@ class TravelCalculatePremiumRequestValidator {
         validatePersonLastName(request).ifPresent(errors::add);  // добавил валидацию  фамилии
         validateAgreementDateFrom(request).ifPresent(errors::add); // добавил валидацию даты начала поездки
         validateAgreementDateTo(request).ifPresent(errors::add);   // добавил валидацию даты окончания поездки
-        if(request.getAgreementDateFrom() != null && request.getAgreementDateTo() != null) {
-            validateAgreementDateDiff(request).ifPresent(errors::add);                          // добавил валидацию на dateFrom<dateTo
-        }
+        validateDateFromLessThenDateTo(request).ifPresent(errors::add); // добавил валидацию на проверку DateFromLessThenDateTo
         return errors;
     }
 
@@ -47,10 +46,14 @@ class TravelCalculatePremiumRequestValidator {
                 : Optional.empty();
     }
 
-    private Optional<ValidationError> validateAgreementDateDiff(TravelCalculatePremiumRequest request) {
-        return(request.getAgreementDateFrom().getTime() > request.getAgreementDateTo().getTime())
-                ? Optional.of(new ValidationError("dateDiff", "dateFrom must be smaller than DateTo!"))
+    private Optional<ValidationError> validateDateFromLessThenDateTo(TravelCalculatePremiumRequest request) {
+        Date dateFrom = request.getAgreementDateFrom();
+        Date dateTo = request.getAgreementDateTo();
+        return (dateFrom != null && dateTo != null
+                && (dateFrom.equals(dateTo) || dateFrom.after(dateTo)))
+                ? Optional.of(new ValidationError("agreementDateFrom", "Must be less then agreementDateTo!"))
                 : Optional.empty();
     }
+
 
 }
