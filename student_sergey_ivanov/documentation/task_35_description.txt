@@ -1,0 +1,3 @@
+Сделал рефакторинг кода.
+В классе TravelCalculatePremiumServiceImpl изменил метод calculatePremium.
+    -Добавил 2 метода buildResponse с разными параметрами.
