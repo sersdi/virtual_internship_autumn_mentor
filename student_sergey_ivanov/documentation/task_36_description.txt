@@ -1,0 +1,10 @@
+Модернизировал код.
+Так-как в программе не было отдельного места где бы рассчитывалась страховая премия,
+то создал отдельный класс:
+    -TravelPremiumUnderwriting
+В классе TravelPremiumUnderwriting еще раз написал метод calculatePremium.
+В core TravelCalculatePremiumServiceImpl написал бизнес логику для класса TravelPremiumUnderwriting:
+    -добавил зависимость через поле premiumUnderwriting;
+    -в методе calculatePremium переписал логику return.
+    -переписал методы buildResponse.
+Создал класс TravelPremiumUnderwritingTest в нем прописал тесты для класса TravelPremiumUnderwriting.
