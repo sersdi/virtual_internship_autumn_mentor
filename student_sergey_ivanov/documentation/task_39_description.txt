@@ -1,0 +1,323 @@
+Знакомство с REST.
+REST (Representational state transfer) – это стиль архитектуры программного
+обеспечения для распределенных систем, таких как World Wide Web, который,
+как правило, используется для построения веб-служб. Термин REST был введен
+в 2000 году Роем Филдингом, одним из авторов HTTP-протокола. Системы,
+поддерживающие REST, называются RESTful-системами.
+
+Узнал как можно больше информации о:
+- связи HTTP и REST;
+- способы формирования уникальных URL;
+- GET/POST/PUT/DELETE и их маппинге на CRUD операции (Create/Read/Update/Delete).
+
+REST и HTTP тесно связаны, но это не одно и то же.
+HTTP — это протокол: он задаёт формат сообщений, правила передачи данных, методы (GET, POST и т.д.), коды ответов, заголовки.
+REST — это архитектурный стиль (набор принципов) для построения распределённых систем и API. Его сформулировал Рой Филдинг, один из авторов спецификации HTTP.
+Простыми словами: HTTP — это «дорога и правила движения транспорта», а REST — это «принципы застройки города», которые определяют, как сервисы должны общаться по этой дороге.
+
+Способы формирования уникальных URL:
+
+- Автоинкрементный числовой ID (sequence / SERIAL)
+    Самый простой вариант: база данных сама выдаёт следующий номер.
+    Примеры URL:
+        /users/123
+        /orders/456
+    Где применяется: почти любой внутренний или публичный API, где не нужна скрытность ID.
+    Плюсы:
+        просто и быстро;
+        удобно для JOIN в БД;
+        естественный порядок создания.
+    Минусы:
+        ID предсказуемы (можно перебирать ресурсы);
+        при шардировании или мультикластерной архитектуре могут конфликтовать.
+    Реализация:
+        PostgreSQL:
+            CREATE TABLE users (
+              id SERIAL PRIMARY KEY,
+              name TEXT NOT NULL
+            );
+        Java (JDBC / JPA):
+            @Entity
+            public class User {
+                @Id
+                @GeneratedValue(strategy = GenerationType.IDENTITY) // автоинкремент
+                private Long id;
+                // ...
+            }
+
+
+- UUID (универсальный уникальный идентификатор)
+    128‑битный идентификатор, который генерируется так, чтобы коллизии были практически невозможны.
+Пример URL:
+    /orders/f47ac10b-58cc-4372-a567-0e02b2c3d479
+Плюсы:
+    -глобальная уникальность (даже между разными БД и кластерами);
+    -сложно угадать соседние ресурсы;
+    -можно генерировать на клиенте без обращения к БД.
+Минусы:
+    -длинные строки;
+    -хуже читаются;
+    -индексы по UUID чуть менее эффективны, чем по числам.
+Реализация:
+    PostgreSQL:
+        CREATE TABLE orders (
+          id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+          total DECIMAL NOT NULL
+        );
+        (нужен pgcrypto для gen_random_uuid())
+    Java:
+        import java.util.UUID;
+        UUID id = UUID.randomUUID(); // например: f47ac10b-58cc-4372-a567-0e02b2c3d479
+        String url = "/orders/" + id;
+
+
+-ULID / NanoID (короткие уникальные ID)
+Это альтернативы UUID: они тоже уникальны, но короче и часто лексикографически упорядочены (удобно для пагинации по ID).
+Примеры:
+    ULID: 01ARZ3NDEKTSV4RRFFQ69G5FAV
+    NanoID: V1StGXR8_Z5jdHi6B-myT
+Плюсы:
+    -короче UUID;
+    -часто читабельнее;
+    -ULID сохраняет порядок по времени.
+Минусы:
+    -не стандарт де‑факто, нужно подключать библиотеки;
+    -в БД нужен тип VARCHAR или TEXT.
+Java (NanoID):
+    import com.twitter.snowflake.NanoId; // или другая библиотека
+    String id = NanoId.code(10); // короткий ID
+    Snowflake ID (Twitter‑style)
+    Числовой ID, который кодирует в себе время, ID машины/процесса и счётчик. Получается уникальный и упорядоченный по времени ID.
+Плюсы:
+    -числа (удобны в БД и URL);
+    -упорядочены по времени (хорошо для курсоров и пагинации);
+    -уникальны в распределённой среде.
+Минусы:
+    -нужно реализовать генератор (или взять готовую библиотеку);
+    -формат зависит от реализации.
+    -Часто используется в высоконагруженных системах.
+
+
+-Человекочитаемый slug (для публичных страниц)
+Для статей, товаров, блогов делают «красивые» ID на основе названия.
+Примеры:
+    /blog/kak-rabotat-s-http
+    /products/arabica-coffee-bag-200g
+Чтобы обеспечить уникальность, обычно:
+    -приводят к нижнему регистру;
+    -заменяют пробелы на -;
+    -убирают спецсимволы;
+    -проверяют в БД, нет ли уже такого slug;
+    -если есть — добавляют суффикс (например, -2, -3).
+Плюс: удобно людям и для SEO.
+Минус: сложнее гарантировать уникальность и поддерживать при переименованиях.
+Java‑пример:
+    public static String toSlug(String title) {
+        return title.toLowerCase()
+            .replaceAll("[^a-z0-9]+", "-")
+            .replaceAll("^-+|-+$", "");
+    }
+// Далее проверка в БД и добавление суффикса при необходимости
+
+
+-Комбинация ID + slug (самый практичный вариант для контента)
+    URL выглядит красиво, но уникальность и логика опираются на ID.
+Пример:
+    /articles/42/kak-pisat-rest-api
+Сервер берёт 42 как ID, slug игнорирует (или проверяет для редиректа).\
+Если slug поменяется, старые ссылки продолжают работать.
+Плюсы: и удобно, и надёжно.
+Минусы: URL длиннее.
+
+
+-Иерархические ID (вложенные ресурсы)
+Когда ресурс принадлежит другому, используют вложенность:
+    /projects/567/tasks/890
+    /stores/12/products/34
+Уникальность обеспечивается либо глобальным ID дочернего ресурса, либо парой (parent_id, child_id).
+Это соответствует REST‑стилю: URL отражает отношения «родитель—потомок».
+
+-Короткие коды (как в сокращателях ссылок)
+Для реферальных ссылок, промокодов, коротких URL используют короткие уникальные строки (часто Base62).
+/s/aZ3b9C
+Здесь нужен отдельный маппинг: короткий код → реальный ID ресурса.
+Плюсы: короткие и удобные для передачи.
+Минусы: нужна дополнительная таблица и логика.
+
+Как выбирать способ под REST
+    Сценарий	                Рекомендуемый ID	                    Почему
+
+Внутренний                CRUD API  UUID или Snowflake	    Уникальность без конфликтов в распределённой системе
+
+Публичный                 REST API (простой)Автоинкремент   Просто, понятно, удобно для тестов и демо
+
+Контент(статьи, товары)      ID + slug	                    Читаемость и SEO, при этом надёжная идентификация по ID
+
+Файлы, временные объекты    UUID или timestamp+random	    Не нужно «красивое» имя, важна уникальность
+
+Высоконагруженные системы    Snowflake / ULID	            Упорядоченность и уникальность в кластере
+
+Реферальные/короткие ссылки	 Короткие коды + маппинг	    Удобство передачи и кликабельность
+
+Важные REST‑нюансы
+ID должен быть неизменяемым. Не меняйте ID ресурса после создания: это ломает кэши, закладки, внешние ссылки.
+Не кодируйте в ID бизнес‑данные. Например, не делайте ID вида USR-2024-001: год и префикс могут измениться, и это усложнит миграции.
+Используйте path‑параметры, а не query. В REST ресурс адресуется через путь: /users/{id}, а не /users?id=123.
+Соблюдайте единый стиль. Если выбрали UUID — везде UUID; если автоинкремент — везде числа. Смешивание усложняет клиентскую часть и документацию.
+
+Пример REST‑контроллера на Spring (Java)
+java
+@RestController
+@RequestMapping("/api")
+public class OrderController {
+
+    @GetMapping("/orders/{id}")
+    public ResponseEntity<Order> getOrder(@PathVariable UUID id) {
+        // логика получения по UUID
+        return ResponseEntity.ok(new Order(id, "example"));
+    }
+
+    @PostMapping("/orders")
+    public ResponseEntity<Order> createOrder(@RequestBody OrderDto dto) {
+        UUID id = UUID.randomUUID();
+        Order order = new Order(id, dto.getTotal());
+        // сохранение в БД...
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .location(URI.create("/api/orders/" + id))
+            .body(order);
+    }
+}
+Здесь:
+UUID как уникальный ID ресурса;
+Location в ответе POST указывает на новый URL—это каноничный REST‑паттерн.
+
+
+GET/POST/PUT/DELETE и их маппинге на CRUD операции (Create/Read/Update/Delete).
+ Маппинг HTTP‑методов на CRUD в REST
+ CRUD (Create, Read, Update, Delete)—это четыре базовые операции над данными. В REST их принято сопоставлять с HTTP‑методами, опираясь на семантику этих методов.
+
+HTTP‑метод   CRUD‑операция              Что делает                                  Пример URL
+POST	    Create (создание)	    Создаёт новый ресурс на сервере	POST                /users
+GET	        Read (чтение)	        Получает ресурс или коллекцию ресурсов	        GET /users, GET /users/42
+PUT	        Update (полная замена)	Полностью заменяет ресурс по указанному URI	    PUT /users/42
+PATCH	    Update (частичное)	    Частично обновляет ресурс	                    PATCH /users/42
+DELETE	    Delete (удаление)	    Удаляет ресурс	                                DELETE /users/42
+
+Как это выглядит на практике (с примерами)
+
+
+-Create (POST)
+    Клиент отправляет данные нового ресурса.
+    Сервер создаёт объект и возвращает его (часто с кодом 201 Created и заголовком Location с URL созданного ресурса).
+Запрос:
+    http
+    POST /users
+    Content-Type: application/json
+    {
+      "name": "Анна",
+      "email": "anna@example.com"
+    }
+Ответ:
+    http
+    HTTP/1.1 201 Created
+    Location: /users/123
+    Content-Type: application/json
+    {
+      "id": 123,
+      "name": "Анна",
+      "email": "anna@example.com"
+    }
+
+в Spring это часто выглядит так:
+    @PostMapping("/users")
+    public ResponseEntity<User> createUser(@RequestBody UserDto dto) {
+        User user = service.create(dto);
+        URI location = URI.create("/users/" + user.getId());
+        return ResponseEntity.created(location).body(user);
+    }
+
+
+-Read (GET)
+    GET используют для получения данных. Он безопасен (не должен менять состояние сервера) и идемпотентен.
+    GET /users — список пользователей.
+    GET /users/123—один пользователь.
+Пример ответа:
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    [
+      {"id": 1, "name": "Иван"},
+      {"id": 2, "name": "Мария"}
+    ]
+В Spring:
+@GetMapping("/users/{id}")
+public ResponseEntity<User> getUser(@PathVariable Long id) {
+    return ResponseEntity.ok(service.getById(id));
+}
+
+
+-Update (PUT vs PATCH)
+Это частая точка путаницы, поэтому разберу подробно.
+PUT — полная замена ресурса
+    Ты говоришь серверу: «Вот полное состояние ресурса, замени им текущее».
+    Если ресурса нет — создай. Если есть — полностью перезапиши.
+Запрос:
+    http
+    PUT /users/123
+    Content-Type: application/json
+    {
+      "name": "Анна Обновлённая",
+      "email": "new@example.com",
+      "role": "admin"
+    }
+Важно: в REST PUT обычно требует передачи всех обязательных полей, иначе сервер может удалить то, что не указано.
+
+
+-PATCH - частичное обновление
+Ты передаёшь только то, что нужно изменить.
+
+Запрос (JSON Patch или обычный JSON):
+    PATCH /users/123
+    Content-Type: application/json
+    {
+      "role": "editor"
+    }
+Сервер обновит только поле role, остальные останутся как были.
+
+В Java (упрощённо):
+    @PutMapping("/users/{id}")
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody UserDto full) {
+        return ResponseEntity.ok(service.updateFull(id, full));
+    }
+    @PatchMapping("/users/{id}")
+    public ResponseEntity<User> patchUser(@PathVariable Long id, @RequestBody Map<String, Object> partial) {
+        return ResponseEntity.ok(service.updatePartial(id, partial));
+    }
+
+
+-Delete (DELETE)
+Удаляет ресурс по URI. Часто возвращает 204 No Content (без тела) или 200 OK с каким‑то сообщением.
+Запрос:
+    DELETE /users/123
+Ответ:
+    HTTP/1.1 204 No Content
+В Spring:
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+Важные нюансы семантики (важно для REST и собеседований)
+Идемпотентность
+    Идемпотентные: GET, PUT, DELETE. Повторный вызов даёт тот же эффект, что и однократный.
+    Не идемпотентный: POST. Повторный POST может создать несколько одинаковых ресурсов.
+Безопасность:
+    Безопасные (не меняют состояние): GET, HEAD.
+    Остальные могут менять состояние.
+Это напрямую влияет на то, как проектируют API: например, для создания заказов используют POST, потому что нельзя гарантировать, что повторный запрос не создаст второй заказ.
+
+Частые ошибки и антипаттерны
+❌ GET /deleteUser?id=123—нарушение семантики GET. Для удаления нужен DELETE.
+❌ POST /updateUser—лучше использовать PUT или PATCH.
+❌ Смешивание глаголов в URL: POST /createUser, GET /getUserById. В REST URL—это ресурс, а действие задаётся методом.
+                   Правильно: POST /users, GET /users/123.
