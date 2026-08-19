@@ -23,7 +23,6 @@ import static org.mockito.Mockito.when;
 class TravelCalculatePremiumServiceImplTest {
 
     @Mock private TravelCalculatePremiumRequestValidator requestValidator;
-    @Mock private DateTimeService dateTimeService;
     @Mock private TravelPremiumUnderwriting travelPremiumUnderwriting;
     @InjectMocks
     private TravelCalculatePremiumServiceImpl service;
@@ -40,7 +39,7 @@ class TravelCalculatePremiumServiceImplTest {
     @Test
     public void shouldPopulatePersonLastName() {
         var request = createRequestWithAllFields();
-        when(dateTimeService.getDaysBetween(request.getAgreementDateFrom(), request.getAgreementDateTo())).thenReturn(0L);
+        when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
         assertEquals(request.getPersonLastName(), response.getPersonLastName());
@@ -49,7 +48,7 @@ class TravelCalculatePremiumServiceImplTest {
     @Test
     public void shouldPopulateAgreementDateFrom() {
         var request = createRequestWithAllFields();
-        when(dateTimeService.getDaysBetween(request.getAgreementDateFrom(), request.getAgreementDateTo())).thenReturn(0L);
+        when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));;
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
         assertEquals(request.getAgreementDateFrom(), response.getAgreementDateFrom());
@@ -58,7 +57,7 @@ class TravelCalculatePremiumServiceImplTest {
     @Test
     public void shouldPopulateAgreementDateTo() {
         var request = createRequestWithAllFields();
-        when(dateTimeService.getDaysBetween(request.getAgreementDateFrom(), request.getAgreementDateTo())).thenReturn(0L);
+        when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
         assertEquals(request.getAgreementDateTo(), response.getAgreementDateTo());
@@ -67,7 +66,7 @@ class TravelCalculatePremiumServiceImplTest {
     @Test
     public void shouldPopulateAgreementPrice() {
         var request = createRequestWithAllFields();
-        when(dateTimeService.getDaysBetween(request.getAgreementDateFrom(), request.getAgreementDateTo())).thenReturn(0L);
+        when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
         assertNotNull(response.getAgreementPrice());
@@ -121,7 +120,7 @@ class TravelCalculatePremiumServiceImplTest {
         var validationError = new ValidationError("field", "message");
         when(requestValidator.validate(request)).thenReturn(List.of(validationError));
         var response = service.calculatePremium(request);
-        verifyNoInteractions(dateTimeService);
+        verifyNoInteractions(travelPremiumUnderwriting);
     }
 
     private TravelCalculatePremiumRequest createRequestWithAllFields() {
