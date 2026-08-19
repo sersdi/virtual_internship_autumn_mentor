@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -23,14 +24,14 @@ class TravelCalculatePremiumServiceImplTest {
 
     @Mock private TravelCalculatePremiumRequestValidator requestValidator;
     @Mock private DateTimeService dateTimeService;
-
+    @Mock private TravelPremiumUnderwriting travelPremiumUnderwriting;
     @InjectMocks
     private TravelCalculatePremiumServiceImpl service;
 
     @Test
     public void shouldPopulatePersonFirstName() {
         var request = createRequestWithAllFields();
-        when(dateTimeService.getDaysBetween(request.getAgreementDateFrom(), request.getAgreementDateTo())).thenReturn(0L);
+        when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
         assertEquals(request.getPersonFirstName(), response.getPersonFirstName());
