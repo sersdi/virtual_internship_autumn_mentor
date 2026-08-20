@@ -1,0 +1,7 @@
+Нужно было поменять ответ на http запрос в json файле. А именно формат даты.
+    ("agreementDateFrom": "2021-05-25T00:00:00.000+00:00",
+     "agreementDateTo": "2021-05-29T00:00:00.000+00:00",)
+На формат "yyyy-MM-dd".
+
+Для этого использовал зависимость: implementation('com.fasterxml.jackson.core:jackson-core:2.14.2') в build.gradle.
+В классе TravelCalculatePremiumResponse добавил аннотацию @JsonFormat(pattern = "yyyy-MM-dd") на 2 даты.
