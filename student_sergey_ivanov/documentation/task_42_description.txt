@@ -1,0 +1,2 @@
+В классе TravelCalculatePremiumRequest
+Указал явно в запросе формат даты при помощи аннотации @JsonFormat(pattern = "yyyy-MM-dd")
