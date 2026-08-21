@@ -1,0 +1,10 @@
+Заменил сравнение ответов в тестах на сравнение ответов из JSON файлов.
+Для этого использовал следующие объекты:
+    MvcResult result = присвоил значение mockMvc.perform(post("/insurance/travel/")...
+
+    String responseBodyContent = result.getResponse().getContentAsString();
+    ObjectMapper mapper = new ObjectMapper();
+    assertEquals(mapper.readTree(response), mapper.readTree(responseBodyContent));
+
+Так-же упростил код, добавил стринг request/response переменные и присвоил им значение ридера пути файлов readJsonFromFile()).
+Весь длинный путь в коде у запросов и ответов заменил на переменные.
