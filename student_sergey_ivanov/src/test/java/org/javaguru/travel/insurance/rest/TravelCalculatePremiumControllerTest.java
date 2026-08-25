@@ -90,6 +90,22 @@ public class TravelCalculatePremiumControllerTest {
         executeAndCompare(request, response);
     }
 
+    @Test
+    @DisplayName("Test case 8: agreementDateFromIsNotPresent")
+    public void agreementDateFromIsNotPresent() throws Exception {
+        request = "rest/TravelCalculatePremiumRequest_agreementDateFromIsNotPresent.json";
+        response = "rest/TravelCalculatePremiumResponse_agreementDateFromIsNotPresent.json";
+        executeAndCompare(request, response);
+    }
+
+    @Test
+    @DisplayName("Test case 9: agreementDateToIsNotPresent")
+    public void agreementDateToIsNotPresent() throws Exception {
+        request = "rest/TravelCalculatePremiumRequest_agreementDateToIsNotPresent.json";
+        response = "rest/TravelCalculatePremiumResponse_agreementDateToIsNotPresent.json";
+        executeAndCompare(request, response);
+    }
+
     private void executeAndCompare(String jsonRequestFilePath,
                                    String jsonResponseFilePath) throws Exception {
         String jsonRequest = jsonFileReader.readJsonFromFile(jsonRequestFilePath);

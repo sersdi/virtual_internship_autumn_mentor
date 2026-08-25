@@ -1,0 +1,13 @@
+{
+  "errors": [
+    {
+      "field": "agreementDateFrom or agreementDateTo",
+      "message": "Date must be in present!"
+    }
+  ],
+  "personFirstName": null,
+  "personLastName": null,
+  "agreementDateFrom": null,
+  "agreementDateTo": null,
+  "agreementPrice": null
+}
