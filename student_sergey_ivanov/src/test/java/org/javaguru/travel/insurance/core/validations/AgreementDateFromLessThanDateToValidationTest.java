@@ -1,5 +1,7 @@
-package org.javaguru.travel.insurance.core;
+package org.javaguru.travel.insurance.core.validations;
 
+import org.javaguru.travel.insurance.core.DateTimeService;
+import org.javaguru.travel.insurance.core.TravelCalculatePremiumRequestValidator;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
@@ -19,7 +21,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class AgreementDateToValidationTest {
+public class AgreementDateFromLessThanDateToValidationTest {
 
     @Mock
     private DateTimeService dateTimeService;
@@ -27,18 +29,33 @@ public class AgreementDateToValidationTest {
     private TravelCalculatePremiumRequestValidator requestValidator;
 
     @Test
-    public void shouldReturnErrorWhenAgreementDateToIsNull(){
+    public void shouldReturnErrorWhenDateFromIsEqualsDateTo() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("firstName");
         when(request.getPersonLastName()).thenReturn("lastName");
         when(request.getAgreementDateFrom()).thenReturn(createDate("26.08.2026"));
-        when(request.getAgreementDateTo()).thenReturn(null);
+        when(request.getAgreementDateTo()).thenReturn(createDate("26.08.2026"));
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("25.08.2026"));
         List<ValidationError> errors = requestValidator.validate(request);
         assertFalse(errors.isEmpty());
         assertEquals(1, errors.size());
-        assertEquals("agreementDateTo", errors.get(0).getField());
-        assertEquals("Must not be empty!", errors.get(0).getMessage());
+        assertEquals("agreementDateFrom", errors.get(0).getField());
+        assertEquals("Must be less then agreementDateTo!", errors.get(0).getMessage());
+    }
+
+    @Test
+    public void shouldReturnErrorWhenDateFromIsAfterDateTo() {
+        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        when(request.getPersonFirstName()).thenReturn("firstName");
+        when(request.getPersonLastName()).thenReturn("lastName");
+        when(request.getAgreementDateFrom()).thenReturn(createDate("30.08.2026"));
+        when(request.getAgreementDateTo()).thenReturn(createDate("28.08.2026"));
+        when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("25.08.2026"));
+        List<ValidationError> errors = requestValidator.validate(request);
+        assertFalse(errors.isEmpty());
+        assertEquals(1, errors.size());
+        assertEquals("agreementDateFrom", errors.get(0).getField());
+        assertEquals("Must be less then agreementDateTo!", errors.get(0).getMessage());
     }
 
     private Date createDate(String dateStr) {
@@ -48,4 +65,5 @@ public class AgreementDateToValidationTest {
             throw new RuntimeException(e);
         }
     }
+
 }

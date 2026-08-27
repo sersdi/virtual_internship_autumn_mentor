@@ -15,7 +15,7 @@ public class DateTimeService {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
-    Date getCurrentDateTime() {
+    public Date getCurrentDateTime() {
         ZoneId zone = ZoneId.of("Europe/Riga");
         ZonedDateTime zonedDateTime = ZonedDateTime.now(zone);
         return Date.from(zonedDateTime.toInstant());
