@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-public class PersonLastNameValidation {
-    public Optional<ValidationError> validatePersonLastName(TravelCalculatePremiumRequest request) {
+class PersonLastNameValidation implements TravelRequestValidation {
+    @Override
+    public Optional<ValidationError> execute(TravelCalculatePremiumRequest request) {
         return (request.getPersonLastName() == null || request.getPersonLastName().isEmpty())
                 ? Optional.of(new ValidationError("personLastName", "Must not be empty!"))
                 : Optional.empty();
