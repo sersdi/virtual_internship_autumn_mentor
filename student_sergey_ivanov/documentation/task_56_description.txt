@@ -1,0 +1,3 @@
+Вынес все валидации из класса TravelCalculatePremiumRequestValidator в отдельные классы.
+В классе TravelCalculatePremiumRequestValidator остались вызовы каждой валидации.
+Создал тесты в папке Test для каждого класса валидации из папки core.
