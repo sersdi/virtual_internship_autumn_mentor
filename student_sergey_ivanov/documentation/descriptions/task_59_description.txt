@@ -1,0 +1,3 @@
+Переместил класс TravelCalculatePremiumRequestValidator
+в пакет /core/validations, сделал для него публичный интерфейс,
+оставил только package level access для TravelRequestValidation.

@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-public class AgreementDateFromInPresentValidation implements TravelRequestValidation {
+class AgreementDateFromInPresentValidation implements TravelRequestValidation {
 
     private final DateTimeService dateTimeService;
 

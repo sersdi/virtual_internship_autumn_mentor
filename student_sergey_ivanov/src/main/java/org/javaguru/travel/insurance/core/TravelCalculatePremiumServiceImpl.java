@@ -2,6 +2,7 @@ package org.javaguru.travel.insurance.core;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import org.javaguru.travel.insurance.core.validations.TravelCalculatePremiumRequestValidatorImpl;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumResponse;
 import org.javaguru.travel.insurance.dto.ValidationError;
@@ -14,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)  // lombok создал конструктор для final полей с доступом по пакету
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
 
-    private final TravelCalculatePremiumRequestValidator requestValidator;  // создаем зависимость с валидатором
+    private final TravelCalculatePremiumRequestValidatorImpl requestValidator;  // создаем зависимость с валидатором
     private final TravelPremiumUnderwriting premiumUnderwriting;
 
     @Override
