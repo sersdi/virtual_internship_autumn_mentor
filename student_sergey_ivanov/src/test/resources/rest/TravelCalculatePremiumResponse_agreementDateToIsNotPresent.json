@@ -5,8 +5,8 @@
       "message": "Must be less then agreementDateTo!"
     },
     {
-      "field": "agreementDateFrom or agreementDateTo",
-      "message": "Date must be in present!"
+      "field": "agreementDateTo",
+      "message": "Must be in the future!"
     }
   ],
   "personFirstName": null,
