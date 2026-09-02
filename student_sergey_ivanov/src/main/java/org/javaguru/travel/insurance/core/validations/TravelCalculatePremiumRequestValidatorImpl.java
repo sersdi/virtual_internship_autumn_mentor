@@ -11,8 +11,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-public class TravelCalculatePremiumRequestValidatorImpl
-    implements TravelCalculatePremiumRequestValidator {
+public class TravelCalculatePremiumRequestValidatorImpl implements TravelCalculatePremiumRequestValidator {
 
     private final List<TravelRequestValidation> travelValidations;
 
