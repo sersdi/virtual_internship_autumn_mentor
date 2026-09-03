@@ -1,0 +1,7 @@
+Превратил запрос (TravelCalculatePremiumRequest)
+в строку (формат JSON) и залогировал его в систему логирования.
+
+Для этого я создал класс TravelCalculatePremiumRequestLogger в rest.
+    В нем создал статик файнал логгер и метод log()
+В классе TravelCalculatePremiumController добавил зависимость с TravelCalculatePremiumRequestLogger через поле.
+    Вызвал в методе calculatePremium() requestLogger.log(request);
