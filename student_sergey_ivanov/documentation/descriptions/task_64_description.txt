@@ -1,0 +1,13 @@
+Нужно добавить в проект функционал замера
+времени выполнения запроса. Для этого воспользовался
+классом Stopwatch из библиотеки Google Guava.
+
+Создал класс TravelCalculatePremiumRequestExecutionTimeLogger
+    В нем создал метод logExecutionTime()
+В классе TravelCalculatePremiumController добавил зависимость с классом TravelCalculatePremiumRequestExecutionTimeLogger
+    В нем создал метод processRequest() который возвращает response. И перенес туда логику response и request.
+    Переписал метод calculatePremium()  для реализации замера времени.
+            Stopwatch stopWatch = Stopwatch.createStarted();
+     		TravelCalculatePremiumResponse response = processRequest(request);
+     		executionTimeLogger.logExecutionTime(stopWatch);)
+

@@ -1,10 +1,12 @@
 package org.javaguru.travel.insurance.rest;
 
+import com.google.common.base.Stopwatch;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.javaguru.travel.insurance.core.TravelCalculatePremiumService;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumResponse;
+import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,16 +19,24 @@ public class TravelCalculatePremiumController {
 
 	private final TravelCalculatePremiumRequestLogger requestLogger;
 	private final TravelCalculatePremiumResponseLogger responseLogger;
+	private final TravelCalculatePremiumRequestExecutionTimeLogger executionTimeLogger;
 	private final TravelCalculatePremiumService calculatePremiumService;
 
 	@PostMapping(path = "/",
 			consumes = "application/json",
 			produces = "application/json")
 	public TravelCalculatePremiumResponse calculatePremium(@RequestBody TravelCalculatePremiumRequest request) {
+		Stopwatch stopWatch = Stopwatch.createStarted();
+		TravelCalculatePremiumResponse response = processRequest(request);
+		executionTimeLogger.logExecutionTime(stopWatch);
+		return response;
+	}
+
+	private TravelCalculatePremiumResponse processRequest(TravelCalculatePremiumRequest request) {
 		requestLogger.log(request);
 		TravelCalculatePremiumResponse response = calculatePremiumService.calculatePremium(request);
 		responseLogger.log(response);
-		return calculatePremiumService.calculatePremium(request);
+		return response;
 	}
 
 }
