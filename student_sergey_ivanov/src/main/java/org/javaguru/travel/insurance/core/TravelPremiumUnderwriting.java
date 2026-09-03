@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 
 @Component
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-public class TravelPremiumUnderwriting {
+class TravelPremiumUnderwriting {
     private final DateTimeService dateTimeService;
 
     BigDecimal calculatePremium(TravelCalculatePremiumRequest request){

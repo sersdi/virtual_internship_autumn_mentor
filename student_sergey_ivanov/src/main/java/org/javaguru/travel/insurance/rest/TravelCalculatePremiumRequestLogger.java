@@ -9,16 +9,15 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class TravelCalculatePremiumRequestLogger {
-    private static final Logger logger = LoggerFactory.getLogger(TravelCalculatePremiumRequestLogger.class);
+class TravelCalculatePremiumRequestLogger {
 
     void log(TravelCalculatePremiumRequest request){
         ObjectMapper objectMapper = new ObjectMapper();
         try{
             String json = objectMapper.writeValueAsString(request);
-            logger.info("REQUEST: " + json);
+            log.info("REQUEST: " + json);
         } catch (JsonProcessingException e){
-            logger.error("Error to convert request to JSON", e);
+            log.error("Error to convert request to JSON", e);
         }
     }
 
