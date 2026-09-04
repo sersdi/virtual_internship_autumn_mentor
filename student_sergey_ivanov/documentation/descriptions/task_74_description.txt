@@ -1,0 +1,3 @@
+Написал SQL скрипт по заполнению таблиц
+classifiers и classifier_values значениями для классификатора
+RISK_TYPE.
