@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class TravelCalculatePremiumResponse extends CoreResponse {
     @JsonFormat(pattern = "yyyy-MM-dd") private Date agreementDateFrom;
     @JsonFormat(pattern = "yyyy-MM-dd") private Date agreementDateTo;
     private BigDecimal agreementPrice;
+    private ArrayList<String> selected_risks;
 
     public TravelCalculatePremiumResponse(List<ValidationError> errors) {
         super(errors);

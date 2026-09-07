@@ -1,0 +1,14 @@
+Добавил в запрос (TravelCalculatePremiumRequest)
+секцию selected_risks и внёс соответствующие изменения в Java код,
+чтобы секция selected_risks парсилась в Java класс запроса:
+
+{
+  "personFirstName" : "Vasja",
+  "personLastName" : "Pupkin",
+  "agreementDateFrom" : "2040-05-25",
+  "agreementDateTo" : "2040-05-29",
+  "selected_risks":["TRAVEL_MEDICAL", "TRAVEL_CANCELLATION", "TRAVEL_LOSS_BAGGAGE"]
+}
+
+selected_risks - это массив строк, каждая строка содержит IC код
+из классификатора RISK_TYPE.
