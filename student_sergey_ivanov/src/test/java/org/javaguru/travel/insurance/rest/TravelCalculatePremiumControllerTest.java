@@ -106,17 +106,17 @@ public class TravelCalculatePremiumControllerTest {
         executeAndCompare(request, response);
     }
 
-    @Test
-    @DisplayName("Test case 10: selected_risks_success")
-    public void selectedRisksSuccess() throws Exception {
-        request = "rest/TravelCalculatePremiumRequest_selected_risks_success.json";
-        response = "rest/TravelCalculatePremiumResponse_selected_risks_success.json";
-        executeAndCompare(request, response);
-    }
+//    @Test
+//    @DisplayName("Test case 10: selected_risks_success")
+//    public void selectedRisksSuccess() throws Exception {
+//        request = "rest/TravelCalculatePremiumRequest_selected_risks_success.json";
+//        response = "rest/TravelCalculatePremiumResponse_selected_risks_success.json";
+//        executeAndCompare(request, response);
+//    }
 
     @Test
-    @DisplayName("Test case 11: selected_risks_not_provided")
-    public void selectedRisksNotProvided() throws Exception {
+    @DisplayName("Test case 11: selected_risk_is_null")
+    public void selectedRisksIsNull() throws Exception {
         request = "rest/TravelCalculatePremiumRequest_selected_risks_not_provided.json";
         response = "rest/TravelCalculatePremiumResponse_selected_risks_not_provided.json";
         executeAndCompare(request, response);

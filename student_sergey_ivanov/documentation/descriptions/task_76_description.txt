@@ -1,9 +1,8 @@
-Одним из требований к системе расчёта премии страхового полиса
-основанного на выбранных клиентом рисков было то, что хотя бы
-один риск должен быть выбран клиентом.
-
-Ваша задача: реализовать валидацию для проверки секции
+Реализовал валидацию для проверки секции
 selected_risks в запросе на пустоту. Если она пуста и ни
 одного риска не выбрано, то система должна выдавать ошибку.
 
-PS: не забудьте про JUnit тесты и тесты контролёра.
+Создал класс SelectedRisksValidation.
+В классе TravelCalculatePremiumServiceImpl написал проверку на response для валидации рисков.
+В TravelCalculatePremiumRequest и TravelCalculatePremiumResponse добавил новое поле @JsonAlias("selected_risks") private List<String> selectedRisks;
+Написал junit тест SelectedRisksValidationTest и для контроллера TravelCalculatePremiumControllerTest
