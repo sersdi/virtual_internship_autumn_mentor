@@ -36,8 +36,8 @@ public class AgreementDateToInPresentValidationTest {
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("agreementDateTo", errorOpt.get().getField());
-        assertEquals("Must be in the future!", errorOpt.get().getMessage());
+        assertEquals("agreementDateTo", errorOpt.get().getErrorCode());
+        assertEquals("Must be in the future!", errorOpt.get().getDescription());
     }
 
     @Test

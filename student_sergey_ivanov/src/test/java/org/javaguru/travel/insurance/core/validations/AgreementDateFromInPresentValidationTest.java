@@ -1,6 +1,7 @@
 package org.javaguru.travel.insurance.core.validations;
 
 import org.javaguru.travel.insurance.core.DateTimeService;
+import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
@@ -16,14 +17,13 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class AgreementDateFromInPresentValidationTest {
 
-    @Mock
-    private DateTimeService dateTimeService;
+    @Mock private DateTimeService dateTimeService;
+    @Mock private ErrorCodeUtil errorCodeUtil;
 
     @InjectMocks
     private AgreementDateFromInPresentValidation validation;
@@ -33,10 +33,11 @@ public class AgreementDateFromInPresentValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateFrom()).thenReturn(createDate("01.01.2020"));
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_1")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("agreementDateFrom", errorOpt.get().getField());
-        assertEquals("Must be in the future!", errorOpt.get().getMessage());
+        assertEquals("ERROR_CODE_1", errorOpt.get().getErrorCode());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test
@@ -46,6 +47,7 @@ public class AgreementDateFromInPresentValidationTest {
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isEmpty());
+        verifyNoInteractions(errorCodeUtil);
     }
 
     private Date createDate(String dateStr) {
@@ -55,4 +57,5 @@ public class AgreementDateFromInPresentValidationTest {
             throw new RuntimeException(e);
         }
     }
+
 }

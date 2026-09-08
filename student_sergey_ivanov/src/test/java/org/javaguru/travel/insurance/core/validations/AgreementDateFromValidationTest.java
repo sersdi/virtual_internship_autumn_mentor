@@ -24,8 +24,8 @@ public class AgreementDateFromValidationTest {
         when(request.getAgreementDateFrom()).thenReturn(null);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("agreementDateFrom", errorOpt.get().getField());
-        assertEquals("Must not be empty!", errorOpt.get().getMessage());
+        assertEquals("agreementDateFrom", errorOpt.get().getErrorCode());
+        assertEquals("Must not be empty!", errorOpt.get().getDescription());
     }
 
     @Test

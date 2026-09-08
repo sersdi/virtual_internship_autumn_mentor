@@ -1,0 +1,25 @@
+Нужно реализовать функционал приложения таким образом,
+    что бы ошибки из файла errorCodes.properties коннектились с валидатором.
+
+Поменял названия полей в классе ValidationError
+   field -> errorCode
+   message -> description
+
+Создал файл errorCodes.properties.
+
+Создал класс ErrorCodeUtil
+
+Затем во всех классах валидации в папке Validations добавил зависимость с классом ErrorCodeUtil.
+    Добавил во все эти классы метод buildError() который возвращает ValidationError.
+
+(Надо будет добавить во все классы validations логику ErrorCodeUtil)
+(Переписать тесты)
+
+В тестовых response из resources/rest поменял поля на актуальные(errorCode и  description).
+
+
+
+
+
+
+

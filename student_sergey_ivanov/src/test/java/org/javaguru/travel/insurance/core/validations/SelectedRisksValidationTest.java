@@ -21,8 +21,8 @@ public class SelectedRisksValidationTest {
         when(request.getSelectedRisks()).thenReturn(null);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("selectedRisks", errorOpt.get().getField());
-        assertEquals("Must not be empty!", errorOpt.get().getMessage());
+        assertEquals("selectedRisks", errorOpt.get().getErrorCode());
+        assertEquals("Must not be empty!", errorOpt.get().getDescription());
     }
 
     @Test
@@ -31,8 +31,8 @@ public class SelectedRisksValidationTest {
         when(request.getSelectedRisks()).thenReturn(List.of());
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("selectedRisks", errorOpt.get().getField());
-        assertEquals("Must not be empty!", errorOpt.get().getMessage());
+        assertEquals("selectedRisks", errorOpt.get().getErrorCode());
+        assertEquals("Must not be empty!", errorOpt.get().getDescription());
     }
 
     @Test

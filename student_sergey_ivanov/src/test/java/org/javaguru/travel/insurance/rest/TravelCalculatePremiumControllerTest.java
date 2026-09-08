@@ -1,6 +1,5 @@
 package org.javaguru.travel.insurance.rest;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,10 +14,10 @@ import org.springframework.test.web.servlet.MvcResult;
 
 
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static uk.org.webcompere.modelassert.json.JsonAssertions.assertJson;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -109,17 +108,26 @@ public class TravelCalculatePremiumControllerTest {
 //    @Test
 //    @DisplayName("Test case 10: selected_risks_success")
 //    public void selectedRisksSuccess() throws Exception {
-//        request = "rest/TravelCalculatePremiumRequest_selected_risks_success.json";
-//        response = "rest/TravelCalculatePremiumResponse_selected_risks_success.json";
+//        request = "rest/TravelCalculatePremiumRequest_selectedRisks_success.json";
+//        response = "rest/TravelCalculatePremiumResponse_selectedRisks_success.json";
 //        executeAndCompare(request, response);
 //    }
 
     @Test
-    @DisplayName("Test case 11: selected_risk_is_null")
+    @DisplayName("Test case 11: selectedRisksIsnull")
     public void selectedRisksIsNull() throws Exception {
-        request = "rest/TravelCalculatePremiumRequest_selected_risks_not_provided.json";
-        response = "rest/TravelCalculatePremiumResponse_selected_risks_not_provided.json";
+        request = "rest/TravelCalculatePremiumRequest_selectedRisks_not_provided.json";
+        response = "rest/TravelCalculatePremiumResponse_selectedRisks_not_provided.json";
         executeAndCompare(request, response);
+    }
+
+    @Test
+    @DisplayName("Test case 12: selectedRisksIsEmpty")
+    public void selectedRisksIsEmpty() throws Exception {
+        request = "rest/TravelCalculatePremiumRequest_selectedRisks_empty.json";
+        response = "rest/TravelCalculatePremiumResponse_selectedRisks_empty.json";
+        executeAndCompare(request, response);
+
     }
 
     private void executeAndCompare(String jsonRequestFilePath,
@@ -136,8 +144,13 @@ public class TravelCalculatePremiumControllerTest {
 
         String jsonResponse = jsonFileReader.readJsonFromFile(jsonResponseFilePath);
 
-        ObjectMapper mapper = new ObjectMapper();
-        assertEquals(mapper.readTree(jsonResponse), mapper.readTree(responseBodyContent));
+        assertJson(responseBodyContent)
+                .where()
+                .keysInAnyOrder()
+                .arrayInAnyOrder()
+                .isEqualTo(jsonResponse);
+
     }
+
 
 }
