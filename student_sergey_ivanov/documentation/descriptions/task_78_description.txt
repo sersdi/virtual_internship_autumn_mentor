@@ -10,9 +10,10 @@
 Создал класс ErrorCodeUtil
 
 Затем во всех классах валидации в папке Validations добавил зависимость с классом ErrorCodeUtil.
+    Так-же добавил в них аннотацию @RequiredArgsConstructor для создания конструктора у final полей.
     Добавил во все эти классы метод buildError() который возвращает ValidationError.
+    Изменил логику Optional.of() в методе execute() return на: Optional.of(buildError("ERROR_CODE_№"))
 
-(Надо будет добавить во все классы validations логику ErrorCodeUtil)
 (Переписать тесты)
 
 В тестовых response из resources/rest поменял поля на актуальные(errorCode и  description).

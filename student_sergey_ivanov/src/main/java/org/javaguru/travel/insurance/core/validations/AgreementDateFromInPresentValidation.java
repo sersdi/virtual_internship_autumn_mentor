@@ -7,7 +7,6 @@ import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.springframework.stereotype.Component;
-import org.springframework.validation.Errors;
 
 import java.util.Date;
 import java.util.Optional;

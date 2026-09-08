@@ -1,8 +1,11 @@
 package org.javaguru.travel.insurance.core.validations;
 
+import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 
 import java.util.Optional;
 
@@ -12,27 +15,32 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 class PersonFirstNameValidationTest {
+    @Mock
+    private ErrorCodeUtil errorCodeUtil;
 
-    private PersonFirstNameValidation validation = new PersonFirstNameValidation();
+    @InjectMocks
+    private PersonFirstNameValidation validation;
 
     @Test
     public void shouldReturnErrorWhenPersonFirstNameIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn(null);
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_7")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("personFirstName", errorOpt.get().getErrorCode());
-        assertEquals("Must not be empty!", errorOpt.get().getDescription());
+        assertEquals("ERROR_CODE_7", errorOpt.get().getErrorCode());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test
     public void shouldReturnErrorWhenPersonFirstNameIsEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("");
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_7")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("personFirstName", errorOpt.get().getErrorCode());
-        assertEquals("Must not be empty!", errorOpt.get().getDescription());
+        assertEquals("ERROR_CODE_7", errorOpt.get().getErrorCode());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test

@@ -1,6 +1,7 @@
 package org.javaguru.travel.insurance.core.validations;
 
 import org.javaguru.travel.insurance.core.DateTimeService;
+import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
@@ -24,6 +25,8 @@ public class AgreementDateToInPresentValidationTest {
 
     @Mock
     private DateTimeService dateTimeService;
+    @Mock
+    private ErrorCodeUtil errorCodeUtil;
 
     @InjectMocks
     private AgreementDateToInPresentValidation validation;
@@ -34,10 +37,11 @@ public class AgreementDateToInPresentValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(createDate("02.01.2022"));
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_3")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("agreementDateTo", errorOpt.get().getErrorCode());
-        assertEquals("Must be in the future!", errorOpt.get().getDescription());
+        assertEquals("ERROR_CODE_3", errorOpt.get().getErrorCode());
+        assertEquals("error description!", errorOpt.get().getDescription());
     }
 
     @Test
