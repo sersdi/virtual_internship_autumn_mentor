@@ -12,7 +12,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Optional;
 
@@ -38,7 +37,7 @@ public class AgreementDateFromLessThanDateToValidationTest {
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
         assertEquals("ERROR_CODE_5", errorOpt.get().getErrorCode());
-        assertEquals("Must be less then agreementDateTo!", errorOpt.get().getDescription());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test

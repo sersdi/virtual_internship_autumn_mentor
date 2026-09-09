@@ -34,7 +34,7 @@ public class AgreementDateToValidationTest {
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
         assertEquals("ERROR_CODE_4", errorOpt.get().getErrorCode());
-        assertEquals("error description!", errorOpt.get().getDescription());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test

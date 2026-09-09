@@ -1,22 +1,21 @@
 Нужно реализовать функционал приложения таким образом,
     что бы ошибки из файла errorCodes.properties коннектились с валидатором.
 
-Поменял названия полей в классе ValidationError
+Поменял названия полей в классе ValidationError.
    field -> errorCode
    message -> description
 
 Создал файл errorCodes.properties.
 
-Создал класс ErrorCodeUtil
+Создал класс ErrorCodeUtil.
 
 Затем во всех классах валидации в папке Validations добавил зависимость с классом ErrorCodeUtil.
     Так-же добавил в них аннотацию @RequiredArgsConstructor для создания конструктора у final полей.
     Добавил во все эти классы метод buildError() который возвращает ValidationError.
     Изменил логику Optional.of() в методе execute() return на: Optional.of(buildError("ERROR_CODE_№"))
 
-(Переписать тесты)
-
-В тестовых response из resources/rest поменял поля на актуальные(errorCode и  description).
+Переписал тесты.
+    В классе TravelCalculatePremiumControllerTest.java закомитил реквесты и респонсы, тк не добавил валидациюю.
 
 
 

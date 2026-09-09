@@ -1,8 +1,13 @@
 package org.javaguru.travel.insurance.core.validations;
 
+import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,27 +17,35 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 public class SelectedRisksValidationTest {
-    private final SelectedRisksValidation validation = new SelectedRisksValidation();
+
+    @Mock
+    private ErrorCodeUtil errorCodeUtil;
+
+    @InjectMocks
+    private SelectedRisksValidation validation;
 
     @Test
     public void shouldReturnErrorWhenSelectedRisksIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(null);
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_6")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("selectedRisks", errorOpt.get().getErrorCode());
-        assertEquals("Must not be empty!", errorOpt.get().getDescription());
+        assertEquals("ERROR_CODE_6", errorOpt.get().getErrorCode());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test
     public void shouldReturnErrorWhenSelectedRisksIsEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(List.of());
+        when(errorCodeUtil.getErrorDescription("ERROR_CODE_6")).thenReturn("error description");
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("selectedRisks", errorOpt.get().getErrorCode());
-        assertEquals("Must not be empty!", errorOpt.get().getDescription());
+        assertEquals("ERROR_CODE_6", errorOpt.get().getErrorCode());
+        assertEquals("error description", errorOpt.get().getDescription());
     }
 
     @Test
@@ -42,16 +55,5 @@ public class SelectedRisksValidationTest {
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isEmpty());
     }
-
-//    @Test
-//    public void shouldReturnErrorWhenSelectedRisksIsEmpty() {
-//        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
-//        when(request.getSelected_risks()).thenReturn("");
-//        Optional<ValidationError> errorOpt = validation.execute(request);
-//        assertTrue(errorOpt.isPresent());
-//        assertEquals("selectedRisks", errorOpt.get().getField());
-//        assertEquals("Must not be empty!", errorOpt.get().getMessage());
-//    }
-
 
 }
