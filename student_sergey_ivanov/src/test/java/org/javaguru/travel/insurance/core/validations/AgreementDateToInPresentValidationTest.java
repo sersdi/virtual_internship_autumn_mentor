@@ -1,12 +1,10 @@
 package org.javaguru.travel.insurance.core.validations;
 
-import org.javaguru.travel.insurance.core.DateTimeService;
-import org.javaguru.travel.insurance.core.ErrorCodeUtil;
+import org.javaguru.travel.insurance.core.util.DateTimeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -25,7 +23,7 @@ import static org.mockito.Mockito.when;
 public class AgreementDateToInPresentValidationTest {
 
     @Mock
-    private DateTimeService dateTimeService;
+    private DateTimeUtil dateTimeUtil;
     @Mock
     private ValidationErrorFactory errorFactory;
 
@@ -37,7 +35,7 @@ public class AgreementDateToInPresentValidationTest {
     public void shouldReturnErrorWhenAgreementDateToIsNotPresent() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(createDate("02.01.2022"));
-        when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
+        when(dateTimeUtil.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         ValidationError errorValidation = mock(ValidationError.class);
         when(errorFactory.buildError("ERROR_CODE_3")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
@@ -49,7 +47,7 @@ public class AgreementDateToInPresentValidationTest {
     public void shouldNotReturnErrorWhenAgreementDateToIsPresent() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2025"));
-        when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
+        when(dateTimeUtil.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isEmpty());
     }
