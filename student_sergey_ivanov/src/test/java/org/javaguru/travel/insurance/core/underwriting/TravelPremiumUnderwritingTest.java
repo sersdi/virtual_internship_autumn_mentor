@@ -1,4 +1,4 @@
-package org.javaguru.travel.insurance.core;
+package org.javaguru.travel.insurance.core.underwriting;
 
 import org.javaguru.travel.insurance.core.util.DateTimeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
@@ -22,7 +22,8 @@ public class TravelPremiumUnderwritingTest {
 
     @Mock private DateTimeUtil dateTimeUtil;
 
-    @InjectMocks private TravelPremiumUnderwriting premiumUnderwriting;
+    @InjectMocks
+    private TravelPremiumUnderwritingImpl premiumUnderwriting;
 
     @Test
     public void shouldReturnResponseWithCorrectAgreementPrice(){
