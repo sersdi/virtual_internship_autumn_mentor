@@ -1,0 +1,28 @@
+Код класса ValidationErrorFactory.
+
+@Component
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+class ValidationErrorFactory {
+
+    private final ErrorCodeUtil errorCodeUtil;
+
+    ValidationError buildError(String errorCode) {
+        String errorDescription = errorCodeUtil.getErrorDescription(errorCode);
+        return new ValidationError(errorCode, errorDescription);
+    }
+
+}
+
+Этот класс является примером реализации дизайн паттерна Factory.
+
+Этот класс содержит логику создания объектов класса ValidationError.
+
+Аналогия Factory из реального мира это завод, завод по созданию объектов типа ValidationError.
+
+Если создание объектов определенного класса сложное, или повторяется во многих частях системы,
+то обычно код, который занимается созданием таких объектов
+выносят в отдельный класс и в название класса добавляют слово Factory.
+
+Слово Factory в названии класса указывает на то, что в классе
+содержится код связанный с дизайн паттерном Factory, код, который
+в системе занимается созданием экземпляров определенного класса.
