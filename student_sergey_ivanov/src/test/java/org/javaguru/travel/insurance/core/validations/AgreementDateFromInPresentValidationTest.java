@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 public class AgreementDateFromInPresentValidationTest {
 
     @Mock private DateTimeService dateTimeService;
-    @Mock private ErrorCodeUtil errorCodeUtil;
+    @Mock private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private AgreementDateFromInPresentValidation validation;
@@ -33,11 +33,11 @@ public class AgreementDateFromInPresentValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateFrom()).thenReturn(createDate("01.01.2020"));
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_1")).thenReturn("error description");
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_1")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_1", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), validationError);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class AgreementDateFromInPresentValidationTest {
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isEmpty());
-        verifyNoInteractions(errorCodeUtil);
+        verifyNoInteractions(errorFactory);
     }
 
     private Date createDate(String dateStr) {
