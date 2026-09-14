@@ -1,6 +1,5 @@
 package org.javaguru.travel.insurance.core.validations;
 
-import org.javaguru.travel.insurance.core.DateTimeService;
 import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
@@ -24,7 +23,7 @@ import static org.mockito.Mockito.when;
 public class AgreementDateFromLessThanDateToValidationTest {
 
     @Mock
-    private ErrorCodeUtil errorCodeUtil;
+    private ValidationErrorFactory errorFactory;
     @InjectMocks
     private AgreementDateFromLessThanDateToValidation validation;
 
@@ -33,11 +32,11 @@ public class AgreementDateFromLessThanDateToValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateFrom()).thenReturn(createDate("10.01.2025"));
         when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2025"));
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_5")).thenReturn("error description");
+        ValidationError errorValidation = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_5")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_5", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), errorValidation);
     }
 
     @Test
@@ -45,11 +44,11 @@ public class AgreementDateFromLessThanDateToValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateFrom()).thenReturn(createDate("01.01.2025"));
         when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2025"));
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_5")).thenReturn("error description");
+        ValidationError errorValidation = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_5")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_5", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), errorValidation);
     }
 
     @Test

@@ -6,6 +6,7 @@ import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -26,7 +27,7 @@ public class AgreementDateToInPresentValidationTest {
     @Mock
     private DateTimeService dateTimeService;
     @Mock
-    private ErrorCodeUtil errorCodeUtil;
+    private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private AgreementDateToInPresentValidation validation;
@@ -37,11 +38,11 @@ public class AgreementDateToInPresentValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(createDate("02.01.2022"));
         when(dateTimeService.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_3")).thenReturn("error description");
+        ValidationError errorValidation = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_3")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_3", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), errorValidation);
     }
 
     @Test

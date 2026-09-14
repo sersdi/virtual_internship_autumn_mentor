@@ -1,6 +1,5 @@
 package org.javaguru.travel.insurance.core.validations;
 
-import org.javaguru.travel.insurance.core.ErrorCodeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
@@ -19,7 +18,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class PersonLastNameValidationTest {
     @Mock
-    private ErrorCodeUtil errorCodeUtil;
+    private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private PersonLastNameValidation validation;
@@ -28,22 +27,22 @@ public class PersonLastNameValidationTest {
     public void shouldReturnErrorWhenPersonLastNameIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonLastName()).thenReturn(null);
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_8")).thenReturn("error description");
+        ValidationError errorValidation = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_8", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), errorValidation);
     }
 
     @Test
     public void shouldReturnErrorWhenPersonLastNameIsEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonLastName()).thenReturn("");
-        when(errorCodeUtil.getErrorDescription("ERROR_CODE_8")).thenReturn("error description");
+        ValidationError errorValidation = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(errorValidation);
         Optional<ValidationError> errorOpt = validation.execute(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals("ERROR_CODE_8", errorOpt.get().getErrorCode());
-        assertEquals("error description", errorOpt.get().getDescription());
+        assertSame(errorOpt.get(), errorValidation);
     }
 
     @Test
