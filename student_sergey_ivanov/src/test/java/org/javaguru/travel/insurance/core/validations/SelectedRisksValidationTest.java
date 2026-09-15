@@ -30,7 +30,7 @@ public class SelectedRisksValidationTest {
         when(request.getSelectedRisks()).thenReturn(null);
         ValidationError errorValidation = mock(ValidationError.class);
         when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(errorValidation);
-        Optional<ValidationError> errorOpt = validation.execute(request);
+        Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
         assertSame(errorOpt.get(), errorValidation);
     }
@@ -41,7 +41,7 @@ public class SelectedRisksValidationTest {
         when(request.getSelectedRisks()).thenReturn(List.of());
         ValidationError errorValidation = mock(ValidationError.class);
         when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(errorValidation);
-        Optional<ValidationError> errorOpt = validation.execute(request);
+        Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
         assertSame(errorOpt.get(), errorValidation);
     }
@@ -50,7 +50,7 @@ public class SelectedRisksValidationTest {
     public void shouldNotReturnErrorWhenSelectedRisksIsNotEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(List.of("TRAVEL_MEDICAL"));
-        Optional<ValidationError> errorOpt = validation.execute(request);
+        Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
     }
 

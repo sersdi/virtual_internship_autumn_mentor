@@ -1,0 +1,40 @@
+Для реализации поставленного выше задания нужно
+внести в код следующие архитектурные изменения:
+
+В интерфейсе TravelRequestValidation переименовать метод
+execute(...) -> validate(...).
+
+Добавить в интерфейс TravelRequestValidation новый метод:
+List<ValidationError> validateList(TravelCalculatePremiumRequest request);
+Этот новый метод позволит возвращать список ошибок при валидации.
+
+Для минимизации эффекта изменений в интерфейсе TravelRequestValidation
+на уже существующий код (чтобы не реализовывать новый метод в каждом
+классе валидации) предлагается создать абстрактный класс с дефолтными
+реализациями методов:
+
+abstract class TravelRequestValidationImpl
+    implements TravelRequestValidation {
+
+    @Override
+    Optional<ValidationError> validate(TravelCalculatePremiumRequest request) {
+        return Optional.empty();
+    }
+
+    @Override
+    List<ValidationError> validateList(TravelCalculatePremiumRequest request) {
+        return List.of();
+    }
+
+}
+
+Все классы валидаций должны наследоваться от
+TravelRequestValidationImpl и переопределять только тот метод
+валидации, который им нужен.
+
+В классе TravelCalculatePremiumRequestValidatorImpl внес
+изменения, так чтобы он вызывал у валидации оба метода
+(как validate(...) так и validateList(...)) и собирал полученные
+ошибки в один список.
+
+Пофиксил все тесты валидаций.
