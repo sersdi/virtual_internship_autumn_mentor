@@ -1,0 +1,2 @@
+Улучшил код в классе ClassifierValueRepositoryTest,
+избавился от дупликации кода создав метод searchClassifierValueAndCheck.
