@@ -1,0 +1,18 @@
+После внесения архитектурных изменений в код модуля валидации
+стало возможным реализовать валидацию, которая бы возвращала
+сразу список ошибок.
+
+Реализовал валидацию по проверке значений selected_risks из запроса.
+
+Для этого создал класс SelectedRisksValidation(прописал логику)
+    Переопределил метод:
+        -List<ValidationError> validateList(TravelCalculatePremiumRequest request)
+    Добавил методы:
+        -List<ValidationError> validateSelectedRisks(TravelCalculatePremiumRequest request)
+        -ValidationError buildValidationError(String riskIc)
+        -Optional<ValidationError> validateRiskIc(String riskIc)
+        -boolean existInDatabase(String riskIc)
+
+Добавил ERROR_CODE_9 в errorCodes.properties
+
+Написал тесты в SelectedRisksValidationTest

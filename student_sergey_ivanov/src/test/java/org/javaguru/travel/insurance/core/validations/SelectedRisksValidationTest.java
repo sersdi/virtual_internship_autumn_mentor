@@ -1,5 +1,7 @@
 package org.javaguru.travel.insurance.core.validations;
 
+import org.javaguru.travel.insurance.core.domain.ClassifierValue;
+import org.javaguru.travel.insurance.core.repositories.ClassifierValueRepository;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
@@ -11,47 +13,55 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.anyList;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class SelectedRisksValidationTest {
+class SelectedRisksValidationTest {
 
-    @Mock
-    private ValidationErrorFactory errorFactory;
+    @Mock private ClassifierValueRepository classifierValueRepository;
+    @Mock private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private SelectedRisksValidation validation;
 
     @Test
-    public void shouldReturnErrorWhenSelectedRisksIsNull() {
+    public void shouldNotValidateWhenSelectedRisksIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(null);
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(errorValidation);
-        Optional<ValidationError> errorOpt = validation.validate(request);
-        assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertTrue(validation.validateList(request).isEmpty());
+        verifyNoInteractions(classifierValueRepository, errorFactory);
     }
 
     @Test
-    public void shouldReturnErrorWhenSelectedRisksIsEmpty() {
+    public void shouldValidateWithoutErrors() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
-        when(request.getSelectedRisks()).thenReturn(List.of());
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(errorValidation);
-        Optional<ValidationError> errorOpt = validation.validate(request);
-        assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        when(request.getSelectedRisks()).thenReturn(List.of("RISK_IC_1", "RISK_IC_2"));
+        when(classifierValueRepository.findByClassifierTitleAndIc("RISK_TYPE", "RISK_IC_1"))
+                .thenReturn(Optional.of(mock(ClassifierValue.class)));
+        when(classifierValueRepository.findByClassifierTitleAndIc("RISK_TYPE", "RISK_IC_2"))
+                .thenReturn(Optional.of(mock(ClassifierValue.class)));
+        assertTrue(validation.validateList(request).isEmpty());
     }
 
     @Test
-    public void shouldNotReturnErrorWhenSelectedRisksIsNotEmpty() {
+    public void shouldValidateWithErrors() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
-        when(request.getSelectedRisks()).thenReturn(List.of("TRAVEL_MEDICAL"));
-        Optional<ValidationError> errorOpt = validation.validate(request);
-        assertTrue(errorOpt.isEmpty());
+        when(request.getSelectedRisks()).thenReturn(List.of("RISK_IC_1", "RISK_IC_2"));
+        when(classifierValueRepository.findByClassifierTitleAndIc("RISK_TYPE", "RISK_IC_1"))
+                .thenReturn(Optional.empty());
+        when(classifierValueRepository.findByClassifierTitleAndIc("RISK_TYPE", "RISK_IC_2"))
+                .thenReturn(Optional.empty());
+
+        ValidationError error = mock(ValidationError.class);
+        when(errorFactory.buildError(eq("ERROR_CODE_9"), anyList())).thenReturn(error);
+
+        assertEquals(2, validation.validateList(request).size());
     }
 
 }
