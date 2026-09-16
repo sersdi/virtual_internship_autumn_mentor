@@ -1,0 +1,37 @@
+На данный момент ответ приложения выглядит так:
+
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "agreementDateFrom": "2040-05-25",
+  "agreementDateTo": "2040-05-29",
+  "agreementPrice": 4
+}
+
+Hужен следующий формат ответа:
+
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "agreementDateFrom": "2040-05-25",
+  "agreementDateTo": "2040-05-29",
+  "agreementPremium": 4,
+  "risks": [
+          {
+            "riskIc": "TRAVEL_MEDICAL",
+            "premium": 2.00
+          },
+          {
+             "riskIc": "TRAVEL_CANCELLATION",
+             "premium": 5.00
+          },
+  ]
+}
+
+
+В ответе заменил agreementPrice на agreementPremium.
+Обоснование: бизнес применяет термин premium для описания цены полиса.
+
+Переписал тесты в TravelPremiumUnderwritingTest.

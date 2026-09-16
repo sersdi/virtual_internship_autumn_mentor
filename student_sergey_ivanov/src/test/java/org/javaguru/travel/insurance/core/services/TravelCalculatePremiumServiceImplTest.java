@@ -67,7 +67,7 @@ class TravelCalculatePremiumServiceImplTest {
         when(travelPremiumUnderwriting.calculatePremium(request)).thenReturn(BigDecimal.valueOf(0L));
         when(requestValidator.validate(request)).thenReturn(List.of());
         var response = service.calculatePremium(request);
-        assertNotNull(response.getAgreementPrice());
+        assertNotNull(response.getAgreementPremium());
     }
 
     @Test
@@ -109,7 +109,7 @@ class TravelCalculatePremiumServiceImplTest {
         assertNull(response.getPersonLastName());
         assertNull(response.getAgreementDateFrom());
         assertNull(response.getAgreementDateTo());
-        assertNull(response.getAgreementPrice());
+        assertNull(response.getAgreementPremium());
     }
 
     @Test
