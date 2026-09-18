@@ -109,7 +109,7 @@ public class TravelCalculatePremiumControllerTest {
     @DisplayName("Test case 10: selected_risks_success")
     public void selectedRisksSuccess() throws Exception {
         request = "rest/TravelCalculatePremiumRequest_selectedRisks_success.json";
-        response = "rest/TravelCalculatePremiumRespons_success.json";
+        response = "rest/TravelCalculatePremiumResponse_success.json";
         executeAndCompare(request, response);
     }
 
