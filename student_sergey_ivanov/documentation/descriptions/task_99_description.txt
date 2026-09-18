@@ -1,0 +1,26 @@
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "agreementDateFrom": "2040-05-25",
+  "agreementDateTo": "2040-05-29",
+  "agreementPremium": 4,
+  "risks": [
+          {
+            "riskIc": "TRAVEL_MEDICAL",
+            "premium": 2.00
+          },
+          {
+             "riskIc": "TRAVEL_CANCELLATION",
+             "premium": 5.00
+          },
+  ]
+}
+
+1. Добавить в ответ секцию "risks" как описано выше
+(подсказка, секцию "risks" можно реализовать по аналогии с "errors").
+На данном этапе заполнять секцию "risks" реальными данными не надо
+(это потребует изменений в архитектуре расчёта премии, ментор
+предлагает сделать это отдельно следующим шагом). Для проверки
+правильности формата ответа на данном этапе заполните секцию "risks"
+рисками из секции запроса "selected_risks" и premium = 0.

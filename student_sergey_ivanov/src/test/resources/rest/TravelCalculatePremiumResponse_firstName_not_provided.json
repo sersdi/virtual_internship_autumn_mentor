@@ -10,5 +10,5 @@
   "agreementDateFrom": null,
   "agreementDateTo": null,
   "agreementPremium": null,
-  "selectedRisks": null
+  "risks": null
 }

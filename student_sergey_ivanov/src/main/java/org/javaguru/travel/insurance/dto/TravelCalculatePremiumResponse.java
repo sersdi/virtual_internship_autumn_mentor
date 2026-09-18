@@ -1,6 +1,5 @@
 package org.javaguru.travel.insurance.dto;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +21,7 @@ public class TravelCalculatePremiumResponse extends CoreResponse {
     @JsonFormat(pattern = "yyyy-MM-dd") private Date agreementDateFrom;
     @JsonFormat(pattern = "yyyy-MM-dd") private Date agreementDateTo;
     private BigDecimal agreementPremium;
+    private List<RiskPremium> risks;
 
 
 
