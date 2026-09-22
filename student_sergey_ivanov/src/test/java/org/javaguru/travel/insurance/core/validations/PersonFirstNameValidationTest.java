@@ -10,14 +10,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class PersonFirstNameValidationTest {
-    @Mock
-    private ValidationErrorFactory errorFactory;
+
+    @Mock private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private PersonFirstNameValidation validation;
@@ -26,22 +28,22 @@ class PersonFirstNameValidationTest {
     public void shouldReturnErrorWhenPersonFirstNameIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn(null);
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_7")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_7")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
     public void shouldReturnErrorWhenPersonFirstNameIsEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonFirstName()).thenReturn("");
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_7")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_7")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
@@ -50,6 +52,7 @@ class PersonFirstNameValidationTest {
         when(request.getPersonFirstName()).thenReturn("Vasja");
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
+        verifyNoInteractions(errorFactory);
     }
 
 }

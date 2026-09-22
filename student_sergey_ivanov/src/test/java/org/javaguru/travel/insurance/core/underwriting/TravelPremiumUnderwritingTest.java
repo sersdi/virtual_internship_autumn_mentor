@@ -3,10 +3,6 @@ package org.javaguru.travel.insurance.core.underwriting;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -16,10 +12,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
 public class TravelPremiumUnderwritingTest {
 
-    @InjectMocks
     private TravelPremiumUnderwritingImpl premiumUnderwriting;
 
     private TravelRiskPremiumCalculator riskPremiumCalculator1;
@@ -30,7 +24,7 @@ public class TravelPremiumUnderwritingTest {
         riskPremiumCalculator1 = mock(TravelRiskPremiumCalculator.class);
         riskPremiumCalculator2 = mock(TravelRiskPremiumCalculator.class);
         var riskPremiumCalculators = List.of(riskPremiumCalculator1, riskPremiumCalculator2);
-        ReflectionTestUtils.setField(premiumUnderwriting, "riskPremiumCalculators", riskPremiumCalculators);
+        premiumUnderwriting = new TravelPremiumUnderwritingImpl(riskPremiumCalculators);
     }
 
     @Test
@@ -40,7 +34,7 @@ public class TravelPremiumUnderwritingTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(List.of("TRAVEL_MEDICAL"));
         TravelPremiumCalculationResult premiumCalculationResult = premiumUnderwriting.calculatePremium(request);
-        assertEquals(BigDecimal.ONE, premiumCalculationResult.getTotalPremium());
+        assertEquals(BigDecimal.ONE, premiumCalculationResult.totalPremium());
     }
 
     @Test
@@ -54,7 +48,7 @@ public class TravelPremiumUnderwritingTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getSelectedRisks()).thenReturn(List.of("TRAVEL_MEDICAL", "TRAVEL_EVACUATION"));
         TravelPremiumCalculationResult premiumCalculationResult = premiumUnderwriting.calculatePremium(request);
-        assertEquals(new BigDecimal(2), premiumCalculationResult.getTotalPremium());
+        assertEquals(new BigDecimal(2), premiumCalculationResult.totalPremium());
     }
 
 }

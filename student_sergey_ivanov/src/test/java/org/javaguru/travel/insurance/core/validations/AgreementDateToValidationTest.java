@@ -13,15 +13,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class AgreementDateToValidationTest {
-    @Mock
-    private ValidationErrorFactory errorFactory;
+class AgreementDateToValidationTest {
+
+    @Mock private ValidationErrorFactory errorFactory;
+
     @InjectMocks
     private AgreementDateToValidation validation;
 
@@ -29,11 +31,11 @@ public class AgreementDateToValidationTest {
     public void shouldReturnErrorWhenAgreementDateToIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(null);
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_4")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_4")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
@@ -42,6 +44,7 @@ public class AgreementDateToValidationTest {
         when(request.getAgreementDateTo()).thenReturn(createDate("01.01.2025"));
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
+        verifyNoInteractions(errorFactory);
     }
 
     private Date createDate(String dateStr) {
@@ -51,4 +54,5 @@ public class AgreementDateToValidationTest {
             throw new RuntimeException(e);
         }
     }
+
 }

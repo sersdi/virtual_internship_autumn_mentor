@@ -10,15 +10,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class PersonLastNameValidationTest {
-    @Mock
-    private ValidationErrorFactory errorFactory;
+class PersonLastNameValidationTest {
+
+    @Mock private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private PersonLastNameValidation validation;
@@ -27,30 +28,31 @@ public class PersonLastNameValidationTest {
     public void shouldReturnErrorWhenPersonLastNameIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonLastName()).thenReturn(null);
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
     public void shouldReturnErrorWhenPersonLastNameIsEmpty() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonLastName()).thenReturn("");
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
     public void shouldNotReturnErrorWhenPersonLastNameIsPresent() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
-        when(request.getPersonLastName()).thenReturn("Pupkin");
+        when(request.getPersonLastName()).thenReturn("Petrov");
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
+        verifyNoInteractions(errorFactory);
     }
 
 }
