@@ -32,9 +32,9 @@ public class TravelCalculatePremiumRequestValidatorImplTest {
     public void shouldReturnSingleErrors() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
-        when(validation1.validate(request)).thenReturn(Optional.of(new ValidationError()));
+        when(validation1.validate(request)).thenReturn(Optional.of(new ValidationError("errorCode","description")));
         TravelRequestValidation validation2 = mock(TravelRequestValidation.class);
-        when(validation2.validate(request)).thenReturn(Optional.of(new ValidationError()));
+        when(validation2.validate(request)).thenReturn(Optional.of(new ValidationError("errorCode","description")));
         var validator = new TravelCalculatePremiumRequestValidatorImpl(List.of(validation1, validation2));
         List<ValidationError> errors = validator.validate(request);
         assertEquals(2, errors.size());
@@ -45,10 +45,10 @@ public class TravelCalculatePremiumRequestValidatorImplTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
         when(validation1.validate(request)).thenReturn(Optional.empty());
-        when(validation1.validateList(request)).thenReturn(List.of(new ValidationError()));
+        when(validation1.validateList(request)).thenReturn(List.of(new ValidationError("errorCode","description")));
         TravelRequestValidation validation2 = mock(TravelRequestValidation.class);
         when(validation2.validate(request)).thenReturn(Optional.empty());
-        when(validation2.validateList(request)).thenReturn(List.of(new ValidationError()));
+        when(validation2.validateList(request)).thenReturn(List.of(new ValidationError("errorCode","description")));
         var validator = new TravelCalculatePremiumRequestValidatorImpl(List.of(validation1, validation2));
         List<ValidationError> errors = validator.validate(request);
         assertEquals(2, errors.size());

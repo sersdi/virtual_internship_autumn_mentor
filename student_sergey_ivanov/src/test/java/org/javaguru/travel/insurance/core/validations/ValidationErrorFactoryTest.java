@@ -27,8 +27,8 @@ class ValidationErrorFactoryTest {
         when(errorCodeUtil.getErrorDescription("ERROR_CODE"))
                 .thenReturn("error description");
         ValidationError error = factory.buildError("ERROR_CODE");
-        assertEquals("ERROR_CODE", error.getErrorCode());
-        assertEquals("error description", error.getDescription());
+        assertEquals("ERROR_CODE", error.errorCode());
+        assertEquals("error description", error.description());
     }
 
     @Test
@@ -37,8 +37,8 @@ class ValidationErrorFactoryTest {
         when(errorCodeUtil.getErrorDescription("ERROR_CODE", List.of(placeholder)))
                 .thenReturn("error AAA description");
         ValidationError error = factory.buildError("ERROR_CODE", List.of(placeholder));
-        assertEquals("ERROR_CODE", error.getErrorCode());
-        assertEquals("error AAA description", error.getDescription());
+        assertEquals("ERROR_CODE", error.errorCode());
+        assertEquals("error AAA description", error.description());
     }
 
 }

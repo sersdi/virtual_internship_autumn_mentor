@@ -49,8 +49,8 @@ public class TravelCalculatePremiumServiceImplTest {
         when(requestValidator.validate(request)).thenReturn(errors);
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
         assertEquals(1, response.getErrors().size());
-        assertEquals("field", response.getErrors().get(0).getErrorCode());
-        assertEquals("errorMessage", response.getErrors().get(0).getDescription());
+        assertEquals("field", response.getErrors().get(0).errorCode());
+        assertEquals("errorMessage", response.getErrors().get(0).description());
     }
 
     @Test

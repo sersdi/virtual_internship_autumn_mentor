@@ -36,7 +36,7 @@ public class AgreementDateFromInPresentValidationTest {
         when(errorFactory.buildError("ERROR_CODE_1")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), validationError);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test

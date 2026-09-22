@@ -17,6 +17,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verifyNoInteractions;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -36,11 +37,11 @@ public class AgreementDateToInPresentValidationTest {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getAgreementDateTo()).thenReturn(createDate("02.01.2022"));
         when(dateTimeUtil.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
-        ValidationError errorValidation = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_3")).thenReturn(errorValidation);
+        ValidationError validationError = mock(ValidationError.class);
+        when(errorFactory.buildError("ERROR_CODE_3")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(errorOpt.get(), errorValidation);
+        assertSame(validationError, errorOpt.get());
     }
 
     @Test
@@ -50,6 +51,7 @@ public class AgreementDateToInPresentValidationTest {
         when(dateTimeUtil.getCurrentDateTime()).thenReturn(createDate("01.01.2023"));
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
+        verifyNoInteractions(errorFactory);
     }
 
     private Date createDate(String dateStr) {
@@ -59,4 +61,5 @@ public class AgreementDateToInPresentValidationTest {
             throw new RuntimeException(e);
         }
     }
+
 }
