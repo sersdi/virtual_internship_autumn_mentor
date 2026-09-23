@@ -1,0 +1,30 @@
+Задача: вынести логику рассчёта премии для каждого риска из класса TravelPremiumUnderwritingImpl
+
+Создал класс SelectedRisksPremiumCalculator:
+    в него добавил логику рассчёта премии для каждого риска calculatePremiumForAllRisks().
+    добавил 2 метода calculatePremiumForRisk(), findRiskPremiumCalculator()
+
+Изменил в классе TravelPremiumUnderwritingImpl:
+
+    добавил зависимость: private final SelectedRisksPremiumCalculator selectedRisksPremiumCalculator;
+
+    добавил 2 метода:
+         private List<RiskPremium> calculateSelectedRisksPremium(TravelCalculatePremiumRequest request) {
+                return selectedRisksPremiumCalculator.calculatePremiumForAllRisks(request);
+            }
+
+         private static BigDecimal calculateTotalPremium(List<RiskPremium> riskPremiums) {
+                 return riskPremiums.stream()
+                         .map(RiskPremium::getPremium)
+                         .reduce(BigDecimal.ZERO, BigDecimal::add);
+             }
+
+    Изменил логику у оверайд метода:
+        @Override
+            public TravelPremiumCalculationResult calculatePremium(TravelCalculatePremiumRequest request) {
+                List<RiskPremium> riskPremiums = calculateSelectedRisksPremium(request);
+                BigDecimal totalPremium = calculateTotalPremium(riskPremiums);
+                return new TravelPremiumCalculationResult(totalPremium, riskPremiums);
+            }
+
+Переписал тесты
