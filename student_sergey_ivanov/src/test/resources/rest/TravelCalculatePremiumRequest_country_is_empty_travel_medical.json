@@ -1,8 +1,8 @@
 {
   "personFirstName" : "Vasja",
   "personLastName" : "Pupkin",
-  "agreementDateFrom" : "2040-05-20",
+  "agreementDateFrom" : "2040-05-25",
   "agreementDateTo" : "2040-05-29",
-  "country" : "SPAIN",
-  "selected_risks": []
+  "country" : "",
+  "selected_risks":["TRAVEL_MEDICAL"]
 }

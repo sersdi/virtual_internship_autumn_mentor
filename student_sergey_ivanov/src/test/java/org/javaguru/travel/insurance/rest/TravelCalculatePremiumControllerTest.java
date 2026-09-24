@@ -130,6 +130,24 @@ public class TravelCalculatePremiumControllerTest {
 
     }
 
+    @Test
+    @DisplayName("Test case 13: country is null")
+    public void countryIsNullWhenTravelMedicalRiskSelected() throws Exception {
+        executeAndCompare(
+                "rest/TravelCalculatePremiumRequest_country_is_null_travel_medical.json",
+                "rest/TravelCalculatePremiumResponse_country_is_null_travel_medical.json"
+        );
+    }
+
+    @Test
+    @DisplayName("Test case 14: country is empty")
+    public void countryIsEmptyWhenTravelMedicalRiskSelected() throws Exception {
+        executeAndCompare(
+                "rest/TravelCalculatePremiumRequest_country_is_empty_travel_medical.json",
+                "rest/TravelCalculatePremiumResponse_country_is_empty_travel_medical.json"
+        );
+    }
+
     private void executeAndCompare(String jsonRequestFilePath,
                                    String jsonResponseFilePath) throws Exception {
         String jsonRequest = jsonFileReader.readJsonFromFile(jsonRequestFilePath);

@@ -1,0 +1,25 @@
+Задача:
+
+1. Добавить поле country в запрос.
+2. Добавить поле country в ответ.
+3. Добавить валидацию на country is not null если в selected_risks
+   присутствует тип риска TRAVEL_MEDICAL.
+4. Добавить валидацию на проверку правильного значения в поле country
+   согласно значениям классификатора в базе данных. Если поле country
+   в запросе содержит отличное от null значение, то оно должно быть
+   значением классификатора COUNTRY из базы данных.
+5. Также написать JUnit тесты и тесты на контроллер.
+
+1. В классе TravelCalculatePremiumRequest добавил поле country.
+2. В классе TravelCalculatePremiumResponse добавил поле country.
+3-4. Добавил в resources/errorCode.properties:  ERROR_CODE_10 = Field country must not be empty!
+     Создал в validations/ класс EmptyCountryValidation в нём:
+        -указал что класс наследуется от TravelRequestValidationImpl
+        -добавил зависимость через поле с ValidationErrorFactory.
+        -добавил 2 метода containsTravelMedical() и countryIsNullOrBlank().
+        -написал оверайд метода validate с добавлением containsTravelMedical() и countryIsNullOrBlank() методов
+            и с указанием ERROR_CODE_10.
+     Добавил в TravelCalculatePremiumServiceImpl в buildResponse метод response.setCountry(request.getCountry());
+5. Написал тесты EmptyCountryValidationTest.java, TravelCalculatePremiumControllerTest.java,
+    добавил рест запросы: TravelCalculatePremiumRequest_country_is_empty_travel_medical.json, TravelCalculatePremiumRequest_country_is_null_travel_medical.json и такие же респонс.
+    переписал все остальные рест файлы с актуальными полями

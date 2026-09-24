@@ -3,6 +3,7 @@
   "personLastName" : "Pupkin",
   "agreementDateFrom" : "2027-08-28",
   "agreementDateTo" : "2027-08-29",
+  "country" : "SPAIN",
   "selectedRisks": [
     "TRAVEL_MEDICAL",
     "TRAVEL_CANCELLATION",
