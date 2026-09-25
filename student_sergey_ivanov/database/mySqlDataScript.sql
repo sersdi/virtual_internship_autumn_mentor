@@ -107,3 +107,21 @@ SELECT
     'Country Japan'
 FROM classifiers as cl
 where cl.title = 'COUNTRY';
+
+
+INSERT INTO country_default_day_rate(
+    id,
+    country_ic,
+    default_day_rate)
+select
+    clv.id,
+    clv.ic,
+    1.00
+FROM classifier_values as clv
+where clv.classifier_id = 1006;
+
+UPDATE `country_default_day_rate`
+SET `default_day_rate` = '2.50' WHERE (`id` = '1014');
+
+UPDATE `country_default_day_rate`
+SET `default_day_rate` = '3.50' WHERE (`id` = '1015');

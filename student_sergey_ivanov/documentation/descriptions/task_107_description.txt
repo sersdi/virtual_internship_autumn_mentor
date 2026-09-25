@@ -1,0 +1,9 @@
+1. Создал таблицу в базе данных COUNTRY_DEFAULT_DAY_RATE
+   (в которой индекс country_ic -> country_default_day_rate).
+2. Написал скрипт заполнения таблицы COUNTRY_DEFAULT_DAY_RATE значениями:
+    LATVIA -> 1.00
+    SPAIN -> 2.50
+    JAPAN -> 3.50
+
+3. Обновил в /database mySqlDataScript.sql, mySqlDbCreationScript.sql
+   Обновил в test/resources/ data.sql и schema.sql  для h2 базы данных

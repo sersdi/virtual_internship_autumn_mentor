@@ -32,4 +32,15 @@ CREATE UNIQUE INDEX `ix_classifier_values_ic`
 ON `classifier_values` (`ic`);
 
 
+CREATE TABLE IF NOT EXISTS `country_default_day_rate`(
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `country_ic` VARCHAR(200) NOT NULL,
+    `default_day_rate` DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1002;
+
+CREATE UNIQUE INDEX `ix_country_default_day_country_ic`
+ON `country_default_day_rate`(`country_ic`);
 
