@@ -1,0 +1,7 @@
+Задача: Реализация AgeCoefficient:
+
+1. Добавил в  TravelCalculatePremiumRequest дату рождения человека по которой и будет
+    определяться его возраст.
+
+2. Добавил в TravelCalculatePremiumResponse дату рождения человека.
+
