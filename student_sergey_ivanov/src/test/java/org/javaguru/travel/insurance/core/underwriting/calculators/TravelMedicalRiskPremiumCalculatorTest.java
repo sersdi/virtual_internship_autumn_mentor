@@ -5,8 +5,10 @@ import org.javaguru.travel.insurance.core.repositories.CountryDefaultDayRateRepo
 import org.javaguru.travel.insurance.core.util.DateTimeUtil;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -16,9 +18,10 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class TravelMedicalRiskPremiumCalculatorTest {
-    @Mock
-    private DateTimeUtil dateTimeUtil;
+@ExtendWith(MockitoExtension.class)
+class TravelMedicalRiskPremiumCalculatorTest {
+
+    @Mock private DateTimeUtil dateTimeUtil;
     @Mock private CountryDefaultDayRateRepository countryDefaultDayRateRepository;
 
     @InjectMocks
@@ -35,4 +38,5 @@ public class TravelMedicalRiskPremiumCalculatorTest {
         BigDecimal premium = calculator.calculatePremium(request);
         assertEquals(new BigDecimal("20").stripTrailingZeros(), premium.stripTrailingZeros());
     }
+
 }

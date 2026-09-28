@@ -2,22 +2,22 @@
   "errors": null,
   "personFirstName": "Vasja",
   "personLastName": "Pupkin",
-  "agreementDateFrom": "2027-08-28",
-  "agreementDateTo": "2027-08-29",
+  "agreementDateFrom": "2027-08-24",
+  "agreementDateTo": "2027-08-28",
   "country" : "SPAIN",
-  "agreementPremium": 1,
+  "agreementPremium": 10.00,
   "risks": [
     {
       "riskIc": "TRAVEL_MEDICAL",
-      "premium": 1
+      "premium": 10.00
     },
     {
       "riskIc": "TRAVEL_CANCELLATION",
-      "premium": 0
+      "premium": 0.00
     },
     {
       "riskIc": "TRAVEL_LOSS_BAGGAGE",
-      "premium": 0
+      "premium": 0.00
     }
   ]
 }

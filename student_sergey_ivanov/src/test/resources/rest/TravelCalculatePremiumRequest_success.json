@@ -1,8 +1,8 @@
 {
   "personFirstName" : "Vasja",
   "personLastName" : "Pupkin",
-  "agreementDateFrom" : "2027-08-28",
-  "agreementDateTo" : "2027-08-29",
+  "agreementDateFrom" : "2027-08-24",
+  "agreementDateTo" : "2027-08-28",
   "country" : "SPAIN",
   "selectedRisks": [
     "TRAVEL_MEDICAL",

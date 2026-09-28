@@ -12,7 +12,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-public class ValidationErrorFactory {
+class ValidationErrorFactory {
 
     private final ErrorCodeUtil errorCodeUtil;
 

@@ -1,0 +1,8 @@
+Задача: для полей BigDecimal задать в ответе четкий формат
+(0.00 - два знака за запятой)
+
+Создал класс в /util BigDecimalSerializer.
+
+В классе RiskPremium установил аннотацию @JsonSerialize(using = BigDecimalSerializer.class)
+
+Переписал рест запросы
