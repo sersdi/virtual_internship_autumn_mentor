@@ -1,0 +1,15 @@
+Задача:
+
+1. Добавить валидацию на проверку personBirthDate is not null.
+Это поле всегда должно быть указано!
+
+2. Добавить валидацию, что personBirthDate должна быть указана
+в прошлом, а не в будущем. Это нужно, чтобы правильно высчитать
+возраст человека.
+
+
+1. Добавил валидацию PersonBirthDateValidation и PersonBirthDateInFutureValidation в /validations.
+
+2. Добавил в resources/errorCodes.properties новые ошибки.
+
+3. Написал тесты PersonBirthDateValidationTest и PersonBirthDateInFutureValidationTest
