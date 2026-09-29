@@ -44,3 +44,15 @@ AUTO_INCREMENT = 1002;
 CREATE UNIQUE INDEX `ix_country_default_day_country_ic`
 ON `country_default_day_rate`(`country_ic`);
 
+
+CREATE TABLE IF NOT EXISTS `age_coefficient`(
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `age_from` TINYINT NOT NULL,
+    `age_to` TINYINT UNSIGNED NOT NULL,
+    `coefficient` decimal(10,2) NOT NULL,
+    PRIMARY KEY(`id`)
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1002;
+
+

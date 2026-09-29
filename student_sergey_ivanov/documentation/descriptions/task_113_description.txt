@@ -1,0 +1,6 @@
+Добавил в базу данных таблицу age_coefficient
+с полями:   id
+            age_from
+            age_to
+            coefficient
+Обновил данные таблиц  в /resources и /database.
