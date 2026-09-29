@@ -33,7 +33,7 @@ class EmptySelectedRisksValidationTest {
         when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(validationError, errorOpt.get());
+        assertSame(errorOpt.get(), validationError);
     }
 
     @Test
@@ -44,7 +44,7 @@ class EmptySelectedRisksValidationTest {
         when(errorFactory.buildError("ERROR_CODE_6")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(validationError, errorOpt.get());
+        assertSame(errorOpt.get(), validationError);
     }
 
     @Test

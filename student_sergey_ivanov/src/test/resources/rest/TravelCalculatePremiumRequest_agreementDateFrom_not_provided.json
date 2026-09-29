@@ -1,6 +1,7 @@
 {
   "personFirstName" : "Vasja",
   "personLastName" : "Pupkin",
+  "personBirthDate": "2002-06-05",
   "agreementDateFrom" : null,
   "agreementDateTo" : "2027-08-20",
   "country": "SPAIN",

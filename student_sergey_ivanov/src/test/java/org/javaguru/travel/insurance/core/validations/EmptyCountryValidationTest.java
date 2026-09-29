@@ -58,8 +58,8 @@ class EmptyCountryValidationTest {
                 .thenReturn(new ValidationError("ERROR_CODE_10", "Country must be provided when TRAVEL_MEDICAL is selected"));
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals(errorOpt.get().errorCode(), "ERROR_CODE_10");
-        assertEquals(errorOpt.get().description(), "Country must be provided when TRAVEL_MEDICAL is selected");
+        assertEquals("ERROR_CODE_10", errorOpt.get().errorCode());
+        assertEquals("Country must be provided when TRAVEL_MEDICAL is selected", errorOpt.get().description());
     }
 
     @Test
@@ -71,8 +71,8 @@ class EmptyCountryValidationTest {
                 .thenReturn(new ValidationError("ERROR_CODE_10", "Country must be provided when TRAVEL_MEDICAL is selected"));
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertEquals(errorOpt.get().errorCode(), "ERROR_CODE_10");
-        assertEquals(errorOpt.get().description(), "Country must be provided when TRAVEL_MEDICAL is selected");
+        assertEquals("ERROR_CODE_10", errorOpt.get().errorCode());
+        assertEquals("Country must be provided when TRAVEL_MEDICAL is selected", errorOpt.get().description());
     }
 
 }

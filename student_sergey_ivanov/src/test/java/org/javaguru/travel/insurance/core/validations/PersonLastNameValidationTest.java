@@ -32,7 +32,7 @@ class PersonLastNameValidationTest {
         when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(validationError, errorOpt.get());
+        assertSame(errorOpt.get(), validationError);
     }
 
     @Test
@@ -43,7 +43,7 @@ class PersonLastNameValidationTest {
         when(errorFactory.buildError("ERROR_CODE_8")).thenReturn(validationError);
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(validationError, errorOpt.get());
+        assertSame(errorOpt.get(), validationError);
     }
 
     @Test
