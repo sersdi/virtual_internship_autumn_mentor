@@ -1,0 +1,33 @@
+Класс TravelMedicalRiskPremiumCalculator требует улучшения.
+
+На данный момент в этом классе реализован расчёт формулы:
+premium = CountryDefaultDayRate * DayCount * AgeCoefficient.
+
+Как мы видим, с точки зрения бизнеса эта формула состоит из
+трёх частей:
+ - CountryDefaultDayRate
+ - DayCount
+ - AgeCoefficient.
+Для расчёта каждой из этих частей в классе
+TravelMedicalRiskPremiumCalculator написан кусочек кода.
+При увеличении формулы этот класс будет расширяться, логики
+в нём будет становиться все больше и больше.
+
+Поэтому логично вынести расчёты для:
+ - CountryDefaultDayRate
+ - DayCount
+ - AgeCoefficient
+каждый в свой класс и потом использовать эти классы в
+TravelMedicalRiskPremiumCalculator.
+Для этого нужно создать новый пакет: core.underwriting.calculators.medical
+перенести туда класс TravelMedicalRiskPremiumCalculator и все новые
+создать в этом пакете.
+
+Задача:
+1) реализовать улучшение по рефакторингу класса TravelMedicalRiskPremiumCalculator,
+2) написать JUnit тесты на все новые классы.
+
+1) Создал в /medical AgeCoefficientCalculator, CountryDefaultDayRateCalculator, DayCountCalculator
+   Перенес их логику в TravelMedicalRiskPremiumCalculator.
+2) Написал тесты.
+AgeCoefficientCalculatorTest.java, CountryDefaultDayRateCalculatorTest.java, DayCountCalculatorTest.java, TravelMedicalRiskPremiumCalculatorTest.java
