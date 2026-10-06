@@ -17,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class PersonBirthDateValidationTest {
+public class EmptyPersonBirthDateValidationTest {
 
     @Mock
     private ValidationErrorFactory errorFactory;
 
     @InjectMocks
-    private PersonBirthDateValidation validation;
+    private EmptyPersonBirthDateValidation validation;
 
     @Test
     public void shouldNotReturnErrorWhenPersonBirthDateIsNotEmpty(){

@@ -148,6 +148,15 @@ public class TravelCalculatePremiumControllerTest {
         );
     }
 
+    @Test
+    @DisplayName("Test case 15: travel medical allFields not provided")
+    public void travelMedicalAllFieldsNotProvided() throws Exception {
+        executeAndCompare(
+                "rest/TravelCalculatePremiumRequest_travel_medical_allFields_not_provided.json",
+                "rest/TravelCalculatePremiumResponse_travel_medical_allFields_not_provided.json"
+        );
+    }
+
     private void executeAndCompare(String jsonRequestFilePath,
                                    String jsonResponseFilePath) throws Exception {
         String jsonRequest = jsonFileReader.readJsonFromFile(jsonRequestFilePath);

@@ -5,6 +5,7 @@
   "agreementDateFrom" : "2027-08-24",
   "agreementDateTo" : "2027-08-28",
   "country" : "SPAIN",
+  "medicalRiskLimitLevel" : "LEVEL_10000",
   "selectedRisks": [
     "TRAVEL_MEDICAL",
     "TRAVEL_CANCELLATION",

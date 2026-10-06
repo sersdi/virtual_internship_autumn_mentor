@@ -5,5 +5,6 @@
   "agreementDateFrom" : "2040-05-25",
   "agreementDateTo" : "2040-05-29",
   "country" : "",
+  "medicalRiskLimitLevel" : "LEVEL_10000",
   "selected_risks":["TRAVEL_MEDICAL"]
 }

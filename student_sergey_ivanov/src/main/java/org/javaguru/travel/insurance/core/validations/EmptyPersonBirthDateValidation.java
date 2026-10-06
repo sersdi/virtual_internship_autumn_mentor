@@ -9,14 +9,19 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 @Component
 @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
-class PersonBirthDateValidation extends TravelRequestValidationImpl {
+class EmptyPersonBirthDateValidation extends TravelRequestValidationImpl {
 
     private final ValidationErrorFactory errorFactory;
 
     @Override
     public Optional<ValidationError> validate(TravelCalculatePremiumRequest request) {
-        return (request.getPersonBirthDate() == null)
+        return (personBirthDateIsNull(request))
                 ? Optional.of(errorFactory.buildError("ERROR_CODE_11"))
                 : Optional.empty();
     }
+
+    private boolean personBirthDateIsNull(TravelCalculatePremiumRequest request) {
+        return request.getPersonBirthDate() == null;
+    }
+
 }
