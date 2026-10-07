@@ -19,4 +19,4 @@ false - функциональность выключена.
 2-3) Создал в /validations MedicalRiskLimitLevelValidation и  EmptyMedicalRiskLimitLevelValidation
      Так-же создал CountryValidation.
      Добавил валидацию в TravelCalculatePremiumServiceImpl.
-     Написал тесты  EmptyMedicalRiskLimitLevelValidationTest и  MedicalRiskLimitLevelValidationTest.
+     Написал тесты  EmptyMedicalRiskLimitLevelValidationTest и  MedicalRiskLimitLevelValidationTest
