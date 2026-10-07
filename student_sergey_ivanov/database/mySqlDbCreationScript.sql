@@ -56,3 +56,14 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 1002;
 
 
+CREATE TABLE IF NOT EXISTS `medical_risk_limit_level`(
+    `id` BIGINT NOT NULL AUTO_INCREMENT,
+    `medical_risk_limit_level_ic` varchar(200) NOT NULL,
+    `coefficient` decimal(10,2) NOT NULL,
+    PRIMARY key(`id`)
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1002;
+
+CREATE UNIQUE INDEX `ix_medical_risk_limit_level_ic`
+ON `medical_risk_limit_level`(`medical_risk_limit_level_ic`);
