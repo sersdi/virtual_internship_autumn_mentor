@@ -1,0 +1,11 @@
+Задача:
+
+1. Создать доменный объект и репозиторий для таблицы
+MEDICAL_RISK_LIMIT_LEVEL.
+
+2. Поменять формулу расчёта медицинского риска на:
+premium = CountryDefaultDayRate * DayCount * AgeCoefficient * InsuranceLimitCoefficient.
+
+Решение:
+
+1) Создал доменный объект MedicalRiskLimitLevel и репозиторий MedicalRiskLimitLevelRepository для таблицы MEDICAL_RISK_LIMIT_LEVEL.
