@@ -9,3 +9,7 @@ premium = CountryDefaultDayRate * DayCount * AgeCoefficient * InsuranceLimitCoef
 Решение:
 
 1) Создал доменный объект MedicalRiskLimitLevel и репозиторий MedicalRiskLimitLevelRepository для таблицы MEDICAL_RISK_LIMIT_LEVEL.
+
+2) Создал в /calculators/medical/ RiskLimitLevelCalculator
+   В классе TravelMedicalRiskPremiumCalculator создал зависимость с RiskLimitLevelCalculator.
+   Обновил тест в /medical TravelMedicalRiskPremiumCalculatorTest.
