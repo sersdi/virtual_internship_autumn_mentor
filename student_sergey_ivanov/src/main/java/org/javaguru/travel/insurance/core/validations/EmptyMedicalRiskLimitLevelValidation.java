@@ -1,7 +1,5 @@
 package org.javaguru.travel.insurance.core.validations;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
 import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,19 +8,24 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 @Component
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 class EmptyMedicalRiskLimitLevelValidation extends TravelRequestValidationImpl {
 
-    @Value( "${medical.risk.limit.level.enabled:false}" )
-    private Boolean medicalRiskLimitLevelEnabled;
+    private final Boolean medicalRiskLimitLevelEnabled;
 
     private final ValidationErrorFactory errorFactory;
+
+    EmptyMedicalRiskLimitLevelValidation(@Value("${medical.risk.limit.level.enabled:false}")
+                                                Boolean medicalRiskLimitLevelEnabled,
+                                                ValidationErrorFactory errorFactory) {
+        this.medicalRiskLimitLevelEnabled = medicalRiskLimitLevelEnabled;
+        this.errorFactory = errorFactory;
+    }
 
     @Override
     public Optional<ValidationError> validate(TravelCalculatePremiumRequest request) {
         return (isMedicalRiskLimitLevelEnabled()
-                    && containsTravelMedical(request)
-                    && isMedicalRiskLimitLevelIsNullOrBlank(request))
+                && containsTravelMedical(request)
+                && isMedicalRiskLimitLevelIsNullOrBlank(request))
                 ? Optional.of(errorFactory.buildError("ERROR_CODE_13"))
                 : Optional.empty();
     }

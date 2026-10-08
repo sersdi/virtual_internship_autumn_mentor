@@ -8,49 +8,40 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class EmptyPersonBirthDateValidationTest {
+class EmptyPersonBirthDateValidationTest {
 
-    @Mock
-    private ValidationErrorFactory errorFactory;
+    @Mock private ValidationErrorFactory errorFactory;
 
     @InjectMocks
     private EmptyPersonBirthDateValidation validation;
 
     @Test
-    public void shouldNotReturnErrorWhenPersonBirthDateIsNotEmpty(){
+    public void shouldReturnNoErrorWhenPersonBirthDateIsPresent() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
-        when(request.getPersonBirthDate()).thenReturn(createDate("06.05.2002"));
+        when(request.getPersonBirthDate()).thenReturn(new Date());
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isEmpty());
-        verifyNoInteractions(errorFactory);
     }
 
     @Test
-    public void shouldReturnErrorWhenPersonBirthDateIsNull(){
+    public void shouldReturnErrorWhenPersonBirthDateIsNull() {
         TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
         when(request.getPersonBirthDate()).thenReturn(null);
-        ValidationError validationError = mock(ValidationError.class);
-        when(errorFactory.buildError("ERROR_CODE_11")).thenReturn(validationError);
+        when(errorFactory.buildError("ERROR_CODE_11"))
+                .thenReturn(new ValidationError("ERROR_CODE_11", "Person Birth Date must be provided when TRAVEL_MEDICAL is selected"));
         Optional<ValidationError> errorOpt = validation.validate(request);
         assertTrue(errorOpt.isPresent());
-        assertSame(validationError, errorOpt.get());
-    }
-
-    private Date createDate(String dateStr) {
-        try {
-            return new SimpleDateFormat("dd.MM.yyyy").parse(dateStr);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
+        assertEquals("ERROR_CODE_11", errorOpt.get().errorCode());
+        assertEquals("Person Birth Date must be provided when TRAVEL_MEDICAL is selected", errorOpt.get().description());
     }
 
 }
