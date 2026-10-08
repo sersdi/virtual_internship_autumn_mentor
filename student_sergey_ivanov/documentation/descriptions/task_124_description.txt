@@ -122,6 +122,6 @@ copyDependencies (через maven-dependency-plugin аналог в Gradle)—�
         archiveVersion = '1.0.0'
     }
 
-
-4) Сгенерировать требуемый деплоймент артефакт и протестировать его запуск.
-
+4) Сгенерировал jar командой bootJar
+   и открыл java -jar student_sergey_ivanov/build/libs/insurance-calculator-1.0.0.jar
+   закрыл ctrl + c в терминале.
