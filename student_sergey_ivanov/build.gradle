@@ -45,7 +45,7 @@ jar {
 bootJar {
 	enabled = true
 	archiveBaseName = 'insurance-calculator'
-	archiveVersion = '1.0.0'
+	archiveVersion = '1.0.1'
 }
 
 publishing {
