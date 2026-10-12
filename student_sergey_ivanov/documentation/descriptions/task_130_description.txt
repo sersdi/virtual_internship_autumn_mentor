@@ -1,0 +1,20 @@
+Клиент прислал нам еще один баг!
+
+Тест кейс:
+selected_risks={"TRAVEL_EVACUATION"}
+country=null or country=empty
+Нет сообщения об ошибке (ERROR_CODE_10).
+
+Клиент просит нас сделать поле country в запросе обязательным,
+в не зависимости от того какие типы рисков были выбраны. Мотивация
+клиента: это travel policy и страна должна быть обязательно указана!
+
+Клиент просит исправить эту ошибку как можно быстрее!
+
+Задача:
+исправить ошибку, описанную клиентом и собрать новую версию
+приложения insurance-calculator-1.0.2.jar.
+
+1) Убрал проверку на TRAVEL_MEDICAL в validations/ CountryValidation и EmptyCountryValidation.
+2) Переписал тест EmptyCountryValidationTest.java.
+3) Собрал сборку insurance-calculator-1.0.2.jar
