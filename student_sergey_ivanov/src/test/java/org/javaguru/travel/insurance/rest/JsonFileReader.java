@@ -1,6 +1,8 @@
 package org.javaguru.travel.insurance.rest;
+
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
+
 import java.io.File;
 import java.nio.file.Files;
 
@@ -15,4 +17,5 @@ public class JsonFileReader {
             throw new RuntimeException(ex);
         }
     }
+
 }
