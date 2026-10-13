@@ -10,7 +10,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import java.math.BigDecimal;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
@@ -51,7 +53,7 @@ class CountryDefaultDayRateRepositoryTest {
         assertEquals(countryIc, valueOpt.get().getCountryIc());
         assertEquals(dayRate, valueOpt.get().getDefaultDayRate());
 
-        assertEquals(valueOpt.get().getDefaultDayRate().stripTrailingZeros(), dayRate.stripTrailingZeros());
+        assertEquals(dayRate.stripTrailingZeros(), valueOpt.get().getDefaultDayRate().stripTrailingZeros());
     }
 
 }

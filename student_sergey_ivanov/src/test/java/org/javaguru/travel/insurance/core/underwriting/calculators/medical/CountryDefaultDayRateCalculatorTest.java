@@ -19,10 +19,9 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class CountryDefaultDayRateCalculatorTest {
+class CountryDefaultDayRateCalculatorTest {
 
-    @Mock
-    private CountryDefaultDayRateRepository countryDefaultDayRateRepository;
+    @Mock private CountryDefaultDayRateRepository countryDefaultDayRateRepository;
 
     @InjectMocks
     private CountryDefaultDayRateCalculator calculator;
@@ -32,6 +31,7 @@ public class CountryDefaultDayRateCalculatorTest {
     @BeforeEach
     void setUp() {
         request = new TravelCalculatePremiumRequest();
+        request.setCountry("US");
     }
 
     @Test
@@ -51,4 +51,5 @@ public class CountryDefaultDayRateCalculatorTest {
         RuntimeException exception = assertThrows(RuntimeException.class, () -> calculator.calculate(request));
         assertEquals("Country day rate not found by country id = " + request.getCountry(), exception.getMessage());
     }
+
 }
