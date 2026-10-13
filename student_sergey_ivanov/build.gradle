@@ -11,6 +11,7 @@ dependencies {
 
 	implementation('mysql:mysql-connector-java:8.0.33')
 	implementation('org.hibernate:hibernate-core:6.5.0.Final')
+	implementation ('org.liquibase:liquibase-core:4.27.0')
 
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
 
@@ -36,6 +37,7 @@ dependencies {
 	test {
 		useJUnitPlatform()
 	}
+
 }
 
 jar {
@@ -57,7 +59,7 @@ publishing {
 			// Project coordinates
 			groupId = 'org.javaguru'
 			artifactId = 'insurance-calculator'
-			version = '1.0.2'
+			version = '1.0.0'
 
 			// Add other metadata as needed
 			pom {
