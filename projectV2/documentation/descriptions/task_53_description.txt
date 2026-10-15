@@ -1,0 +1,8 @@
+Выполнил рефакторинг TravelCalculatePremiumControllerTest класса.
+Избавился от дупликации кода, путём создания метода executeAndCompare().
+    В этот метод добавил логику MvcResult result = mockMvc.perform(post("/insurance/travel/")
+                                                        .content(jsonRequest)
+                                                        .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE))
+                                                .andExpect(status().isOk())
+                                                .andReturn();
+В тест методах оставил только запрос и ответ, затем метод executeAndCompare()

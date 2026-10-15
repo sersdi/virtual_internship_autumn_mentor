@@ -1,0 +1,2 @@
+Создал класс JsonFileReader в папке test  для чтения json файлов.
+Написал в нем метод public String readJsonFromFile(String filePath){}

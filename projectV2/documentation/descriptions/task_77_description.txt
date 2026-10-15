@@ -1,0 +1,12 @@
+Цель - найти решение для сравнения
+контента JSON строк без учёта порядка расположения элементов.
+Проверить найденное решение и заменить старое решение на новое
+в проекте.
+
+Добавил в Gradle: testImplementation('uk.org.webcompere:model-assert:1.0.0')
+В тесте TravelCalculatePremiumControllerTest добавил логику в метод executeAndCompare():
+    assertJson(responseBodyContent)
+                    .where()
+                    .keysInAnyOrder()
+                    .arrayInAnyOrder()
+                    .isEqualTo(jsonResponse);

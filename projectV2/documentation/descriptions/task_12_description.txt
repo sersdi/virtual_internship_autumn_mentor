@@ -1,0 +1,2 @@
+Добавил в класс TravelCalculatePremiumServiceImpl метод calculatePremium, который принимает объект TravelCalculatePremiumRequest и возвращает объект TravelCalculatePremiumResponse.
+Внутри метода я заполняю поля ответа значениями из запроса, используя бизнес-логику приложения.

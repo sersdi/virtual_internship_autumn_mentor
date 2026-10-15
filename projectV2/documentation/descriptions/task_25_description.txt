@@ -1,0 +1,40 @@
+JUnit - это библиотека, которая управляет запуском юнит тестов.
+Ее поведение можно расширять, что и сделано с помощью
+@ExtendWith(MockitoExtension.class).
+Делает под капотом следующее:
+    -Автоматически создаёт моки. Если в тестовом классе есть поля с аннотациями @Mock, MockitoExtension сама инициализирует их — вам не нужно вручную вызывать Mockito.mock() или MockitoAnnotations.openMocks(this).
+    -Внедряет моки в тестируемый объект. Когда вы помечаете поле или конструктор аннотацией @InjectMocks, расширение автоматически подставляет туда созданные моки.
+    -Обеспечивает изоляцию тестов. Между тестовыми методами моки сбрасываются — это помогает избежать побочных эффектов.
+    -Проверяет корректность использования Mockito. После каждого теста расширение проводит валидацию: например, может выдать ошибку, если какой-то мок остался неиспользованным
+Пример:
+    @ExtendWith(MockitoExtension.class)
+    public class UserServiceTest {
+        @Mock
+        private UserRepository userRepository; // Мок создаётся автоматически [14](https://www.geeksforgeeks.org/advance-java/resolve-parameterresolutionexception-in-junit-5/)
+
+        @InjectMocks
+        private UserService userService; // Мок внедряется в сервис
+
+        @Test
+        void testGetUserDetails() {
+            when(userRepository.findById(1L)).thenReturn(someUser);
+            User result = userService.getUserDetails(1L);
+            assertEquals(someUser, result);
+        }
+    }
+
+@Mock
+Эта аннотация используется для создания мок-объекта (объекта, который имитирует поведение реального, но для теста мы подменяем его на фиктивный) для указанного класса или интерфейса.
+Вместо того чтобы вручную создавать мок через Mockito.mock(Class), вы просто помечаете поле в тестовом классе аннотацией @Mock. Mockito автоматически сгенерирует для этого поля мок-объект.
+Пример:
+    @Mock
+    private MyClass myClass; // Создаётся мок для MyClass
+
+@InjectMocks
+Эта аннотация нужна для автоматического внедрения (инъекции) созданных моков в тестируемый объект. Mockito сам создаст экземпляр класса, который вы аннотируете, и подставит в него все зависимости, помеченные как @Mock или @Spy.
+Mockito пытается выполнить внедрение разными способами: через конструктор, сеттер или поле. Если какая-то стратегия не сработает (например, зависимость не найдена), Mockito не выдаст ошибку — поле просто останется пустым, и вам придётся инициализировать его вручную.
+Пример:
+    @InjectMocks
+    private MyTestClass myTestClass; // Mockito создаст экземпляр MyTestCl
+
+Интегрировал аннотации: @ExtendWith(MockitoExtension.class), @Mock, @InjectMocks в классе TravelCalculatePremiumServiceImplTest.

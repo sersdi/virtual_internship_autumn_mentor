@@ -1,0 +1,3 @@
+Превратил ответ (TravelCalculatePremiumResponse) в строку (формат JSON) и залогировал его в систему логирования.
+Для этого создал класс TravelCalculatePremiumResponseLogger в нем по аналогии с классом TravelCalculatePremiumRequestLogger прописал логику,
+    затем добавил зависимость в TravelCalculatePremiumController и создал объект response в методе calculatePremium.

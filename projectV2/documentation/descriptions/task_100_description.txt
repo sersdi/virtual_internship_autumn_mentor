@@ -1,0 +1,50 @@
+Нужен такой ответ приложения:
+{
+  "errors": null,
+  "personFirstName": "Vasja",
+  "personLastName": "Pupkin",
+  "agreementDateFrom": "2040-05-25",
+  "agreementDateTo": "2040-05-29",
+  "agreementPremium": 4,
+  "risks": [
+          {
+            "riskIc": "TRAVEL_MEDICAL",
+            "premium": 2.00
+          },
+          {
+             "riskIc": "TRAVEL_CANCELLATION",
+             "premium": 5.00
+          },
+  ]
+}
+
+
+Нужно заполнить секцию "risks" в ответе реальными данными полученными
+при расчёте премии для каждого выбранного риска.
+
+Для этого создал класс TravelPremiumCalculationResult.
+Переписал класс TravelPremiumUnderwriting:
+    TravelPremiumCalculationResult calculatePremium(TravelCalculatePremiumRequest request);
+
+Изменил класс TravelPremiumUnderwritingImpl:
+    @Override
+        public TravelPremiumCalculationResult calculatePremium(TravelCalculatePremiumRequest request) {
+            List<RiskPremium> riskPremiums = request.getSelectedRisks().stream()
+                    .map(riskIc -> {
+                        BigDecimal riskPremium = calculatePremiumForRisk(riskIc, request);
+                        return new RiskPremium(riskIc, riskPremium);
+                    })
+                    .toList();
+
+            BigDecimal totalPremium = riskPremiums.stream()
+                    .map(RiskPremium::getPremium)
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+            return new TravelPremiumCalculationResult(totalPremium, riskPremiums);
+        }
+
+Изменил класс TravelCalculatePremiumServiceImpl:
+    В методе private TravelCalculatePremiumResponse buildResponse()
+        добавил параметр: premiumCalculationResult
+        добавил логику: response.setAgreementPremium(premiumCalculationResult.getTotalPremium());
+                        response.setRisks(premiumCalculationResult.getRiskPremiums());

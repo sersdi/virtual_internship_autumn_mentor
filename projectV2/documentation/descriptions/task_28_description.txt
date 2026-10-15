@@ -1,0 +1,22 @@
+Ознакомился с кодом валидации.
+Внедряю код валидации в проект.
+Добавил папку dto и распределил классы
+Создал класс TravelCalculatePremiumRequestValidator в папке Core.
+Создал класс ValidationError в папке dto.
+Добавил зависимость TravelCalculatePremiumRequestValidator в класс TravelCalculatePremiumServiceImpl
+    -добавил в  метод  calculatePremium:
+        List<ValidationError> errors = requestValidator.validate(request);
+            if (!errors.isEmpty()) {
+                return new TravelCalculatePremiumResponse(errors);
+            }
+
+Создал класс CoreResponse в dto(добавил гет сет конструкторы)
+
+В классе TravelCalculatePremiumResponse создал конструктор:
+    public TravelCalculatePremiumResponse(List<ValidationError> errors) {
+            super(errors);
+        }
+
+Скорректировал тесты прошлые(добавил validation), добавил новые
+
+

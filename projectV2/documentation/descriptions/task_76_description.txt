@@ -1,0 +1,8 @@
+Реализовал валидацию для проверки секции
+selected_risks в запросе на пустоту. Если она пуста и ни
+одного риска не выбрано, то система должна выдавать ошибку.
+
+Создал класс SelectedRisksValidation.
+В классе TravelCalculatePremiumServiceImpl написал проверку на response для валидации рисков.
+В TravelCalculatePremiumRequest и TravelCalculatePremiumResponse добавил новое поле @JsonAlias("selected_risks") private List<String> selectedRisks;
+Написал junit тест SelectedRisksValidationTest и для контроллера TravelCalculatePremiumControllerTest

@@ -1,0 +1,4 @@
+Что бы воспользоваться методом класса JsonFileReader в классе TravelCalculatePremiumControllerTest:
+    добавил в класс JsonFileReader @Component,
+    в классе TravelCalculatePremiumControllerTest создал зависимость через поле с классом JsonFileReader при помощи @Autowired
+Заменил запросы в классе TravelCalculatePremiumControllerTest.

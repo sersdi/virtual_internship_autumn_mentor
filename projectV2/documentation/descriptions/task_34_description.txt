@@ -1,0 +1,6 @@
+Добавил валидацию на то, что agreementDateFrom
+должен быть меньше agreementDateTo.
+   В классе TravelCalculatePremiumRequestValidator
+        -добавил метод validateDateFromLessThenDateTo.
+        -в методе validate добавил метод validateDateFromLessThenDateTo.
+Написал тесты на validateDateFromLessThenDateTo

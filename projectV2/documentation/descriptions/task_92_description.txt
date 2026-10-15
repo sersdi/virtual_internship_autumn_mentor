@@ -1,0 +1,20 @@
+Нужно создать новую валидацию. Для этого надо воспользоваться классом ClassifierValueRepository
+и его методом findByClassifierTitleAndIc(...) для создания
+новой валидации. Новая валидация должна проверять значения selected_risks
+в запросе. Все значения указанные в selected_risks должны
+быть значениями ic (ClassifierValue.ic) классификатора RISK_TYPE
+из базы данных. Для каждого не верного значения в selected_risks
+валидация должна возвращать ошибку:
+Риск с ic = NOT_EXISTING_RISK не поддерживается системой.
+
+Так-же нужно проанализировать можно ли с текущей
+реализацией создать валидацию, которая бы возвращала не одну ошибку,
+а список ошибок?
+
+interface TravelRequestValidation {
+
+    Optional<ValidationError> execute(TravelCalculatePremiumRequest request);
+
+}
+
+Без изменения интерфейса TravelRequestValidation это сделать невозможно.

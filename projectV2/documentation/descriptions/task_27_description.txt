@@ -1,0 +1,16 @@
+Применил Lombok для генерации конструктора
+в классах
+- TravelCalculatePremiumServiceImpl
+- TravelCalculatePremiumController
+без модификатора доступа.
+
+Для этого воспользовался аннотацией из Lombok библиотеки:
+@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+
+Eсли вы хотите, что бы Lombok добавил в параметр конструктора
+свойство класса то при использовании @RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+свойство класса должно быть final.
+
+Важный момент: сгенерированный Lombok код можно найти в папке
+out/production/classes если вы билдите проект при помощи IDEA
+build/classes если вы билдите проект при помощи Gradle.

@@ -1,0 +1,32 @@
+Что такое immutable (не изменяемые) классы и для чего их используют.
+
+Класс TravelPremiumCalculationResult представляет собой результаты
+расчета премии для одной персоны. Он содержит как общую премию
+(totalPremium), так и премии для каждого риска в отдельности
+(riskPremiums).
+
+Как добиться того, чтобы результаты расчета премии
+были не изменяемыми (immutable)?
+
+Для этого в программировании используют понятие immutable объекта.
+
+Immutable объект - это объект состояние которого нельзя изменить
+после его создания. То есть в нашем случае нам нужно добиться того,
+чтобы мы могли создавать объекты класса TravelPremiumCalculationResult,
+но после создания таких объектов изменять хранящиеся в них данные
+было бы нельзя.
+
+Это можно сделать несколькими способами:
+- просто созданием Java класса руками без сторонних библиотек;
+- при помощи Lombok библиотеки;
+- при помощи Java record.
+
+Задача: добиться того, чтобы результаты расчета премии были не изменяемыми (immutable).
+
+Использовал java record в классе TravelPremiumCalculationResult.
+В классе TravelCalculatePremiumServiceImpl в метод buildResponse() изменил логику валидации:
+            response.setAgreementPremium(premiumCalculationResult.totalPremium());
+            response.setRisks(premiumCalculationResult.riskPremiums());
+В классе TravelRequestValidationImpl метод validateList() возвращает null.
+
+

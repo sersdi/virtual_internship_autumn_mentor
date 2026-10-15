@@ -1,0 +1,25 @@
+Задача:
+1. Создать в Java доменный объект + репозиторий для написания
+запросов к таблице AGE_COEFFICIENT.
+
+2. Поменять формулу расчёта медицинского риска на:
+premium = CountryDefaultDayRate * DayCount * AgeCoefficient.
+
+
+
+1. Создал в /domain AgeCoefficient.
+   Создал в /repositories AgeCoefficientRepository.
+
+2. В /calculators TravelMedicalRiskPremiumCalculator изменил логику:
+        Создал метод  toLocalDate(),
+        Создал метод calculateAge(),
+        Создал метод findAgeCoefficient(),
+        Изменил метод  calculatePremium():
+            создал переменную ageCoefficient = findAgeCoefficient(request).
+            в return указал:
+                return countryDefaultRate       +
+                    .multiply(daysCount)        +
+                    .multiply(ageCoefficient)   +
+                    .setScale(2, RoundingMode.HALF_UP);.multiply(daysCount)
+
+3. Написал тесты и переписал рест запросы, ответы.

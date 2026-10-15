@@ -1,0 +1,5 @@
+Создал новый класс DateTimeService рядом с
+TravelCalculatePremiumServiceImpl и поместил в него
+алгоритм расчёта числа дней между двумя датами.
+Сделал новый тест DateTimeServiceTest для нового метода getDaysBetween.
+

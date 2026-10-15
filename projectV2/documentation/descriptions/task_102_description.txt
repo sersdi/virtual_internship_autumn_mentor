@@ -1,0 +1,20 @@
+Продолжаем улучшать надежность кода нашего приложения
+используя принцип не изменяемых объектов (immutable object).
+
+Задача: преобразовать ValidationError класс в Java record.
+
+Преобразовал класс ValidationError: убрал все аннотации спринг бута, вместо 2 переменных добавил 2 параметра.
+Указал в классе явно, что класс типа java record:
+    public record ValidationError(String errorCode, String description) {
+    }
+
+Переписал тесты:
+    В services/TravelCalculatePremiumServiceImplTest
+     В методе shouldReturnResponseWithValidationErrors() изменил обращение у response: c getErrorCode и getDescription на errorCode и description
+        assertEquals("field", response.getErrors().get(0).errorCode());
+        assertEquals("errorMessage", response.getErrors().get(0).description());
+
+    В validations у тестов изменил название переменной errorValidation на validationError
+        также изменил порядок переменных в assertSame(errorOpt.get(), validationError) на (validationError, errorOpt.get());
+
+

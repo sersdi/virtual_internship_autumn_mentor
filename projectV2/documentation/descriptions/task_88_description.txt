@@ -1,0 +1,5 @@
+Cоздал доменную модель приложения (классы Classifier
+и ClassifierValue) и указал их маппинг на соответствующие
+таблицы в реляционной базе данных.
+
+Классы Classifier и ClassifierValue создал в пакете core.domain.

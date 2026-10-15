@@ -1,0 +1,5 @@
+Добавил валидацию на agreementDateTo из запроса:
+    В классе TravelCalculatePremiumRequestValidator:
+    - написал метод validatePersonDateTo.
+    - добавил валидацию validatePersonDateTo в метод validate.
+Написал тесты в TravelCalculatePremiumRequestValidator на agreementDateTo.

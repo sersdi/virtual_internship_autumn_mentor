@@ -1,0 +1,6 @@
+Задача:
+1. Добавить в запрос поле medicalRiskLimitLevel.
+2. Добавить в ответ поле medicalRiskLimitLevel.
+
+Решение:
+Обновил /dto TravelCalculatePremiumRequest и TravelCalculatePremiumResponse.

@@ -1,0 +1,86 @@
+Нужно написать тесты на контроллер
+TravelCalculatePremiumController, для того чтобы можно было
+поднимать приложение целиком, посылать HTTP POST запрос с JSON
+внутри и проверять ответ.
+
+Нужно разобраться как работает тест контроллера
+
+TravelCalculatePremiumControllerTest.
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class TravelCalculatePremiumControllerTest {
+
+    @Autowired private MockMvc mockMvc;
+
+    @Test
+    public void simpleRestControllerTest() throws Exception {
+        mockMvc.perform(post("/insurance/travel/")
+                        .content("{" +
+                                "\"personFirstName\" : \"Vasja\",\n" +
+                                "\"personLastName\" : \"Pupkin\",\n" +
+                                "\"agreementDateFrom\" : \"2021-05-25\",\n" +
+                                "\"agreementDateTo\" : \"2021-05-29\"\n" +
+                                "}")
+                        .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("personFirstName", is("Vasja")))
+                .andExpect(jsonPath("personLastName", is("Pupkin")))
+                .andExpect(jsonPath("agreementDateFrom", is("2021-05-25")))
+                .andExpect(jsonPath("agreementDateTo", is("2021-05-29")))
+                .andExpect(jsonPath("agreementPrice", is(4)))
+                .andReturn();
+    }
+
+}
+
+Это интеграционный тест контроллера на Spring Boot с использованием MockMvc.
+Его цель—проверить, что REST‑эндпоинт /insurance/travel/ корректно принимает JSON‑запрос,
+обрабатывает данные и возвращает ожидаемый JSON‑ответ.
+
+Что делают аннотации
+@ExtendWith(SpringExtension.class) (JUnit5) / раньше @RunWith(SpringRunner.class) в JUnit4:
+подключает поддержку Spring к тестам—контекст приложения будет поднят,
+бины (включая контроллеры) будут созданы и внедрены.
+
+@SpringBootTest: поднимает почти полный Spring‑контекст приложения (как при запуске приложения),
+но без реального запуска сервера (без Tomcat/Jetty).
+
+@AutoConfigureMockMvc: автоматически создаёт и настраивает бин MockMvc—это «моковый» HTTP‑клиент внутри контекста Spring, который умеет вызывать контроллеры напрямую, без сетевого стека.
+
+Разбор теста simpleRestControllerTest
+Подготовка запроса:
+    mockMvc.perform(post("/insurance/travel/")
+        .content("{…}")
+        .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE))
+
+post("/insurance/travel/")—HTTP POST‑запрос на указанный путь.
+
+.content("…")—тело запроса в виде JSON‑строки.
+Здесь вручную склеивают JSON через конкатенацию строк—это рабочий, но не самый удобный способ.
+Лучше использовать objectMapper.writeValueAsString(...) или библиотеки вроде Jackson.
+
+.header(..., APPLICATION_JSON)—устанавливает заголовок Content-Type: application/json,
+чтобы Spring понял, что тело—это JSON.
+
+Проверка статуса:
+.andExpect(status().isOk())
+Тест ожидает, что сервер вернёт HTTP‑код 200 OK.
+Это значит, что контроллер обработал запрос без ошибок.
+
+Проверка содержимого ответа через jsonPath:
+    .andExpect(jsonPath("personFirstName", is("Vasja")))
+    .andExpect(jsonPath("personLastName", is("Pupkin")))
+    .andExpect(jsonPath("agreementPrice", is(4)))
+
+jsonPath(...) проверяет конкретные поля в JSON‑ответе.
+is(...)—матчер из Hamcrest, который проверяет равенство.
+
+Таким образом, тест убеждается, что:
+данные из запроса «прошли» через контроллер и вернулись обратно;
+поле agreementPrice рассчитано и равно 4—это и есть основная бизнес‑проверка (расчёт премии).
+.andReturn()—завершает цепочку ожиданий; результат можно сохранить, если нужно дальше анализировать ответ (например, достать тело как строку).
+В этом тесте он просто закрывает вызов.
+
+
+

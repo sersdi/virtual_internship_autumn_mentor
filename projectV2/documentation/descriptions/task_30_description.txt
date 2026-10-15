@@ -1,0 +1,4 @@
+В классе TravelCalculatePremiumRequestValidator:
+    -Добавил валидацию фамилии в методе Validate: validatePersonLastName(request).ifPresent(errors::add);
+    -Так же добавил метод validatePersonLastName.
+Протестировал в TravelCalculatePremiumRequestValidatorTest случаи когда не заполнили фамилию.

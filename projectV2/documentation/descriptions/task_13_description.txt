@@ -1,0 +1,5 @@
+Написал тесты в классе TravelCalculatePremiumServiceImplTest.
+Тест populateResponse() проверяет корректность заполнения ответа на основе входных данных.
+Создал в нем request, в него передал значения.
+Затем создал response, которому передал request через service.
+Потом сравнил значения request с ожидаемыми значениями response, используя assertEquals.

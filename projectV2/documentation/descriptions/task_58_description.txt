@@ -1,0 +1,25 @@
+Сделал для всех классов валидаций общий интерфейс TravelRequestValidation.
+    -имплементил новый интерфейс в каждый класс валидации
+
+Новый интерфейс TravelRequestValidation поместил в пакет core/validations и сделал его паблик;
+    -в интерфейсе написал оверрайд метод execute.
+    -пометил аннотацией @FunctionalInterface
+
+Сделал все классы валидаций level access PACKAGE. (убрал public с классов, чтобы они были доступны только внутри пакета);
+
+В классе TravelCalculatePremiumRequestValidator удалил старый конструктор
+    и добавил новое поле: private List<TravelRequestValidation> travelValidations;
+    Затем переписал метод validate() добавил в него stream() с интерфейсом TravelRequestValidation.
+
+Переписал тест TravelCalculatePremiumRequestValidatorTest в виде:
+            TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+            TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
+            when(validation1.execute(request)).thenReturn(Optional.empty());
+            TravelRequestValidation validation2 = mock(TravelRequestValidation.class);
+            when(validation2.execute(request)).thenReturn(Optional.empty());
+            List<TravelRequestValidation> travelValidations = List.of(
+                    validation1, validation2
+            );
+            ReflectionTestUtils.setField(requestValidator, "travelValidations", travelValidations);
+            List<ValidationError> errors = requestValidator.validate(request);
+            assertTrue(errors.isEmpty());
