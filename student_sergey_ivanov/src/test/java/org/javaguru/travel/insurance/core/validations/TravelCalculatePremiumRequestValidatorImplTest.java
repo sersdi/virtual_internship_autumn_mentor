@@ -1,6 +1,6 @@
 package org.javaguru.travel.insurance.core.validations;
 
-import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
+import org.javaguru.travel.insurance.dto.v1.TravelCalculatePremiumRequestV1;
 import org.javaguru.travel.insurance.dto.ValidationError;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ public class TravelCalculatePremiumRequestValidatorImplTest {
 
     @Test
     public void shouldNotReturnErrors() {
-        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        TravelCalculatePremiumRequestV1 request = mock(TravelCalculatePremiumRequestV1.class);
         TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
         when(validation1.validate(request)).thenReturn(Optional.empty());
         when(validation1.validateList(request)).thenReturn(List.of());
@@ -30,7 +30,7 @@ public class TravelCalculatePremiumRequestValidatorImplTest {
 
     @Test
     public void shouldReturnSingleErrors() {
-        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        TravelCalculatePremiumRequestV1 request = mock(TravelCalculatePremiumRequestV1.class);
         TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
         when(validation1.validate(request)).thenReturn(Optional.of(new ValidationError("errorCode","description")));
         TravelRequestValidation validation2 = mock(TravelRequestValidation.class);
@@ -42,7 +42,7 @@ public class TravelCalculatePremiumRequestValidatorImplTest {
 
     @Test
     public void shouldReturnListErrors() {
-        TravelCalculatePremiumRequest request = mock(TravelCalculatePremiumRequest.class);
+        TravelCalculatePremiumRequestV1 request = mock(TravelCalculatePremiumRequestV1.class);
         TravelRequestValidation validation1 = mock(TravelRequestValidation.class);
         when(validation1.validate(request)).thenReturn(Optional.empty());
         when(validation1.validateList(request)).thenReturn(List.of(new ValidationError("errorCode","description")));

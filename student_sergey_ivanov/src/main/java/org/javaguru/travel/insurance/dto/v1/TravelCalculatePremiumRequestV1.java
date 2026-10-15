@@ -1,4 +1,4 @@
-package org.javaguru.travel.insurance.dto;
+package org.javaguru.travel.insurance.dto.v1;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -15,7 +15,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class TravelCalculatePremiumRequest {
+public class TravelCalculatePremiumRequestV1 {
 
     private String personFirstName;
     private String personLastName;

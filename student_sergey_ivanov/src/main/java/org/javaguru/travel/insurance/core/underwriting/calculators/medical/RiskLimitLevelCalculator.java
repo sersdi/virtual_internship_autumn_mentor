@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import org.javaguru.travel.insurance.core.domain.MedicalRiskLimitLevel;
 import org.javaguru.travel.insurance.core.repositories.MedicalRiskLimitLevelRepository;
-import org.javaguru.travel.insurance.dto.TravelCalculatePremiumRequest;
+import org.javaguru.travel.insurance.dto.v1.TravelCalculatePremiumRequestV1;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -19,13 +19,13 @@ class RiskLimitLevelCalculator {
 
     private final MedicalRiskLimitLevelRepository riskLimitLevelRepository;
 
-    BigDecimal calculate(TravelCalculatePremiumRequest request) {
+    BigDecimal calculate(TravelCalculatePremiumRequestV1 request) {
         return medicalRiskLimitLevelEnabled
                 ? getCoefficient(request)
                 : getDefaultValue();
     }
 
-    private BigDecimal getCoefficient(TravelCalculatePremiumRequest request) {
+    private BigDecimal getCoefficient(TravelCalculatePremiumRequestV1 request) {
         return riskLimitLevelRepository.findByMedicalRiskLimitLevelIc(request.getMedicalRiskLimitLevel())
                 .map(MedicalRiskLimitLevel::getCoefficient)
                 .orElseThrow(() -> new RuntimeException("Medical risk limit level not found by = " + request.getMedicalRiskLimitLevel()));
